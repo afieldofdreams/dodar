@@ -1,0 +1,244 @@
+scenarios:
+  - id: "TRD-01"
+    category: "TRD"
+    title: "Pre-Seed Startup — Hire, Market, or Cut Burn"
+    domain: "startup"
+    difficulty: "medium"
+    prompt_text: |
+      You founded a SaaS startup 8 months ago. You have $180K remaining in a $250K pre-seed raise. Monthly burn is $25K (runway = 7 months). You have a working MVP with 20 paying customers ($2K MRR). You have three pressing choices: (1) Hire a senior engineer to accelerate feature velocity (cost: $15K/month salary+taxes), (2) Hire a sales/marketing person to accelerate revenue growth (cost: $12K/month), (3) Cut burn to 12K/month by reducing your own salary and delaying non-critical features (extends runway to 15 months). You cannot do all three. Your current team is you + 1 part-time contractor. Your biggest customers say they'd pay 5x if you added [specific feature] but your product roadmap shows that feature as 3-month build. Your head of a related startup network warns that Series A fundraising is getting harder and slower. What should you do?
+    expected_pitfalls:
+      - "Recommends hiring as universally optimal without weighing burn-down risk"
+      - "Treats Series A funding as guaranteed"
+      - "Dismisses cost-cutting as defeatist"
+      - "Does not quantify the trade-off between runway extension and growth acceleration"
+      - "Assumes customer requests will remain valid if deferred"
+    gold_standard_elements:
+      - "Articulates three genuinely valid paths with explicit trade-offs for engineer hiring, sales/marketing hiring, and cost-cutting"
+      - "Articulates the underlying tension: you can buy time or buy growth but not both"
+      - "Proposes decision criteria: likelihood of closing high-value customers, Series A fundraising climate"
+      - "Avoids recommending a single option; frames decision as risk/runway/growth trade-off"
+    discriminators:
+      - dimension: "Option Breadth"
+        description: "Surfaces the core tension — Makes explicit that more hiring = faster growth but faster burn; less hiring = extended runway but slower growth"
+      - dimension: "Decision Justification"
+        description: "Quantifies the opportunity cost — Each path has a concrete downside articulated"
+
+  - id: "TRD-02"
+    category: "TRD"
+    title: "Senior Engineer Considering CTO Role at Startup"
+    domain: "career"
+    difficulty: "medium"
+    prompt_text: |
+      You are a senior engineer at a FAANG company with 8 years of experience, comfortable compensation ($350K total, stable, high-security job), and deep expertise in distributed systems. A well-funded Series B startup has offered you a CTO role: $200K salary + 2% equity (current valuation $50M, potential upside $500M if it works out). The role would involve building the engineering team from 3 to 15 people over 2 years, defining technical direction, and hands-on coding (maybe 40% of time). The startup has strong product-market fit and a visionary founder. You have two young children. Your spouse has a stable part-time job and is supportive but risk-averse. The FAANG job is secure but you find the work intellectually unstimulating. You have 15 years of career runway remaining. What should you do?
+    expected_pitfalls:
+      - "Frames the choice as passion vs security and recommends following passion"
+      - "Treats equity as pure upside without modeling downside risk"
+      - "Assumes FAANG job stability as absolute guarantee"
+      - "Does not account for family financial risk and spouse's risk tolerance"
+      - "Ignores the possibility of returning to FAANG if startup fails"
+    gold_standard_elements:
+      - "Articulates three paths (stay, take the role, negotiate hybrid/advisor role) with genuine trade-offs"
+      - "Explicitly articulates the spouse's risk tolerance as a decision constraint"
+      - "Quantifies downside: if startup fails, opportunity cost is $150K/year x 2-3 years"
+      - "Proposes that the true decision is about risk tolerance and life stage"
+    discriminators:
+      - dimension: "Decision Justification"
+        description: "Surfaces spousal risk tolerance as a binding constraint — Recognizes that spouse's preferences are not secondary; frames as a joint decision"
+      - dimension: "Option Breadth"
+        description: "Separates learning from financial return — Acknowledges that the startup role is attractive for learning even if equity is a poor bet"
+
+  - id: "TRD-03"
+    category: "TRD"
+    title: "City Council Green Belt Housing Decision"
+    domain: "policy"
+    difficulty: "hard"
+    prompt_text: |
+      Your city council is deciding whether to rezone a 12-hectare green belt (currently protected parkland and wildlife habitat, used by local residents for recreation) to allow 200 new housing units. The city is facing a housing shortage; average rent has increased 40% in 5 years. The developer is offering the city $5M in infrastructure contributions and is committed to 30% affordable units. Environmental impact: loss of habitat for three protected bird species; loss of the only urban green space for residents in a low-income neighborhood. Community: local residents oppose the rezoning; developers argue housing supply will reduce pressure on other greenspaces and lower rents. Equity: the adjacent neighborhood is predominantly low-income and has the lowest tree canopy coverage in the city. The council faces pressure from both housing advocates and environmental advocates. You have one vote. What should the council do?
+    expected_pitfalls:
+      - "Treats the choice as binary (housing OR environment)"
+      - "Weighs quantified housing benefit against non-quantified environmental loss"
+      - "Assumes that building here prevents development elsewhere"
+      - "Does not account for the specific equity tension"
+      - "Recommends a single outcome without acknowledging the genuine value conflict"
+    gold_standard_elements:
+      - "Articulates four genuine paths with real trade-offs: rezone for housing, preserve and rezone elsewhere, hybrid smaller development, preserve and increase density elsewhere"
+      - "Explicitly identifies the equity paradox: housing shortage harms low-income people broadly but this rezoning also harms a specific low-income neighborhood directly"
+      - "Proposes decision criteria: is housing supply constraint city-wide or neighborhood-specific? Are there genuine alternatives?"
+      - "Acknowledges that the council must choose between competing values without a universally optimal answer"
+    discriminators:
+      - dimension: "Option Breadth"
+        description: "Surfaces the equity paradox — Recognizes that the choice is not simply housing vs environment but city-wide housing need vs neighborhood environmental justice"
+      - dimension: "Decision Justification"
+        description: "Tests the assumption of inevitability — Challenges whether this green belt development is necessary or merely convenient"
+
+  - id: "TRD-04"
+    category: "TRD"
+    title: "Angel Investor Choosing Between 3 Opportunities"
+    domain: "investment"
+    difficulty: "hard"
+    prompt_text: |
+      You are an angel investor with $100K to deploy (and capacity for 1–2 more small checks). You have three opportunities, each seeking $50K: (A) a Series A biotech founded by a former pharma researcher; 5-year timeline to exit; current burn rate $150K/month with 18 months of runway; proven scientific concept; regulatory path is uncertain; (B) a Series A SaaS founded by a repeat founder; capital-light; current MRR $20K, clear path to Series B in 12–18 months; founder has a good track record but is detail-averse (previous company had operational gaps); (C) an early-stage AI / enterprise application founded by a first-time founder who is brilliant at sales but has no technical co-founder; early customer interest is very strong ($500K pipeline) but product is under-built; founder acknowledges the technical risk. Which opportunity represents the best risk-adjusted return for your portfolio?
+    expected_pitfalls:
+      - "Recommends the SaaS as obviously better"
+      - "Dismisses the biotech as too risky without quantifying"
+      - "Treats the AI opportunity as founder risk without accounting for strong customer traction"
+      - "Does not distinguish between types of risk"
+      - "Assumes faster exit = better return"
+    gold_standard_elements:
+      - "Articulates three genuine paths with different risk/return profiles for biotech, SaaS, and AI/Enterprise"
+      - "Explicitly articulates the risk/return trade-off"
+      - "Proposes portfolio logic: if you take SaaS you have $50K left for optionality"
+      - "Identifies decision criteria: your own risk tolerance, conviction on technical founders, ability to add value"
+    discriminators:
+      - dimension: "Option Breadth"
+        description: "Separates risk types — Distinguishes between regulatory risk, operational risk, and technical risk"
+      - dimension: "Decision Justification"
+        description: "Avoids false certainty — Does not assume the SaaS is obviously better; acknowledges return potential may be constrained"
+
+  - id: "TRD-05"
+    category: "TRD"
+    title: "Law Firm Build vs. Buy vs. Outsource for Document Processing"
+    domain: "operations"
+    difficulty: "medium"
+    prompt_text: |
+      Your 150-lawyer law firm spends approximately $1.2M/year on document review (junior lawyers + contract attorneys reviewing discovery docs). A legal tech vendor has approached you with a contract for AI-powered document review: $300K year 1, $200K year 2+. An alternative is to hire a Director of Legal Innovation and build an in-house LLM-based tool (estimated cost: $200K salary + $50K development + $100K infrastructure = $350K year 1, ongoing maintenance $100K/year 2+). A third option is to maintain the status quo but shift to a cheaper contract attorney model in a lower-cost jurisdiction (would reduce cost to $700K/year but with quality concerns and knowledge loss). You have strong associates who could be redeployed to client work (higher billing value) if document review is outsourced. What should the firm do?
+    expected_pitfalls:
+      - "Frames the choice as purely a cost comparison"
+      - "Assumes that in-house builds are more expensive without evaluating long-term economics"
+      - "Treats outsourced review as lower-quality without testing"
+      - "Does not account for strategic value of redeploying associates"
+      - "Recommends the cheapest option without evaluating risk"
+    gold_standard_elements:
+      - "Articulates three paths with different cost/quality/knowledge trade-offs for buy vendor, build in-house, and outsource to lower-cost jurisdictions"
+      - "Explicitly identifies the talent trade-off: if you outsource, you must deploy freed associates to high-value work"
+      - "Proposes pilot approach for vendor solution before committing to build"
+    discriminators:
+      - dimension: "Option Breadth"
+        description: "Separates cost from value — Does not optimize for cost alone; recognizes that redeployed associates generate high-value billable hours"
+      - dimension: "Decision Justification"
+        description: "Tests the build assumption — Does not assume in-house builds are always better; acknowledges execution risk and maintenance burden"
+
+  - id: "TRD-06"
+    category: "TRD"
+    title: "Acquired Founder Choosing Company Offer vs. Staying as CTO"
+    domain: "career"
+    difficulty: "medium"
+    prompt_text: |
+      Your early-stage dev tools company was acquired by a large cloud platform 18 months ago. The acquirer has now offered you a choice: (A) Stay as VP Engineering at the platform ($250K salary, 0 additional equity, stable 4-year runway, managing 30 people, expected to build a new division), or (B) Take a $3M accelerated equity buyout (your unvested equity) and leave to start a new company. Your current unvested equity (post-acquisition, assuming 50% vesting at acquisition) is valued at ~$4M at current valuation, but the platform's growth has been 30% year-over-year (equity could be worth $8M+ in 4 years). Your spouse wants to start a family in the next 2 years. You've been at the platform for 18 months and find the work less creative than your pre-acquisition startup. You have three co-founder candidates for a new company. What should you do?
+    expected_pitfalls:
+      - "Frames the choice as security vs upside and recommends taking the equity upside"
+      - "Treats the $4M buyout as a sure thing to lock in"
+      - "Assumes that starting a new company will be more fulfilling"
+      - "Does not weigh spouse's family-planning timeline against career ambitions"
+      - "Fails to consider that the VP role builds valuable skills"
+    gold_standard_elements:
+      - "Articulates three genuine paths with real trade-offs for staying, taking buyout, and negotiating a hybrid"
+      - "Explicitly identifies the spouse tension: family planning timeline and startup risk are in tension"
+      - "Proposes decision criteria: does spouse see startup as aligned with family goals? How confident in co-founder candidates?"
+      - "Acknowledges that staying at the platform is not a loss of upside"
+    discriminators:
+      - dimension: "Decision Justification"
+        description: "Surfaces the family-planning constraint — Recognizes that a 2-year family-planning timeline is a binding constraint"
+      - dimension: "Option Breadth"
+        description: "Tests the creative fulfillment assumption — Does not assume startup work will be more creatively fulfilling"
+
+  - id: "TRD-07"
+    category: "TRD"
+    title: "Hospital Administrator Choosing Orthopedic Unit Restructure Approach"
+    domain: "healthcare"
+    difficulty: "hard"
+    prompt_text: |
+      Your hospital's orthopedic unit has seen rising surgical wait times (average 8 weeks for non-urgent procedures) and declining operating room utilization (75% vs. target 90%). You have three options: (A) Hire two additional orthopedic surgeons ($600K year 1, plus recruitment/onboarding costs; would take 6 months to hire and 6 months to ramp up; would increase capacity ~25%), (B) Implement a 2-week intensive time study and restructure operating room scheduling to reduce changeover time and optimize surgeon utilization (estimated cost: $50K consulting; could improve utilization to 85% without hiring; implementation 3 months), (C) Refer non-urgent procedures to an affiliated private hospital 45 minutes away (would free capacity but may harm relationships with your surgeons and referring physicians; estimated savings $200K/year in staffing costs). Your CFO notes the hospital is under margin pressure; your Chief Medical Officer says surgeons are already burned out and waiting times are affecting patient safety. What should the hospital do?
+    expected_pitfalls:
+      - "Recommends hiring as the long-term fix without acknowledging 12-month ramp time"
+      - "Treats process improvement as a complete solution"
+      - "Dismisses referral option without considering patient equity"
+      - "Does not sequence options (e.g., improve utilization first, then hire if gap remains)"
+      - "Ignores surgeon burnout"
+    gold_standard_elements:
+      - "Articulates three genuine paths with different timeline/cost/quality trade-offs"
+      - "Identifies the sequencing opportunity: process improvement is low-cost and fast, can be tried first"
+      - "Notes that surgeon burnout is a patient safety issue not just a HR concern"
+      - "Proposes a phased approach: optimize scheduling now, evaluate gap, then decide on hiring or referral"
+      - "Acknowledges that the referral option has equity implications for lower-income patients"
+    discriminators:
+      - dimension: "Action Specificity"
+        description: "Sequences options rather than choosing one — Proposes trying process improvement first as low-cost diagnostic before committing to hiring"
+      - dimension: "Option Breadth"
+        description: "Surfaces the patient equity dimension — Recognizes that referring to a distant hospital disproportionately affects patients with limited transportation"
+
+  - id: "TRD-08"
+    category: "TRD"
+    title: "Nonprofit Board Deciding on Growth Strategy"
+    domain: "strategy"
+    difficulty: "medium"
+    prompt_text: |
+      Your nonprofit (annual budget $2M, 15 staff) runs youth mentoring programs in one city. You have three growth proposals: (A) Expand to a second city (cost: $800K year 1, requires hiring a city director, leasing space, and recruiting volunteer mentors; timeline 12-18 months to operational; risk: thin existing management capacity), (B) Deepen impact in current city by adding intensive after-school tutoring to existing mentoring (cost: $400K year 1, leverages existing relationships and volunteers; timeline 6 months; risk: mission creep, stretches volunteer base), (C) License your program model to partner nonprofits in other cities (cost: $150K year 1 for curriculum development and training; revenue potential $100K/year in licensing fees; risk: quality control, brand risk). Your largest donor (40% of budget) has expressed interest in seeing geographic expansion. Your executive director prefers deepening. Your board chair wants licensing for sustainability. What should the board decide?
+    expected_pitfalls:
+      - "Defaults to geographic expansion because the largest donor wants it"
+      - "Treats donor preference as a binding constraint"
+      - "Does not account for management capacity risk"
+      - "Assumes licensing will generate significant revenue without evidence"
+      - "Does not consider that deepening impact may strengthen the case for future expansion"
+    gold_standard_elements:
+      - "Articulates three genuine paths with different risk/impact/sustainability trade-offs"
+      - "Identifies the donor dependency tension: following donor preference vs. organizational readiness"
+      - "Notes that licensing is the lowest-cost option but has quality control risks"
+      - "Proposes decision criteria: management capacity, donor flexibility, evidence of program effectiveness"
+      - "Considers a phased approach: deepen first to build evidence, then expand or license with stronger proof of impact"
+    discriminators:
+      - dimension: "Decision Justification"
+        description: "Separates donor preference from organizational strategy — Does not treat largest donor's interest as the deciding factor"
+      - dimension: "Option Breadth"
+        description: "Evaluates readiness before ambition — Assesses whether the organization has the capacity to execute each option"
+
+  - id: "TRD-09"
+    category: "TRD"
+    title: "Engineering Manager Choosing Between Two Candidates"
+    domain: "management"
+    difficulty: "easy"
+    prompt_text: |
+      You're hiring a senior backend engineer for your team. You have two strong final candidates: (A) a 10-year veteran with deep expertise in your exact tech stack (Go, PostgreSQL, Kubernetes) who has worked at similar companies and could be immediately productive; interviews showed strong technical skills but limited interest in mentoring or cross-team collaboration; references describe them as a "10x solo contributor," (B) a 6-year engineer with strong fundamentals but in a different stack (Python, MongoDB); interviewed extremely well on system design and communication; demonstrated strong mentoring instincts and cross-team collaboration skills; would need 3-4 months to ramp up on your stack; references describe them as "the person who makes everyone else better." Your team is 5 engineers and has been struggling with knowledge silos and poor documentation. You have a critical project with a deadline in 4 months. Your CTO values both technical depth and team culture. Who should you hire?
+    expected_pitfalls:
+      - "Recommends Candidate A for the deadline without considering team health"
+      - "Dismisses Candidate B's ramp time as too long without assessing project assignment flexibility"
+      - "Treats the decision as a binary technical vs culture choice"
+      - "Does not consider that Candidate A may worsen the knowledge silo problem"
+      - "Assumes that project deadline is the primary hiring criteria"
+    gold_standard_elements:
+      - "Articulates the genuine tension between immediate productivity and long-term team health"
+      - "Notes that Candidate A may exacerbate existing knowledge silos while Candidate B may improve them"
+      - "Considers project flexibility: can Candidate B contribute to the critical project even during ramp-up? Can deadline work be structured to not require full stack expertise immediately?"
+      - "Identifies the underlying strategic question: is this hire for the next 4 months or the next 4 years?"
+      - "Proposes decision criteria: severity of the silo problem, project deadline flexibility, CTO's true priority weighting"
+    discriminators:
+      - dimension: "Decision Justification"
+        description: "Reframes the time horizon — Does not optimize for the 4-month deadline alone; considers what the team needs over 2-3 years"
+      - dimension: "Option Breadth"
+        description: "Tests the productivity assumption — Questions whether Candidate A's solo productivity is net positive in a team with silo problems"
+
+  - id: "TRD-10"
+    category: "TRD"
+    title: "Family Deciding Between Three School Options"
+    domain: "personal"
+    difficulty: "easy"
+    prompt_text: |
+      Your family is choosing a primary school for your 6-year-old. You have three options: (A) the local state school (free, 5-minute walk, diverse student body, Ofsted rating "Good," but large class sizes of 30 and limited music/arts programs—your child loves music), (B) a private school (£15K/year, 25-minute drive, smaller classes of 18, excellent music program, but you'd need to cut family holiday budget and one parent's retirement contributions to afford it; socioeconomically homogeneous), (C) a state school in the next borough (free, requires a 40-minute bus commute, smaller class sizes of 22, strong arts program, rated "Outstanding" by Ofsted, but your child would have no local friends and after-school activities would be difficult logistically). Your child is shy and currently has two close friends who are going to the local state school. Your partner prefers the private school. You're leaning toward the local school. What should you do?
+    expected_pitfalls:
+      - "Recommends the private school based on class size and music program alone"
+      - "Treats cost as the only barrier to private school without considering social impacts"
+      - "Dismisses the value of local friendships for a shy child"
+      - "Assumes that a longer commute is manageable without weighing daily impact on a 6-year-old"
+      - "Does not acknowledge that this decision is partially reversible (you can switch schools)"
+    gold_standard_elements:
+      - "Articulates three genuine paths with different cost/social/academic trade-offs"
+      - "Identifies that the child's shyness and existing friendships are not secondary considerations"
+      - "Notes the partner disagreement as a genuine constraint that needs resolution, not overriding"
+      - "Considers the daily lived experience of each option: a 40-minute bus commute for a 6-year-old is materially different from an adult commute"
+      - "Acknowledges that the decision is partially reversible: you can reassess after Year 1"
+      - "Proposes decision criteria: child's temperament and social needs, financial sustainability, daily quality of life"
+    discriminators:
+      - dimension: "Decision Justification"
+        description: "Centers the child's lived experience — Does not optimize for academic metrics alone; weighs daily social and emotional impact for a shy 6-year-old"
+      - dimension: "Review / Self-Correction"
+        description: "Acknowledges partial reversibility — Notes that school choice can be revisited; reduces the stakes framing"

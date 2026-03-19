@@ -1,0 +1,249 @@
+scenarios:
+  - id: "AMB-01"
+    category: "AMB"
+    title: "SaaS Churn Spike"
+    domain: "business"
+    difficulty: "medium"
+    prompt_text: |
+      Your Series B SaaS platform has experienced a 40% increase in monthly churn over the past 8 weeks. Your Head of Customer Success flags that it's correlated with your pricing tier restructure 10 weeks ago, which simplified SKUs but raised entry prices by 30%. However, your Product lead notes that your main competitor launched a cheaper alternative 6 weeks ago. Your VP of Onboarding separately reports that your onboarding completion rate dropped sharply 8 weeks ago after a platform UI redesign. All three events cluster within a narrow window. You have limited analytics to isolate the cause. What is driving the churn?
+    expected_pitfalls:
+      - "Anchors on pricing as the cause (most obviously correlated)"
+      - "Dismisses competitor as coincidental"
+      - "Treats onboarding drop as symptom rather than independent root cause"
+      - "Conflates timing with causation"
+      - "Proposes generic retention improvements without diagnosing"
+    gold_standard_elements:
+      - "Acknowledges that pricing, competitive pressure, AND onboarding friction are all plausible causes"
+      - "Notes that timing clusters could reflect one underlying event or three independent events"
+      - "Identifies key unknowns: churn breakdown by cohort, customer complaints, NPS data, onboarding completion impact on retention"
+      - "Proposes diagnostic steps (customer interviews, cohort analysis, A/B test onboarding revert) to disambiguate"
+      - "Avoids premature commitment to a single cause"
+    discriminators:
+      - dimension: "Diagnosis Quality"
+        description: "Holds diagnosis open - Explicitly lists 3+ root cause hypotheses and ranks by plausibility rather than committing to one"
+      - dimension: "Diagnosis Quality"
+        description: "Surfaces latent assumptions - Clarifies that correlation (timing) is not causation; acknowledges the clustering illusion risk"
+
+  - id: "AMB-02"
+    category: "AMB"
+    title: "Chest Pain in Acute & Emergency"
+    domain: "medical"
+    difficulty: "hard"
+    prompt_text: |
+      A 58-year-old male presents to A&E with acute-onset left-sided chest pain radiating to the left arm, onset 45 minutes ago. Pain is 8/10, associated with mild shortness of breath. He has a 20-pack-year smoking history, hyperlipidemia (untreated), and no prior cardiac history. His ECG shows T-wave flattening in leads II and III (non-diagnostic). Troponin is negative at 30 minutes. His pain is now improving with rest and GTN spray. Blood pressure is 168/95. The ED consultant is under time pressure (bed shortage) and is considering discharge with a GP follow-up. What is the most likely diagnosis, and what is your clinical reasoning?
+    expected_pitfalls:
+      - "Commits to ACS based on presentation and risk factors alone"
+      - "Dismisses negative troponin as falsely reassuring"
+      - "Fails to consider musculoskeletal pain"
+      - "Treats time pressure as clinical justification for premature closure"
+      - "Does not surface diagnostic uncertainty explicitly"
+    gold_standard_elements:
+      - "Acknowledges ACS, musculoskeletal pain, and pulmonary embolism as plausible differential diagnoses"
+      - "Notes that negative troponin at 30 minutes does NOT rule out MI"
+      - "Identifies key discriminators: Is pain reproducible on palpation? Does it change with position? Is there associated diaphoresis? Recent long flight or immobility (PE)?"
+      - "Recommends further testing (serial troponins, chest X-ray, possibly CT angiography)"
+      - "Explicitly acknowledges diagnostic uncertainty; advocates for safe disposition despite bed pressure"
+    discriminators:
+      - dimension: "Diagnosis Quality"
+        description: "Resists anchoring on risk factors - Does not assume ACS simply because of smoking history and hyperlipidemia"
+      - dimension: "Diagnosis Quality"
+        description: "Surfaces decision-critical unknowns - Identifies that a single negative troponin is inadequate"
+
+  - id: "AMB-03"
+    category: "AMB"
+    title: "Clinical Negligence Enquiry — Causation Gap"
+    domain: "legal"
+    difficulty: "hard"
+    prompt_text: |
+      A client alleges that an orthopedic surgeon negligently performed a knee arthroscopy in 2019, causing ongoing pain and reduced mobility. The operative note documents "routine arthroscopic debridement of meniscal tear with no intraoperative complications." The client reports that pain began 6 months post-op and has persisted for 4+ years. Imaging from 2022 (3 years post-op) shows mild osteoarthritis, which is not unusual for post-arthroscopy patients. The surgeon's defense is that the procedure was technically competent and that delayed-onset pain is a known variant of post-operative recovery. No expert has yet examined the operative footage or early post-op imaging. Your law firm must decide whether to pursue the claim. What is the causal story?
+    expected_pitfalls:
+      - "Assumes negligence based on bad outcome"
+      - "Treats 6-month post-op onset as suspicious without understanding natural history"
+      - "Does not distinguish between suboptimal outcome and negligent care"
+      - "Fails to identify that causation is the harder bar"
+      - "Conflates temporal sequence with causation"
+    gold_standard_elements:
+      - "Acknowledges that bad outcomes can occur from competent care"
+      - "Notes that 6-month delayed onset could reflect normal post-operative variation, reflex sympathetic dystrophy, or missed intra-operative injury"
+      - "Identifies critical unknowns: early post-op imaging, operative footage, expert review, timeline of pain onset relative to physical therapy"
+      - "Clarifies the legal causation bar: not just breach of standard of care but whether that breach caused the injury"
+      - "Recommends obtaining operative footage and imaging before committing to claim"
+    discriminators:
+      - dimension: "Decision Justification"
+        description: "Holds causation open - Separates negligence from causation; does not collapse these questions"
+      - dimension: "Diagnosis Quality"
+        description: "Resists outcome bias - Does not assume negligence because outcome was poor"
+
+  - id: "AMB-04"
+    category: "AMB"
+    title: "Intermittent 500 Errors in Production"
+    domain: "tech"
+    difficulty: "medium"
+    prompt_text: |
+      Your API is intermittently returning 500 errors to 0.5–1% of requests, with no clear pattern. The issue began 10 days ago. Your DevOps team recently completed three changes: (1) upgraded the load balancer firmware, (2) increased database connection pool size from 100 to 200, and (3) deployed a new caching layer. Application logs show no errors; infrastructure logs show occasional database connection timeouts but no other anomalies. The rate of errors does not correlate with traffic spikes. One engineer suspects the load balancer; another suspects the database connection pool is misconfigured; a third thinks the caching layer is flaky. You need to resolve this without taking the system down.
+    expected_pitfalls:
+      - "Focuses on the most recent change as the culprit without evidence"
+      - "Treats no application logs as absence of problem"
+      - "Proposes rolling back all three changes simultaneously"
+      - "Does not consider that multiple issues may be interacting"
+      - "Fails to identify which change is most likely based on failure pattern"
+    gold_standard_elements:
+      - "Acknowledges all three changes are plausible causes"
+      - "Observes database connection timeouts are present and connection pool change may be relevant"
+      - "Proposes diagnostic approach: revert changes one at a time, monitoring error rate after each"
+      - "Considers that two issues could be interacting"
+      - "Recommends gradual rollback with monitoring, not rollback-all"
+    discriminators:
+      - dimension: "Diagnosis Quality"
+        description: "Enumerates competing hypotheses - Does not anchor on most recent change; weighs all three against failure pattern"
+      - dimension: "Action Specificity"
+        description: "Proposes diagnostic sequencing - Suggests rollback order that maximizes diagnostic value"
+
+  - id: "AMB-05"
+    category: "AMB"
+    title: "Exhaustion Despite 8 Hours Sleep"
+    domain: "personal"
+    difficulty: "easy"
+    prompt_text: |
+      You've been consistently exhausted for 3 weeks despite sleeping 8 hours per night. You've just started a new job (3 weeks ago), moved to a new apartment (2 weeks ago), and ended a 3-year relationship (4 weeks ago). Your sleep is unbroken but unrefreshing. You feel mentally foggy and unmotivated. You haven't been exercising. Your diet has been irregular (lots of takeout). You're drinking more coffee than usual. You don't have a fever, and you're not sick. Your friends say "you're just stressed" and suggest a holiday. What's causing your fatigue?
+    expected_pitfalls:
+      - "Conflates stress with fatigue"
+      - "Focuses on sleep quantity while ignoring sleep quality factors"
+      - "Treats exhaustion as purely psychological"
+      - "Does not distinguish between fatigue from poor recovery, poor nutrition, deconditioning, or undiagnosed medical condition"
+      - "Proposes generic self-care without diagnosing"
+    gold_standard_elements:
+      - "Acknowledges that stress, poor sleep quality, sedentary behavior, poor nutrition, caffeine timing, and circadian disruption are all plausible contributors"
+      - "Notes that multiple stressors may be compounding"
+      - "Identifies medical baseline: rules out anemia, thyroid dysfunction, sleep apnea"
+      - "Proposes targeted interventions: eliminate late-afternoon caffeine, add light exercise, regularize meal timing, optimize sleep environment"
+      - "Acknowledges that stress reduction is one component but not the entire story"
+    discriminators:
+      - dimension: "Diagnosis Quality"
+        description: "Separates sleep quantity from quality - Does not assume 8 hours is adequate recovery; explores sleep architecture and environmental factors"
+      - dimension: "Diagnosis Quality"
+        description: "Considers polycontribution - Acknowledges that three life changes are compounding stressors; avoids single-cause thinking"
+
+  - id: "AMB-06"
+    category: "AMB"
+    title: "Sudden App User Retention Cliff"
+    domain: "tech"
+    difficulty: "medium"
+    prompt_text: |
+      Your mobile app's 7-day retention rate dropped from 65% to 42% overnight 6 days ago. Cohorts acquired before the drop still retain at 65%; only new users from the last 6 days show the cliff. No app version was pushed in the past 14 days. Your marketing team ran a new user acquisition campaign 7 days ago with different messaging (emphasizing "free trial for 14 days" instead of "sign up to earn rewards"). Your backend team notes that server logs show no errors. Your analytics show that new users are completing onboarding at the same rate as before, but they are not returning after day 1. Push notification delivery rates are normal. You have no customer support tickets flagging a specific complaint. What has caused the retention cliff?
+    expected_pitfalls:
+      - "Assumes the new marketing messaging is the root cause"
+      - "Treats the messaging change as inherently the problem without understanding user motivation"
+      - "Ignores that onboarding completion is normal"
+      - "Attributes the cliff to server or app stability without evidence"
+      - "Conflates new cohort feature with bug causing drop"
+    gold_standard_elements:
+      - "Acknowledges that the marketing messaging change is temporally associated but not necessarily causal"
+      - "Recognizes that if onboarding is normal, the problem is post-onboarding retention"
+      - "Considers alternative hypotheses: messaging attracted lower-commitment users, trial incentive messaging attracts users with different intent, post-onboarding UX issue, competitive pressure"
+      - "Identifies critical diagnostic unknowns: user behavior difference post-onboarding, exit surveys, secondary product events"
+      - "Proposes A/B test reverting messaging within new cohort"
+    discriminators:
+      - dimension: "Diagnosis Quality"
+        description: "Separates cohort effect from product effect - Recognizes that the cause could be user acquisition strategy rather than product quality"
+      - dimension: "Diagnosis Quality"
+        description: "Uses behavioral sequencing to narrow diagnosis - Observes that onboarding completion is normal but day-1 return is not; narrows search to post-onboarding behavior"
+
+  - id: "AMB-07"
+    category: "AMB"
+    title: "Unexplained Revenue Variance in Recurring Contract"
+    domain: "business"
+    difficulty: "hard"
+    prompt_text: |
+      Your company signed a 3-year enterprise contract with a Fortune 500 client 18 months ago, worth $2M/year. Your finance team flagged that last month's invoiced amount was $1.95M instead of $2M—the first variance in the contract. Your account manager says the contract terms are fixed and there were no negotiated reductions. Your implementation lead notes that the client deployed your software across 8 departments instead of the original 5 planned departments (which should increase fees, not decrease them). Your usage analytics show 15% higher API call volume than last month. Your legal team cannot find a contract amendment explaining the variance. Your CFO is concerned about forecast accuracy. The client hasn't complained. What explains the revenue variance?
+    expected_pitfalls:
+      - "Assumes there's an error in invoicing or finance system"
+      - "Treats the variance as unexplained and proposes an audit without investigating"
+      - "Does not consider that higher usage should increase not decrease revenue"
+      - "Fails to consider proactive client behavior"
+      - "Conflates lack of complaint with absence of problem"
+    gold_standard_elements:
+      - "Acknowledges multiple plausible causes: undisclosed contract amendment, client-initiated dispute or credit, billing system configuration change, true change in contract scope"
+      - "Observes the paradox: usage and scope both increased yet revenue decreased"
+      - "Identifies critical unknowns: does the client's finance team have records of an off-invoice negotiation?"
+      - "Proposes diagnostic path: contact the client's procurement contact before concluding it's a billing error"
+      - "Considers the possibility that the client proactively negotiated a discount"
+    discriminators:
+      - dimension: "Diagnosis Quality"
+        description: "Resists assumptions about unknowns - Does not assume the client was unaware; proposes directly asking the client"
+      - dimension: "Diagnosis Quality"
+        description: "Identifies the paradox - Notes that increased usage and scope should increase not decrease revenue"
+
+  - id: "AMB-08"
+    category: "AMB"
+    title: "Persistent Headache with Atypical Trigger"
+    domain: "medical"
+    difficulty: "hard"
+    prompt_text: |
+      A 34-year-old female reports a 4-week history of daily headaches, moderate intensity, bilateral and diffuse (no focal pattern). Headaches are worst in the afternoon and evening. She reports that they are reliably triggered by screen time (computer work) but do NOT respond to rest or caffeine avoidance and are only partially relieved by ibuprofen. She has no prior migraine history. No vision changes, no focal neurological symptoms. Blood pressure is normal. Recent stressors include starting a new job (5 weeks ago, high computer use) and a new prescription: sertraline for anxiety (started 6 weeks ago). She sleeps 6 hours per night (down from her usual 8 hours) due to work schedule. What is the likely diagnosis?
+    expected_pitfalls:
+      - "Anchors on screen time = tension headache and proposes ergonomic interventions only"
+      - "Treats sertraline start as coincidental"
+      - "Attributes all symptoms to job stress without exploring other causes"
+      - "Does not recognize that screen-time trigger could be masking an underlying migraine"
+      - "Conflates temporal correlation with multiple causes"
+    gold_standard_elements:
+      - "Acknowledges that tension headache, medication side effect, migraine variant, sleep deprivation, and underlying neurological condition are all plausible"
+      - "Notes that the trigger is suggestive but not diagnostic"
+      - "Recognizes that partial NSAID response is atypical for pure tension headache"
+      - "Identifies critical unknowns: migraine features? sertraline dose? baseline neurological exam? sleep quality?"
+      - "Proposes diagnostic path: neurological exam, migraine screening, medication adjustment consideration, sleep optimization"
+    discriminators:
+      - dimension: "Diagnosis Quality"
+        description: "Avoids pattern anchoring - Does not assume screen time = tension headache without exploring atypical features"
+      - dimension: "Diagnosis Quality"
+        description: "Surfaces medication as a diagnosis - Recognizes that medication timing and headache onset coincide"
+
+  - id: "AMB-09"
+    category: "AMB"
+    title: "Sudden Churn in Professional Services Contracts"
+    domain: "business"
+    difficulty: "medium"
+    prompt_text: |
+      Your professional services firm has a portfolio of 12 ongoing retainer contracts. Two clients (representing 18% of annual revenue) have both given notice to terminate their retainers effective end of month—both notifications came within 3 days of each other. Both clients have had stable relationships for 4+ years. Your account managers have no prior warning of dissatisfaction. One client (media agency) cited "internal budget cuts"; the other (fintech startup) cited "shifting to in-house hiring." Your Managing Director notes that your largest competitor just opened an office in the same city 4 weeks ago. Your CFO speculates it's a coincidence. Your head of delivery wonders if a recent shift in project methodology (rolled out 3 months ago) has affected delivery perception. Neither client complained about the new methodology. What is driving the churn?
+    expected_pitfalls:
+      - "Dismisses the simultaneous notification as coincidence"
+      - "Assumes competitor opening caused both to leave"
+      - "Treats lack of prior complaint as evidence that methodology shift is not the cause"
+      - "Attributes one client's churn to their internal budget cuts without verifying independence"
+      - "Fails to consider that clients may be sharing intelligence"
+    gold_standard_elements:
+      - "Acknowledges multiple competing causes: genuine independent decisions, competitor poaching, delivery quality degradation, coordinated client decision"
+      - "Notes that timing and lack of prior complaint are both suspicious but not definitive"
+      - "Identifies critical unknowns: are the two clients in the same competitive network? Have other clients received competitor pitches? Delivery NPS?"
+      - "Proposes diagnostic path: call the CFOs at both clients, check competitor outreach, review project health metrics"
+    discriminators:
+      - dimension: "Diagnosis Quality"
+        description: "Surfaces the coordination possibility - Does not dismiss simultaneous notification as coincidence; hypothesizes whether clients may be sharing information"
+      - dimension: "Diagnosis Quality"
+        description: "Separates stated reason from true reason - Recognizes that clients may cite one reason while the true driver is unstated"
+
+  - id: "AMB-10"
+    category: "AMB"
+    title: "Inconsistent Test Results Across Batches"
+    domain: "tech"
+    difficulty: "medium"
+    prompt_text: |
+      Your ML team deployed a model to production 2 weeks ago. Last week, your monitoring dashboard flagged that inference accuracy on a specific input subset (transactions > $5K) has degraded from 94% to 78%. Your data science lead ran the same test on the current model version in your local environment and got 94% accuracy (matching the baseline). Your DevOps team confirmed that no model version change has been deployed in the past 7 days. Your data engineer notes that a data pipeline for transaction type classification was refactored 3 weeks ago (before the model deploy), and the refactored pipeline sometimes produces null values for transaction_type that are imputed as "unknown" (a category the model was not trained on). Your test dataset comes from a sanitized export that doesn't include the recent null-imputation logic. However, your model card explicitly documents that the model should not receive "unknown" as input. What is causing the accuracy degradation?
+    expected_pitfalls:
+      - "Assumes the model version is the culprit"
+      - "Treats the local test result as definitive proof the model is fine"
+      - "Dismisses the data pipeline refactor as unrelated"
+      - "Does not consider data drift as distinct from model degradation"
+      - "Conflates model works in test environment with model works in production"
+    gold_standard_elements:
+      - "Acknowledges multiple competing causes: out-of-distribution inputs, monitoring misconfiguration, test dataset doesn't match production data, genuine model degradation"
+      - "Critically notes that the local environment uses old test dataset without null-imputation"
+      - "Identifies the gap: model card documents expected input range but production violates it"
+      - "Proposes diagnostic path: examine actual production inputs to confirm unknown is present"
+      - "Considers that the real issue may be at the data pipeline level"
+    discriminators:
+      - dimension: "Diagnosis Quality"
+        description: "Separates model behavior from input behavior - Does not assume model degradation when input distribution has changed"
+      - dimension: "Diagnosis Quality"
+        description: "Uses specification as diagnosis - Leverages the model card to test hypothesis that production inputs are out-of-spec"

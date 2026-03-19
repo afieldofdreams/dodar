@@ -1,0 +1,45 @@
+[project]
+name = "dodar-benchmark"
+version = "0.1.0"
+description = "DODAR reasoning framework validation benchmark"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.0",
+    "pydantic-settings>=2.0",
+    "pyyaml>=6.0",
+    "tiktoken>=0.7",
+    "anthropic>=0.40",
+    "openai>=1.50",
+    "google-genai>=1.0",
+    "click>=8.1",
+    "python-dotenv>=1.0",
+    "websockets>=12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+    "httpx>=0.27",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+dodar = "dodar.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["dodar"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
