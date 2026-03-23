@@ -29,15 +29,26 @@ class Settings(BaseSettings):
 
     # Models
     anthropic_model: str = "claude-3-haiku-20240307"
-    openai_model: str = "gpt-4o"
+    openai_model: str = "gpt-5.4"
     google_model: str = "gemini-2.0-flash"
     autoscore_model: str = "claude-3-haiku-20240307"  # Model used for auto-scoring
 
     # Pricing (per 1M tokens)
     model_pricing: dict[str, dict[str, float]] = {
+        "claude-opus-4-6": {"input": 15.0, "output": 75.0},
         "claude-sonnet-4-5": {"input": 3.0, "output": 15.0},
+        "claude-haiku-4-5": {"input": 0.80, "output": 4.0},
+        "gpt-5.4": {"input": 2.5, "output": 10.0},
         "gpt-4o": {"input": 2.5, "output": 10.0},
+        "gpt-4o-mini": {"input": 0.15, "output": 0.60},
+        "gpt-4.1-mini": {"input": 0.40, "output": 1.60},
+        "gpt-4.1-nano": {"input": 0.10, "output": 0.40},
         "gemini-2.0-flash": {"input": 0.10, "output": 0.40},
+        "qwen2.5:32b": {"input": 0.0, "output": 0.0},
+        "qwen2.5:14b": {"input": 0.0, "output": 0.0},
+        "qwen2.5:7b": {"input": 0.0, "output": 0.0},
+        "llama3.1:8b": {"input": 0.0, "output": 0.0},
+        "phi3:3.8b": {"input": 0.0, "output": 0.0},
     }
 
     model_config = {
@@ -65,9 +76,20 @@ def get_settings() -> Settings:
 
 # Canonical model identifiers
 MODEL_IDS = {
+    "claude-opus-4-6": "claude-opus-4-6",
     "claude-sonnet-4-5": "claude-sonnet-4-5",
+    "claude-haiku-4-5": "claude-haiku-4-5",
+    "gpt-5.4": "gpt-5.4",
     "gpt-4o": "gpt-4o",
+    "gpt-4o-mini": "gpt-4o-mini",
+    "gpt-4.1-mini": "gpt-4.1-mini",
+    "gpt-4.1-nano": "gpt-4.1-nano",
     "gemini-2.0-flash": "gemini-2.0-flash",
+    "qwen2.5:32b": "qwen2.5:32b",
+    "qwen2.5:14b": "qwen2.5:14b",
+    "qwen2.5:7b": "qwen2.5:7b",
+    "llama3.1:8b": "llama3.1:8b",
+    "phi3:3.8b": "phi3:3.8b",
 }
 
 CONDITION_IDS = ["zero_shot", "cot", "length_matched", "dodar"]

@@ -5,10 +5,15 @@ export function fetchSessions(): Promise<ScoringSessionSummary[]> {
   return get<ScoringSessionSummary[]>("/scoring/sessions");
 }
 
+export function fetchScorerModels(): Promise<{ models: Record<string, string> }> {
+  return get("/scoring/scorer-models");
+}
+
 export function createSession(config: {
   scorer: string;
   run_id: string;
   auto_score?: boolean;
+  scorer_model?: string;
 }): Promise<{ session_id: string; run_id: string; total_items: number; scorer: string; auto_score: boolean }> {
   return post("/scoring/sessions", config);
 }

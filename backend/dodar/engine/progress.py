@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from enum import Enum
 from typing import Any, Callable
 
@@ -29,7 +30,10 @@ class ProgressEvent:
     summary: dict[str, Any] | None = None
 
     def to_dict(self) -> dict[str, Any]:
-        d: dict[str, Any] = {"type": self.type.value}
+        d: dict[str, Any] = {
+            "type": self.type.value,
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+        }
         if self.scenario_id:
             d["scenario_id"] = self.scenario_id
         if self.model:

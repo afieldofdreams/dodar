@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { fetchSessions, createSession, fetchNextItem, submitScore, revealSession, retrySession, stopSession, deleteSession } from "../api/scoring";
+import { fetchSessions, fetchScorerModels, createSession, fetchNextItem, submitScore, revealSession, retrySession, stopSession, deleteSession } from "../api/scoring";
 import { fetchRuns } from "../api/runs";
 import type { DimensionScore, BlindItem } from "../types";
 
@@ -18,12 +18,19 @@ function SessionList({ onSelectSession }: { onSelectSession: (id: string) => voi
   const [scorer, setScorer] = useState("");
   const [selectedRunId, setSelectedRunId] = useState("");
   const [autoScore, setAutoScore] = useState(true);
+  const [scorerModel, setScorerModel] = useState("claude-opus-4-6");
   const queryClient = useQueryClient();
 
   const { data: runs = [] } = useQuery({
     queryKey: ["runs"],
     queryFn: fetchRuns,
   });
+
+  const { data: scorerModelsData } = useQuery({
+    queryKey: ["scorer-models"],
+    queryFn: fetchScorerModels,
+  });
+  const scorerModels = scorerModelsData?.models || {};
 
   const completedRuns = runs.filter((r) => r.status === "completed");
 
@@ -34,7 +41,7 @@ function SessionList({ onSelectSession }: { onSelectSession: (id: string) => voi
   });
 
   const createMutation = useMutation({
-    mutationFn: () => createSession({ scorer, run_id: selectedRunId, auto_score: autoScore }),
+    mutationFn: () => createSession({ scorer, run_id: selectedRunId, auto_score: autoScore, scorer_model: scorerModel }),
     onSuccess: (data) => {
       queryClient.invalidateQueries({ queryKey: ["scoring-sessions"] });
       if (!data.auto_score) {
@@ -92,32 +99,44 @@ function SessionList({ onSelectSession }: { onSelectSession: (id: string) => voi
             {createMutation.isPending
               ? "Creating..."
               : autoScore
-              ? "Auto-Score with Opus"
+              ? `Auto-Score with ${scorerModels[scorerModel] || scorerModel}`
               : "Create Manual Session"}
           </button>
         </div>
-        <label
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "0.5rem",
-            marginTop: "0.75rem",
-            fontSize: "0.85rem",
-            cursor: "pointer",
-          }}
-        >
-          <input
-            type="checkbox"
-            checked={autoScore}
-            onChange={(e) => setAutoScore(e.target.checked)}
-          />
-          <span>
-            Auto-score using Claude Opus 4.6
-            <span style={{ color: "#888", marginLeft: 4 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginTop: "0.75rem", flexWrap: "wrap" }}>
+          <label
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              fontSize: "0.85rem",
+              cursor: "pointer",
+            }}
+          >
+            <input
+              type="checkbox"
+              checked={autoScore}
+              onChange={(e) => setAutoScore(e.target.checked)}
+            />
+            <span>Auto-score</span>
+          </label>
+          {autoScore && (
+            <select
+              value={scorerModel}
+              onChange={(e) => setScorerModel(e.target.value)}
+              style={{ padding: "0.4rem 0.6rem", borderRadius: 6, border: "1px solid #d0d0d0", fontSize: "0.85rem" }}
+            >
+              {Object.entries(scorerModels).map(([id, label]) => (
+                <option key={id} value={id}>{label}</option>
+              ))}
+            </select>
+          )}
+          {autoScore && (
+            <span style={{ color: "#888", fontSize: "0.8rem" }}>
               (uses scenario rubrics as evaluation criteria)
             </span>
-          </span>
-        </label>
+          )}
+        </div>
         {createMutation.isError && (
           <p style={{ color: "#f44336", margin: "0.5rem 0 0", fontSize: "0.85rem" }}>
             {(createMutation.error as Error).message}

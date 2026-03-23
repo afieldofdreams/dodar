@@ -35,7 +35,10 @@ async def run_progress_ws(websocket: WebSocket, run_id: str):
             # Wait for events with a timeout to allow checking for client messages
             try:
                 event = await asyncio.wait_for(queue.get(), timeout=1.0)
-                await websocket.send_json(event.to_dict())
+                try:
+                    await websocket.send_json(event.to_dict())
+                except (RuntimeError, WebSocketDisconnect):
+                    break
                 if event.type.value in ("run_complete", "run_error"):
                     break
             except asyncio.TimeoutError:
@@ -50,7 +53,7 @@ async def run_progress_ws(websocket: WebSocket, run_id: str):
                         break
                 except (asyncio.TimeoutError, Exception):
                     pass
-    except WebSocketDisconnect:
+    except (WebSocketDisconnect, RuntimeError):
         pass
     finally:
         tracker.remove_listener(on_event)

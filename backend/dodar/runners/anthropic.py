@@ -11,10 +11,10 @@ from dodar.runners.base import ModelResponse, ModelRunner
 class AnthropicRunner(ModelRunner):
     model_id = "claude-sonnet-4-5"
 
-    def __init__(self) -> None:
+    def __init__(self, model_override: str | None = None) -> None:
         settings = get_settings()
         self._client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
-        self._model = settings.anthropic_model
+        self._model = model_override or settings.anthropic_model
 
     async def _call_api(self, prompt: str) -> ModelResponse:
         start = time.monotonic()

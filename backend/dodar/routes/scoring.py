@@ -15,10 +15,18 @@ from dodar.storage.scores import load_all_sessions, load_session, save_session, 
 router = APIRouter(tags=["scoring"])
 
 
+SCORER_MODELS = {
+    "claude-opus-4-6": "Claude Opus 4.6",
+    "gpt-5.4": "GPT-5.4",
+    "gpt-4o": "GPT-4o",
+}
+
+
 class CreateSessionRequest(BaseModel):
     scorer: str
     run_id: str  # which benchmark run to score
     auto_score: bool = False
+    scorer_model: str = "claude-opus-4-6"  # which model to use for auto-scoring
 
 
 class SubmitScoreRequest(BaseModel):
@@ -27,8 +35,9 @@ class SubmitScoreRequest(BaseModel):
 
 @router.post("/scoring/sessions")
 async def create_session(req: CreateSessionRequest, request: Request) -> dict:
+    scorer_label = SCORER_MODELS.get(req.scorer_model, req.scorer_model)
     session = create_scoring_session(
-        scorer=req.scorer if not req.auto_score else f"opus-4.6-auto ({req.scorer})",
+        scorer=req.scorer if not req.auto_score else f"{scorer_label}-auto ({req.scorer})",
         run_id=req.run_id,
     )
     save_session(session)
@@ -36,13 +45,18 @@ async def create_session(req: CreateSessionRequest, request: Request) -> dict:
     if req.auto_score:
         import asyncio
 
+        cancel_event = asyncio.Event()
+
         async def run_autoscore():
-            await autoscore_session(session, concurrency=3)
+            await autoscore_session(session, concurrency=3, cancel_event=cancel_event, scorer_model=req.scorer_model)
 
         task = asyncio.create_task(run_autoscore())
         if not hasattr(request.app.state, "autoscore_tasks"):
             request.app.state.autoscore_tasks = {}
+        if not hasattr(request.app.state, "autoscore_cancels"):
+            request.app.state.autoscore_cancels = {}
         request.app.state.autoscore_tasks[session.session_id] = task
+        request.app.state.autoscore_cancels[session.session_id] = cancel_event
 
     return {
         "session_id": session.session_id,
@@ -51,6 +65,11 @@ async def create_session(req: CreateSessionRequest, request: Request) -> dict:
         "scorer": session.scorer,
         "auto_score": req.auto_score,
     }
+
+
+@router.get("/scoring/scorer-models")
+async def get_scorer_models() -> dict:
+    return {"models": SCORER_MODELS}
 
 
 @router.get("/scoring/sessions")
@@ -153,13 +172,18 @@ async def retry_session(session_id: str, request: Request) -> dict:
 
     import asyncio
 
+    cancel_event = asyncio.Event()
+
     async def run_retry():
-        await autoscore_session(session, concurrency=3)
+        await autoscore_session(session, concurrency=3, cancel_event=cancel_event)
 
     task = asyncio.create_task(run_retry())
     if not hasattr(request.app.state, "autoscore_tasks"):
         request.app.state.autoscore_tasks = {}
+    if not hasattr(request.app.state, "autoscore_cancels"):
+        request.app.state.autoscore_cancels = {}
     request.app.state.autoscore_tasks[session_id] = task
+    request.app.state.autoscore_cancels[session_id] = cancel_event
 
     return {"status": "retrying", "unscored": unscored, "total": len(session.items)}
 
@@ -167,6 +191,14 @@ async def retry_session(session_id: str, request: Request) -> dict:
 @router.post("/scoring/sessions/{session_id}/stop")
 async def stop_session(session_id: str, request: Request) -> dict:
     """Cancel a running auto-score task."""
+    # Signal cancellation via event so pending items are skipped
+    cancels = getattr(request.app.state, "autoscore_cancels", {})
+    cancel_event = cancels.get(session_id)
+    if cancel_event:
+        cancel_event.set()
+        cancels.pop(session_id, None)
+
+    # Also cancel the task itself for any in-flight API calls
     tasks = getattr(request.app.state, "autoscore_tasks", {})
     task = tasks.get(session_id)
     if task and not task.done():
@@ -180,7 +212,13 @@ async def stop_session(session_id: str, request: Request) -> dict:
 @router.delete("/scoring/sessions/{session_id}")
 async def delete_session_endpoint(session_id: str, request: Request) -> dict:
     """Stop and delete a scoring session."""
-    # Stop task if running
+    # Signal cancellation
+    cancels = getattr(request.app.state, "autoscore_cancels", {})
+    cancel_event = cancels.pop(session_id, None)
+    if cancel_event:
+        cancel_event.set()
+
+    # Cancel task
     tasks = getattr(request.app.state, "autoscore_tasks", {})
     task = tasks.get(session_id)
     if task and not task.done():

@@ -8,6 +8,7 @@ import re
 from datetime import datetime, timezone
 
 import anthropic
+import openai
 
 from dodar.config import SCORING_DIMENSIONS, get_settings
 from dodar.models.scoring import DimensionScore, ScoreCard, ScoringSession
@@ -115,22 +116,99 @@ Now score this response on all 6 dimensions. Return ONLY the JSON."""
 
 
 def _parse_scores(raw_text: str) -> dict[str, dict]:
-    """Parse the JSON scores from the model response, handling markdown code blocks."""
+    """Parse the JSON scores from the model response, with fallback for malformed JSON."""
     text = raw_text.strip()
+
     # Strip markdown code fences if present
     if text.startswith("```"):
         text = re.sub(r"^```(?:json)?\s*\n?", "", text)
         text = re.sub(r"\n?```\s*$", "", text)
-    return json.loads(text)
+
+    # Try strict parse first
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+
+    # Extract the JSON object if surrounded by other text
+    match = re.search(r"\{[\s\S]*\}", text)
+    if match:
+        candidate = match.group(0)
+        try:
+            return json.loads(candidate)
+        except json.JSONDecodeError:
+            pass
+
+        # Fix trailing commas before closing braces/brackets
+        fixed = re.sub(r",\s*([}\]])", r"\1", candidate)
+        try:
+            return json.loads(fixed)
+        except json.JSONDecodeError:
+            pass
+
+    # Last resort: regex extraction of scores
+    result = {}
+    for dim in SCORING_DIMENSIONS:
+        pattern = re.escape(dim) + r'["\s:]*\{[^}]*?"score"["\s:]*(\d)'
+        m = re.search(pattern, text)
+        if m:
+            result[dim] = {"score": int(m.group(1)), "rationale": "parsed from malformed response"}
+    if result:
+        return result
+
+    raise ValueError(f"Could not parse scores from response: {text[:200]}...")
+
+
+async def _call_anthropic(prompt: str, model: str) -> str:
+    settings = get_settings()
+    client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
+    response = await client.messages.create(
+        model=model,
+        max_tokens=2048,
+        system=AUTOSCORE_SYSTEM_PROMPT,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    raw = ""
+    for block in response.content:
+        if block.type == "text":
+            raw += block.text
+    return raw
+
+
+async def _call_openai(prompt: str, model: str) -> str:
+    settings = get_settings()
+    client = openai.AsyncOpenAI(api_key=settings.openai_api_key)
+    use_completion_tokens = any(
+        model.startswith(p) for p in ("gpt-5", "o1", "o3", "o4")
+    )
+    token_param = (
+        {"max_completion_tokens": 2048}
+        if use_completion_tokens
+        else {"max_tokens": 2048}
+    )
+    response = await client.chat.completions.create(
+        model=model,
+        **token_param,
+        messages=[
+            {"role": "system", "content": AUTOSCORE_SYSTEM_PROMPT},
+            {"role": "user", "content": prompt},
+        ],
+    )
+    return response.choices[0].message.content or ""
+
+
+def _is_openai_model(model: str) -> bool:
+    return model.startswith(("gpt-", "o1", "o3", "o4"))
 
 
 async def autoscore_item(
     scenario_id: str,
     response_text: str,
     scenario_prompt: str,
+    scorer_model: str | None = None,
 ) -> list[DimensionScore]:
-    """Score a single response using Claude Opus 4.6."""
-    settings = get_settings()
+    """Score a single response using the configured auto-score model."""
+    model = scorer_model or _get_autoscore_model()
 
     scenario = get_scenario_by_id(scenario_id)
     if not scenario:
@@ -144,18 +222,10 @@ async def autoscore_item(
         discriminators=[d.model_dump() for d in scenario.discriminators],
     )
 
-    client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
-    response = await client.messages.create(
-        model=_get_autoscore_model(),
-        max_tokens=2048,
-        system=AUTOSCORE_SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": prompt}],
-    )
-
-    raw = ""
-    for block in response.content:
-        if block.type == "text":
-            raw += block.text
+    if _is_openai_model(model):
+        raw = await _call_openai(prompt, model)
+    else:
+        raw = await _call_anthropic(prompt, model)
 
     parsed = _parse_scores(raw)
 
@@ -177,6 +247,8 @@ async def autoscore_session(
     session: ScoringSession,
     concurrency: int = 3,
     on_progress: callable | None = None,
+    cancel_event: asyncio.Event | None = None,
+    scorer_model: str | None = None,
 ) -> ScoringSession:
     """Auto-score all unscored items in a session using Claude Opus 4.6."""
     semaphore = asyncio.Semaphore(concurrency)
@@ -186,6 +258,10 @@ async def autoscore_session(
     async def score_one(item_id: str) -> None:
         nonlocal completed
 
+        # Check for cancellation before starting
+        if cancel_event and cancel_event.is_set():
+            return
+
         item = next((i for i in session.items if i.item_id == item_id), None)
         if not item:
             completed += 1
@@ -194,10 +270,8 @@ async def autoscore_session(
             return
 
         # Try versioned run_id first, then fall back to unversioned
-        run_id_candidates = [item.run_result_file.replace(".json", "")]
-        result = load_result(run_id_candidates[0])
+        result = load_result(item.run_result_file.replace(".json", ""))
         if not result:
-            # Try without version suffix
             fallback_id = f"{item.scenario_id}_{item.model}_{item.condition}"
             result = load_result(fallback_id)
         if not result:
@@ -208,11 +282,16 @@ async def autoscore_session(
             return
 
         async with semaphore:
+            # Check again after acquiring semaphore (may have waited)
+            if cancel_event and cancel_event.is_set():
+                return
+
             try:
                 scores = await autoscore_item(
                     scenario_id=item.scenario_id,
                     response_text=result.response_text,
                     scenario_prompt=result.prompt_sent,
+                    scorer_model=scorer_model,
                 )
 
                 session.scores[item_id] = ScoreCard(
@@ -228,6 +307,9 @@ async def autoscore_session(
                 if on_progress:
                     on_progress(completed, total)
 
+            except asyncio.CancelledError:
+                print(f"Cancelled scoring {item.scenario_id}/{item.model}/{item.condition}")
+                raise
             except Exception as e:
                 print(f"Error scoring {item.scenario_id}/{item.model}/{item.condition}: {e}")
                 completed += 1
@@ -237,6 +319,6 @@ async def autoscore_session(
     # Score all unscored items
     unscored = [item_id for item_id in session.order if item_id not in session.scores]
     tasks = [score_one(item_id) for item_id in unscored]
-    await asyncio.gather(*tasks)
+    await asyncio.gather(*tasks, return_exceptions=True)
 
     return session

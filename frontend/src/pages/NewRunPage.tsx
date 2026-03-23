@@ -12,6 +12,7 @@ export default function NewRunPage() {
   const [selectedScenarioIds, setSelectedScenarioIds] = useState<string[]>([]);
   const [selectedModels, setSelectedModels] = useState<string[]>([...MODELS]);
   const [selectedConditions, setSelectedConditions] = useState<string[]>([...CONDITIONS]);
+  const [skipCompleted, setSkipCompleted] = useState(true);
   const [estimates, setEstimates] = useState<CostEstimate[] | null>(null);
 
   const { data: scenarios = [] } = useQuery({
@@ -35,6 +36,7 @@ export default function NewRunPage() {
         scenario_ids: selectedScenarioIds.length > 0 ? selectedScenarioIds : undefined,
         models: selectedModels,
         conditions: selectedConditions,
+        skip_completed: skipCompleted,
       }),
     onSuccess: (data) => navigate(`/runs/${data.run_id}`),
   });
@@ -109,6 +111,17 @@ export default function NewRunPage() {
             {c.replace(/_/g, " ")}
           </label>
         ))}
+      </Section>
+
+      <Section title="Options">
+        <label style={{ display: "block", fontSize: "0.9rem" }}>
+          <input
+            type="checkbox"
+            checked={skipCompleted}
+            onChange={() => setSkipCompleted(!skipCompleted)}
+          />{" "}
+          Skip already completed items (resume interrupted runs)
+        </label>
       </Section>
 
       <div style={{ display: "flex", gap: "1rem", marginTop: "1.5rem" }}>

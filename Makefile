@@ -9,7 +9,7 @@ dev:  ## Run both backend and frontend in parallel (Ctrl+C kills both)
 	wait
 
 dev-backend:  ## Run FastAPI backend
-	cd backend && $(CURDIR)/$(VENV)/uvicorn dodar.main:app --reload --host 0.0.0.0 --port 8000
+	cd backend && $(CURDIR)/$(VENV)/uvicorn dodar.main:app --reload --host 0.0.0.0 --port 8001
 
 dev-frontend:  ## Run Vite frontend
 	cd frontend && npm run dev

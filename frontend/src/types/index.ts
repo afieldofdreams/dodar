@@ -119,6 +119,12 @@ export interface ProgressEvent {
   };
 }
 
-export const MODELS = ["claude-sonnet-4-5", "gpt-4o", "gemini-2.0-flash"] as const;
+export const MODELS = [
+  "claude-opus-4-6", "claude-sonnet-4-5", "claude-haiku-4-5",
+  "gpt-5.4", "gpt-4o", "gpt-4o-mini", "gpt-4.1-mini", "gpt-4.1-nano",
+  "gemini-2.0-flash",
+  "qwen2.5:32b", "qwen2.5:14b", "qwen2.5:7b",
+  "llama3.1:8b", "phi3:3.8b",
+] as const;
 export const CONDITIONS = ["zero_shot", "cot", "length_matched", "dodar"] as const;
 export const CATEGORIES = ["AMB", "TRD", "IRR", "ETH", "MUL", "CAS", "TIM"] as const;

@@ -26,7 +26,13 @@ async def execute_benchmark(
 ) -> RunSummary:
     """Execute a full benchmark run across scenarios × models × conditions."""
     settings = get_settings()
-    semaphore = asyncio.Semaphore(settings.default_concurrency)
+
+    # Local models (Ollama) serialize internally — use concurrency 1 to avoid timeouts
+    LOCAL_PREFIXES = ("qwen", "llama", "phi", "mistral", "gemma", "codellama")
+    has_local = any(m.startswith(LOCAL_PREFIXES) for m in config.models)
+    has_cloud = any(not m.startswith(LOCAL_PREFIXES) for m in config.models)
+    concurrency = 1 if has_local and not has_cloud else settings.default_concurrency
+    semaphore = asyncio.Semaphore(concurrency)
 
     # Tag config with current prompt version
     config.prompt_version = PROMPT_VERSION
@@ -104,6 +110,12 @@ async def execute_benchmark(
             completed += 1
             total_cost += cost
             total_tokens += response.input_tokens + response.output_tokens
+
+            # Update summary incrementally so progress survives crashes
+            summary.completed_items = completed
+            summary.total_cost_usd = round(total_cost, 4)
+            summary.total_tokens = total_tokens
+            save_run_summary(summary)
 
             if tracker:
                 tracker.emit(
