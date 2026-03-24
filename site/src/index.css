@@ -586,6 +586,21 @@ code {
   color: var(--text-heading);
 }
 
+.powered-by {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.powered-by a {
+  color: var(--text-light);
+  text-decoration: underline;
+}
+
+.powered-by a:hover {
+  color: var(--text-heading);
+}
+
 .footer-links {
   display: flex;
   gap: 1.5rem;

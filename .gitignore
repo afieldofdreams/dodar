@@ -26,6 +26,9 @@ env/
 backend/data/runs/
 backend/data/scores/
 
+# Digital Ocean deployment
+.do/
+
 # Node
 node_modules/
 frontend/dist/
