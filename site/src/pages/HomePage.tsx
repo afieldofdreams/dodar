@@ -126,6 +126,47 @@ result.review.failure_modes       # Self-critique`}</code></pre>
           </div>
         </div>
       </section>
+
+      <section className="section section-alt">
+        <div className="container">
+          <div className="section-header">
+            <h2>Help expand the research</h2>
+            <p>
+              The current benchmark covers 10 scenarios across 8 models. The findings are
+              promising but the sample is small. We need help making them robust.
+            </p>
+          </div>
+          <div className="card-grid">
+            <div className="card">
+              <h3>Write new scenarios</h3>
+              <p>
+                We need more scenarios across healthcare, finance, legal, engineering,
+                and other domains to test generalisability. Each scenario needs pitfalls,
+                gold standards, and DODAR discriminators.
+              </p>
+            </div>
+            <div className="card">
+              <h3>Benchmark local models</h3>
+              <p>
+                Run the benchmark on open-source models via Ollama — Llama, Mistral, Qwen,
+                Phi, Gemma, DeepSeek. The harness supports any Ollama model out of the box.
+              </p>
+            </div>
+            <div className="card">
+              <h3>Add human evaluation</h3>
+              <p>
+                All scoring is currently automated. If you have domain expertise, score
+                responses manually through the scoring UI to create a human baseline.
+              </p>
+            </div>
+          </div>
+          <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
+            <a href="https://github.com/afieldofdreams/dodar/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              Contributing guide
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

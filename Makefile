@@ -1,6 +1,6 @@
-VENV := backend/.venv/bin
+VENV := .venv/bin
 
-.PHONY: dev dev-backend dev-frontend install install-backend install-frontend stop
+.PHONY: dev dev-backend dev-frontend dev-site install install-backend install-frontend stop build-site
 
 dev:  ## Run both backend and frontend in parallel (Ctrl+C kills both)
 	trap 'kill 0' INT TERM; \
@@ -14,6 +14,9 @@ dev-backend:  ## Run FastAPI backend
 dev-frontend:  ## Run Vite frontend
 	cd frontend && npm run dev
 
+dev-site:  ## Run static site dev server
+	cd site && npm run dev -- --port 5174
+
 stop:  ## Kill any lingering dev servers
 	-pkill -f "uvicorn dodar.main:app" 2>/dev/null
 	-pkill -f "vite" 2>/dev/null
@@ -21,7 +24,13 @@ stop:  ## Kill any lingering dev servers
 install: install-backend install-frontend  ## Install all dependencies
 
 install-backend:  ## Create venv and install Python backend dependencies
-	cd backend && python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
+	python3 -m venv .venv && .venv/bin/pip install -e "backend/[dev]" build twine
 
 install-frontend:  ## Install frontend dependencies
 	cd frontend && npm install
+
+build-site:  ## Build static site for deployment
+	cd site && npm run build
+
+publish-sdk:  ## Build and publish SDK to PyPI
+	cd sdk && $(CURDIR)/$(VENV)/python -m build && $(CURDIR)/$(VENV)/python -m twine upload dist/*
