@@ -1,0 +1,192 @@
+{
+  "table2": {
+    "GPT-4.1 Nano": {
+      "tier": "Nano",
+      "zero_shot": 2.89,
+      "cot": 2.79,
+      "dodar": 3.97,
+      "pipeline": 4.08,
+      "length_matched": 3.54
+    },
+    "GPT-4o Mini": {
+      "tier": "Small",
+      "zero_shot": 2.76,
+      "cot": 2.47,
+      "dodar": 3.48,
+      "pipeline": 3.67,
+      "length_matched": 2.97
+    },
+    "GPT-4.1 Mini": {
+      "tier": "Small",
+      "zero_shot": 3.35,
+      "cot": 3.34,
+      "dodar": 4.63,
+      "pipeline": 4.8,
+      "length_matched": 4.28
+    },
+    "Haiku 4.5": {
+      "tier": "Small",
+      "zero_shot": 3.82,
+      "cot": 3.8,
+      "dodar": 4.41,
+      "pipeline": 4.62,
+      "length_matched": 4.61
+    },
+    "GPT-4o": {
+      "tier": "Mid",
+      "zero_shot": 3.42,
+      "cot": 3.53,
+      "dodar": 3.98,
+      "pipeline": 4.09,
+      "length_matched": 3.58
+    },
+    "Sonnet 4.5": {
+      "tier": "Mid-Frontier",
+      "zero_shot": 4.26,
+      "cot": 4.05,
+      "dodar": 4.64,
+      "pipeline": 4.75,
+      "length_matched": 4.87
+    },
+    "GPT-5.4": {
+      "tier": "Frontier",
+      "zero_shot": 4.45,
+      "cot": 4.47,
+      "dodar": 1.85,
+      "pipeline": 4.8,
+      "length_matched": 3.03
+    },
+    "Opus 4.6": {
+      "tier": "Frontier",
+      "zero_shot": 4.62,
+      "cot": 4.53,
+      "dodar": 4.66,
+      "pipeline": 4.87,
+      "length_matched": 4.78
+    }
+  },
+  "pipeline_lift": {
+    "GPT-4.1 Nano": {
+      "Diagnosis Quality": 0.9,
+      "Option Breadth": 0.9,
+      "Decision Justification": 0.4,
+      "Action Specificity": 1.9,
+      "Review / Self-Correction": 2.6,
+      "Overall Trustworthiness": 0.6
+    },
+    "GPT-4o Mini": {
+      "Diagnosis Quality": 0.9,
+      "Option Breadth": 0.6,
+      "Decision Justification": 0.2,
+      "Action Specificity": 1.1,
+      "Review / Self-Correction": 2.4,
+      "Overall Trustworthiness": 0.3
+    },
+    "GPT-4.1 Mini": {
+      "Diagnosis Quality": 1.2,
+      "Option Breadth": 1.5,
+      "Decision Justification": 0.8,
+      "Action Specificity": 1.8,
+      "Review / Self-Correction": 2.4,
+      "Overall Trustworthiness": 1.1
+    },
+    "Haiku 4.5": {
+      "Diagnosis Quality": 0.9,
+      "Option Breadth": 1.5,
+      "Decision Justification": -0.2,
+      "Action Specificity": 0.5,
+      "Review / Self-Correction": 1.6,
+      "Overall Trustworthiness": 0.4
+    },
+    "GPT-4o": {
+      "Diagnosis Quality": 0.7,
+      "Option Breadth": 0.8,
+      "Decision Justification": -0.4,
+      "Action Specificity": 1.0,
+      "Review / Self-Correction": 1.8,
+      "Overall Trustworthiness": 0.1
+    },
+    "Sonnet 4.5": {
+      "Diagnosis Quality": 0.8,
+      "Option Breadth": 1.1,
+      "Decision Justification": -0.1,
+      "Action Specificity": 0.1,
+      "Review / Self-Correction": 0.9,
+      "Overall Trustworthiness": 0.1
+    },
+    "GPT-5.4": {
+      "Diagnosis Quality": 0.5,
+      "Option Breadth": 0.9,
+      "Decision Justification": -0.2,
+      "Action Specificity": 0.1,
+      "Review / Self-Correction": 0.7,
+      "Overall Trustworthiness": 0.1
+    },
+    "Opus 4.6": {
+      "Diagnosis Quality": 0.3,
+      "Option Breadth": 0.7,
+      "Decision Justification": -0.1,
+      "Action Specificity": 0.0,
+      "Review / Self-Correction": 0.5,
+      "Overall Trustworthiness": 0.0
+    }
+  },
+  "cost_data": [
+    {
+      "model": "GPT-4.1 Nano",
+      "quality": 4.08,
+      "pct_opus": 88,
+      "cost_per_query": 0.0024,
+      "vs_opus": "98% cheaper",
+      "latency_s": 39
+    },
+    {
+      "model": "GPT-4.1 Mini",
+      "quality": 4.8,
+      "pct_opus": 104,
+      "cost_per_query": 0.0155,
+      "vs_opus": "89% cheaper",
+      "latency_s": 102
+    },
+    {
+      "model": "Haiku 4.5",
+      "quality": 4.62,
+      "pct_opus": 100,
+      "cost_per_query": 0.103,
+      "vs_opus": "28% cheaper",
+      "latency_s": 227
+    },
+    {
+      "model": "GPT-4o",
+      "quality": 4.09,
+      "pct_opus": 89,
+      "cost_per_query": 0.0504,
+      "vs_opus": "65% cheaper",
+      "latency_s": 48
+    },
+    {
+      "model": "Opus 4.6 (zero-shot)",
+      "quality": 4.62,
+      "pct_opus": 100,
+      "cost_per_query": 0.1424,
+      "vs_opus": "baseline",
+      "latency_s": 47
+    }
+  ],
+  "cot_lift": {
+    "GPT-4.1 Nano": -0.1,
+    "GPT-4o Mini": -0.29,
+    "GPT-4.1 Mini": -0.01,
+    "Haiku 4.5": -0.02,
+    "GPT-4o": 0.12,
+    "Sonnet 4.5": -0.21,
+    "GPT-5.4": 0.02,
+    "Opus 4.6": -0.09
+  },
+  "inter_rater": {
+    "exact_agreement": 0.705,
+    "within_one_point": 0.997,
+    "mean_abs_diff": 0.3,
+    "signed_diff": 0.08
+  }
+}
