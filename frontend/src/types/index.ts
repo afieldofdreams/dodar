@@ -126,5 +126,5 @@ export const MODELS = [
   "qwen2.5:32b", "qwen2.5:14b", "qwen2.5:7b",
   "llama3.1:8b", "phi3:3.8b",
 ] as const;
-export const CONDITIONS = ["zero_shot", "cot", "length_matched", "dodar"] as const;
+export const CONDITIONS = ["zero_shot", "cot", "length_matched", "dodar", "dodar_pipeline"] as const;
 export const CATEGORIES = ["AMB", "TRD", "IRR", "ETH", "MUL", "CAS", "TIM"] as const;

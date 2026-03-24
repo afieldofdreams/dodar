@@ -25,6 +25,9 @@ def build_prompt(scenario: Scenario, condition: str) -> str:
             return _build_length_matched(scenario)
         case "dodar":
             return DODAR_TEMPLATE.format(prompt_text=scenario.prompt_text)
+        case "dodar_pipeline":
+            # Handled directly by the executor via DODARPipeline
+            return scenario.prompt_text
         case _:
             raise ValueError(f"Unknown condition: {condition}")
 

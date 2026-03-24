@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import AppShell from "./components/layout/AppShell";
+import PlaygroundPage from "./pages/PlaygroundPage";
+import DocsPage from "./pages/DocsPage";
 import DashboardPage from "./pages/DashboardPage";
 import ScenariosPage from "./pages/ScenariosPage";
 import ScenarioDetailPage from "./pages/ScenarioDetailPage";
@@ -20,7 +22,11 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<AppShell />}>
-            <Route path="/" element={<DashboardPage />} />
+            {/* Framework */}
+            <Route path="/" element={<PlaygroundPage />} />
+            <Route path="/docs" element={<DocsPage />} />
+            {/* Benchmark */}
+            <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/scenarios" element={<ScenariosPage />} />
             <Route path="/scenarios/:id" element={<ScenarioDetailPage />} />
             <Route path="/runs" element={<RunsPage />} />

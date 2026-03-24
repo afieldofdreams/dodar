@@ -28,10 +28,10 @@ class Settings(BaseSettings):
     max_retries: int = 3
 
     # Models
-    anthropic_model: str = "claude-3-haiku-20240307"
-    openai_model: str = "gpt-5.4"
+    anthropic_model: str = "claude-sonnet-4-5"
+    openai_model: str = "gpt-4o"
     google_model: str = "gemini-2.0-flash"
-    autoscore_model: str = "claude-3-haiku-20240307"  # Model used for auto-scoring
+    autoscore_model: str = "claude-opus-4-6"  # Model used for auto-scoring
 
     # Pricing (per 1M tokens)
     model_pricing: dict[str, dict[str, float]] = {
@@ -92,7 +92,7 @@ MODEL_IDS = {
     "phi3:3.8b": "phi3:3.8b",
 }
 
-CONDITION_IDS = ["zero_shot", "cot", "length_matched", "dodar"]
+CONDITION_IDS = ["zero_shot", "cot", "length_matched", "dodar", "dodar_pipeline"]
 
 SCORING_DIMENSIONS = [
     "Diagnosis Quality",

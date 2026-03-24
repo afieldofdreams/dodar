@@ -10,6 +10,7 @@ from dodar.config import get_settings
 from dodar.engine.progress import EventType, ProgressEvent, ProgressTracker
 from dodar.models.run import RunConfig, RunItemProgress, RunStatus, RunSummary
 from dodar.models.scenario import Scenario
+from dodar.agents import DODARPipeline
 from dodar.prompts.builder import build_prompt
 from dodar.prompts.templates import PROMPT_VERSION
 from dodar.runners.base import ModelRunner
@@ -80,36 +81,59 @@ async def execute_benchmark(
             )
 
         try:
-            async with semaphore:
-                runner = get_runner(model)
-                prompt = build_prompt(scenario, condition)
-                response = await runner.run(prompt)
+            if condition == "dodar_pipeline":
+                # Multi-agent pipeline — 5 sequential calls
+                async with semaphore:
+                    pipeline = DODARPipeline(model=model)
+                    pipeline_result = await pipeline.run(scenario.prompt_text)
 
-            # Compute cost
-            pricing = settings.model_pricing.get(model, {"input": 0, "output": 0})
-            cost = (response.input_tokens / 1_000_000 * pricing["input"]) + (
-                response.output_tokens / 1_000_000 * pricing["output"]
-            )
+                result = RunResult(
+                    run_id=rid,
+                    scenario_id=scenario.id,
+                    model=model,
+                    condition=condition,
+                    prompt_version=PROMPT_VERSION,
+                    timestamp=datetime.now(timezone.utc),
+                    prompt_sent="[multi-agent pipeline — 5 sequential calls]",
+                    response_text=pipeline_result.text,
+                    input_tokens=pipeline_result.total_input_tokens,
+                    output_tokens=pipeline_result.total_output_tokens,
+                    latency_seconds=round(pipeline_result.total_latency_seconds, 2),
+                    cost_usd=pipeline_result.total_cost_usd,
+                )
+                cost = pipeline_result.total_cost_usd
+                save_result(result)
+            else:
+                async with semaphore:
+                    runner = get_runner(model)
+                    prompt = build_prompt(scenario, condition)
+                    response = await runner.run(prompt)
 
-            result = RunResult(
-                run_id=rid,
-                scenario_id=scenario.id,
-                model=model,
-                condition=condition,
-                prompt_version=PROMPT_VERSION,
-                timestamp=datetime.now(timezone.utc),
-                prompt_sent=prompt,
-                response_text=response.text,
-                input_tokens=response.input_tokens,
-                output_tokens=response.output_tokens,
-                latency_seconds=round(response.latency_seconds, 2),
-                cost_usd=round(cost, 6),
-            )
-            save_result(result)
+                # Compute cost
+                pricing = settings.model_pricing.get(model, {"input": 0, "output": 0})
+                cost = (response.input_tokens / 1_000_000 * pricing["input"]) + (
+                    response.output_tokens / 1_000_000 * pricing["output"]
+                )
+
+                result = RunResult(
+                    run_id=rid,
+                    scenario_id=scenario.id,
+                    model=model,
+                    condition=condition,
+                    prompt_version=PROMPT_VERSION,
+                    timestamp=datetime.now(timezone.utc),
+                    prompt_sent=prompt,
+                    response_text=response.text,
+                    input_tokens=response.input_tokens,
+                    output_tokens=response.output_tokens,
+                    latency_seconds=round(response.latency_seconds, 2),
+                    cost_usd=round(cost, 6),
+                )
+                save_result(result)
 
             completed += 1
             total_cost += cost
-            total_tokens += response.input_tokens + response.output_tokens
+            total_tokens += result.input_tokens + result.output_tokens
 
             # Update summary incrementally so progress survives crashes
             summary.completed_items = completed
@@ -126,7 +150,7 @@ async def execute_benchmark(
                         condition=condition,
                         completed=completed,
                         total=total,
-                        tokens_used=response.input_tokens + response.output_tokens,
+                        tokens_used=result.input_tokens + result.output_tokens,
                         cost_usd=round(cost, 6),
                     )
                 )

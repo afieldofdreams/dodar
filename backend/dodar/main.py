@@ -10,7 +10,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
-from dodar.routes import scenarios, runs, scoring, reports, ws
+from dodar.routes import scenarios, runs, scoring, reports, ws, playground
 
 
 @asynccontextmanager
@@ -38,6 +38,7 @@ app.add_middleware(
 )
 
 # API routes
+app.include_router(playground.router, prefix="/api")
 app.include_router(scenarios.router, prefix="/api")
 app.include_router(runs.router, prefix="/api")
 app.include_router(scoring.router, prefix="/api")
