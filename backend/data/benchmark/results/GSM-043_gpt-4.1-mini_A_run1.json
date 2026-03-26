@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-043",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:26:26.506709Z",
+  "latency_seconds": 3.38,
+  "input_tokens": 99,
+  "output_tokens": 182,
+  "cost_usd": 0.000331,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Carly had 80 cards, 2/5 of the cards had the letter A on them, 1/2 of the remaining had the letter B, 5/8 of the rest had the letter C on them, and the others had the letter D. How many of the cards had the letter D on them?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Total cards = 80\n\nStep 1: Find the number of cards with the letter A.\n2/5 of 80 = (2/5) × 80 = 2 × 16 = 32 cards\n\nRemaining cards after A:\n80 - 32 = 48 cards\n\nStep 2: Find the number of cards with the letter B.\n1/2 of remaining (48) = (1/2) × 48 = 24 cards\n\nRemaining cards after B:\n48 - 24 = 24 cards\n\nStep 3: Find the number of cards with the letter C.\n5/8 of remaining (24) = (5/8) × 24 = 5 × 3 = 15 cards\n\nRemaining cards after C:\n24 - 15 = 9 cards\n\nThese remaining 9 cards have the letter D.\n\nFINAL ANSWER: 9",
+  "extracted_answer": "9",
+  "is_correct": true,
+  "correct_answer": "9",
+  "answer_type": "numeric_exact",
+  "question": "Carly had 80 cards, 2/5 of the cards had the letter A on them, 1/2 of the remaining had the letter B, 5/8 of the rest had the letter C on them, and the others had the letter D. How many of the cards had the letter D on them?",
+  "source": "GSM8K"
+}

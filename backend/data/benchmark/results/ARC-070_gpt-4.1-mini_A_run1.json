@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-070",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:27:31.606788Z",
+  "latency_seconds": 2.42,
+  "input_tokens": 76,
+  "output_tokens": 140,
+  "cost_usd": 0.000254,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Which change would be harmful to the habitat of a squirrel?\n\n  A: new plant growth\n  B: changing of the seasons\n  C: cutting down trees to build houses\n  D: planting pine seedlings\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option to see which would be harmful to the habitat of a squirrel:\n\nA: New plant growth – This generally provides more food and shelter, which would benefit squirrels.\n\nB: Changing of the seasons – Squirrels are adapted to seasonal changes, so this natural process is not harmful.\n\nC: Cutting down trees to build houses – Trees provide shelter and food sources for squirrels, so removing them destroys their habitat and is harmful.\n\nD: Planting pine seedlings – Planting trees, such as pine seedlings, would eventually provide habitat and food, so this is beneficial.\n\nTherefore, the harmful change to the habitat of a squirrel is cutting down trees to build houses.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Which change would be harmful to the habitat of a squirrel?",
+  "source": "ARC-Challenge"
+}

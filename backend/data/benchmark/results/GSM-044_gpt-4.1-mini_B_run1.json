@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-044",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:26:39.631646Z",
+  "latency_seconds": 3.13,
+  "input_tokens": 275,
+  "output_tokens": 139,
+  "cost_usd": 0.000332,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nNani is 8 years old. His brother is twice his age. Nani's sister is 25% younger than him. What is the total age of all three of the family members?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Nani's age is given as 8 years.\n\nStep 2: Nani's brother is twice his age.\nBrother's age = 2 × 8 = 16 years.\n\nStep 3: Nani's sister is 25% younger than Nani.\n25% of Nani's age = 0.25 × 8 = 2 years.\nSister's age = 8 - 2 = 6 years.\n\nStep 4: Total age of all three family members = Nani's age + Brother's age + Sister's age\n= 8 + 16 + 6 = 30 years.\n\nFINAL ANSWER: 30",
+  "extracted_answer": "30",
+  "is_correct": true,
+  "correct_answer": "30",
+  "answer_type": "numeric_exact",
+  "question": "Nani is 8 years old. His brother is twice his age. Nani's sister is 25% younger than him. What is the total age of all three of the family members?",
+  "source": "GSM8K"
+}

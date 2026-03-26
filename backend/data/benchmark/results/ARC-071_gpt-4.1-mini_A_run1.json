@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-071",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:22:25.501751Z",
+  "latency_seconds": 5.9,
+  "input_tokens": 82,
+  "output_tokens": 339,
+  "cost_usd": 0.000575,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A red giant star differs from main sequence stars because it\n\n  A: burns at a cooler temperature.\n  B: is always larger than other suns.\n  C: has greater density and gravity.\n  D: fuses hydrogen to make helium.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option based on what we know about red giant stars compared to main sequence stars:\n\nA: burns at a cooler temperature.\n- Red giants have cooler surface temperatures than main sequence stars like the Sun, which is why they appear red. This is true.\n\nB: is always larger than other suns.\n- Red giants are indeed much larger in radius than main sequence stars; their outer layers expand significantly. This is also true.\n\nC: has greater density and gravity.\n- Red giants are actually less dense on the surface because their outer layers are expanded. Their surface gravity is lower compared to main sequence stars. So this is false.\n\nD: fuses hydrogen to make helium.\n- Main sequence stars fuse hydrogen into helium in their cores. Red giants have exhausted hydrogen in their cores, and for a time, fuse hydrogen in a shell around the core; they also begin fusing helium in the core or will soon begin to do so. So this is only partially true, but not the best distinction.\n\nConsidering that the question asks how a red giant star differs from main sequence stars, and the main characteristic difference is that red giants have a cooler surface temperature but are larger in size, both A and B are correct in a way, but \"cooler temperature\" is a defining difference that causes the \"red\" color, which is a distinctive trait.\n\nBetween A and B, the better, more general answer is A, because not all red giants are larger than \"other suns\" (some stars are much larger even outside the red giant phase, e.g., supergiants), but red giants are specifically cooler in surface temperature than main sequence stars.\n\nTherefore,\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "A red giant star differs from main sequence stars because it",
+  "source": "ARC-Challenge"
+}

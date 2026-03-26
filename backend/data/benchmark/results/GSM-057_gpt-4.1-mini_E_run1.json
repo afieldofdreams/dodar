@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-057",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:21:14.670830Z",
+  "latency_seconds": 4.39,
+  "input_tokens": 232,
+  "output_tokens": 265,
+  "cost_usd": 0.000517,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nJoe has $50 to buy an outfit for his new field trip. There is a 30% off sale at the clothing store. The shirt he picks out has a price of $25. He also picks out a pair of shorts for $35. Assuming that sales tax is included, how much money will Joe have left after the purchase?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nWhen dealing with discounts and purchases, the key principles are:\n\n- A discount percentage (like 30%) reduces the original price by that percentage.\n- To find the price after discount, multiply the original price by (1 - discount rate).\n- The total cost is the sum of the discounted prices of all items.\n- To find the remaining money, subtract the total cost from the initial amount of money available.\n- Since the problem states sales tax is included, we don't need to add additional tax.\n\nStep 2 - REASON:  \n- Shirt original price: $25  \n- Shorts original price: $35  \n- Discount: 30% off means each item costs 70% of original price (100% - 30% = 70% = 0.7)  \n\nCalculate discounted prices:  \n- Shirt price after discount = 25 × 0.7 = $17.50  \n- Shorts price after discount = 35 × 0.7 = $24.50  \n\nCalculate total cost:  \n- Total = 17.50 + 24.50 = $42.00  \n\nCalculate money left after purchase:  \n- Joe starts with $50  \n- Remaining = 50 - 42 = $8\n\nFINAL ANSWER: 8",
+  "extracted_answer": "8",
+  "is_correct": true,
+  "correct_answer": "8",
+  "answer_type": "numeric_exact",
+  "question": "Joe has $50 to buy an outfit for his new field trip. There is a 30% off sale at the clothing store. The shirt he picks out has a price of $25. He also picks out a pair of shorts for $35. Assuming that sales tax is included, how much money will Joe have left after the purchase?",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-051",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:26:30.450080Z",
+  "latency_seconds": 3.79,
+  "input_tokens": 275,
+  "output_tokens": 224,
+  "cost_usd": 0.000468,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nAdrian's age is three times the age of Harriet, and Harriet is half the age of Zack. Calculate the average age of the three in three years if Harriet is 21 years old now.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Identify Harriet's current age.\nHarriet is 21 years old now.\n\nStep 2: Find Zack's current age.\nHarriet is half the age of Zack, so:\nHarriet = 1/2 * Zack\n21 = 1/2 * Zack\nZack = 21 * 2 = 42 years old.\n\nStep 3: Find Adrian's current age.\nAdrian's age is three times the age of Harriet, so:\nAdrian = 3 * Harriet = 3 * 21 = 63 years old.\n\nStep 4: Calculate each person's age in 3 years.\nAdrian in 3 years = 63 + 3 = 66\nHarriet in 3 years = 21 + 3 = 24\nZack in 3 years = 42 + 3 = 45\n\nStep 5: Calculate the average age of the three in 3 years.\nAverage age = (66 + 24 + 45) / 3 = 135 / 3 = 45\n\nFINAL ANSWER: 45",
+  "extracted_answer": "45",
+  "is_correct": true,
+  "correct_answer": "45",
+  "answer_type": "numeric_exact",
+  "question": "Adrian's age is three times the age of Harriet, and Harriet is half the age of Zack. Calculate the average age of the three in three years if Harriet is 21 years old now.",
+  "source": "GSM8K"
+}

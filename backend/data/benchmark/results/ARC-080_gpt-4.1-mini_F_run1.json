@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-080",
+  "condition": "F",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:20:44.133273Z",
+  "latency_seconds": 12.99,
+  "input_tokens": 277,
+  "output_tokens": 475,
+  "cost_usd": 0.000871,
+  "system_prompt_sent": "When answering this question, work through these five phases:\n\n1. REVIEW: Check your understanding of the problem. What is actually being asked? Are there errors in your initial reading? Identify at least one way you might misinterpret this question.\n\n2. ACTION: Begin working through the problem. Show your reasoning and calculations. Identify which parts of your work are certain and which are tentative.\n\n3. OPTIONS: Step back and generate at least three possible approaches or answers. For each option, identify the key trade-off or risk. Do not commit yet.\n\n4. DIAGNOSE: Now identify the core problem more precisely. What are the key constraints? What information is given and what is missing? What assumptions should you question?\n\n5. DECIDE: Select your final approach. State explicitly why you are choosing it and why you are rejecting each alternative. State your confidence level and what evidence would change your mind.",
+  "user_prompt_sent": "Follow the five phases (Review, Action, Options, Diagnose, Decide).\n\nWhich of the following will best display percentages of the eight most abundant elements in the Earth's crust?\n\n  A: line graph\n  B: pie chart\n  C: bar graph\n  D: data table\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "1. REVIEW:\nThe question is asking which type of visual representation (line graph, pie chart, bar graph, or data table) will best display the percentages of the eight most abundant elements in the Earth's crust. \nA possible misinterpretation might be confusing which element types of graphs best show parts of a whole, or mistaking a data table for a visual graph.\n\n2. ACTION:\n- The data consists of percentages for eight elements.\n- We want to visually represent percentages to clearly show the relative abundances.\n- A line graph is used to show trends over a continuous variable (e.g., time).\n- A pie chart represents parts of a whole, good for percentage breakdowns.\n- A bar graph can compare quantities side-by-side.\n- A data table just lists numbers, no visual comparison.\n\nCertain: Pie charts are commonly used to display percentages that make a whole 100%. Bar graphs also work to compare quantities but might be less intuitive for percentage parts of a whole. Line graphs are less appropriate, and tables don’t visually emphasize proportions well.\n\n3. OPTIONS:\nA: Line graph\n- Trade-off: Good for trends, but percentages of elements are static categories, not continuous data. Risk: misleading interpretation.\nB: Pie chart\n- Trade-off: Good at visually showing parts of a whole; each slice represents the percentage of each element.\n- Risk: With 8 categories, the chart might get busy, but still manageable.\nC: Bar graph\n- Trade-off: Can show percentages side by side; easier to compare exact values.\n- Risk: Less visually intuitive for parts of a whole compared to pie charts.\nD: Data table\n- Trade-off: Precise values shown.\n- Risk: No visual emphasis; harder to immediately perceive proportions.\n\n4. DIAGNOSE:\nGiven the data are percentages summing to 100% for eight elements, the goal is to visualize relative abundance clearly and intuitively.\n\nKey constraints:\n- Data type: categorical percentages adding to whole.\n- Number of categories: 8.\n\nQuestion:\n- Is exact value precision or visual proportional comparison more important?\n- Should visual simplicity be prioritized?\n- Is the audience likely to interpret complex charts?\n\nGiven these, a pie chart generally works best for part-whole percentage visualizing with manageable number of categories.\n\n5. DECIDE:\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": false,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following will best display percentages of the eight most abundant elements in the Earth's crust?",
+  "source": "ARC-Challenge"
+}

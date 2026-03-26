@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-047",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:37:58.590042Z",
+  "latency_seconds": 4.11,
+  "input_tokens": 292,
+  "output_tokens": 177,
+  "cost_usd": 0.0004,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nPam and Fred went to a carnival. Pam rode the roller coaster 2 times while Fred rode it 4 times. After that, each of them decided to ride the luge 2 times. If each ride cost 6 tickets, how many tickets did they use that day?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Determine how many rides Pam took.\n- Pam rode the roller coaster 2 times.\n- Pam rode the luge 2 times.\n- Total rides for Pam = 2 + 2 = 4 rides.\n\nStep 2: Determine how many rides Fred took.\n- Fred rode the roller coaster 4 times.\n- Fred rode the luge 2 times.\n- Total rides for Fred = 4 + 2 = 6 rides.\n\nStep 3: Find the total number of rides taken by both Pam and Fred.\n- Total rides = Pam's rides + Fred's rides = 4 + 6 = 10 rides.\n\nStep 4: Calculate the total number of tickets used.\n- Each ride costs 6 tickets.\n- Total tickets = 10 rides × 6 tickets/ride = 60 tickets.\n\nFINAL ANSWER: 60",
+  "extracted_answer": "60",
+  "is_correct": true,
+  "correct_answer": "60",
+  "answer_type": "numeric_exact",
+  "question": "Pam and Fred went to a carnival. Pam rode the roller coaster 2 times while Fred rode it 4 times. After that, each of them decided to ride the luge 2 times. If each ride cost 6 tickets, how many tickets did they use that day?",
+  "source": "GSM8K"
+}

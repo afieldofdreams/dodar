@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-056",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:38:11.223372Z",
+  "latency_seconds": 3.02,
+  "input_tokens": 233,
+  "output_tokens": 234,
+  "cost_usd": 0.000468,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nMark took a test yesterday that consisted of 75 questions. He completed the test at a rate of 5 questions per hour. Today, he took another test of 100 questions at the same rate. If Mark had 8 hours to complete the first test and 6 hours to complete the second one, how many questions did he leave incomplete?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nRelevant principles here involve rate-time-distance type problems, where work done (or items completed) is the product of rate and time. If the rate is given as questions per hour and the time available is given in hours, then the total number of questions completed can be found by multiplying the rate by the time spent. If the total number of questions in the test is known, subtract the number completed from the total to find how many are left incomplete.\n\nStep 2 - REASON:  \nMark's rate = 5 questions/hour.\n\nFor the first test:  \n- Number of questions = 75  \n- Time available = 8 hours  \n- Questions completed = rate × time = 5 × 8 = 40  \n- Questions incomplete = 75 - 40 = 35\n\nFor the second test:  \n- Number of questions = 100  \n- Time available = 6 hours  \n- Questions completed = 5 × 6 = 30  \n- Questions incomplete = 100 - 30 = 70\n\nTotal incomplete questions = 35 + 70 = 105\n\nFINAL ANSWER: 105",
+  "extracted_answer": "105",
+  "is_correct": true,
+  "correct_answer": "105",
+  "answer_type": "numeric_exact",
+  "question": "Mark took a test yesterday that consisted of 75 questions. He completed the test at a rate of 5 questions per hour. Today, he took another test of 100 questions at the same rate. If Mark had 8 hours to complete the first test and 6 hours to complete the second one, how many questions did he leave incomplete?",
+  "source": "GSM8K"
+}

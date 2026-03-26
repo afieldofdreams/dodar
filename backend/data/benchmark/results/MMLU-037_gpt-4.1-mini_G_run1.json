@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-037",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:23:55.519586Z",
+  "latency_seconds": 5.9,
+  "input_tokens": 376,
+  "output_tokens": 337,
+  "cost_usd": 0.00069,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A student places a metal spoon in a cup of hot water. After one minute, the handle feels warm. Which best explains this?\nA: Heat energy was created in the spoon by the water\nB: Cold energy moved from the spoon into the water\nC: Heat energy was transferred through the metal by conduction\nD: The spoon absorbed light energy from the water\n\nEXAMPLE ANSWER: The observation is that a metal spoon's handle gets warm when the bowl end is in hot water. I need to identify the mechanism.\n\nKey physics: metal is a good thermal conductor. Heat transfers through solid materials by conduction.\n\nEvaluating each option:\n- A: Heat is not created. It is transferred. Violates conservation of energy. Incorrect.\n- B: No such thing as 'cold energy.' Heat moves from hot to cold. Incorrect.\n- C: Heat transfers from hot water to spoon, then through metal by conduction. Correct.\n- D: Light energy not involved. The transfer is thermal. Incorrect.\n\nFINAL ANSWER: C\n\nNow solve the following problem using the same careful reasoning approach.\n\nZokro a nongovernmental not-for-profit organization uses the indirect method to prepare its statement of cash flows. In determining its net cash provided (used) by operating activities Sokro must add back which of the following to the change in net assets?\n\n  A: Purchase of equipment.\n  B: Payment on long-term debt.\n  C: Depreciation.\n  D: Decrease in accounts payable.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "The problem deals with preparing the statement of cash flows using the indirect method, focusing specifically on the adjustments to net assets when calculating net cash provided or used by operating activities.\n\nStep 1: Understand the indirect method.\n- The indirect method starts with net income or change in net assets and adjusts for non-cash items and changes in working capital.\n- The goal is to reconcile net assets (or net income) to net cash flows from operating activities.\n\nStep 2: What items are adjusted?\n- Non-cash expenses such as depreciation are added back because they reduce net assets but do not involve cash outflows.\n- Changes in working capital accounts (like accounts payable or receivable) are also adjusted to reflect cash impact.\n- Investing and financing activities, like purchase of equipment or payment on long-term debt, are NOT a part of operating activities and are presented separately (in investing or financing sections).\n\nStep 3: Analyze each option:\n- A: Purchase of equipment is investing activity, involves cash outflow for acquiring fixed assets, not added back to operating cash flows. So no.\n- B: Payment on long-term debt is a financing cash flow, not added back in operating activities. No.\n- C: Depreciation is a non-cash expense originally deducted in net assets; must be added back in the indirect method to operating cash flows. Yes.\n- D: Decrease in accounts payable means the company paid off some of its payables, so cash decreased. This would be subtracted from net assets when adjusting. It is not an item \"added back,\" instead a decrease in accounts payable would decrease operating cash flow. So no.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Zokro a nongovernmental not-for-profit organization uses the indirect method to prepare its statement of cash flows. In determining its net cash provided (used) by operating activities Sokro must add back which of the following to the change in net assets?",
+  "source": "MMLU/professional_accounting"
+}

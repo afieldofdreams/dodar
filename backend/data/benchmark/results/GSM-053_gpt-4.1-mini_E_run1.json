@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-053",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:39:12.337091Z",
+  "latency_seconds": 2.59,
+  "input_tokens": 210,
+  "output_tokens": 223,
+  "cost_usd": 0.000441,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nRobert is building a 15 foot long, 10 foot wide, rectangular wooden fence around his garden.  He needs 2 wood slats for every foot of fencing he builds.  How many wooden slats will he need?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nTo determine the number of wooden slats Robert needs, we need to understand:  \n- How to find the total length of the fence (which is the perimeter of the rectangular garden).  \n- How to link the length of the fence to the number of wooden slats needed, given the relationship of 2 slats per foot of fencing.\n\nThe perimeter of a rectangle is found by adding the lengths of all sides:  \nPerimeter = 2 × (length + width).  \n\nOnce the perimeter is found, multiply the number of feet by the number of slats needed per foot to get the total number of slats.\n\nStep 2 - REASON:  \nThe garden is 15 feet long and 10 feet wide.  \nCalculate the perimeter:  \nPerimeter = 2 × (15 + 10) = 2 × 25 = 50 feet.  \n\nRobert needs 2 slats per foot, so:  \nTotal slats = 50 feet × 2 slats/foot = 100 slats.\n\nFINAL ANSWER: 100",
+  "extracted_answer": "100",
+  "is_correct": true,
+  "correct_answer": "100",
+  "answer_type": "numeric_exact",
+  "question": "Robert is building a 15 foot long, 10 foot wide, rectangular wooden fence around his garden.  He needs 2 wood slats for every foot of fencing he builds.  How many wooden slats will he need?",
+  "source": "GSM8K"
+}

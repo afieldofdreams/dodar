@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-061",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:20:19.391744Z",
+  "latency_seconds": 4.25,
+  "input_tokens": 124,
+  "output_tokens": 202,
+  "cost_usd": 0.000373,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "On a hot day, Jenny walked home from the grocery store with a bag of chocolate chips. When she arrived home the chocolate chips had melted in the bag. Why did the chocolate chips melt?\n\n  A: Heat transferred from the chocolate chips to the bag.\n  B: Heat evaporated from the bag to the chocolate chips.\n  C: Heat transferred from the environment to the chocolate chips.\n  D: Heat condensed from her hand to the chocolate chips.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the situation: \n\n- Chocolate chips melted because they absorbed heat.\n- On a hot day, the environment is warm or hot, so heat would naturally move from the warmer environment to the cooler object (the chocolate chips).\n- Heat transfer typically goes from a warmer place to a cooler place.\n- The bag itself is likely cooler than the environment but warmer than the chocolate chips, so heat moving from the environment to the chocolate chips is the correct concept.\n- Option A says heat transferred from the chocolate chips to the bag — that would mean chips lost heat, which can’t cause melting.\n- Option B talks about heat evaporating from the bag, but evaporation is a phase change of liquid to gas and doesn’t directly cause the chocolate to melt.\n- Option D mentions heat condensed from her hand, which doesn’t make sense since condensation is the change from gas to liquid and her hand isn't colder than the chips to cause heat transfer that way.\n\nTherefore, the correct explanation is:\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "On a hot day, Jenny walked home from the grocery store with a bag of chocolate chips. When she arrived home the chocolate chips had melted in the bag. Why did the chocolate chips melt?",
+  "source": "ARC-Challenge"
+}

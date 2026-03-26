@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-090",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:38:29.467675Z",
+  "latency_seconds": 14.07,
+  "input_tokens": 185,
+  "output_tokens": 414,
+  "cost_usd": 0.000736,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are five books: a blue book, a red book, a brown book, a yellow book, and an orange book. The red book is to the left of the brown book. The yellow book is to the right of the orange book. The brown book is the second from the left. The yellow book is to the left of the blue book.\nOptions:\n(A) The blue book is the rightmost\n(B) The red book is the rightmost\n(C) The brown book is the rightmost\n(D) The yellow book is the rightmost\n(E) The orange book is the rightmost\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the given information step by step.\n\nThere are five books in a fixed order on the shelf:\n- Colors: Blue, Red, Brown, Yellow, Orange\n- Positions: 1st (leftmost), 2nd, 3rd, 4th, 5th (rightmost)\n\nGiven statements:\n1. The red book is to the left of the brown book.\n2. The yellow book is to the right of the orange book.\n3. The brown book is the second from the left.\n4. The yellow book is to the left of the blue book.\n\n---\n\nFrom (3): Brown book is second from the left  \nPositions:  \n1: ?  \n2: Brown  \n3: ?  \n4: ?  \n5: ?\n\n---\n\nFrom (1): Red is to the left of Brown  \nSince Brown is at position 2, Red must be before position 2, which means Red is at position 1.\n\nPositions:  \n1: Red  \n2: Brown  \n3: ?  \n4: ?  \n5: ?\n\n---\n\nFrom (2): Yellow is to the right of Orange  \nYellow > Orange in position.\n\nPossible slots left: 3, 4, 5\n\n---\n\nFrom (4): Yellow is to the left of Blue  \nYellow < Blue in position.\n\nSo Orange < Yellow < Blue in position.\n\nWe have 3 positions left: 3, 4, 5 for Orange, Yellow, Blue.\n\nThey must be placed such that Orange < Yellow < Blue.\n\n---\n\nSo assign:  \n3: Orange  \n4: Yellow  \n5: Blue\n\n---\n\nLet's verify all:\n\n- Red (1) is to the left of Brown (2) ✔  \n- Yellow (4) is to the right of Orange (3) ✔  \n- Brown is the second (2) ✔  \n- Yellow (4) is to the left of Blue (5) ✔\n\nAll conditions satisfied.\n\nSo the rightmost book (5th position) is the Blue book.\n\n---\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "(A)",
+  "answer_type": "exact_match",
+  "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are five books: a blue book, a red book, a brown book, a yellow book, and an orange book. The red book is to the left of the brown book. The yellow book is to the right of the orange book. The brown book is the second from the left. The yellow book is to the left of the blue book.\nOptions:\n(A) The blue book is the rightmost\n(B) The red book is the rightmost\n(C) The brown book is the rightmost\n(D) The yellow book is the rightmost\n(E) The orange book is the rightmost",
+  "source": "BBH/logical_deduction_five_objects"
+}

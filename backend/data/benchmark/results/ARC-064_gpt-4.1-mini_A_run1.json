@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-064",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:33:30.494209Z",
+  "latency_seconds": 3.51,
+  "input_tokens": 72,
+  "output_tokens": 199,
+  "cost_usd": 0.000347,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Formation of the ozone layer helped protect which type of living organisms as they evolved?\n\n  A: marine\n  B: terrestrial\n  C: photosynthetic\n  D: eukaryotic\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "The formation of the ozone layer was crucial because it absorbs most of the Sun's harmful ultraviolet (UV) radiation, preventing it from reaching the Earth's surface in large amounts.\n\n- Marine organisms (A) were initially protected by the water itself, which absorbs UV radiation, so the ozone layer was not as critical for them.\n- Terrestrial organisms (B) are exposed directly to sunlight and would have been vulnerable to harmful UV radiation without the ozone layer. The formation of the ozone layer allowed life to transition from water to land safely.\n- Photosynthetic organisms (C) include both marine and terrestrial plants and algae, but the key factor in their protection was whether they were on land or water.\n- Eukaryotic organisms (D) include all complex cells, but the ozone layer specifically protected organisms exposed to direct sunlight on land.\n\nThus, the ozone layer's formation primarily enabled terrestrial life by providing protection from UV radiation, which was necessary for life to thrive on land.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Formation of the ozone layer helped protect which type of living organisms as they evolved?",
+  "source": "ARC-Challenge"
+}

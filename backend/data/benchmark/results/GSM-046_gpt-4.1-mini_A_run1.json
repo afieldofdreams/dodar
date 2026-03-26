@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-046",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:23:48.590735Z",
+  "latency_seconds": 4.24,
+  "input_tokens": 112,
+  "output_tokens": 168,
+  "cost_usd": 0.000314,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Marcus ordered 5 croissants at $3.00 apiece, 4 cinnamon rolls at $2.50 each, 3 mini quiches for $4.00 apiece and 13 blueberry muffins that were $1.00 apiece.  At check out, Marcus shows his loyalty card that gives him 10% off of his purchase.  What is Marcus' total bill?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "First, calculate the cost of each type of item:\n\n- Croissants: 5 × $3.00 = $15.00\n- Cinnamon rolls: 4 × $2.50 = $10.00\n- Mini quiches: 3 × $4.00 = $12.00\n- Blueberry muffins: 13 × $1.00 = $13.00\n\nNext, find the total before discount:\n\n$15.00 + $10.00 + $12.00 + $13.00 = $50.00\n\nNow, apply the 10% loyalty card discount:\n\n10% of $50.00 = $5.00\n\nSubtract the discount from the total:\n\n$50.00 - $5.00 = $45.00\n\nFINAL ANSWER: 45.00",
+  "extracted_answer": "45.00",
+  "is_correct": true,
+  "correct_answer": "45",
+  "answer_type": "numeric_exact",
+  "question": "Marcus ordered 5 croissants at $3.00 apiece, 4 cinnamon rolls at $2.50 each, 3 mini quiches for $4.00 apiece and 13 blueberry muffins that were $1.00 apiece.  At check out, Marcus shows his loyalty card that gives him 10% off of his purchase.  What is Marcus' total bill?",
+  "source": "GSM8K"
+}

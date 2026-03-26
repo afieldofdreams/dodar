@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-056",
+  "condition": "D",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:37:06.313317Z",
+  "latency_seconds": 4.72,
+  "input_tokens": 261,
+  "output_tokens": 286,
+  "cost_usd": 0.000562,
+  "system_prompt_sent": "When answering this question, use the Thought-Action-Observation reasoning pattern. Alternate between reasoning about the problem and taking concrete analytical actions.\n\nFor each step:\n\nThought: Reason about what you currently know, what you need to figure out, and what approach to try next.\n\nAction: Perform a specific analytical action (e.g., identify key information, apply a formula, evaluate an option, check a constraint, test a hypothesis).\n\nObservation: State what you learned from that action and whether it changes your understanding.\n\nRepeat this Thought-Action-Observation cycle until you have enough information to answer confidently. Then provide your final answer.\n\nYou may use as many cycles as needed. Each cycle should build on what you learned in the previous one.",
+  "user_prompt_sent": "Use the Thought-Action-Observation pattern.\n\nMark took a test yesterday that consisted of 75 questions. He completed the test at a rate of 5 questions per hour. Today, he took another test of 100 questions at the same rate. If Mark had 8 hours to complete the first test and 6 hours to complete the second one, how many questions did he leave incomplete?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Thought:  \nFirst, I need to determine how many questions Mark completed on each test given his rate and the time allowed. Then, I can subtract the number of questions he completed from the total number of questions to find how many he left incomplete on each test. Finally, I will sum the incomplete questions from both tests.\n\nAction:  \nCalculate the number of questions Mark completed on the first test:  \nRate = 5 questions/hour  \nTime = 8 hours  \nQuestions completed = 5 * 8 = 40 questions\n\nObservation:  \nMark completed 40 questions on the first test out of 75 questions.\n\nThought:  \nNow calculate the number of questions Mark completed on the second test.\n\nAction:  \nCalculate the number of questions completed on the second test:  \nRate = 5 questions/hour  \nTime = 6 hours  \nQuestions completed = 5 * 6 = 30 questions\n\nObservation:  \nMark completed 30 questions on the second test out of 100 questions.\n\nThought:  \nNow find how many questions he left incomplete on each test, then sum them.\n\nAction:  \nIncomplete on first test = 75 - 40 = 35 questions  \nIncomplete on second test = 100 - 30 = 70 questions  \nTotal incomplete = 35 + 70 = 105 questions\n\nObservation:  \nMark left 105 questions incomplete in total across both tests.\n\nFINAL ANSWER: 105",
+  "extracted_answer": "105",
+  "is_correct": true,
+  "correct_answer": "105",
+  "answer_type": "numeric_exact",
+  "question": "Mark took a test yesterday that consisted of 75 questions. He completed the test at a rate of 5 questions per hour. Today, he took another test of 100 questions at the same rate. If Mark had 8 hours to complete the first test and 6 hours to complete the second one, how many questions did he leave incomplete?",
+  "source": "GSM8K"
+}

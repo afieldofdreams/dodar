@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-058",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:31:35.448032Z",
+  "latency_seconds": 5.78,
+  "input_tokens": 119,
+  "output_tokens": 350,
+  "cost_usd": 0.000608,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Mike decides he wants to replace his movie collection with digital versions.  He has 600 movies.  A third of the movies are in various series and he knows he can get those for only $6 of the cost of a normal movie by just buying the series together.  40% of the remaining movies are older movies which are $5.  How much does replacing the movies cost if a normal movie costs $10?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's break down the problem step-by-step:\n\n1. **Total movies:** 600\n2. **Movies in series:** One third of 600 = \\( \\frac{1}{3} \\times 600 = 200 \\) movies\n3. **Remaining movies:** \\( 600 - 200 = 400 \\) movies\n4. **Cost of a normal movie:** $10\n\n---\n\n**Cost for movies in series:**\n\n- These cost 6 times less than a normal movie.\n- \\( \\frac{1}{6} \\) of $10 = \\( \\frac{10}{6} \\approx 1.6667 \\) dollars per movie.\n- Total cost for series movies = 200 movies × $1.6667 = 200 × \\( \\frac{10}{6} \\) = \\( \\frac{2000}{6} \\approx 333.33 \\)\n\n---\n\n**Cost for remaining movies:**\n\n- 40% of the remaining 400 movies are older movies costing $5 each.\n- Number of older movies = 40% of 400 = 0.40 × 400 = 160 movies.\n- Number of other remaining movies = 400 - 160 = 240 movies.\n\n- Cost for older movies = 160 × $5 = $800\n- Cost for other movies = 240 × $10 = $2400\n\n---\n\n**Total cost:**\n\n- Series movies: ≈ $333.33\n- Older movies: $800\n- Other remaining movies: $2400\n\nSum = 333.33 + 800 + 2400 = 3533.33\n\n---\n\n**FINAL ANSWER: 3533.33**",
+  "extracted_answer": "3533.33",
+  "is_correct": false,
+  "correct_answer": "4400",
+  "answer_type": "numeric_exact",
+  "question": "Mike decides he wants to replace his movie collection with digital versions.  He has 600 movies.  A third of the movies are in various series and he knows he can get those for only $6 of the cost of a normal movie by just buying the series together.  40% of the remaining movies are older movies which are $5.  How much does replacing the movies cost if a normal movie costs $10?",
+  "source": "GSM8K"
+}

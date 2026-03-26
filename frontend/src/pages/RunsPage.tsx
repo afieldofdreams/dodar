@@ -48,11 +48,11 @@ export default function RunsPage() {
       ) : runs.length === 0 ? (
         <div
           style={{
-            background: "#fff",
+            background: "#1e1e32",
             padding: "3rem",
             borderRadius: 8,
             textAlign: "center",
-            color: "#666",
+            color: "#9898b8",
           }}
         >
           <p>No benchmark runs yet.</p>
@@ -61,7 +61,7 @@ export default function RunsPage() {
           </Link>
         </div>
       ) : (
-        <table style={{ width: "100%", borderCollapse: "collapse", background: "#fff", borderRadius: 8 }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", background: "#1e1e32", borderRadius: 8 }}>
           <thead>
             <tr>
               <th style={thStyle}>Run ID</th>
@@ -84,7 +84,7 @@ export default function RunsPage() {
                 <td style={tdStyle}>
                   <span
                     style={{
-                      background: "#e8e8f0",
+                      background: "#262640",
                       padding: "2px 8px",
                       borderRadius: 4,
                       fontSize: "0.8rem",
@@ -97,7 +97,7 @@ export default function RunsPage() {
                 <td style={tdStyle}>
                   <span
                     style={{
-                      color: STATUS_COLORS[r.status] || "#666",
+                      color: STATUS_COLORS[r.status] || "#9898b8",
                       fontWeight: 600,
                       fontSize: "0.85rem",
                     }}
@@ -117,7 +117,7 @@ export default function RunsPage() {
                         deleteMutation.mutate(r.run_id);
                       }
                     }}
-                    style={{ color: "#999", background: "none", border: "none", cursor: "pointer", textDecoration: "underline", fontSize: "0.85rem" }}
+                    style={{ color: "#6868a0", background: "none", border: "none", cursor: "pointer", textDecoration: "underline", fontSize: "0.85rem" }}
                   >
                     Delete
                   </button>
@@ -134,13 +134,14 @@ export default function RunsPage() {
 const thStyle: React.CSSProperties = {
   textAlign: "left",
   padding: "0.75rem 1rem",
-  borderBottom: "2px solid #e0e0e0",
+  borderBottom: "2px solid #2e2e50",
   fontSize: "0.8rem",
-  color: "#666",
+  color: "#9898b8",
+  background: "transparent",
 };
 
 const tdStyle: React.CSSProperties = {
   padding: "0.75rem 1rem",
-  borderBottom: "1px solid #f0f0f0",
+  borderBottom: "1px solid #22223a",
   fontSize: "0.9rem",
 };

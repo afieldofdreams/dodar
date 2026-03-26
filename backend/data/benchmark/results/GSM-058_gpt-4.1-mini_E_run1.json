@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-058",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:25:53.034532Z",
+  "latency_seconds": 10.0,
+  "input_tokens": 250,
+  "output_tokens": 318,
+  "cost_usd": 0.000609,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nMike decides he wants to replace his movie collection with digital versions.  He has 600 movies.  A third of the movies are in various series and he knows he can get those for only $6 of the cost of a normal movie by just buying the series together.  40% of the remaining movies are older movies which are $5.  How much does replacing the movies cost if a normal movie costs $10?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nWhen calculating costs with discounts and different pricing tiers, the general approach involves:  \n- Identifying the subsets of items based on the given criteria (e.g., series movies vs. non-series movies, older movies vs. others).  \n- Applying the correct per-unit price to each subset.  \n- Summing the total costs of each subset for the final cost.  \n\nThis approach is key when dealing with problems of partitioning groups and applying different cost rates.\n\nStep 2 - REASON:  \n- Total movies = 600  \n- A third are in series: 1/3 * 600 = 200 movies  \n- Cost of series movies: each costs $6 (since it's $6 of the normal $10 price)  \n- Remaining movies = 600 - 200 = 400  \n\nAmong the remaining 400:  \n- 40% are older movies = 0.40 * 400 = 160 movies  \n- Older movies cost $5 each  \n- The rest of the remaining movies = 400 - 160 = 240 movies  \n- These 240 movies cost the normal $10 each (not discounted)  \n\nCalculate costs:  \n- Series movies cost = 200 * $6 = $1,200  \n- Older movies cost = 160 * $5 = $800  \n- Other remaining movies cost = 240 * $10 = $2,400  \n\nTotal cost = $1,200 + $800 + $2,400 = $4,400  \n\nFINAL ANSWER: 4400",
+  "extracted_answer": "4400",
+  "is_correct": true,
+  "correct_answer": "4400",
+  "answer_type": "numeric_exact",
+  "question": "Mike decides he wants to replace his movie collection with digital versions.  He has 600 movies.  A third of the movies are in various series and he knows he can get those for only $6 of the cost of a normal movie by just buying the series together.  40% of the remaining movies are older movies which are $5.  How much does replacing the movies cost if a normal movie costs $10?",
+  "source": "GSM8K"
+}

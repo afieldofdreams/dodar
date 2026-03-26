@@ -17,12 +17,18 @@ class GoogleRunner(ModelRunner):
         self._client = genai.Client(api_key=settings.google_api_key)
         self._model = settings.google_model
 
-    async def _call_api(self, prompt: str) -> ModelResponse:
+    async def _call_api(
+        self, prompt: str, *, system_prompt: str | None = None
+    ) -> ModelResponse:
         start = time.monotonic()
+        config = types.GenerateContentConfig(max_output_tokens=4096)
+        if system_prompt:
+            config.system_instruction = system_prompt
+
         response = await self._client.aio.models.generate_content(
             model=self._model,
             contents=prompt,
-            config=types.GenerateContentConfig(max_output_tokens=4096),
+            config=config,
         )
         latency = time.monotonic() - start
 

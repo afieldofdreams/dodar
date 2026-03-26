@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-050",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:30:48.579608Z",
+  "latency_seconds": 6.6,
+  "input_tokens": 108,
+  "output_tokens": 310,
+  "cost_usd": 0.000539,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Brook Hills High School currently enrolls 3000 students. Half of these students are over 16 years old, and one-fourth of the students over 16 years old are male. The remaining half of the students are under 16 years old, and one-half of the students under 16 are male. In total, how many female students are enrolled at this school?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Determine the number of students over 16 years old.\nTotal students = 3000  \nHalf are over 16:  \n\\[ \\frac{1}{2} \\times 3000 = 1500 \\]\n\nStep 2: Find the number of male students over 16.\nOne-fourth of the over 16 students are male:  \n\\[ \\frac{1}{4} \\times 1500 = 375 \\]\n\nStep 3: Find the number of female students over 16.\nTotal over 16 = 1500  \nMale over 16 = 375  \nFemale over 16 = 1500 - 375 = 1125\n\nStep 4: Determine the number of students under 16 years old.\nThe other half of the students are under 16:  \n\\[ 3000 - 1500 = 1500 \\]\n\nStep 5: Find the number of male students under 16.\nHalf of the students under 16 are male:  \n\\[ \\frac{1}{2} \\times 1500 = 750 \\]\n\nStep 6: Find the number of female students under 16.\nTotal under 16 = 1500  \nMale under 16 = 750  \nFemale under 16 = 1500 - 750 = 750\n\nStep 7: Calculate the total number of female students.\nFemale over 16 + Female under 16 = 1125 + 750 = 1875\n\nFINAL ANSWER: 1875",
+  "extracted_answer": "1875",
+  "is_correct": true,
+  "correct_answer": "1,875",
+  "answer_type": "numeric_exact",
+  "question": "Brook Hills High School currently enrolls 3000 students. Half of these students are over 16 years old, and one-fourth of the students over 16 years old are male. The remaining half of the students are under 16 years old, and one-half of the students under 16 are male. In total, how many female students are enrolled at this school?",
+  "source": "GSM8K"
+}

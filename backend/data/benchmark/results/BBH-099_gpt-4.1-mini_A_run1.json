@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-099",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:32:43.142703Z",
+  "latency_seconds": 5.22,
+  "input_tokens": 75,
+  "output_tokens": 290,
+  "cost_usd": 0.000494,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Question: Phoebe tells the truth. Christie says Phoebe tells the truth. Fletcher says Christie tells the truth. Amberly says Fletcher lies. Raymond says Amberly tells the truth. Does Raymond tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the statements step-by-step.\n\n1. Phoebe tells the truth.  \n   - Phoebe is a truth-teller.\n\n2. Christie says Phoebe tells the truth.  \n   - If Christie is telling the truth, then Phoebe tells the truth (which matches statement 1).\n   - If Christie is lying, then Phoebe does NOT tell the truth (contradicts statement 1).\n   - Since statement 1 says Phoebe tells the truth, Christie must be telling the truth.\n\n3. Fletcher says Christie tells the truth.  \n   - We have established Christie tells the truth.\n   - If Fletcher is telling the truth, then Christie tells the truth (matches above).\n   - If Fletcher is lying, then Christie does NOT tell the truth (contradiction again).\n   - Therefore, Fletcher is telling the truth.\n\n4. Amberly says Fletcher lies.  \n   - We just deduced Fletcher tells the truth.\n   - Amberly says the opposite, so Amberly lies.\n\n5. Raymond says Amberly tells the truth.  \n   - Amberly lies.\n   - Raymond says Amberly tells the truth (false).\n   - Therefore, Raymond is lying.\n\n**Summary:**\n\n- Phoebe: truth\n- Christie: truth\n- Fletcher: truth\n- Amberly: lies\n- Raymond: lies\n\nSince Raymond lies, he does **not** tell the truth.\n\nFINAL ANSWER: No",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "Question: Phoebe tells the truth. Christie says Phoebe tells the truth. Fletcher says Christie tells the truth. Amberly says Fletcher lies. Raymond says Amberly tells the truth. Does Raymond tell the truth?",
+  "source": "BBH/web_of_lies"
+}

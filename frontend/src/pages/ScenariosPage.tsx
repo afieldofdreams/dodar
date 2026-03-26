@@ -72,10 +72,10 @@ export default function ScenariosPage() {
               style={{
                 textDecoration: "none",
                 color: "inherit",
-                background: "#fff",
+                background: "#1e1e32",
                 borderRadius: 8,
                 padding: "1.25rem",
-                border: "1px solid #e0e0e0",
+                border: "1px solid #2e2e50",
                 transition: "box-shadow 0.2s",
               }}
               onMouseEnter={(e) =>
@@ -99,10 +99,10 @@ export default function ScenariosPage() {
                 </span>
               </div>
               <h3 style={{ margin: "0 0 0.5rem", fontSize: "1rem" }}>{s.title}</h3>
-              <div style={{ display: "flex", gap: "0.5rem", fontSize: "0.8rem", color: "#666" }}>
+              <div style={{ display: "flex", gap: "0.5rem", fontSize: "0.8rem", color: "#9898b8" }}>
                 <span
                   style={{
-                    background: "#e8e8f0",
+                    background: "#262640",
                     padding: "2px 6px",
                     borderRadius: 4,
                   }}
@@ -111,7 +111,7 @@ export default function ScenariosPage() {
                 </span>
                 <span
                   style={{
-                    background: "#e8e8f0",
+                    background: "#262640",
                     padding: "2px 6px",
                     borderRadius: 4,
                   }}
@@ -126,7 +126,7 @@ export default function ScenariosPage() {
       )}
 
       {!isLoading && scenarios.length === 0 && (
-        <p style={{ color: "#666" }}>No scenarios match your filters.</p>
+        <p style={{ color: "#9898b8" }}>No scenarios match your filters.</p>
       )}
     </div>
   );
@@ -135,7 +135,8 @@ export default function ScenariosPage() {
 const selectStyle: React.CSSProperties = {
   padding: "0.5rem 0.75rem",
   borderRadius: 6,
-  border: "1px solid #d0d0d0",
-  background: "#fff",
+  border: "1px solid #2e2e50",
+  background: "#1e1e32",
+  color: "#e8e8f0",
   fontSize: "0.9rem",
 };

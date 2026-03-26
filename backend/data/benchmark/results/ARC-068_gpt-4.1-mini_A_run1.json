@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-068",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:37:41.321569Z",
+  "latency_seconds": 3.01,
+  "input_tokens": 134,
+  "output_tokens": 208,
+  "cost_usd": 0.000386,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Propane (C_{3}H_{8}) is a gas at room temperature. Which statement best describes the physical characteristics of a sample of propane at room temperature?\n\n  A: It has a definite volume and takes the shape of its container.\n  B: It has an indefinite volume and takes the shape of its container.\n  C: It has a definite volume, and its shape is independent of its container.\n  D: It has an indefinite volume, and its shape is independent of its container.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the properties of propane (C₃H₈) at room temperature:\n\n- Propane is a gas at room temperature.\n- Gases have no definite shape or volume.\n- Gases take the shape of their container.\n- Gases expand to fill their container, so their volume is indefinite (depends on the container).\n\nNow let's evaluate each option:\n\nA: \"It has a definite volume and takes the shape of its container.\"  \n- Incorrect, because gases do not have a definite volume.\n\nB: \"It has an indefinite volume and takes the shape of its container.\"  \n- Correct, as gases both have indefinite volume and take the shape of their container.\n\nC: \"It has a definite volume, and its shape is independent of its container.\"  \n- Incorrect, applies to solids.\n\nD: \"It has an indefinite volume, and its shape is independent of its container.\"  \n- Incorrect, gases have an indefinite volume AND take the shape of their container (shape depends on container).\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Propane (C_{3}H_{8}) is a gas at room temperature. Which statement best describes the physical characteristics of a sample of propane at room temperature?",
+  "source": "ARC-Challenge"
+}

@@ -11,6 +11,9 @@ import NewRunPage from "./pages/NewRunPage";
 import RunProgressPage from "./pages/RunProgressPage";
 import ScoringPage from "./pages/ScoringPage";
 import ExportPage from "./pages/ExportPage";
+import NewBenchmarkRunPage from "./pages/NewBenchmarkRunPage";
+import BenchmarkProgressPage from "./pages/BenchmarkProgressPage";
+import BenchmarkResultsPage from "./pages/BenchmarkResultsPage";
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 30_000 } },
@@ -34,6 +37,10 @@ export default function App() {
             <Route path="/runs/:id" element={<RunProgressPage />} />
             <Route path="/scoring" element={<ScoringPage />} />
             <Route path="/export" element={<ExportPage />} />
+            {/* Phase 2 Benchmark */}
+            <Route path="/benchmark/new" element={<NewBenchmarkRunPage />} />
+            <Route path="/benchmark/results" element={<BenchmarkResultsPage />} />
+            <Route path="/benchmark/runs/:id" element={<BenchmarkProgressPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

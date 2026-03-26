@@ -18,7 +18,9 @@ class FlakyRunner(ModelRunner):
         self.fail_count = fail_count
         self.attempt = 0
 
-    async def _call_api(self, prompt: str) -> ModelResponse:
+    async def _call_api(
+        self, prompt: str, *, system_prompt: str | None = None
+    ) -> ModelResponse:
         self.attempt += 1
         if self.attempt <= self.fail_count:
             raise RuntimeError("rate limit exceeded (429)")
@@ -35,7 +37,9 @@ class NonRetryableRunner(ModelRunner):
 
     model_id = "test-model"
 
-    async def _call_api(self, prompt: str) -> ModelResponse:
+    async def _call_api(
+        self, prompt: str, *, system_prompt: str | None = None
+    ) -> ModelResponse:
         raise ValueError("Invalid prompt format")
 
 

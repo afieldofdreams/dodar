@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-095",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:32:13.445084Z",
+  "latency_seconds": 5.81,
+  "input_tokens": 198,
+  "output_tokens": 336,
+  "cost_usd": 0.000617,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Alice, Bob, Claire, Dave, and Eve are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets The Fellowship of the Ring, Bob gets The Odyssey, Claire gets Frankenstein, Dave gets Hound of the Baskervilles, and Eve gets Ulysses.\nAs the semester proceeds, they start trading around the new books. First, Alice and Claire swap books. Then, Alice and Eve swap books. Then, Dave and Claire swap books. Then, Dave and Bob swap books. Finally, Dave and Alice swap books. At the end of the semester, Claire has\nOptions:\n(A) The Fellowship of the Ring\n(B) The Odyssey\n(C) Frankenstein\n(D) Hound of the Baskervilles\n(E) Ulysses\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's track the books step-by-step.\n\n**Initial assignment:**\n- Alice: The Fellowship of the Ring (F)\n- Bob: The Odyssey (O)\n- Claire: Frankenstein (Fr)\n- Dave: Hound of the Baskervilles (H)\n- Eve: Ulysses (U)\n\n---\n\n**Step 1: Alice and Claire swap books.**\n\nBefore:  \n- Alice: F  \n- Claire: Fr  \n\nAfter:  \n- Alice: Fr  \n- Claire: F\n\n---\n\n**Step 2: Alice and Eve swap books.**\n\nBefore:  \n- Alice: Fr  \n- Eve: U  \n\nAfter:  \n- Alice: U  \n- Eve: Fr\n\n---\n\n**Step 3: Dave and Claire swap books.**\n\nBefore:  \n- Dave: H  \n- Claire: F  \n\nAfter:  \n- Dave: F  \n- Claire: H\n\n---\n\n**Step 4: Dave and Bob swap books.**\n\nBefore:  \n- Dave: F  \n- Bob: O  \n\nAfter:  \n- Dave: O  \n- Bob: F\n\n---\n\n**Step 5: Dave and Alice swap books.**\n\nBefore:  \n- Dave: O  \n- Alice: U  \n\nAfter:  \n- Dave: U  \n- Alice: O\n\n---\n\n**Final holdings:**\n- Alice: O (The Odyssey)\n- Bob: F (The Fellowship of the Ring)\n- Claire: H (Hound of the Baskervilles)\n- Dave: U (Ulysses)\n- Eve: Fr (Frankenstein)\n\n---\n\n**Claire has Hound of the Baskervilles.**\n\nFINAL ANSWER: Hound of the Baskervilles",
+  "extracted_answer": "Hound of the Baskervilles",
+  "is_correct": false,
+  "correct_answer": "(D)",
+  "answer_type": "exact_match",
+  "question": "Alice, Bob, Claire, Dave, and Eve are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets The Fellowship of the Ring, Bob gets The Odyssey, Claire gets Frankenstein, Dave gets Hound of the Baskervilles, and Eve gets Ulysses.\nAs the semester proceeds, they start trading around the new books. First, Alice and Claire swap books. Then, Alice and Eve swap books. Then, Dave and Claire swap books. Then, Dave and Bob swap books. Finally, Dave and Alice swap books. At the end of the semester, Claire has\nOptions:\n(A) The Fellowship of the Ring\n(B) The Odyssey\n(C) Frankenstein\n(D) Hound of the Baskervilles\n(E) Ulysses",
+  "source": "BBH/tracking_shuffled_objects_five_objects"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-055",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:38:26.222058Z",
+  "latency_seconds": 2.97,
+  "input_tokens": 301,
+  "output_tokens": 236,
+  "cost_usd": 0.000498,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nJohn wins an award at work.  The award has a 1 time monetary reward of $5000 and a 5% raise in salary.  If he makes 2000 a week, every week of the year and he got the award on the first day of the year how much money did he make that year?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Determine John's weekly salary before the raise.  \nJohn makes $2000 a week.\n\nStep 2: Determine the number of weeks in a year.  \nThere are 52 weeks in a year.\n\nStep 3: Calculate the total amount John makes in a year without the raise.  \n2000 dollars/week * 52 weeks = 104,000 dollars.\n\nStep 4: John gets a 5% raise on his salary starting on the first day of the year.  \nA 5% raise means his new weekly salary is:  \n2000 + (5% of 2000) = 2000 + (0.05 * 2000) = 2000 + 100 = 2100 dollars/week.\n\nStep 5: Calculate the total amount John makes from his salary after the raise.  \n2100 dollars/week * 52 weeks = 109,200 dollars.\n\nStep 6: Add the one-time monetary reward of $5000.  \n109,200 + 5000 = 114,200 dollars.\n\nJohn makes a total of $114,200 in that year.\n\nFINAL ANSWER: 114200",
+  "extracted_answer": "114200",
+  "is_correct": true,
+  "correct_answer": "114,200",
+  "answer_type": "numeric_exact",
+  "question": "John wins an award at work.  The award has a 1 time monetary reward of $5000 and a 5% raise in salary.  If he makes 2000 a week, every week of the year and he got the award on the first day of the year how much money did he make that year?",
+  "source": "GSM8K"
+}

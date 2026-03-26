@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-060",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:21:10.147027Z",
+  "latency_seconds": 4.69,
+  "input_tokens": 208,
+  "output_tokens": 272,
+  "cost_usd": 0.000518,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nOn a particular week, a tow truck pulled ten cars for each of the first three days and then four fewer cars on each of the remaining days of the week. Calculate the total number of cars it towed that week.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:\nThe problem involves calculating the total number of cars towed in a week. The relevant concepts are:\n- Understanding that a week has 7 days.\n- Calculating total quantities by adding daily amounts.\n- Recognizing that for the first three days, the tow truck towed a fixed number of cars.\n- For the remaining days (the rest of the week), the number towed each day is 4 fewer than the first three days.\n- Summing these quantities for the entire week to get the total.\n\nStep 2 - REASON:\n- The tow truck towed 10 cars each on the first three days.\n- That means for the first 3 days: 3 days × 10 cars/day = 30 cars.\n- For the remaining days: 7 total days - 3 days = 4 days.\n- The tow truck towed 4 fewer cars each day for the remaining 4 days.\n- 10 cars - 4 cars = 6 cars per day for the remaining days.\n- For these 4 days: 4 days × 6 cars/day = 24 cars.\n- Total cars towed in the week = cars in first 3 days + cars in last 4 days = 30 + 24 = 54 cars.\n\nFINAL ANSWER: 54",
+  "extracted_answer": "54",
+  "is_correct": true,
+  "correct_answer": "54",
+  "answer_type": "numeric_exact",
+  "question": "On a particular week, a tow truck pulled ten cars for each of the first three days and then four fewer cars on each of the remaining days of the week. Calculate the total number of cars it towed that week.",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-052",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:25:36.427767Z",
+  "latency_seconds": 5.98,
+  "input_tokens": 208,
+  "output_tokens": 256,
+  "cost_usd": 0.000493,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nChase and Rider can ride their bikes thrice a day for 5 days; but on two other days, they ride twice the times they do on usual days. How many times do they ride their bikes a week?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:\nTo solve this problem, we need to understand how to calculate the total number of times an activity is done over multiple days, taking into account different daily rates for different days. When an activity is done a certain number of times per day for a number of days, the total is the product of the times per day and the number of days. If the frequency changes on some days, we calculate those separately. Finally, we sum all these values to get the total frequency over the given period.\n\nStep 2 - REASON:\n- Normally, Chase and Rider ride their bikes 3 times a day.\n- For 5 days, they ride 3 times each day: 5 days × 3 times/day = 15 times.\n- On two other days, they ride twice the usual times. Twice the usual times means: 2 × 3 = 6 times per day.\n- For 2 days at 6 times per day: 2 days × 6 times/day = 12 times.\n- Total rides in a week = rides during the 5 usual days + rides during the 2 days at double rate.\n- Total rides = 15 + 12 = 27 times.\n\nFINAL ANSWER: 27",
+  "extracted_answer": "27",
+  "is_correct": false,
+  "correct_answer": "54",
+  "answer_type": "numeric_exact",
+  "question": "Chase and Rider can ride their bikes thrice a day for 5 days; but on two other days, they ride twice the times they do on usual days. How many times do they ride their bikes a week?",
+  "source": "GSM8K"
+}

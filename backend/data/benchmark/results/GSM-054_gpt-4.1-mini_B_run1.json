@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-054",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:33:34.830703Z",
+  "latency_seconds": 3.24,
+  "input_tokens": 308,
+  "output_tokens": 256,
+  "cost_usd": 0.000533,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nAfter tracking his workout routine for 8 weeks, Josh discovered that he had spent 4 hours working out every week except on some occasions. At one point, he spent 5 hours each for two consecutive weeks. Another time, he spent 6 hours in one week. What is the total number of hours he has spent working out across the 8 weeks?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's analyze the given information step by step:\n\n1. Josh tracks his workout for 8 weeks.\n2. He generally spends 4 hours every week.\n3. There are exceptions on three weeks:\n   - Two consecutive weeks where he worked out 5 hours each.\n   - One week where he worked out 6 hours.\n\nStep 1: Calculate the total number of hours if he worked out 4 hours every week for 8 weeks:\n\n4 hours/week * 8 weeks = 32 hours\n\nStep 2: Adjust for the exceptions:\n\n- For the two weeks he did 5 hours instead of 4, he spent 1 extra hour per week (5 - 4 = 1 hour extra). For two weeks, that's 2 extra hours.\n- For the one week he did 6 hours instead of 4, he spent 2 extra hours (6 - 4 = 2 hours extra).\n\nStep 3: Total extra hours from exceptions:\n\n2 (from two 5-hour weeks) + 2 (from one 6-hour week) = 4 extra hours\n\nStep 4: Total hours worked out = 32 (base hours) + 4 (extra hours) = 36 hours\n\nFINAL ANSWER: 36",
+  "extracted_answer": "36",
+  "is_correct": true,
+  "correct_answer": "36",
+  "answer_type": "numeric_exact",
+  "question": "After tracking his workout routine for 8 weeks, Josh discovered that he had spent 4 hours working out every week except on some occasions. At one point, he spent 5 hours each for two consecutive weeks. Another time, he spent 6 hours in one week. What is the total number of hours he has spent working out across the 8 weeks?",
+  "source": "GSM8K"
+}

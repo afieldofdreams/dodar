@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-065",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:28:30.088885Z",
+  "latency_seconds": 3.72,
+  "input_tokens": 540,
+  "output_tokens": 286,
+  "cost_usd": 0.000674,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A 65-year-old man presents with sudden onset of slurred speech and right-sided weakness that started 2 hours ago. He has a history of atrial fibrillation and takes warfarin. His INR today is 1.4. CT head shows no haemorrhage. What is the most appropriate immediate management?\nA: Administer IV alteplase (thrombolysis)\nB: Increase warfarin dose\nC: Start aspirin 300mg\nD: Arrange urgent MRI brain\n\nEXAMPLE ANSWER: Let me work through this carefully.\n\nThe presentation is acute onset neurological deficit (slurred speech, right-sided weakness) within a 2-hour window. This is a clinical stroke presentation.\n\nKey factors to consider:\n- 2-hour onset puts him within the thrombolysis window (typically 4.5 hours)\n- CT shows no haemorrhage, so this is likely ischaemic\n- He has AF, which is a major risk factor for cardioembolic stroke\n- His INR is 1.4, which is subtherapeutic (target typically 2-3 for AF)\n- The subtherapeutic INR may explain why he had a stroke despite being on warfarin\n\nNow evaluating each option:\n- A (IV alteplase): Thrombolysis. Within time window, CT excludes haemorrhage. Guidelines generally consider thrombolysis if INR < 1.7.\n- B (Increase warfarin): Addresses long-term problem but nothing for acute stroke.\n- C (Aspirin 300mg): Standard if thrombolysis contraindicated, but thrombolysis is an option here.\n- D (Urgent MRI): Would delay treatment. CT already excluded haemorrhage.\n\nSince he is within the thrombolysis window, CT excludes haemorrhage, and INR 1.4 is below the 1.7 threshold, IV alteplase is most appropriate.\n\nFINAL ANSWER: A\n\nNow solve the following problem using the same careful reasoning approach.\n\nWhich theory of the origin of the Moon proposes that Earth's Moon formed by the same process that formed Mars, Jupiter, and Neptune?\n\n  A: The Giant Impact Theory\n  B: The Fission Theory\n  C: The Capture Theory\n  D: The Coaccretion Theory\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let me carefully analyze the question and the options given.\n\nThe question asks: Which theory of the origin of the Moon proposes that Earth's Moon formed by the same process that formed Mars, Jupiter, and Neptune?\n\nThis implies we are looking for the theory that suggests the Moon and the planets formed together by a similar process.\n\nNow, let's review the options:\n\nA: The Giant Impact Theory — This theory proposes that the Moon formed from debris after a Mars-sized body collided with the early Earth. It does not suggest formation by the same process as planets, but rather a unique collision event.\n\nB: The Fission Theory — This suggests that the Moon split off from the early Earth due to rapid spinning. This is a unique process, differing from planetary formation, so this is unlikely to suggest the Moon formed like Mars, Jupiter, and Neptune.\n\nC: The Capture Theory — This argues the Moon formed elsewhere and was gravitationally captured by Earth. This also does not imply a shared formation process with planets.\n\nD: The Coaccretion Theory — This theory states that the Earth and Moon both formed together by accretion in the protoplanetary disk, similar to the way planets (like Mars, Jupiter, and Neptune) were formed. This theory therefore matches the premise in the question.\n\nSummarizing, only the Coaccretion Theory suggests that the Moon formed by the same process as the planets.\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "Which theory of the origin of the Moon proposes that Earth's Moon formed by the same process that formed Mars, Jupiter, and Neptune?",
+  "source": "ARC-Challenge"
+}

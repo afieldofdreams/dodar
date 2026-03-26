@@ -65,7 +65,7 @@ export default function NewRunPage() {
             ))}
           </select>
         </div>
-        <div style={{ maxHeight: 200, overflow: "auto", border: "1px solid #e0e0e0", borderRadius: 6, padding: "0.5rem" }}>
+        <div style={{ maxHeight: 200, overflow: "auto", border: "1px solid #2e2e50", borderRadius: 6, padding: "0.5rem" }}>
           <label style={{ display: "block", marginBottom: 4, fontWeight: 600, fontSize: "0.85rem" }}>
             <input
               type="checkbox"
@@ -146,7 +146,7 @@ export default function NewRunPage() {
       {estimates && (
         <div style={{ marginTop: "1.5rem" }}>
           <h3 style={{ fontSize: "0.95rem" }}>Cost Estimate</h3>
-          <table style={{ width: "100%", borderCollapse: "collapse", background: "#fff", borderRadius: 8 }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", background: "#1e1e32", borderRadius: 8 }}>
             <thead>
               <tr>
                 <th style={thStyle}>Model</th>
@@ -183,7 +183,7 @@ export default function NewRunPage() {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div style={{ marginBottom: "1.25rem" }}>
-      <h3 style={{ fontSize: "0.95rem", color: "#444", marginBottom: "0.5rem" }}>{title}</h3>
+      <h3 style={{ fontSize: "0.95rem", color: "#e8e8f0", marginBottom: "0.5rem" }}>{title}</h3>
       {children}
     </div>
   );
@@ -192,8 +192,9 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 const selectStyle: React.CSSProperties = {
   padding: "0.5rem 0.75rem",
   borderRadius: 6,
-  border: "1px solid #d0d0d0",
-  background: "#fff",
+  border: "1px solid #2e2e50",
+  background: "#1e1e32",
+  color: "#e8e8f0",
   fontSize: "0.9rem",
 };
 
@@ -208,7 +209,7 @@ const btnPrimary: React.CSSProperties = {
 };
 
 const btnSecondary: React.CSSProperties = {
-  background: "#fff",
+  background: "#1e1e32",
   color: "#6c63ff",
   border: "1px solid #6c63ff",
   padding: "0.6rem 1.5rem",
@@ -220,13 +221,14 @@ const btnSecondary: React.CSSProperties = {
 const thStyle: React.CSSProperties = {
   textAlign: "left",
   padding: "0.5rem",
-  borderBottom: "2px solid #e0e0e0",
+  borderBottom: "2px solid #2e2e50",
   fontSize: "0.8rem",
-  color: "#666",
+  color: "#9898b8",
+  background: "transparent",
 };
 
 const tdStyle: React.CSSProperties = {
   padding: "0.5rem",
-  borderBottom: "1px solid #f0f0f0",
+  borderBottom: "1px solid #22223a",
   fontSize: "0.85rem",
 };

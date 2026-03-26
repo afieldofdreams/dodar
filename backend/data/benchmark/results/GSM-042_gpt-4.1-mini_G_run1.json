@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-042",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:31:18.451293Z",
+  "latency_seconds": 5.06,
+  "input_tokens": 518,
+  "output_tokens": 332,
+  "cost_usd": 0.000738,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nA tank has a capacity of 18000 gallons. Wanda and Ms. B decided to pump water from a pond to fill the tank in two days. On the first day, working in shifts, Wanda filled 1/4 of the tank's capacity with water, and Ms. B pumped 3/4 as much water as Wanda pumped into the tank that day. On the second day, Wanda pumped 2/3 of the amount of water she pumped on the previous day, while Ms. B only pumped 1/3 of the number of gallons she pumped on the first day. How many gallons of water are remaining for the tank to be full?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's begin by carefully analyzing the problem step-by-step.\n\n1. The tank's total capacity is 18,000 gallons.\n\n2. On the first day:\n\n- Wanda fills 1/4 of the tank's capacity. Since the total is 18,000 gallons, Wanda pumped:\n\n  \\( \\frac{1}{4} \\times 18000 = 4500 \\) gallons.\n\n- Ms. B pumps 3/4 as much water as Wanda on that day. So Ms. B pumped:\n\n  \\( \\frac{3}{4} \\times 4500 = 3375 \\) gallons.\n\n3. On the second day:\n\n- Wanda pumps 2/3 of what she pumped the previous day:\n\n  \\( \\frac{2}{3} \\times 4500 = 3000 \\) gallons.\n\n- Ms. B pumps 1/3 of what she pumped the first day:\n\n  \\( \\frac{1}{3} \\times 3375 = 1125 \\) gallons.\n\n4. Now, total water pumped over both days by both:\n\n- Wanda total: day 1 + day 2 = 4500 + 3000 = 7500 gallons.\n\n- Ms. B total: day 1 + day 2 = 3375 + 1125 = 4500 gallons.\n\n- Total pumped: 7500 + 4500 = 12000 gallons.\n\n5. Capacity is 18000 gallons, so remaining water to fill the tank is:\n\n\\( 18000 - 12000 = 6000 \\) gallons.\n\nFINAL ANSWER: 6000",
+  "extracted_answer": "6000",
+  "is_correct": true,
+  "correct_answer": "6000",
+  "answer_type": "numeric_exact",
+  "question": "A tank has a capacity of 18000 gallons. Wanda and Ms. B decided to pump water from a pond to fill the tank in two days. On the first day, working in shifts, Wanda filled 1/4 of the tank's capacity with water, and Ms. B pumped 3/4 as much water as Wanda pumped into the tank that day. On the second day, Wanda pumped 2/3 of the amount of water she pumped on the previous day, while Ms. B only pumped 1/3 of the number of gallons she pumped on the first day. How many gallons of water are remaining for the tank to be full?",
+  "source": "GSM8K"
+}

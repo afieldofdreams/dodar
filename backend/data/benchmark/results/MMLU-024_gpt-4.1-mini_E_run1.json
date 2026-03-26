@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-024",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:27:16.798432Z",
+  "latency_seconds": 6.22,
+  "input_tokens": 265,
+  "output_tokens": 402,
+  "cost_usd": 0.000749,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nA 32-year-old male presents to the office with the complaint of pain in his right shoulder for the past two weeks. Physical examination reveals tenderness at the greater tubercle of the humerus and painful abduction of the right upper extremity. The cause of this patient's condition is most likely a somatic dysfunction of which of the following muscles?\n\n  A: anterior scalene\n  B: latissimus dorsi\n  C: pectoralis minor\n  D: supraspinatus\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK:\nTo address this clinical question, we need to understand the anatomy, common shoulder pathology, and the concept of somatic dysfunction related to muscles. Shoulder pain with tenderness at the greater tubercle of the humerus and painful abduction suggests involvement of the rotator cuff muscles or associated structures.\n\nKey concepts:\n- The greater tubercle of the humerus serves as an attachment site for rotator cuff muscles (supraspinatus, infraspinatus, and teres minor).\n- Painful abduction often points toward the supraspinatus muscle, since it initiates abduction of the arm.\n- Somatic dysfunction refers to impaired or altered function of related components of the somatic system (bones, muscles, joints, fascia).\n- Identifying which muscle's dysfunction is causing pain involves recognizing both the site of tenderness and the shoulder movement affected.\n\nStep 2 - REASON:\nThe patient presents with right shoulder pain over two weeks, tenderness over the greater tubercle, and painful abduction. The greater tubercle is the site of insertion for the supraspinatus muscle.\n\n- Anterior scalene (A) attaches to cervical vertebrae and first rib, involved in neck movement and respiration, not shoulder abduction.\n- Latissimus dorsi (B) inserts on the intertubercular groove of the humerus and is primarily responsible for extension, adduction, and internal rotation of the humerus, not abduction.\n- Pectoralis minor (C) attaches from ribs to the coracoid process of scapula, influences scapular protraction, not directly involved in abduction.\n- Supraspinatus (D) originates from the supraspinous fossa of scapula and inserts on the greater tubercle, initiating abduction.\n\nTherefore, the patient's symptoms (tenderness and painful abduction) suggest somatic dysfunction of the supraspinatus muscle.\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "A 32-year-old male presents to the office with the complaint of pain in his right shoulder for the past two weeks. Physical examination reveals tenderness at the greater tubercle of the humerus and painful abduction of the right upper extremity. The cause of this patient's condition is most likely a somatic dysfunction of which of the following muscles?",
+  "source": "MMLU/professional_medicine"
+}

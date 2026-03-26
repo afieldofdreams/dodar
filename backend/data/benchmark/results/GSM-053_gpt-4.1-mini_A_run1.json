@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-053",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:23:25.410392Z",
+  "latency_seconds": 3.17,
+  "input_tokens": 79,
+  "output_tokens": 97,
+  "cost_usd": 0.000187,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Robert is building a 15 foot long, 10 foot wide, rectangular wooden fence around his garden.  He needs 2 wood slats for every foot of fencing he builds.  How many wooden slats will he need?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "First, find the perimeter of the fence.\n\nThe fence is rectangular with length 15 feet and width 10 feet.\n\nPerimeter = 2 × (length + width)  \nPerimeter = 2 × (15 + 10) = 2 × 25 = 50 feet\n\nHe needs 2 wood slats for every foot of fencing.\n\nTotal wood slats = 2 × perimeter = 2 × 50 = 100\n\nFINAL ANSWER: 100",
+  "extracted_answer": "100",
+  "is_correct": true,
+  "correct_answer": "100",
+  "answer_type": "numeric_exact",
+  "question": "Robert is building a 15 foot long, 10 foot wide, rectangular wooden fence around his garden.  He needs 2 wood slats for every foot of fencing he builds.  How many wooden slats will he need?",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-097",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:22:14.925682Z",
+  "latency_seconds": 4.67,
+  "input_tokens": 284,
+  "output_tokens": 211,
+  "cost_usd": 0.000451,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nQuestion: Fletcher tells the truth. Conception says Fletcher tells the truth. Bernita says Conception tells the truth. Jamey says Bernita tells the truth. Teressa says Jamey lies. Does Teressa tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the statements step-by-step to determine if Teressa tells the truth.\n\n1. Fletcher tells the truth.\n   - This is given as a fact.\n\n2. Conception says Fletcher tells the truth.\n   - Since Fletcher does tell the truth, Conception's statement is true.\n   - Therefore, Conception tells the truth.\n\n3. Bernita says Conception tells the truth.\n   - We've established Conception tells the truth.\n   - Therefore, Bernita's statement is true.\n   - So, Bernita tells the truth.\n\n4. Jamey says Bernita tells the truth.\n   - Bernita indeed tells the truth.\n   - So Jamey's statement is true.\n   - Jamey tells the truth.\n\n5. Teressa says Jamey lies.\n   - Jamey tells the truth.\n   - Teressa says Jamey lies, which is false.\n   - Therefore, Teressa does not tell the truth.\n\nFinal conclusion: Teressa does not tell the truth.\n\nFINAL ANSWER: No",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "Question: Fletcher tells the truth. Conception says Fletcher tells the truth. Bernita says Conception tells the truth. Jamey says Bernita tells the truth. Teressa says Jamey lies. Does Teressa tell the truth?",
+  "source": "BBH/web_of_lies"
+}

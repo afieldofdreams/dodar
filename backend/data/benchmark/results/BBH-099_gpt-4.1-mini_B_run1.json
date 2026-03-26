@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-099",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:37:58.927812Z",
+  "latency_seconds": 2.71,
+  "input_tokens": 278,
+  "output_tokens": 211,
+  "cost_usd": 0.000449,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nQuestion: Phoebe tells the truth. Christie says Phoebe tells the truth. Fletcher says Christie tells the truth. Amberly says Fletcher lies. Raymond says Amberly tells the truth. Does Raymond tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze each statement carefully step by step.\n\n1. Phoebe tells the truth.\n   - This is our starting point: Phoebe is truthful.\n\n2. Christie says Phoebe tells the truth.\n   - Since Phoebe tells the truth (from 1), Christie's statement is correct.\n   - Therefore, Christie also tells the truth.\n\n3. Fletcher says Christie tells the truth.\n   - We now know Christie tells the truth (from 2).\n   - Fletcher says Christie tells the truth, so Fletcher's statement is true.\n   - Therefore, Fletcher tells the truth.\n\n4. Amberly says Fletcher lies.\n   - From 3, Fletcher tells the truth.\n   - Amberly says Fletcher lies, which is false.\n   - Therefore, Amberly lies.\n\n5. Raymond says Amberly tells the truth.\n   - Amberly lies (from 4).\n   - Raymond says Amberly tells the truth, so Raymond's statement is false.\n   - Therefore, Raymond lies.\n\nFinal conclusion: Raymond lies.\n\nFINAL ANSWER: No",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "Question: Phoebe tells the truth. Christie says Phoebe tells the truth. Fletcher says Christie tells the truth. Amberly says Fletcher lies. Raymond says Amberly tells the truth. Does Raymond tell the truth?",
+  "source": "BBH/web_of_lies"
+}

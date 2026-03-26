@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-076",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:32:42.784549Z",
+  "latency_seconds": 4.2,
+  "input_tokens": 214,
+  "output_tokens": 349,
+  "cost_usd": 0.000644,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nWhich of the following is the most efficient way to transport large amounts of coal from a mine in Kentucky to a power plant in Arizona?\n\n  A: by ship\n  B: by train\n  C: by truck\n  D: by airplane\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK:  \nWhen considering the most efficient way to transport large quantities of a heavy bulk commodity like coal over long distances, the key factors include cost per ton-mile, infrastructure availability, speed, and practicality. Common transportation methods include trucks, trains, ships, and airplanes.  \n- Air transport is generally the fastest but also the most expensive and impractical for heavy bulk goods due to high fuel costs and limited cargo capacity.  \n- Trucks are flexible and good for shorter distances but are less fuel-efficient and more costly per ton-mile over long distances.  \n- Trains are generally more cost-effective and efficient than trucks for large volumes overland, especially over long distances, due to their large capacity and lower fuel consumption per ton-mile.  \n- Ships are usually the most cost-efficient mode for moving large quantities over long distances but are limited to locations accessible by waterways. They work well for coastal or river transport but not for landlocked routes without waterway connections.  \n\nStep 2 - REASON:  \nCoal needs to travel from Kentucky to Arizona, which is a long overland route. Kentucky is not directly on the coast, and Arizona is inland, so transporting by ship would require extensive use of waterways and additional transshipment, making it inefficient.  \nTransporting by airplane is highly impractical and cost-prohibitive given the weight and volume of coal.  \nTrucks would work but are inefficient and costly for very large amounts and long distances.  \nTrains, on the other hand, have extensive rail networks connecting both Kentucky and Arizona and are designed specifically for hauling bulk commodities efficiently over land. Given the volume and distance involved, rail transport is typically the most cost-effective and efficient choice.  \n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following is the most efficient way to transport large amounts of coal from a mine in Kentucky to a power plant in Arizona?",
+  "source": "ARC-Challenge"
+}

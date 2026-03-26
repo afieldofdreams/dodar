@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-024",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:36:47.254229Z",
+  "latency_seconds": 8.38,
+  "input_tokens": 134,
+  "output_tokens": 460,
+  "cost_usd": 0.00079,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A 32-year-old male presents to the office with the complaint of pain in his right shoulder for the past two weeks. Physical examination reveals tenderness at the greater tubercle of the humerus and painful abduction of the right upper extremity. The cause of this patient's condition is most likely a somatic dysfunction of which of the following muscles?\n\n  A: anterior scalene\n  B: latissimus dorsi\n  C: pectoralis minor\n  D: supraspinatus\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the clinical scenario and the answer choices:\n\n**Patient presentation:**\n- 32-year-old male with right shoulder pain for 2 weeks.\n- Physical exam: tenderness at the greater tubercle of the humerus.\n- Painful abduction of the right upper extremity.\n\n**Key points:**\n- Tenderness at the greater tubercle, which is the prominent lateral part of the humerus where rotator cuff muscles attach.\n- Pain during abduction suggests involvement of muscles responsible for this movement.\n\n**Relevant anatomy and function:**\n- The **greater tubercle of the humerus** serves as the insertion for three rotator cuff muscles:\n  - Supraspinatus\n  - Infraspinatus\n  - Teres minor\n\n- Supraspinatus initiates abduction (first 15 degrees) followed by the deltoid.\n\n**Answer choices:**\n\nA) **Anterior scalene**\n- Muscle of the neck, inserts on the first rib; involved in neck flexion and elevates the first rib, not shoulder abduction.\n- Not related to tenderness on the greater tubercle or shoulder abduction.\n\nB) **Latissimus dorsi**\n- Inserts on the intertubercular groove of the humerus (lesser tubercle area).\n- Primarily responsible for shoulder extension, adduction, and internal rotation.\n- Not involved in abduction, unlikely to cause tender greater tubercle pain with painful abduction.\n\nC) **Pectoralis minor**\n- Inserts on the coracoid process of the scapula.\n- Involved in scapular protraction and depression.\n- No direct relation to the greater tubercle or abduction pain.\n\nD) **Supraspinatus**\n- Inserts on the superior facet of the greater tubercle of the humerus.\n- Responsible for initiating abduction of the arm.\n- Tenderness at the greater tubercle and painful abduction is classic for **supraspinatus tendinopathy or somatic dysfunction**.\n\n**Conclusion:**\nThe condition is likely related to somatic dysfunction or pathology of the **supraspinatus muscle**, leading to tenderness at the greater tubercle and painful abduction.\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "A 32-year-old male presents to the office with the complaint of pain in his right shoulder for the past two weeks. Physical examination reveals tenderness at the greater tubercle of the humerus and painful abduction of the right upper extremity. The cause of this patient's condition is most likely a somatic dysfunction of which of the following muscles?",
+  "source": "MMLU/professional_medicine"
+}

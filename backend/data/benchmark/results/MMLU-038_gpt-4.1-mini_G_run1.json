@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-038",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:34:41.489279Z",
+  "latency_seconds": 6.18,
+  "input_tokens": 367,
+  "output_tokens": 336,
+  "cost_usd": 0.000684,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A student places a metal spoon in a cup of hot water. After one minute, the handle feels warm. Which best explains this?\nA: Heat energy was created in the spoon by the water\nB: Cold energy moved from the spoon into the water\nC: Heat energy was transferred through the metal by conduction\nD: The spoon absorbed light energy from the water\n\nEXAMPLE ANSWER: The observation is that a metal spoon's handle gets warm when the bowl end is in hot water. I need to identify the mechanism.\n\nKey physics: metal is a good thermal conductor. Heat transfers through solid materials by conduction.\n\nEvaluating each option:\n- A: Heat is not created. It is transferred. Violates conservation of energy. Incorrect.\n- B: No such thing as 'cold energy.' Heat moves from hot to cold. Incorrect.\n- C: Heat transfers from hot water to spoon, then through metal by conduction. Correct.\n- D: Light energy not involved. The transfer is thermal. Incorrect.\n\nFINAL ANSWER: C\n\nNow solve the following problem using the same careful reasoning approach.\n\nWhich of the following documents is typically issued as part of the due-process activities of the Financial Accounting Standards Board (FASB) for amending the FASB Accounting Standards Codification?\n\n  A: A proposed statement of position.\n  B: A proposed accounting standards update.\n  C: A proposed accounting research bulletin.\n  D: A proposed staff accounting bulletin.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "The question asks which document is typically issued during the due-process activities of the Financial Accounting Standards Board (FASB) when amending the FASB Accounting Standards Codification.\n\nStep 1: Understand what \"due process\" in the FASB context means. Due process involves steps the FASB takes to issue accounting standards, including issuing documents for public comment before finalizing changes.\n\nStep 2: Recall typical FASB documents:\n\n- Proposed Statement of Position (SOP): This is issued by the American Institute of Certified Public Accountants (AICPA), not FASB. Historically related to accounting practice guidance but not part of FASB's process.\n  \n- Proposed Accounting Standards Update (ASU): The FASB issues proposed ASUs to amend the Codification. The ASU outlines proposed changes and is released for public comment as part of due process.\n  \n- Proposed Accounting Research Bulletin (ARB): ARBs were issued by the Committee on Accounting Procedure, a predecessor of FASB, but are no longer used.\n  \n- Proposed Staff Accounting Bulletin (SAB): These are issued by the SEC staff to provide guidance but are not part of FASB's due process.\n\nStep 3: From this knowledge:\n\n- A: SOP is AICPA-related and not part of FASB due process. Exclude.\n- B: ASU is the formal document FASB issues proposing amendments to the Codification. Matches requirement.\n- C: ARB is outdated and no longer issued. Exclude.\n- D: SAB is SEC staff guidance, not FASB due process. Exclude.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following documents is typically issued as part of the due-process activities of the Financial Accounting Standards Board (FASB) for amending the FASB Accounting Standards Codification?",
+  "source": "MMLU/professional_accounting"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-038",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:30:21.232010Z",
+  "latency_seconds": 6.28,
+  "input_tokens": 106,
+  "output_tokens": 302,
+  "cost_usd": 0.000526,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Which of the following documents is typically issued as part of the due-process activities of the Financial Accounting Standards Board (FASB) for amending the FASB Accounting Standards Codification?\n\n  A: A proposed statement of position.\n  B: A proposed accounting standards update.\n  C: A proposed accounting research bulletin.\n  D: A proposed staff accounting bulletin.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option in the context of FASB's due-process activities for amending the FASB Accounting Standards Codification:\n\nA: **A proposed statement of position**  \n- Statements of Position (SOPs) were issued by the AICPA's Accounting Standards Division and are not part of the FASB’s due process documents. They also are not directly related to the FASB Codification updates.\n\nB: **A proposed accounting standards update**  \n- The FASB issues Accounting Standards Updates (ASUs) as part of its due process to amend and clarify the Accounting Standards Codification (ASC). A proposed Accounting Standards Update (a \"proposed ASU\") is issued to solicit public comments before finalizing the change. This matches the due process activity of the FASB.\n\nC: **A proposed accounting research bulletin**  \n- Accounting Research Bulletins (ARBs) were issued by the U.S. Committee on Accounting Procedure (CAP) before the FASB was established. They are historical and not related to the current FASB due process.\n\nD: **A proposed staff accounting bulletin**  \n- Staff Accounting Bulletins (SABs) are issued by the SEC staff to provide guidance on applying SEC rules and regulations and are not part of the FASB’s due-process activities.\n\nGiven this analysis, the correct document typically issued by the FASB as part of the due process for amending the Codification is:\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following documents is typically issued as part of the due-process activities of the Financial Accounting Standards Board (FASB) for amending the FASB Accounting Standards Codification?",
+  "source": "MMLU/professional_accounting"
+}

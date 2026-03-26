@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-078",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:31:36.727777Z",
+  "latency_seconds": 2.96,
+  "input_tokens": 84,
+  "output_tokens": 147,
+  "cost_usd": 0.000269,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Sometimes, large meteoroids enter the atmosphere of Earth and reach the ground. Scientists identify possible impact sites when they find\n\n  A: carbon deposits.\n  B: volcanic materials.\n  C: strike-slip faults.\n  D: bowl-shaped craters.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "When large meteoroids enter Earth's atmosphere and reach the ground, they create impact sites that are characterized by certain geological features.\n\n- A: Carbon deposits are usually related to organic material or biological processes, not directly indicative of meteoroid impacts.\n- B: Volcanic materials come from volcanic activities, not from meteor impacts.\n- C: Strike-slip faults are types of faults where two blocks slide past each other horizontally; these are associated with tectonic activity rather than meteor impacts.\n- D: Bowl-shaped craters are classic evidence of meteor impacts, as meteoroids striking the Earth's surface create circular depressions, typically bowl-shaped.\n\nTherefore, scientists identify possible impact sites by finding bowl-shaped craters.\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "Sometimes, large meteoroids enter the atmosphere of Earth and reach the ground. Scientists identify possible impact sites when they find",
+  "source": "ARC-Challenge"
+}

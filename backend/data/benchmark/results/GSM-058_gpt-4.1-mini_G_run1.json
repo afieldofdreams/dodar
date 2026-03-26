@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-058",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:25:45.398746Z",
+  "latency_seconds": 4.3,
+  "input_tokens": 471,
+  "output_tokens": 291,
+  "cost_usd": 0.000654,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nMike decides he wants to replace his movie collection with digital versions.  He has 600 movies.  A third of the movies are in various series and he knows he can get those for only $6 of the cost of a normal movie by just buying the series together.  40% of the remaining movies are older movies which are $5.  How much does replacing the movies cost if a normal movie costs $10?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me reason through this carefully step by step.\n\n1. Mike has 600 movies total.\n\n2. A third of the movies are in various series. \n   - Number of series movies = 1/3 * 600 = 200 movies.\n   - These series movies cost $6 each (because buying the series together is 60% less than normal $10 price).\n   - Cost for series movies = 200 * $6 = $1200.\n\n3. The remaining movies = 600 - 200 = 400 movies.\n\n4. Among these remaining 400 movies, 40% are older movies that cost $5 each.\n   - Number of older movies = 40% of 400 = 0.4 * 400 = 160 movies.\n   - Cost for older movies = 160 * $5 = $800.\n\n5. The rest of the remaining movies are newer movies (not in series, not older).\n   - Number of these = 400 - 160 = 240 movies.\n   - Cost for these movies is normal price = $10 each.\n   - Cost for these movies = 240 * $10 = $2400.\n\n6. Total cost to replace all movies:\n   = Cost of series movies + cost of older movies + cost of newer movies\n   = $1200 + $800 + $2400\n   = $4400.\n\nFINAL ANSWER: 4400",
+  "extracted_answer": "4400",
+  "is_correct": true,
+  "correct_answer": "4400",
+  "answer_type": "numeric_exact",
+  "question": "Mike decides he wants to replace his movie collection with digital versions.  He has 600 movies.  A third of the movies are in various series and he knows he can get those for only $6 of the cost of a normal movie by just buying the series together.  40% of the remaining movies are older movies which are $5.  How much does replacing the movies cost if a normal movie costs $10?",
+  "source": "GSM8K"
+}

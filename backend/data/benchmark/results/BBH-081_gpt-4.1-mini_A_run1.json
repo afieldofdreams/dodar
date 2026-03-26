@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-081",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:24:18.355136Z",
+  "latency_seconds": 3.93,
+  "input_tokens": 354,
+  "output_tokens": 227,
+  "cost_usd": 0.000505,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "How would a typical person answer each of the following questions about causation?\nLouie and Claire are playing a game of basketball, and they made a bet with their friends who are watching on the sidelines. If either Louie makes a 3-point shot or Claire makes a 3-point shot during the game, then they'll win $100 and split it down the middle. Just when the game started, Louie immediately got the ball at the 3-point line. He looked to the basket, focused his shot, and made a 3-point shot right at the beginning of the game. Louie, Claire, and their friends continued playing, but as hard as they tried, Louie and Claire couldn't make another shot. And then right at the end of the game as the clock was winding down, Claire got the ball at the 3-point line. She looked to the basket, focused her shot, and made a 3- point shot right at the buzzer. Then the game ended. Because they would win $100 if either Louie made a 3-point shot or Claire made a 3- point shot, Louie and Claire won $100 and split it down the middle. Think about what could have been different in the story that you just read. Which event do you imagine happening differently: Louie making the 3-point shot right at the beginning of the game. Claire making the 3-point shot right at the buzzer. Did Louie and Claire win the $100 bet because Louie made the 3-point shot?\nOptions:\n- Yes\n- No\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's think through how a typical person might reason about the causation question here:\n\n- The bet says that if **either** Louie makes a 3-point shot **or** Claire makes a 3-point shot, then they win $100.\n- Louie made a 3-point shot right at the start.\n- Claire made a 3-point shot at the buzzer.\n- Because either one making a 3-point shot is sufficient to win the bet, just Louie's shot alone was enough for them to win.\n- So, even if Claire had not made the shot at the buzzer, Louie’s shot would have caused them to win.\n- The question is, \"Did Louie and Claire win the $100 bet because Louie made the 3-point shot?\"\n- Since Louie’s shot alone met the condition for winning, the answer should be **Yes**.\n- Claire’s shot was not necessary to meet the condition; it was redundant with respect to winning the bet.\n- Therefore, the presence of Louie’s successful shot caused the condition for winning to be satisfied.\n\nFINAL ANSWER: Yes",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nLouie and Claire are playing a game of basketball, and they made a bet with their friends who are watching on the sidelines. If either Louie makes a 3-point shot or Claire makes a 3-point shot during the game, then they'll win $100 and split it down the middle. Just when the game started, Louie immediately got the ball at the 3-point line. He looked to the basket, focused his shot, and made a 3-point shot right at the beginning of the game. Louie, Claire, and their friends continued playing, but as hard as they tried, Louie and Claire couldn't make another shot. And then right at the end of the game as the clock was winding down, Claire got the ball at the 3-point line. She looked to the basket, focused her shot, and made a 3- point shot right at the buzzer. Then the game ended. Because they would win $100 if either Louie made a 3-point shot or Claire made a 3- point shot, Louie and Claire won $100 and split it down the middle. Think about what could have been different in the story that you just read. Which event do you imagine happening differently: Louie making the 3-point shot right at the beginning of the game. Claire making the 3-point shot right at the buzzer. Did Louie and Claire win the $100 bet because Louie made the 3-point shot?\nOptions:\n- Yes\n- No",
+  "source": "BBH/causal_judgement"
+}

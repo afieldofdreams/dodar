@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-043",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:31:03.412738Z",
+  "latency_seconds": 3.95,
+  "input_tokens": 451,
+  "output_tokens": 198,
+  "cost_usd": 0.000497,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nCarly had 80 cards, 2/5 of the cards had the letter A on them, 1/2 of the remaining had the letter B, 5/8 of the rest had the letter C on them, and the others had the letter D. How many of the cards had the letter D on them?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me reason through this step by step.\n\nTotal cards = 80.\n\n1. Cards with letter A:\n   \\( \\frac{2}{5} \\times 80 = \\frac{2}{5} \\times 80 = 32 \\) cards.\n\n2. Remaining cards after removing A:\n   \\( 80 - 32 = 48 \\) cards.\n\n3. Cards with letter B:\n   Half of the remaining, so:\n   \\( \\frac{1}{2} \\times 48 = 24 \\) cards.\n\n4. Remaining cards after removing B:\n   \\( 48 - 24 = 24 \\) cards.\n\n5. Cards with letter C:\n   \\( \\frac{5}{8} \\times 24 = 15 \\) cards.\n\n6. Remaining cards after removing C:\n   \\( 24 - 15 = 9 \\) cards.\n\nThese remaining 9 cards have the letter D.\n\nFINAL ANSWER: 9",
+  "extracted_answer": "9",
+  "is_correct": true,
+  "correct_answer": "9",
+  "answer_type": "numeric_exact",
+  "question": "Carly had 80 cards, 2/5 of the cards had the letter A on them, 1/2 of the remaining had the letter B, 5/8 of the rest had the letter C on them, and the others had the letter D. How many of the cards had the letter D on them?",
+  "source": "GSM8K"
+}

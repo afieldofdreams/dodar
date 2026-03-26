@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-059",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:33:33.985725Z",
+  "latency_seconds": 4.39,
+  "input_tokens": 270,
+  "output_tokens": 214,
+  "cost_usd": 0.00045,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nChad ordered a build-your-own burrito for lunch.  The base burrito is $6.50.  He adds extra meat for $2.00, extra cheese for $1.00, avocado for $1.00 and 2 sauces for $0.25 each.  He decides to upgrade his meal for an extra $3.00 which will add chips and a drink.  He has a gift card for $5.00 that he uses at check out.  How much does he still owe?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nWhen dealing with a problem involving the cost of items with various additions and discounts (like gift cards), the general principle is to first calculate the total cost by summing the base price and all extra charges, then subtract any discounts or gift cards to determine the remaining balance owed.\n\nStep 2 - REASON:  \n- Base burrito: $6.50  \n- Extra meat: $2.00  \n- Extra cheese: $1.00  \n- Avocado: $1.00  \n- 2 sauces at $0.25 each = 2 × $0.25 = $0.50  \n- Upgrade meal (chips and drink): $3.00  \n\nSum all these:  \n$6.50 + $2.00 + $1.00 + $1.00 + $0.50 + $3.00 = $14.00  \n\nSubtract the gift card:  \n$14.00 - $5.00 = $9.00\n\nFINAL ANSWER: 9.00",
+  "extracted_answer": "9.00",
+  "is_correct": true,
+  "correct_answer": "9",
+  "answer_type": "numeric_exact",
+  "question": "Chad ordered a build-your-own burrito for lunch.  The base burrito is $6.50.  He adds extra meat for $2.00, extra cheese for $1.00, avocado for $1.00 and 2 sauces for $0.25 each.  He decides to upgrade his meal for an extra $3.00 which will add chips and a drink.  He has a gift card for $5.00 that he uses at check out.  How much does he still owe?",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-097",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:23:44.202106Z",
+  "latency_seconds": 3.24,
+  "input_tokens": 81,
+  "output_tokens": 195,
+  "cost_usd": 0.000344,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Question: Fletcher tells the truth. Conception says Fletcher tells the truth. Bernita says Conception tells the truth. Jamey says Bernita tells the truth. Teressa says Jamey lies. Does Teressa tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the statements step-by-step.\n\n1. Fletcher tells the truth.  \n   - So, Fletcher is telling the truth.\n\n2. Conception says Fletcher tells the truth.  \n   - Since Fletcher tells the truth, Conception's statement (\"Fletcher tells the truth\") is true.\n   - Therefore, Conception tells the truth.\n\n3. Bernita says Conception tells the truth.  \n   - Since Conception tells the truth, Bernita's statement is true.\n   - Therefore, Bernita tells the truth.\n\n4. Jamey says Bernita tells the truth.  \n   - Bernita tells the truth, so Jamey's statement is true.\n   - Therefore, Jamey tells the truth.\n\n5. Teressa says Jamey lies.  \n   - But Jamey tells the truth, so Teressa's statement (\"Jamey lies\") is false.\n   - Therefore, Teressa lies.\n\nFINAL ANSWER: No",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "Question: Fletcher tells the truth. Conception says Fletcher tells the truth. Bernita says Conception tells the truth. Jamey says Bernita tells the truth. Teressa says Jamey lies. Does Teressa tell the truth?",
+  "source": "BBH/web_of_lies"
+}

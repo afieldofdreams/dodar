@@ -70,7 +70,7 @@ export default function RunProgressPage() {
           <span
             style={{
               fontSize: "0.8rem",
-              background: "#e8e8f0",
+              background: "#262640",
               padding: "4px 10px",
               borderRadius: 6,
               marginLeft: 12,
@@ -92,7 +92,7 @@ export default function RunProgressPage() {
 
       <div
         style={{
-          background: "#e0e0e0",
+          background: "#2e2e50",
           borderRadius: 8,
           height: 24,
           marginBottom: "1.5rem",
@@ -138,7 +138,7 @@ export default function RunProgressPage() {
       {isRunning && events.length > 0 && (
         <>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.5rem" }}>
-            <h3 style={{ fontSize: "0.95rem", color: "#444", margin: 0 }}>Event Log</h3>
+            <h3 style={{ fontSize: "0.95rem", color: "#e8e8f0", margin: 0 }}>Event Log</h3>
             <RunStats events={events} />
           </div>
           <div
@@ -241,16 +241,16 @@ export default function RunProgressPage() {
               <div
                 key={scenarioId}
                 style={{
-                  background: "#fff",
+                  background: "#1e1e32",
                   borderRadius: 8,
                   marginBottom: "1rem",
-                  border: "1px solid #e0e0e0",
+                  border: "1px solid #2e2e50",
                 }}
               >
                 <div
                   style={{
                     padding: "0.75rem 1rem",
-                    borderBottom: "1px solid #f0f0f0",
+                    borderBottom: "1px solid #22223a",
                     fontWeight: 600,
                     color: "#6c63ff",
                   }}
@@ -335,9 +335,9 @@ export default function RunProgressPage() {
                                       style={{
                                         padding: "4px 12px",
                                         borderRadius: 4,
-                                        border: "1px solid #d0d0d0",
-                                        background: viewMode === "response" ? "#6c63ff" : "#fff",
-                                        color: viewMode === "response" ? "#fff" : "#333",
+                                        border: "1px solid #2e2e50",
+                                        background: viewMode === "response" ? "#6c63ff" : "#1e1e32",
+                                        color: viewMode === "response" ? "#fff" : "#e8e8f0",
                                         cursor: "pointer",
                                         fontSize: "0.8rem",
                                       }}
@@ -349,9 +349,9 @@ export default function RunProgressPage() {
                                       style={{
                                         padding: "4px 12px",
                                         borderRadius: 4,
-                                        border: "1px solid #d0d0d0",
-                                        background: viewMode === "prompt" ? "#6c63ff" : "#fff",
-                                        color: viewMode === "prompt" ? "#fff" : "#333",
+                                        border: "1px solid #2e2e50",
+                                        background: viewMode === "prompt" ? "#6c63ff" : "#1e1e32",
+                                        color: viewMode === "prompt" ? "#fff" : "#e8e8f0",
                                         cursor: "pointer",
                                         fontSize: "0.8rem",
                                       }}
@@ -362,10 +362,11 @@ export default function RunProgressPage() {
                                   <pre
                                     style={{
                                       whiteSpace: "pre-wrap",
-                                      background: "#fafafa",
+                                      background: "#161625",
                                       padding: "1rem",
                                       borderRadius: 6,
-                                      border: "1px solid #e0e0e0",
+                                      border: "1px solid #2e2e50",
+                                      color: "#e8e8f0",
                                       fontSize: "0.85rem",
                                       lineHeight: 1.6,
                                       maxHeight: 500,
@@ -391,7 +392,7 @@ export default function RunProgressPage() {
       )}
 
       {!isRunning && results.length === 0 && run?.status === "completed" && (
-        <p style={{ color: "#666" }}>No result files found for this run.</p>
+        <p style={{ color: "#9898b8" }}>No result files found for this run.</p>
       )}
     </div>
   );
@@ -401,14 +402,14 @@ function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div
       style={{
-        background: "#fff",
+        background: "#1e1e32",
         padding: "0.75rem 1rem",
         borderRadius: 8,
         flex: 1,
         textAlign: "center",
       }}
     >
-      <div style={{ fontSize: "0.75rem", color: "#666", marginBottom: 4 }}>
+      <div style={{ fontSize: "0.75rem", color: "#9898b8", marginBottom: 4 }}>
         {label}
       </div>
       <div style={{ fontWeight: 600, fontSize: "1rem" }}>{value}</div>
@@ -424,7 +425,7 @@ function RunStats({ events }: { events: any[] }) {
     .reduce((sum, e) => sum + (e.tokens_used || 0), 0);
 
   return (
-    <div style={{ display: "flex", gap: "1rem", fontSize: "0.8rem", color: "#666" }}>
+    <div style={{ display: "flex", gap: "1rem", fontSize: "0.8rem", color: "#9898b8" }}>
       <span><span style={{ color: "#4caf50" }}>{completed}</span> done</span>
       {errors > 0 && <span><span style={{ color: "#f44336" }}>{errors}</span> errors</span>}
       <span>{totalTokens.toLocaleString()} tokens</span>
@@ -491,12 +492,13 @@ function conditionColor(condition: string): string {
 const thStyle: React.CSSProperties = {
   textAlign: "left",
   padding: "0.5rem 0.75rem",
-  borderBottom: "2px solid #e0e0e0",
+  borderBottom: "2px solid #2e2e50",
   fontSize: "0.8rem",
-  color: "#666",
+  color: "#9898b8",
+  background: "transparent",
 };
 
 const tdStyle: React.CSSProperties = {
   padding: "0.5rem 0.75rem",
-  borderBottom: "1px solid #f0f0f0",
+  borderBottom: "1px solid #22223a",
 };

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-044",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:28:46.916126Z",
+  "latency_seconds": 2.53,
+  "input_tokens": 72,
+  "output_tokens": 108,
+  "cost_usd": 0.000202,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Nani is 8 years old. His brother is twice his age. Nani's sister is 25% younger than him. What is the total age of all three of the family members?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Nani is 8 years old.\n\nHis brother is twice his age:\nBrother's age = 2 × 8 = 16\n\nNani's sister is 25% younger than him:\n25% of 8 = 0.25 × 8 = 2\nSister's age = 8 - 2 = 6\n\nTotal age = Nani's age + Brother's age + Sister's age\nTotal age = 8 + 16 + 6 = 30\n\nFINAL ANSWER: 30",
+  "extracted_answer": "30",
+  "is_correct": true,
+  "correct_answer": "30",
+  "answer_type": "numeric_exact",
+  "question": "Nani is 8 years old. His brother is twice his age. Nani's sister is 25% younger than him. What is the total age of all three of the family members?",
+  "source": "GSM8K"
+}

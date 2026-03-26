@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-024",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:23:59.804220Z",
+  "latency_seconds": 7.54,
+  "input_tokens": 337,
+  "output_tokens": 387,
+  "cost_usd": 0.000754,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nA 32-year-old male presents to the office with the complaint of pain in his right shoulder for the past two weeks. Physical examination reveals tenderness at the greater tubercle of the humerus and painful abduction of the right upper extremity. The cause of this patient's condition is most likely a somatic dysfunction of which of the following muscles?\n\n  A: anterior scalene\n  B: latissimus dorsi\n  C: pectoralis minor\n  D: supraspinatus\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the clinical presentation step-by-step:\n\n1. Patient: 32-year-old male with right shoulder pain ongoing for 2 weeks.\n2. Physical exam findings:\n   - Tenderness at the greater tubercle of the humerus.\n   - Painful abduction of the right upper extremity.\n   \n3. Relevant anatomy and muscle actions:\n   - The greater tubercle of the humerus is the site of insertion for the supraspinatus, infraspinatus, and teres minor muscles.\n   - The supraspinatus muscle initiates abduction of the arm (first 15 degrees), after which the deltoid takes over. Painful abduction usually implicates the supraspinatus.\n   - Tenderness at the greater tubercle (its insertion point) further suggests supraspinatus involvement.\n   \n4. Consider the answer choices:\n   - A: Anterior scalene: It is a neck muscle primarily involved in neck flexion and elevation of the first rib, unlikely to cause shoulder pain and pain on abduction.\n   - B: Latissimus dorsi: Inserts on the intertubercular sulcus, responsible for adduction, extension, and internal rotation of the arm, not abduction. Not tender at the greater tubercle.\n   - C: Pectoralis minor: Inserts on the coracoid process of the scapula and affects scapular movement; its dysfunction can cause shoulder pain but is not directly related to abduction or tenderness at the greater tubercle.\n   - D: Supraspinatus: Inserts on the greater tubercle of the humerus and initiates abduction; its dysfunction (like tendinopathy or somatic dysfunction) would present with tenderness at the greater tubercle and pain on abduction.\n\nTherefore, the muscle likely involved is the supraspinatus.\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "A 32-year-old male presents to the office with the complaint of pain in his right shoulder for the past two weeks. Physical examination reveals tenderness at the greater tubercle of the humerus and painful abduction of the right upper extremity. The cause of this patient's condition is most likely a somatic dysfunction of which of the following muscles?",
+  "source": "MMLU/professional_medicine"
+}

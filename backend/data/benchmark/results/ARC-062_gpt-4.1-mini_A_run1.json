@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-062",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:27:31.644817Z",
+  "latency_seconds": 2.96,
+  "input_tokens": 73,
+  "output_tokens": 155,
+  "cost_usd": 0.000277,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Which characteristic of a dog is most likely learned from its environment?\n\n  A: keen eyesight\n  B: begging for food\n  C: ability to run fast\n  D: swimming in water\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each characteristic:\n\nA: keen eyesight  \n- This is an innate physical trait determined by genetics, not learned behavior.\n\nB: begging for food  \n- This behavior is typically learned. Dogs may learn to beg because they observe humans' reactions (e.g., giving food) and repeat the behavior.\n\nC: ability to run fast  \n- Running speed is largely determined by breed and physical traits, so it's mostly innate.\n\nD: swimming in water  \n- Some dogs are naturally good swimmers, but swimming can also be learned from experience. However, not all dogs learn to swim; it depends on exposure.\n\nBetween B and D, begging for food is more clearly a learned behavior influenced by the dog's environment, while swimming may be innate or learned.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Which characteristic of a dog is most likely learned from its environment?",
+  "source": "ARC-Challenge"
+}

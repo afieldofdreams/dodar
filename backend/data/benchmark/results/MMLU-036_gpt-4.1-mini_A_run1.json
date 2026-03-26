@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-036",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:36:09.772706Z",
+  "latency_seconds": 9.86,
+  "input_tokens": 132,
+  "output_tokens": 381,
+  "cost_usd": 0.000662,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Which of the following is the proper treatment of the cost of equipment used in research and development activities that will have alternative future uses?\n\n  A: Expensed in the year in which the research and development project started.\n  B: Capitalized and depreciated over the term of the research and development project.\n  C: Capitalized and depreciated over its estimated useful life.\n  D: Either capitalized or expensed, but not both, depending on the term of the research and development project.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option with respect to the treatment of equipment used in research and development (R&D) activities that will have alternative future uses:\n\n- Under accounting standards (such as US GAAP and IFRS), expenditures on R&D are generally expensed as incurred. However, certain equipment used in R&D that has alternative future uses beyond the current R&D project is treated differently.\n\n- For equipment that has alternative future uses (i.e., can be used in other projects or operations after the R&D project finishes), the cost is not fully expensed immediately. Instead, it is capitalized as an asset and then depreciated over its expected useful life.\n\nNow, examine each option:\n\nA: Expensed in the year in which the research and development project started.\n- This would be correct if the equipment had no alternative future uses, but since this equipment does have alternative future uses, expensing in the year is incorrect for the full cost.\n\nB: Capitalized and depreciated over the term of the research and development project.\n- Depreciating only over the R&D project term assumes the asset has no useful life beyond that project, which is not true here (alternative future uses exist). So this is incorrect.\n\nC: Capitalized and depreciated over its estimated useful life.\n- This fits the treatment of equipment that has alternative future uses. The cost should be capitalized and depreciated over the asset's useful life, not just the current project period.\n\nD: Either capitalized or expensed, but not both, depending on the term of the research and development project.\n- This is vague and not aligned with the rules, which specify capitalization when alternative future uses exist, regardless of project length.\n\n**Conclusion:** The proper treatment for equipment used in R&D that has alternative future uses is to **capitalize its cost and depreciate it over its estimated useful life**.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following is the proper treatment of the cost of equipment used in research and development activities that will have alternative future uses?",
+  "source": "MMLU/professional_accounting"
+}

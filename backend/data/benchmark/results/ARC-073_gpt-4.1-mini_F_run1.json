@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-073",
+  "condition": "F",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:31:26.664895Z",
+  "latency_seconds": 5.17,
+  "input_tokens": 287,
+  "output_tokens": 320,
+  "cost_usd": 0.000627,
+  "system_prompt_sent": "When answering this question, work through these five phases:\n\n1. REVIEW: Check your understanding of the problem. What is actually being asked? Are there errors in your initial reading? Identify at least one way you might misinterpret this question.\n\n2. ACTION: Begin working through the problem. Show your reasoning and calculations. Identify which parts of your work are certain and which are tentative.\n\n3. OPTIONS: Step back and generate at least three possible approaches or answers. For each option, identify the key trade-off or risk. Do not commit yet.\n\n4. DIAGNOSE: Now identify the core problem more precisely. What are the key constraints? What information is given and what is missing? What assumptions should you question?\n\n5. DECIDE: Select your final approach. State explicitly why you are choosing it and why you are rejecting each alternative. State your confidence level and what evidence would change your mind.",
+  "user_prompt_sent": "Follow the five phases (Review, Action, Options, Diagnose, Decide).\n\nWhat is the role of the mitochondrion in cells?\n\n  A: It converts sunlight to energy.\n  B: It controls all functions of the cell.\n  C: It transports water throughout the cell.\n  D: It breaks down sugar to release energy.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "1. REVIEW:\nThe question asks about the role of the mitochondrion in cells. A potential misinterpretation could be confusing the mitochondrion with other organelles like chloroplasts or the nucleus, as they have distinct functions.\n\n2. ACTION:\n- Option A suggests the mitochondrion converts sunlight to energy, which is the role of chloroplasts in plant cells, not mitochondria.\n- Option B states it controls all functions of the cell, a role mostly attributed to the nucleus.\n- Option C says it transports water, which is not the primary role of mitochondria; water transport is more related to vacuoles or membranes.\n- Option D says it breaks down sugar to release energy, which aligns with mitochondria's known function of cellular respiration.\n\n3. OPTIONS:\n- A: Mitochondrion converts sunlight to energy (risk: confusing mitochondria with chloroplasts).\n- B: Mitochondrion controls all functions of the cell (risk: confusing mitochondria with nucleus).\n- C: Mitochondrion transports water (risk: unlikely function of mitochondria).\n- D: Mitochondrion breaks down sugar to release energy (most consistent with biology).\n\n4. DIAGNOSE:\nThe key constraint is knowing the function of the mitochondrion. It is known as the \"powerhouse of the cell,\" primarily responsible for energy production via cellular respiration, which involves breaking down sugar molecules.\n\n5. DECIDE:\nBased on the known biology of mitochondria, option D is correct.\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "What is the role of the mitochondrion in cells?",
+  "source": "ARC-Challenge"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-052",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:30:28.692167Z",
+  "latency_seconds": 2.84,
+  "input_tokens": 77,
+  "output_tokens": 164,
+  "cost_usd": 0.000293,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Chase and Rider can ride their bikes thrice a day for 5 days; but on two other days, they ride twice the times they do on usual days. How many times do they ride their bikes a week?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's analyze the problem step-by-step:\n\n1. Chase and Rider ride their bikes thrice a day for 5 days.\n   - Number of rides in these 5 days = 3 rides/day × 5 days = 15 rides\n\n2. On two other days, they ride twice the times they do on usual days.\n   - Usual rides per day = 3\n   - Twice the usual rides = 3 × 2 = 6 rides/day\n   - Number of rides in these 2 days = 6 rides/day × 2 days = 12 rides\n\n3. Total rides in a week (7 days) = rides in 5 days + rides in 2 days\n   - Total = 15 + 12 = 27 rides\n\nFINAL ANSWER: 27",
+  "extracted_answer": "27",
+  "is_correct": false,
+  "correct_answer": "54",
+  "answer_type": "numeric_exact",
+  "question": "Chase and Rider can ride their bikes thrice a day for 5 days; but on two other days, they ride twice the times they do on usual days. How many times do they ride their bikes a week?",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-038",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:31:33.613543Z",
+  "latency_seconds": 4.79,
+  "input_tokens": 309,
+  "output_tokens": 343,
+  "cost_usd": 0.000672,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nWhich of the following documents is typically issued as part of the due-process activities of the Financial Accounting Standards Board (FASB) for amending the FASB Accounting Standards Codification?\n\n  A: A proposed statement of position.\n  B: A proposed accounting standards update.\n  C: A proposed accounting research bulletin.\n  D: A proposed staff accounting bulletin.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the options one by one based on what is typically issued as part of the due-process activities of the Financial Accounting Standards Board (FASB) when amending the FASB Accounting Standards Codification.\n\n1. **A proposed statement of position (SOP):**\n   - SOPs are generally issued by the American Institute of Certified Public Accountants (AICPA), not the FASB. They provide guidance on accounting practices but are not part of the FASB's standard-setting due process.\n\n2. **A proposed accounting standards update (ASU):**\n   - The FASB issues Accounting Standards Updates to communicate amendments to the FASB Accounting Standards Codification. The ASUs are part of the FASB’s due process activities for proposing changes to accounting standards. This is the main document released for public comment before being finalized.\n\n3. **A proposed accounting research bulletin (ARB):**\n   - ARBs were issued by the Committee on Accounting Procedure (CAP) before the formation of the FASB. They are obsolete and have been superseded by the FASB's standards. Thus, they are not currently issued by the FASB.\n\n4. **A proposed staff accounting bulletin (SAB):**\n   - SABs are issued by the staff of the Securities and Exchange Commission (SEC) to provide guidance on SEC reporting requirements. They are not issued by the FASB and are unrelated to its due process activities.\n\nFrom this analysis, the only document among the choices that fits the description of what the FASB typically issues when amending the Codification as part of due process is a \"proposed accounting standards update.\"\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following documents is typically issued as part of the due-process activities of the Financial Accounting Standards Board (FASB) for amending the FASB Accounting Standards Codification?",
+  "source": "MMLU/professional_accounting"
+}

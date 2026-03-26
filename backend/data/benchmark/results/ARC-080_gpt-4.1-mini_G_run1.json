@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-080",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:23:33.375499Z",
+  "latency_seconds": 5.4,
+  "input_tokens": 525,
+  "output_tokens": 300,
+  "cost_usd": 0.00069,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A 65-year-old man presents with sudden onset of slurred speech and right-sided weakness that started 2 hours ago. He has a history of atrial fibrillation and takes warfarin. His INR today is 1.4. CT head shows no haemorrhage. What is the most appropriate immediate management?\nA: Administer IV alteplase (thrombolysis)\nB: Increase warfarin dose\nC: Start aspirin 300mg\nD: Arrange urgent MRI brain\n\nEXAMPLE ANSWER: Let me work through this carefully.\n\nThe presentation is acute onset neurological deficit (slurred speech, right-sided weakness) within a 2-hour window. This is a clinical stroke presentation.\n\nKey factors to consider:\n- 2-hour onset puts him within the thrombolysis window (typically 4.5 hours)\n- CT shows no haemorrhage, so this is likely ischaemic\n- He has AF, which is a major risk factor for cardioembolic stroke\n- His INR is 1.4, which is subtherapeutic (target typically 2-3 for AF)\n- The subtherapeutic INR may explain why he had a stroke despite being on warfarin\n\nNow evaluating each option:\n- A (IV alteplase): Thrombolysis. Within time window, CT excludes haemorrhage. Guidelines generally consider thrombolysis if INR < 1.7.\n- B (Increase warfarin): Addresses long-term problem but nothing for acute stroke.\n- C (Aspirin 300mg): Standard if thrombolysis contraindicated, but thrombolysis is an option here.\n- D (Urgent MRI): Would delay treatment. CT already excluded haemorrhage.\n\nSince he is within the thrombolysis window, CT excludes haemorrhage, and INR 1.4 is below the 1.7 threshold, IV alteplase is most appropriate.\n\nFINAL ANSWER: A\n\nNow solve the following problem using the same careful reasoning approach.\n\nWhich of the following will best display percentages of the eight most abundant elements in the Earth's crust?\n\n  A: line graph\n  B: pie chart\n  C: bar graph\n  D: data table\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let me work through this carefully.\n\nThe question asks for the best way to display percentages of the eight most abundant elements in the Earth's crust.\n\nKey factors to consider:\n- We are dealing with parts of a whole (percentages that sum to 100%)\n- There are eight categories (elements)\n- The goal is to give the viewer an intuitive understanding of the proportion each element contributes to the total\n\nNow evaluating each option:\n\n- A (line graph): Line graphs are generally used to show trends or changes over continuous data, such as time. They are not ideal for showing percentage breakdowns of categories, especially when categories are discrete elements.\n\n- B (pie chart): Pie charts illustrate parts of a whole well and are commonly used to show percentage distributions among categories. They are effective at showing the relative size of each element's contribution to the total.\n\n- C (bar graph): Bar graphs can show quantities of different elements and can display percentages as well. They are good for comparing elements side by side by length of bars. However, for displaying percentage shares that add up to 100%, a pie chart tends to be more intuitive.\n\n- D (data table): A table can present precise percentage values but is harder to visualize proportions quickly. It's better for detailed data review than for intuitive understanding of proportions.\n\nSince the question asks for the best display method (implying the clearest visual representation of percentages), a pie chart (option B) is the most appropriate choice.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": false,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following will best display percentages of the eight most abundant elements in the Earth's crust?",
+  "source": "ARC-Challenge"
+}

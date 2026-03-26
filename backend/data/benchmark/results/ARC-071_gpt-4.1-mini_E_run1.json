@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-071",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:26:16.550383Z",
+  "latency_seconds": 6.26,
+  "input_tokens": 213,
+  "output_tokens": 385,
+  "cost_usd": 0.000701,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nA red giant star differs from main sequence stars because it\n\n  A: burns at a cooler temperature.\n  B: is always larger than other suns.\n  C: has greater density and gravity.\n  D: fuses hydrogen to make helium.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK:  \nTo understand how a red giant star differs from main sequence stars, we need to recall the lifecycle and characteristics of stars. Main sequence stars primarily fuse hydrogen into helium in their cores, maintaining a balance between gravitational collapse and radiation pressure, which keeps their size relatively stable. Red giants represent a later evolutionary stage in a star's life. Once a star exhausts hydrogen in its core, the core contracts while the outer layers expand and cool, making the star much larger but cooler on the surface compared to its main sequence phase. Red giants have lower surface temperatures but significantly increased size and luminosity. Density and gravity in the outer layers decrease because of expansion, while the core density and gravity increase. The fusion process may shift from hydrogen fusion in the core to hydrogen shell fusion around a helium core or helium fusion if conditions allow.\n\nStep 2 - REASON:  \nOption A: Red giants burn at a cooler surface temperature compared to main sequence stars, which gives them their reddish color. This is true.  \nOption B: Red giants are larger than main sequence stars, but not necessarily larger than *all* other suns (some stars, like supergiants, are larger). So \"always larger than other suns\" is an overstatement.  \nOption C: Red giants have a lower density and weaker gravity in their outer layers due to expansion, but higher core density and gravity. The overall star is not \"greater density and gravity\" compared to main sequence stars in general.  \nOption D: Main sequence stars fuse hydrogen into helium in their cores. Red giants have generally exhausted core hydrogen fusion and have switched to shell fusion or helium fusion. So fusing hydrogen into helium is not unique to red giants and is more characteristic of main sequence stars.\n\nThe statement that best differentiates a red giant from main sequence stars is that red giants burn at a cooler temperature.\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "A red giant star differs from main sequence stars because it",
+  "source": "ARC-Challenge"
+}

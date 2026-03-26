@@ -1,0 +1,21 @@
+{
+  "task_id": "MED-011",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:35:53.796196Z",
+  "latency_seconds": 5.72,
+  "input_tokens": 192,
+  "output_tokens": 440,
+  "cost_usd": 0.000781,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A 52-year-old man presents to the physician with a 6-month history of shortness of breath and nonproductive cough. He was recently diagnosed with stage 3 embryonal carcinoma testicular cancer. Following an orchiectomy, he was placed on chemotherapy. Cardiopulmonary examination shows fine inspiratory crackles bilaterally. There is clubbing present in the fingers bilaterally. Pulmonary function tests (PFTs) show FVC is 78% of expected and FEV1/FVC ratio is 92%. A CT scan of the chest is shown. Which of the following drugs is responsible for the patient’s condition?\n\n  A: Bleomycin\n  B: Carboplatin\n  C: Cisplatin\n  D: Ifosfamide\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the question step-by-step.\n\n**Patient presentation:**  \n- 52-year-old man  \n- 6-month history of shortness of breath and nonproductive cough  \n- Recently diagnosed with Stage 3 embryonal carcinoma of the testis  \n- Underwent orchiectomy and chemotherapy  \n- Physical exam: fine inspiratory crackles bilaterally, clubbing of fingers  \n- PFTs: FVC 78% (slightly reduced), FEV1/FVC 92% (normal or slightly high; normal ratio usually 70-80%)  \n- CT chest (not shown here but presumably shows interstitial lung changes/fibrosis)  \n\n**Interpretation of findings:**  \nThe patient has symptoms and signs suggestive of interstitial lung disease (ILD). Fine inspiratory crackles and clubbing point towards chronic lung fibrosis. The PFTs show a restrictive pattern (reduced FVC and preserved or increased FEV1/FVC ratio). This clinical picture is consistent with pulmonary fibrosis, potentially drug-induced.\n\n**Association with testicular cancer:**  \nChemotherapy agents used for testicular cancer include:\n\n- Bleomycin  \n- Cisplatin  \n- Ifosfamide  \n- Carboplatin  \n\n**Drug toxicities:**  \n\n- **Bleomycin:** Known for causing pulmonary toxicity, especially pulmonary fibrosis. Bleomycin-induced pneumonitis and fibrosis is a well-known side effect; risk factors include older age and cumulative dose. The mechanism is believed to be via free radical-induced lung injury.  \n- **Cisplatin:** Mainly nephrotoxicity, neurotoxicity, ototoxicity, but not commonly pulmonary fibrosis.  \n- **Carboplatin:** Has less neurotoxicity and nephrotoxicity compared to cisplatin; no major pulmonary toxicity is typically associated.  \n- **Ifosfamide:** Mainly causes hemorrhagic cystitis and nephrotoxicity; pulmonary toxicity is rare.\n\n**Conclusion:**  \nGiven the presentation of interstitial lung disease in a patient treated for embryonal carcinoma with chemotherapy, and the known pulmonary toxicity profile, **bleomycin** is the most likely culprit drug.\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "A 52-year-old man presents to the physician with a 6-month history of shortness of breath and nonproductive cough. He was recently diagnosed with stage 3 embryonal carcinoma testicular cancer. Following an orchiectomy, he was placed on chemotherapy. Cardiopulmonary examination shows fine inspiratory crackles bilaterally. There is clubbing present in the fingers bilaterally. Pulmonary function tests (PFTs) show FVC is 78% of expected and FEV1/FVC ratio is 92%. A CT scan of the chest is shown. Which of the following drugs is responsible for the patient’s condition?",
+  "source": "MedQA-USMLE"
+}

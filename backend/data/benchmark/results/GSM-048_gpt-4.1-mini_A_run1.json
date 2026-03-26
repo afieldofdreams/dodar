@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-048",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:24:59.136672Z",
+  "latency_seconds": 5.33,
+  "input_tokens": 98,
+  "output_tokens": 171,
+  "cost_usd": 0.000313,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Stephen borrowed $300 from his sister and promised to return it with an additional 2% of the money he owed. For 11 months Stephen will give his sister $25 per month and the remaining amount, including the interest, will be paid on the twelfth month. How much will Stephen pay in the twelfth month?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Calculate the total amount Stephen owes including interest.\n\nStephen borrowed $300, and he promised to return it with an additional 2% of the money he owed.\n\nInterest = 2% of $300 = 0.02 × 300 = $6\n\nTotal amount to be paid = Principal + Interest = 300 + 6 = $306\n\n---\n\nStep 2: Calculate the total amount Stephen pays in the first 11 months.\n\nEach month, he pays $25 for 11 months.\n\nTotal paid in 11 months = 25 × 11 = $275\n\n---\n\nStep 3: Calculate the remaining amount to be paid in the twelfth month.\n\nRemaining amount = Total amount owed - Amount paid in first 11 months\n\n= 306 - 275 = $31\n\n---\n\nFINAL ANSWER: 31",
+  "extracted_answer": "31",
+  "is_correct": true,
+  "correct_answer": "31",
+  "answer_type": "numeric_exact",
+  "question": "Stephen borrowed $300 from his sister and promised to return it with an additional 2% of the money he owed. For 11 months Stephen will give his sister $25 per month and the remaining amount, including the interest, will be paid on the twelfth month. How much will Stephen pay in the twelfth month?",
+  "source": "GSM8K"
+}

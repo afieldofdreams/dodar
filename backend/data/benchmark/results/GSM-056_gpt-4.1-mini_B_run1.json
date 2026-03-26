@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-056",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:22:08.615775Z",
+  "latency_seconds": 5.48,
+  "input_tokens": 305,
+  "output_tokens": 233,
+  "cost_usd": 0.000495,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nMark took a test yesterday that consisted of 75 questions. He completed the test at a rate of 5 questions per hour. Today, he took another test of 100 questions at the same rate. If Mark had 8 hours to complete the first test and 6 hours to complete the second one, how many questions did he leave incomplete?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Determine how many questions Mark can complete in 8 hours on the first test.  \nHe completes 5 questions per hour.  \nIn 8 hours, he can complete: 5 questions/hour * 8 hours = 40 questions.\n\nStep 2: Calculate the number of questions left incomplete on the first test.  \nThe test had 75 questions.  \nQuestions incomplete on test 1: 75 - 40 = 35 questions.\n\nStep 3: Determine how many questions Mark can complete in 6 hours on the second test.  \nHe completes 5 questions per hour.  \nIn 6 hours, he can complete: 5 questions/hour * 6 hours = 30 questions.\n\nStep 4: Calculate the number of questions left incomplete on the second test.  \nThe test had 100 questions.  \nQuestions incomplete on test 2: 100 - 30 = 70 questions.\n\nStep 5: Calculate the total number of incomplete questions from both tests.  \nTotal incomplete = 35 (from first test) + 70 (from second test) = 105 questions.\n\nFINAL ANSWER: 105",
+  "extracted_answer": "105",
+  "is_correct": true,
+  "correct_answer": "105",
+  "answer_type": "numeric_exact",
+  "question": "Mark took a test yesterday that consisted of 75 questions. He completed the test at a rate of 5 questions per hour. Today, he took another test of 100 questions at the same rate. If Mark had 8 hours to complete the first test and 6 hours to complete the second one, how many questions did he leave incomplete?",
+  "source": "GSM8K"
+}

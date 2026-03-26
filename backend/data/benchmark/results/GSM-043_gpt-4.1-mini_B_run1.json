@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-043",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:34:16.990082Z",
+  "latency_seconds": 2.83,
+  "input_tokens": 302,
+  "output_tokens": 222,
+  "cost_usd": 0.000476,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nCarly had 80 cards, 2/5 of the cards had the letter A on them, 1/2 of the remaining had the letter B, 5/8 of the rest had the letter C on them, and the others had the letter D. How many of the cards had the letter D on them?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Total cards Carly had = 80.\n\nStep 2: 2/5 of the cards had the letter A.\nNumber of A cards = (2/5) × 80 = (2 × 80) / 5 = 160 / 5 = 32.\n\nStep 3: Remaining cards after removing A cards:\n80 - 32 = 48 cards left.\n\nStep 4: Half of the remaining cards had the letter B.\nNumber of B cards = (1/2) × 48 = 24.\n\nStep 5: Remaining cards after removing B cards:\n48 - 24 = 24 cards left.\n\nStep 6: 5/8 of these remaining cards had the letter C.\nNumber of C cards = (5/8) × 24 = (5 × 24) / 8 = 120 / 8 = 15.\n\nStep 7: Remaining cards after removing C cards:\n24 - 15 = 9 cards.\n\nStep 8: These remaining cards had the letter D.\n\nFINAL ANSWER: 9",
+  "extracted_answer": "9",
+  "is_correct": true,
+  "correct_answer": "9",
+  "answer_type": "numeric_exact",
+  "question": "Carly had 80 cards, 2/5 of the cards had the letter A on them, 1/2 of the remaining had the letter B, 5/8 of the rest had the letter C on them, and the others had the letter D. How many of the cards had the letter D on them?",
+  "source": "GSM8K"
+}

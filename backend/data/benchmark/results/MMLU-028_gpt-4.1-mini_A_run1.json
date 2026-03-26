@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-028",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:30:14.799333Z",
+  "latency_seconds": 7.84,
+  "input_tokens": 127,
+  "output_tokens": 450,
+  "cost_usd": 0.000771,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A witness is scheduled to testify in a criminal case. To prove that he was a juvenile on a given date, evidence is offered that on that date he was confined in a juvenile detention facility. If a party wished to argue that this evidence is hearsay, whom would he point to as the hearsay declarant?\n\n  A: The witness on the stand.\n  B: The party offering the evidence.\n  C: The juvenile authorities.\n  D: The witness.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the question carefully step-by-step:\n\n1. The fact to be proven: The witness was a juvenile on a given date.\n\n2. The evidence offered: On that date, the witness was confined in a juvenile detention facility.\n\n3. The issue: Whether this evidence is hearsay.\n\n4. Hearsay is an out-of-court statement offered to prove the truth of the matter asserted.\n\n5. To argue that this evidence is hearsay, a party must identify the declarant — the person who made the out-of-court statement.\n\nSo, what is the evidence here? The evidence is that the witness was confined in a juvenile detention facility on a certain date. This might be shown through documents or testimony from the witness, or perhaps from records from the juvenile authorities.\n\nIf the party says \"this is hearsay,\" the question is: who made the out-of-court statement that's being offered for its truth?\n\nConsider the options:\n\n- A: The witness on the stand.\n\nThe witness on the stand is testifying live. Statements made in court by a witness are not hearsay; they are in-court statements.\n\nThe question distinguishes between two mentions of \"the witness\": \n\n\"A\" says \"the witness on the stand,\" \n\n\"D\" says \"the witness\" (unclear if different, but likely also the witness on the stand).\n\n- B: The party offering the evidence.\n\nA party is not a declarant of a statement; a party introduces evidence but does not \"declare\" in the sense of hearsay.\n\n- C: The juvenile authorities.\n\nThe confinement in a juvenile detention facility would be a matter recorded or stated by the juvenile authorities, either in records or via statements.\n\nSo, if the evidence comes from records or statements issued by the juvenile authorities—e.g., confinement logs, admission records—then the declarant making the out-of-court statement is the juvenile authorities.\n\nHence, the argument that this evidence is hearsay is that the \"statements\" or records, made out-of-court by the juvenile authorities, are being introduced to prove the truth of the matter asserted (the witness was confined).\n\nTherefore, the hearsay declarant would be the juvenile authorities.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "A witness is scheduled to testify in a criminal case. To prove that he was a juvenile on a given date, evidence is offered that on that date he was confined in a juvenile detention facility. If a party wished to argue that this evidence is hearsay, whom would he point to as the hearsay declarant?",
+  "source": "MMLU/professional_law"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-060",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:34:06.398905Z",
+  "latency_seconds": 3.14,
+  "input_tokens": 77,
+  "output_tokens": 172,
+  "cost_usd": 0.000306,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "On a particular week, a tow truck pulled ten cars for each of the first three days and then four fewer cars on each of the remaining days of the week. Calculate the total number of cars it towed that week.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's analyze the problem step-by-step:\n\n1. Number of days in a week = 7\n2. For the first three days, the tow truck pulled 10 cars each day.\n   - Total cars for first three days = 3 days × 10 cars/day = 30 cars\n3. On the remaining days (7 - 3 = 4 days), the tow truck pulled 4 fewer cars than the first three days.\n   - Cars pulled per day on remaining days = 10 - 4 = 6 cars/day\n   - Total cars for remaining four days = 4 days × 6 cars/day = 24 cars\n4. Total cars pulled in the week = cars in first three days + cars in remaining four days\n   = 30 + 24 = 54 cars\n\nFINAL ANSWER: 54",
+  "extracted_answer": "54",
+  "is_correct": true,
+  "correct_answer": "54",
+  "answer_type": "numeric_exact",
+  "question": "On a particular week, a tow truck pulled ten cars for each of the first three days and then four fewer cars on each of the remaining days of the week. Calculate the total number of cars it towed that week.",
+  "source": "GSM8K"
+}

@@ -24,18 +24,27 @@ class ModelRunner(ABC):
     model_id: str  # canonical model ID (e.g., "claude-sonnet-4-5")
 
     @abstractmethod
-    async def _call_api(self, prompt: str) -> ModelResponse:
-        """Make the actual API call. Subclasses implement this."""
+    async def _call_api(
+        self, prompt: str, *, system_prompt: str | None = None
+    ) -> ModelResponse:
+        """Make the actual API call. Subclasses implement this.
+
+        Args:
+            prompt: The user message content.
+            system_prompt: Optional system message (separate from user content).
+        """
         ...
 
-    async def run(self, prompt: str) -> ModelResponse:
+    async def run(
+        self, prompt: str, *, system_prompt: str | None = None
+    ) -> ModelResponse:
         """Run with retry and exponential backoff."""
         settings = get_settings()
         delays = [1, 2, 4]  # seconds between retries
 
         for attempt in range(settings.max_retries + 1):
             try:
-                return await self._call_api(prompt)
+                return await self._call_api(prompt, system_prompt=system_prompt)
             except Exception as e:
                 if attempt == settings.max_retries:
                     raise

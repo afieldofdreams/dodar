@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-049",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:31:02.126128Z",
+  "latency_seconds": 2.07,
+  "input_tokens": 95,
+  "output_tokens": 95,
+  "cost_usd": 0.00019,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Dean's mother gave him $28 to go to the toy store. Dean bought 6 toy cars and 5 teddy bears. Each toy car cost $2 and each teddy bear cost $1. His mother then feels generous and decides to give him an extra $10. How much money does Dean have left?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Dean starts with $28.\n\nHe buys 6 toy cars at $2 each:\n6 × $2 = $12\n\nHe buys 5 teddy bears at $1 each:\n5 × $1 = $5\n\nTotal spent:\n$12 + $5 = $17\n\nMoney left after buying toys:\n$28 - $17 = $11\n\nHis mother gives him an extra $10:\n$11 + $10 = $21\n\nFINAL ANSWER: 21",
+  "extracted_answer": "21",
+  "is_correct": true,
+  "correct_answer": "21",
+  "answer_type": "numeric_exact",
+  "question": "Dean's mother gave him $28 to go to the toy store. Dean bought 6 toy cars and 5 teddy bears. Each toy car cost $2 and each teddy bear cost $1. His mother then feels generous and decides to give him an extra $10. How much money does Dean have left?",
+  "source": "GSM8K"
+}

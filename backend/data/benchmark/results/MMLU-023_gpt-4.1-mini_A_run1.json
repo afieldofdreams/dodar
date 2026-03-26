@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-023",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:30:06.810430Z",
+  "latency_seconds": 5.73,
+  "input_tokens": 149,
+  "output_tokens": 444,
+  "cost_usd": 0.00077,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A 4-year-old boy is brought for a follow-up examination. He has a history of chronic recurrent otitis media and recently completed a 10-day course of antibiotics. His vital signs are within normal limits. Examination shows clear ear canals and intact tympanic membranes; a brown, irregular mass is visualized behind the tympanic membrane. Which of the following is the most likely explanation for these findings?\n\n  A: Epithelial tissue proliferation\n  B: Lingual papillae loss\n  C: Middle ear effusion\n  D: Midface hypoplasia\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the case step-by-step:\n\n- Patient: 4-year-old boy with a history of chronic recurrent otitis media.\n- Recently finished a 10-day course of antibiotics.\n- Vitals are normal.\n- On examination: clear ear canals, intact tympanic membranes.\n- Behind the tympanic membrane, a brown, irregular mass is visualized.\n\n**What could this brown irregular mass be?**\n\nThe key is that the tympanic membranes are intact but behind them there's an irregular mass seen. Chronic recurrent otitis media can lead to complications, one of which is the formation of a cholesteatoma.\n\n- **Cholesteatoma** is an abnormal collection of keratinizing squamous epithelium within the middle ear or mastoid. It often appears as a mass behind an intact or retracted tympanic membrane.\n- Cholesteatoma results from epithelial proliferation and can be a complication of chronic otitis media, especially with repeated infections and eustachian tube dysfunction.\n- The mass is often described as a pearly white or brown mass behind the tympanic membrane.\n\nNow let's link the options to the findings.\n\n**Option A: Epithelial tissue proliferation**\n\n- This suggests an abnormal growth of epithelial cells, which is consistent with cholesteatoma.\n  \n**Option B: Lingual papillae loss**\n\n- Lingual papillae are on the tongue; their loss is typically seen in vitamin deficiencies or glossitis, unrelated to ear findings.\n  \n**Option C: Middle ear effusion**\n\n- Middle ear effusion typically presents as an air-fluid level or a dull, bulging tympanic membrane.\n- The tympanic membrane here is intact and presumably not bulging; also, the mass is described as brown and irregular.\n  \n**Option D: Midface hypoplasia**\n\n- Midface hypoplasia is a facial skeletal abnormality seen in some congenital conditions (e.g., cleft palate, Down syndrome), unrelated to this ear mass.\n\nTherefore, the brown irregular mass behind an intact tympanic membrane in a child with chronic recurrent otitis media is most likely a cholesteatoma, which results from epithelial tissue proliferation.\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "A 4-year-old boy is brought for a follow-up examination. He has a history of chronic recurrent otitis media and recently completed a 10-day course of antibiotics. His vital signs are within normal limits. Examination shows clear ear canals and intact tympanic membranes; a brown, irregular mass is visualized behind the tympanic membrane. Which of the following is the most likely explanation for these findings?",
+  "source": "MMLU/professional_medicine"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-098",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:37:37.104211Z",
+  "latency_seconds": 3.33,
+  "input_tokens": 79,
+  "output_tokens": 214,
+  "cost_usd": 0.000374,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Question: Jim lies. Crista says Jim lies. Vernell says Crista tells the truth. Bernita says Vernell tells the truth. Millicent says Bernita tells the truth. Does Millicent tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the statements step-by-step.\n\n1. Jim lies.\n   - Given as a fact in the problem.\n\n2. Crista says Jim lies.\n   - Since Jim indeed lies, Crista’s statement \"Jim lies\" is true.\n   - So Crista is telling the truth.\n\n3. Vernell says Crista tells the truth.\n   - Crista does tell the truth (from #2).\n   - Therefore Vernell’s statement is true.\n   - Vernell is telling the truth.\n\n4. Bernita says Vernell tells the truth.\n   - Vernell tells the truth (from #3).\n   - Bernita’s statement is true.\n   - Bernita is telling the truth.\n\n5. Millicent says Bernita tells the truth.\n   - Bernita tells the truth (from #4).\n   - Therefore Millicent’s statement is true.\n   - Millicent tells the truth.\n\nSo, going down the chain, all are telling the truth from Crista onwards, including Millicent.\n\nFINAL ANSWER: Yes",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "Question: Jim lies. Crista says Jim lies. Vernell says Crista tells the truth. Bernita says Vernell tells the truth. Millicent says Bernita tells the truth. Does Millicent tell the truth?",
+  "source": "BBH/web_of_lies"
+}

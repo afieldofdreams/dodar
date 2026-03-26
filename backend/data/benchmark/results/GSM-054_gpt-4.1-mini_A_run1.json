@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-054",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:36:05.552457Z",
+  "latency_seconds": 5.18,
+  "input_tokens": 105,
+  "output_tokens": 266,
+  "cost_usd": 0.000468,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "After tracking his workout routine for 8 weeks, Josh discovered that he had spent 4 hours working out every week except on some occasions. At one point, he spent 5 hours each for two consecutive weeks. Another time, he spent 6 hours in one week. What is the total number of hours he has spent working out across the 8 weeks?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Josh worked out for 8 weeks.\n\n- Normally, he spends 4 hours every week.\n- Except at some points:\n  - For two consecutive weeks, he spent 5 hours each week.\n  - For one week, he spent 6 hours.\n\nLet's find the total hours:\n\n1. Total hours if he spent 4 hours each week for 8 weeks:\n   \\( 8 \\times 4 = 32 \\) hours.\n\n2. Adjust for the two weeks he spent 5 hours each:\n   - Normally for those 2 weeks, he would spend \\( 2 \\times 4 = 8 \\) hours.\n   - Actually, he spent \\( 2 \\times 5 = 10 \\) hours.\n   - Difference: \\( 10 - 8 = 2 \\) extra hours.\n\n3. Adjust for the one week he spent 6 hours:\n   - Normally would be 4 hours.\n   - Actually 6 hours.\n   - Difference: \\( 6 - 4 = 2 \\) extra hours.\n\n4. Total extra hours over the 8 weeks = \\( 2 + 2 = 4 \\) hours.\n\n5. So, total hours spent = \\( 32 + 4 = 36 \\) hours.\n\nFINAL ANSWER: 36",
+  "extracted_answer": "36",
+  "is_correct": true,
+  "correct_answer": "36",
+  "answer_type": "numeric_exact",
+  "question": "After tracking his workout routine for 8 weeks, Josh discovered that he had spent 4 hours working out every week except on some occasions. At one point, he spent 5 hours each for two consecutive weeks. Another time, he spent 6 hours in one week. What is the total number of hours he has spent working out across the 8 weeks?",
+  "source": "GSM8K"
+}

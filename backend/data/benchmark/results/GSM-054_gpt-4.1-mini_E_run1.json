@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-054",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:32:18.266779Z",
+  "latency_seconds": 4.67,
+  "input_tokens": 236,
+  "output_tokens": 274,
+  "cost_usd": 0.000533,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nAfter tracking his workout routine for 8 weeks, Josh discovered that he had spent 4 hours working out every week except on some occasions. At one point, he spent 5 hours each for two consecutive weeks. Another time, he spent 6 hours in one week. What is the total number of hours he has spent working out across the 8 weeks?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nWhen calculating total time spent across multiple intervals (weeks, in this case), the principle is to add up the amount of time spent each week. If we know the usual time per week and exceptions where the time changed, we can start with the base calculation (usual time × number of weeks) and then adjust for the weeks where the time was different by either adding or subtracting differences.\n\nStep 2 - REASON:  \nJosh worked out for 8 weeks total.  \n- Most weeks: 4 hours per week  \n- Exceptions:  \n  - Two consecutive weeks at 5 hours each  \n  - One week at 6 hours  \n\nLet's first calculate the total if all weeks were 4 hours:  \n8 weeks × 4 hours = 32 hours\n\nNow, adjust for the exceptions:  \n- For two weeks at 5 hours instead of 4: Each of these weeks is 1 hour more than usual  \n  So add 2 weeks × 1 hour = +2 hours  \n- For one week at 6 hours, this is 2 hours more than usual  \n  So add +2 hours\n\nTotal adjustment = 2 + 2 = +4 hours\n\nTOTAL hours = 32 (base) + 4 (extra) = 36 hours\n\nFINAL ANSWER: 36",
+  "extracted_answer": "36",
+  "is_correct": true,
+  "correct_answer": "36",
+  "answer_type": "numeric_exact",
+  "question": "After tracking his workout routine for 8 weeks, Josh discovered that he had spent 4 hours working out every week except on some occasions. At one point, he spent 5 hours each for two consecutive weeks. Another time, he spent 6 hours in one week. What is the total number of hours he has spent working out across the 8 weeks?",
+  "source": "GSM8K"
+}

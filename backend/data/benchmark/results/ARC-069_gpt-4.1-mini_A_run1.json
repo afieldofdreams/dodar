@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-069",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:26:01.826501Z",
+  "latency_seconds": 4.76,
+  "input_tokens": 99,
+  "output_tokens": 223,
+  "cost_usd": 0.000396,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "The presence of fossil organisms in rocks can provide information about the environment at the time the sediments were deposited because\n\n  A: fossils occur only in sedimentary rocks.\n  B: many organisms survive for millions of years.\n  C: fossils do not undergo chemical or physical weathering.\n  D: different organisms usually inhabit specific environments.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option carefully:\n\nA: fossils occur only in sedimentary rocks.  \n- While fossils are most commonly found in sedimentary rocks, this statement alone doesn't explain how fossils provide information about the environment. It just states the location where fossils are found.\n\nB: many organisms survive for millions of years.  \n- This is generally not true. Most individual organisms do not survive for millions of years; rather, species may persist over long periods. This option doesn't directly relate to how fossils inform us about past environments.\n\nC: fossils do not undergo chemical or physical weathering.  \n- Fossils can be affected by weathering and alteration over geological time, so this statement is not true and doesn't explain how fossils indicate past environments.\n\nD: different organisms usually inhabit specific environments.  \n- This is a key principle of paleoenvironmental interpretation. Since certain organisms thrive only in specific environmental conditions (marine vs. freshwater, tropical vs. arid, etc.), the presence of their fossils in rock layers helps infer the environment at the time of sediment deposition.\n\nTherefore, the best answer is:\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "The presence of fossil organisms in rocks can provide information about the environment at the time the sediments were deposited because",
+  "source": "ARC-Challenge"
+}

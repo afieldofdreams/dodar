@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-047",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:37:43.939006Z",
+  "latency_seconds": 2.47,
+  "input_tokens": 89,
+  "output_tokens": 148,
+  "cost_usd": 0.000272,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Pam and Fred went to a carnival. Pam rode the roller coaster 2 times while Fred rode it 4 times. After that, each of them decided to ride the luge 2 times. If each ride cost 6 tickets, how many tickets did they use that day?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "First, calculate the total number of rides Pam took:\n- Roller coaster: 2 times\n- Luge: 2 times\nTotal rides for Pam = 2 + 2 = 4 rides\n\nNext, calculate the total number of rides Fred took:\n- Roller coaster: 4 times\n- Luge: 2 times\nTotal rides for Fred = 4 + 2 = 6 rides\n\nNow, calculate the total rides combined:\nTotal rides = Pam's rides + Fred's rides = 4 + 6 = 10 rides\n\nEach ride costs 6 tickets, so total tickets used:\nTotal tickets = 10 rides × 6 tickets/ride = 60 tickets\n\nFINAL ANSWER: 60",
+  "extracted_answer": "60",
+  "is_correct": true,
+  "correct_answer": "60",
+  "answer_type": "numeric_exact",
+  "question": "Pam and Fred went to a carnival. Pam rode the roller coaster 2 times while Fred rode it 4 times. After that, each of them decided to ride the luge 2 times. If each ride cost 6 tickets, how many tickets did they use that day?",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-049",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:33:56.866706Z",
+  "latency_seconds": 3.03,
+  "input_tokens": 298,
+  "output_tokens": 191,
+  "cost_usd": 0.000425,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nDean's mother gave him $28 to go to the toy store. Dean bought 6 toy cars and 5 teddy bears. Each toy car cost $2 and each teddy bear cost $1. His mother then feels generous and decides to give him an extra $10. How much money does Dean have left?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Calculate the total cost of 6 toy cars.  \nEach toy car costs $2, so 6 toy cars cost:  \n6 × $2 = $12\n\nStep 2: Calculate the total cost of 5 teddy bears.  \nEach teddy bear costs $1, so 5 teddy bears cost:  \n5 × $1 = $5\n\nStep 3: Calculate the total amount spent by Dean.  \nTotal spent = cost of toy cars + cost of teddy bears  \nTotal spent = $12 + $5 = $17\n\nStep 4: Calculate how much money Dean has left after the purchase but before the extra $10.  \nDean was given $28 initially.  \nMoney left = $28 - $17 = $11\n\nStep 5: Add the extra $10 his mother gave him afterward.  \nTotal money left = $11 + $10 = $21\n\nFINAL ANSWER: 21",
+  "extracted_answer": "21",
+  "is_correct": true,
+  "correct_answer": "21",
+  "answer_type": "numeric_exact",
+  "question": "Dean's mother gave him $28 to go to the toy store. Dean bought 6 toy cars and 5 teddy bears. Each toy car cost $2 and each teddy bear cost $1. His mother then feels generous and decides to give him an extra $10. How much money does Dean have left?",
+  "source": "GSM8K"
+}

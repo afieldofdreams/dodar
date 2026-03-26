@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-063",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:32:49.490710Z",
+  "latency_seconds": 2.36,
+  "input_tokens": 75,
+  "output_tokens": 146,
+  "cost_usd": 0.000264,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Where are fern plants most likely to grow?\n\n  A: in a desert\n  B: along a river\n  C: at the bottom of an ocean\n  D: in the middle of a prairie\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Fern plants thrive in environments that provide ample moisture and shade, as they require water for reproduction (their spores need a moist environment to grow). \n\n- A desert (A) is too dry for ferns to grow well.\n- Along a river (B) provides plenty of moisture and often shade, making it an ideal environment for ferns.\n- At the bottom of an ocean (C) is underwater saltwater, unsuitable for fern plants which are terrestrial or freshwater plants.\n- In the middle of a prairie (D), the environment tends to be dry and exposed with little shade, which is not ideal for ferns.\n\nTherefore, the most likely place for ferns to grow is along a river.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Where are fern plants most likely to grow?",
+  "source": "ARC-Challenge"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-100",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:23:35.474289Z",
+  "latency_seconds": 4.91,
+  "input_tokens": 282,
+  "output_tokens": 235,
+  "cost_usd": 0.000489,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nQuestion: Kandi tells the truth. Alejandro says Kandi tells the truth. Millicent says Alejandro lies. Shalonda says Millicent lies. Conception says Shalonda lies. Does Conception tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the statements step by step:\n\n1. Kandi tells the truth.\n   - This means everything Kandi says is true.\n\n2. Alejandro says Kandi tells the truth.\n   - Since Kandi tells the truth, Alejandro's statement (that Kandi tells the truth) is true.\n   - Therefore, Alejandro is telling the truth.\n\n3. Millicent says Alejandro lies.\n   - From step 2, Alejandro tells the truth.\n   - Millicent claims Alejandro lies, so Millicent's statement is false.\n   - Therefore, Millicent is lying.\n\n4. Shalonda says Millicent lies.\n   - Millicent is lying (from step 3).\n   - Shalonda says Millicent lies, which is true.\n   - So Shalonda tells the truth.\n\n5. Conception says Shalonda lies.\n   - Shalonda tells the truth (from step 4).\n   - Conception says Shalonda lies, so Conception's statement is false.\n   - Therefore, Conception is lying.\n\nFinal conclusion: Conception does not tell the truth.\n\nFINAL ANSWER: No",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "Question: Kandi tells the truth. Alejandro says Kandi tells the truth. Millicent says Alejandro lies. Shalonda says Millicent lies. Conception says Shalonda lies. Does Conception tell the truth?",
+  "source": "BBH/web_of_lies"
+}

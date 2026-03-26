@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-073",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:22:21.743276Z",
+  "latency_seconds": 6.67,
+  "input_tokens": 216,
+  "output_tokens": 249,
+  "cost_usd": 0.000485,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nWhat is the role of the mitochondrion in cells?\n\n  A: It converts sunlight to energy.\n  B: It controls all functions of the cell.\n  C: It transports water throughout the cell.\n  D: It breaks down sugar to release energy.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK:  \nTo understand the role of mitochondria, it's important to recall basic cell biology principles. Cells have specialized structures called organelles, each with distinct functions. The mitochondrion is known primarily as the \"powerhouse\" of the cell because it is involved in producing energy. Specifically, it performs cellular respiration, a process that breaks down glucose (sugar) and other food molecules to generate ATP (adenosine triphosphate), which cells use as a primary energy source.\n\nOther organelles perform different roles: for example, chloroplasts in plant cells convert sunlight into energy (photosynthesis), the nucleus controls cell functions, and transport of water is typically handled by other mechanisms such as the vacuole or cell membrane.\n\nStep 2 - REASON:  \nGiven the options:  \nA: Converting sunlight to energy is the role of chloroplasts, not mitochondria.  \nB: Controlling all functions of the cell is primarily the role of the nucleus.  \nC: Transporting water is managed by other parts of the cell, not mitochondria.  \nD: Breaking down sugar to release energy matches the role of mitochondria since they conduct cellular respiration.\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "What is the role of the mitochondrion in cells?",
+  "source": "ARC-Challenge"
+}

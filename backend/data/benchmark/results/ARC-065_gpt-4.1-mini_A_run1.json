@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-065",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:35:27.086471Z",
+  "latency_seconds": 5.41,
+  "input_tokens": 90,
+  "output_tokens": 293,
+  "cost_usd": 0.000505,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Which theory of the origin of the Moon proposes that Earth's Moon formed by the same process that formed Mars, Jupiter, and Neptune?\n\n  A: The Giant Impact Theory\n  B: The Fission Theory\n  C: The Capture Theory\n  D: The Coaccretion Theory\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each theory mentioned to determine which one proposes that Earth's Moon formed by the same process that formed Mars, Jupiter, and Neptune.\n\nA: The Giant Impact Theory  \n- This theory suggests that the Moon formed as a result of a massive collision between the early Earth and a Mars-sized body. The debris from the impact eventually coalesced to form the Moon.  \n- It does not imply formation by the same process as planets like Mars, Jupiter, or Neptune.\n\nB: The Fission Theory  \n- This theory suggests that the Moon separated from a rapidly spinning, molten early Earth.  \n- It focuses on Earth's own material and rotation rather than planetary formation processes.\n\nC: The Capture Theory  \n- This theory proposes that the Moon formed elsewhere in the solar system and was later captured by Earth's gravity.  \n- It implies formation elsewhere but not necessarily by the same process as planets.\n\nD: The Coaccretion Theory  \n- This theory suggests that the Earth and the Moon formed together at the same time from the protoplanetary disk during the early solar system, similar to how other planets like Mars, Jupiter, and Neptune formed.  \n- This would mean the Moon formed by the same process that formed other planets, i.e., accretion of material in the solar nebula.\n\nTherefore, the theory proposing that the Moon formed by the same process that formed Mars, Jupiter, and Neptune is the Coaccretion Theory.\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "Which theory of the origin of the Moon proposes that Earth's Moon formed by the same process that formed Mars, Jupiter, and Neptune?",
+  "source": "ARC-Challenge"
+}

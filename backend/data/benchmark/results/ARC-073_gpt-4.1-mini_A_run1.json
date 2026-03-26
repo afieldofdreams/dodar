@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-073",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:21:52.727345Z",
+  "latency_seconds": 2.79,
+  "input_tokens": 85,
+  "output_tokens": 118,
+  "cost_usd": 0.000223,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "What is the role of the mitochondrion in cells?\n\n  A: It converts sunlight to energy.\n  B: It controls all functions of the cell.\n  C: It transports water throughout the cell.\n  D: It breaks down sugar to release energy.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option:\n\nA: It converts sunlight to energy.  \nThis is the role of chloroplasts in plant cells, not mitochondria.\n\nB: It controls all functions of the cell.  \nThe nucleus primarily controls cell activities, not the mitochondrion.\n\nC: It transports water throughout the cell.  \nWater transport is usually associated with the cell membrane or vacuoles, not mitochondria.\n\nD: It breaks down sugar to release energy.  \nThis describes cellular respiration, a primary function of mitochondria where glucose is converted into ATP (energy).\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "What is the role of the mitochondrion in cells?",
+  "source": "ARC-Challenge"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-100",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:37:38.154723Z",
+  "latency_seconds": 3.45,
+  "input_tokens": 79,
+  "output_tokens": 200,
+  "cost_usd": 0.000352,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Question: Kandi tells the truth. Alejandro says Kandi tells the truth. Millicent says Alejandro lies. Shalonda says Millicent lies. Conception says Shalonda lies. Does Conception tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze each statement step-by-step:\n\n1. Kandi tells the truth.\n\n2. Alejandro says Kandi tells the truth.\n\n- Since Kandi tells the truth, Alejandro's statement (\"Kandi tells the truth\") is true.\n- So Alejandro tells the truth.\n\n3. Millicent says Alejandro lies.\n\n- Alejandro tells the truth (from step 2).\n- Millicent says Alejandro lies, but Alejandro does not lie.\n- So Millicent is lying.\n\n4. Shalonda says Millicent lies.\n\n- Millicent lies (from step 3).\n- Shalonda says Millicent lies, which is a true statement.\n- So Shalonda tells the truth.\n\n5. Conception says Shalonda lies.\n\n- Shalonda tells the truth (from step 4).\n- Conception says Shalonda lies, which is false.\n- So Conception lies.\n\nTherefore, Conception does not tell the truth.\n\nFINAL ANSWER: No",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "Question: Kandi tells the truth. Alejandro says Kandi tells the truth. Millicent says Alejandro lies. Shalonda says Millicent lies. Conception says Shalonda lies. Does Conception tell the truth?",
+  "source": "BBH/web_of_lies"
+}

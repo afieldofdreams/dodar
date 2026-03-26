@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-049",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:28:49.511631Z",
+  "latency_seconds": 2.44,
+  "input_tokens": 447,
+  "output_tokens": 141,
+  "cost_usd": 0.000404,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nDean's mother gave him $28 to go to the toy store. Dean bought 6 toy cars and 5 teddy bears. Each toy car cost $2 and each teddy bear cost $1. His mother then feels generous and decides to give him an extra $10. How much money does Dean have left?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me analyze the problem step by step.\n\n1. Dean initially has $28.\n\n2. He buys 6 toy cars at $2 each:\n   Cost of toy cars = 6 × $2 = $12.\n\n3. He buys 5 teddy bears at $1 each:\n   Cost of teddy bears = 5 × $1 = $5.\n\n4. Total cost for toys = $12 + $5 = $17.\n\n5. Money left after buying toys = $28 − $17 = $11.\n\n6. Dean's mother gives him an extra $10.\n\n7. Total money Dean has now = $11 + $10 = $21.\n\nFINAL ANSWER: 21",
+  "extracted_answer": "21",
+  "is_correct": true,
+  "correct_answer": "21",
+  "answer_type": "numeric_exact",
+  "question": "Dean's mother gave him $28 to go to the toy store. Dean bought 6 toy cars and 5 teddy bears. Each toy car cost $2 and each teddy bear cost $1. His mother then feels generous and decides to give him an extra $10. How much money does Dean have left?",
+  "source": "GSM8K"
+}

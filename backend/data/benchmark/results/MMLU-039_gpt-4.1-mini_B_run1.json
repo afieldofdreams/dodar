@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-039",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:31:00.757544Z",
+  "latency_seconds": 5.3,
+  "input_tokens": 357,
+  "output_tokens": 382,
+  "cost_usd": 0.000754,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nGreene is the sole shareholder of Seagull, a calendar-year S corporation. Greene's basis at the beginning of the year is $15,000. Seagull reported an ordinary loss of $5,000 and $2,000 of municipal bond interest for the year. Seagull distributed cash of $6,000 to Greene on November 1. What is Greene's basis in Seagull at the end of the year?\n\n  A: $4,000\n  B: $6,000\n  C: $14,000\n  D: $15,000\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the problem step by step.\n\n**Given:**\n- Greene is the sole shareholder of Seagull (an S corporation).\n- Greene's basis at the beginning of the year: $15,000.\n- Seagull's ordinary loss for the year: $5,000.\n- Seagull's municipal bond interest income: $2,000.\n- Cash distribution to Greene: $6,000 on November 1.\n\n---\n\n### Step 1: Understand the rules for basis adjustments for an S corporation shareholder.\n\nFor an S corporation shareholder, basis is adjusted as follows:\n\n- Increase basis by items of income (taxable and tax-exempt).\n- Decrease basis by losses and non-deductible expenses.\n- Decrease basis by distributions (to the extent of basis).\n- Basis cannot go below zero.\n\n---\n\n### Step 2: Start with initial basis\n\nInitial basis = $15,000\n\n---\n\n### Step 3: Adjust for income items\n\n- Ordinary loss: subtract $5,000.\n- Municipal bond interest: added to basis as tax-exempt income increases basis by $2,000.\n\nCalculation:\n- $15,000 (initial basis)\n- - $5,000 (loss)\n- + $2,000 (tax-exempt income)\n\nNew basis before distribution: $15,000 - $5,000 + $2,000 = $12,000.\n\n---\n\n### Step 4: Adjust for distribution\n\n- Distribution = $6,000 (cash)\n- This reduces basis dollar for dollar.\n\nNew basis after distribution: $12,000 - $6,000 = $6,000.\n\n---\n\n### Step 5: Confirm basis is not negative\n\n- Current calculated basis is $6,000, which is positive.\n\n---\n\n### Final basis at year-end = $6,000.\n\n---\n\n### Final answer:\n\nFINAL ANSWER: B",
+  "extracted_answer": "FINAL ANSWER: B",
+  "is_correct": false,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Greene is the sole shareholder of Seagull, a calendar-year S corporation. Greene's basis at the beginning of the year is $15,000. Seagull reported an ordinary loss of $5,000 and $2,000 of municipal bond interest for the year. Seagull distributed cash of $6,000 to Greene on November 1. What is Greene's basis in Seagull at the end of the year?",
+  "source": "MMLU/professional_accounting"
+}

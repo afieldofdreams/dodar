@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-061",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:30:51.939275Z",
+  "latency_seconds": 4.72,
+  "input_tokens": 255,
+  "output_tokens": 256,
+  "cost_usd": 0.000512,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nOn a hot day, Jenny walked home from the grocery store with a bag of chocolate chips. When she arrived home the chocolate chips had melted in the bag. Why did the chocolate chips melt?\n\n  A: Heat transferred from the chocolate chips to the bag.\n  B: Heat evaporated from the bag to the chocolate chips.\n  C: Heat transferred from the environment to the chocolate chips.\n  D: Heat condensed from her hand to the chocolate chips.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK:  \nTo understand why a substance melts, we need to consider heat transfer and the states of matter. Melting occurs when solid matter absorbs enough thermal energy to change into a liquid. Heat naturally flows from a region of higher temperature to a region of lower temperature. So, if the chocolate chips melted, they must have absorbed heat from a source warmer than themselves. The environment, objects, or surfaces warmer than the chocolate chips can transfer heat to them, causing melting.\n\nStep 2 - REASON:  \nJenny was outside on a hot day, presumably in a warm environment. The chocolate chips, initially solid and cooler, absorbed heat. This heat would come from the environment (like warm air or sunlight) rather than from the chocolate itself to the bag or from her hand condensing heat. Option A is incorrect because heat would not transfer from a cooler object (chocolate chips) to a warmer one (bag) to cause melting. Option B is wrong because evaporation involves a liquid turning to vapor, not transferring heat to a solid. Option D involves condensation, which is a gas turning to liquid, not relevant here. Option C correctly states that heat transferred from the environment to the chocolate chips, causing them to melt.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "On a hot day, Jenny walked home from the grocery store with a bag of chocolate chips. When she arrived home the chocolate chips had melted in the bag. Why did the chocolate chips melt?",
+  "source": "ARC-Challenge"
+}

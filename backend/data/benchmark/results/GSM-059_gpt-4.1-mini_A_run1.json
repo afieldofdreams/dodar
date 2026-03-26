@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-059",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:31:46.195642Z",
+  "latency_seconds": 2.5,
+  "input_tokens": 139,
+  "output_tokens": 186,
+  "cost_usd": 0.000353,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Chad ordered a build-your-own burrito for lunch.  The base burrito is $6.50.  He adds extra meat for $2.00, extra cheese for $1.00, avocado for $1.00 and 2 sauces for $0.25 each.  He decides to upgrade his meal for an extra $3.00 which will add chips and a drink.  He has a gift card for $5.00 that he uses at check out.  How much does he still owe?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "First, calculate the total cost of the base burrito and all the add-ons:\n\n- Base burrito: $6.50  \n- Extra meat: $2.00  \n- Extra cheese: $1.00  \n- Avocado: $1.00  \n- 2 sauces at $0.25 each: 2 × $0.25 = $0.50  \n\nAdd these amounts together:  \n$6.50 + $2.00 + $1.00 + $1.00 + $0.50 = $11.00\n\nNext, add the upgrade for chips and a drink:  \n$11.00 + $3.00 = $14.00\n\nNow subtract the gift card amount:  \n$14.00 - $5.00 = $9.00\n\nChad still owes $9.00 after using his gift card.\n\nFINAL ANSWER: 9.00",
+  "extracted_answer": "9.00",
+  "is_correct": true,
+  "correct_answer": "9",
+  "answer_type": "numeric_exact",
+  "question": "Chad ordered a build-your-own burrito for lunch.  The base burrito is $6.50.  He adds extra meat for $2.00, extra cheese for $1.00, avocado for $1.00 and 2 sauces for $0.25 each.  He decides to upgrade his meal for an extra $3.00 which will add chips and a drink.  He has a gift card for $5.00 that he uses at check out.  How much does he still owe?",
+  "source": "GSM8K"
+}

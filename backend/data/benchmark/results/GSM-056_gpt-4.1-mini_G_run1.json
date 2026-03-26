@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-056",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:39:17.254204Z",
+  "latency_seconds": 4.76,
+  "input_tokens": 454,
+  "output_tokens": 186,
+  "cost_usd": 0.000479,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nMark took a test yesterday that consisted of 75 questions. He completed the test at a rate of 5 questions per hour. Today, he took another test of 100 questions at the same rate. If Mark had 8 hours to complete the first test and 6 hours to complete the second one, how many questions did he leave incomplete?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me reason through this carefully.\n\nMark's rate is 5 questions per hour for both tests.\n\nFirst test:\n- Number of questions: 75\n- Time allotted: 8 hours\n- Questions able to complete in 8 hours = 5 questions/hour * 8 hours = 40 questions\n- Since the test has 75 questions, Mark completes 40 questions and leaves 75 - 40 = 35 questions incomplete.\n\nSecond test:\n- Number of questions: 100\n- Time allotted: 6 hours\n- Questions able to complete in 6 hours = 5 questions/hour * 6 hours = 30 questions\n- Since the test has 100 questions, Mark completes 30 questions and leaves 100 - 30 = 70 questions incomplete.\n\nTotal questions left incomplete = 35 (first test) + 70 (second test) = 105\n\nFINAL ANSWER: 105",
+  "extracted_answer": "105",
+  "is_correct": true,
+  "correct_answer": "105",
+  "answer_type": "numeric_exact",
+  "question": "Mark took a test yesterday that consisted of 75 questions. He completed the test at a rate of 5 questions per hour. Today, he took another test of 100 questions at the same rate. If Mark had 8 hours to complete the first test and 6 hours to complete the second one, how many questions did he leave incomplete?",
+  "source": "GSM8K"
+}

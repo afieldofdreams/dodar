@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-049",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:25:13.754051Z",
+  "latency_seconds": 4.61,
+  "input_tokens": 226,
+  "output_tokens": 208,
+  "cost_usd": 0.000423,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nDean's mother gave him $28 to go to the toy store. Dean bought 6 toy cars and 5 teddy bears. Each toy car cost $2 and each teddy bear cost $1. His mother then feels generous and decides to give him an extra $10. How much money does Dean have left?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nRelevant principles here include basic arithmetic operations such as multiplication and addition/subtraction. Specifically, we need to calculate the total amount spent by Dean by multiplying the quantity of each item by their respective costs and then summing those totals. After that, we subtract the total amount spent from the initial money given. Finally, we add any additional money given afterward to find the total amount Dean has left.\n\nStep 2 - REASON:  \n- Dean initially has $28.  \n- He buys 6 toy cars at $2 each: 6 × 2 = $12.  \n- He buys 5 teddy bears at $1 each: 5 × 1 = $5.  \n- Total spent: $12 + $5 = $17.  \n- Money left after buying toys: $28 - $17 = $11.  \n- His mother gives him an extra $10.  \n- Total money now: $11 + $10 = $21.\n\nFINAL ANSWER: 21",
+  "extracted_answer": "21",
+  "is_correct": true,
+  "correct_answer": "21",
+  "answer_type": "numeric_exact",
+  "question": "Dean's mother gave him $28 to go to the toy store. Dean bought 6 toy cars and 5 teddy bears. Each toy car cost $2 and each teddy bear cost $1. His mother then feels generous and decides to give him an extra $10. How much money does Dean have left?",
+  "source": "GSM8K"
+}

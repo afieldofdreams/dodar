@@ -61,13 +61,13 @@ function SessionList({ onSelectSession }: { onSelectSession: (id: string) => voi
     <div>
       <h1 style={{ marginTop: 0 }}>Scoring</h1>
 
-      <div style={{ background: "#fff", padding: "1.25rem", borderRadius: 8, marginBottom: "1.5rem" }}>
+      <div style={{ background: "#1e1e32", padding: "1.25rem", borderRadius: 8, marginBottom: "1.5rem" }}>
         <h3 style={{ margin: "0 0 0.75rem", fontSize: "0.95rem" }}>Create New Session</h3>
         <div style={{ display: "flex", gap: "0.75rem", alignItems: "center", flexWrap: "wrap" }}>
           <select
             value={selectedRunId}
             onChange={(e) => setSelectedRunId(e.target.value)}
-            style={{ padding: "0.5rem 0.75rem", borderRadius: 6, border: "1px solid #d0d0d0", minWidth: 200 }}
+            style={{ padding: "0.5rem 0.75rem", borderRadius: 6, border: "1px solid #2e2e50", minWidth: 200, background: "#1e1e32", color: "#e8e8f0" }}
           >
             <option value="">Select a run...</option>
             {completedRuns.map((r) => (
@@ -81,13 +81,13 @@ function SessionList({ onSelectSession }: { onSelectSession: (id: string) => voi
             placeholder="Scorer name"
             value={scorer}
             onChange={(e) => setScorer(e.target.value)}
-            style={{ padding: "0.5rem 0.75rem", borderRadius: 6, border: "1px solid #d0d0d0", flex: 1, minWidth: 150 }}
+            style={{ padding: "0.5rem 0.75rem", borderRadius: 6, border: "1px solid #2e2e50", flex: 1, minWidth: 150, background: "#1e1e32", color: "#e8e8f0" }}
           />
           <button
             onClick={() => createMutation.mutate()}
             disabled={!scorer || !selectedRunId || createMutation.isPending}
             style={{
-              background: !scorer || !selectedRunId ? "#ccc" : autoScore ? "#ff6b35" : "#6c63ff",
+              background: !scorer || !selectedRunId ? "#2e2e50" : autoScore ? "#ff6b35" : "#6c63ff",
               color: "#fff",
               border: "none",
               padding: "0.5rem 1.25rem",
@@ -124,7 +124,7 @@ function SessionList({ onSelectSession }: { onSelectSession: (id: string) => voi
             <select
               value={scorerModel}
               onChange={(e) => setScorerModel(e.target.value)}
-              style={{ padding: "0.4rem 0.6rem", borderRadius: 6, border: "1px solid #d0d0d0", fontSize: "0.85rem" }}
+              style={{ padding: "0.4rem 0.6rem", borderRadius: 6, border: "1px solid #2e2e50", fontSize: "0.85rem", background: "#1e1e32", color: "#e8e8f0" }}
             >
               {Object.entries(scorerModels).map(([id, label]) => (
                 <option key={id} value={id}>{label}</option>
@@ -132,7 +132,7 @@ function SessionList({ onSelectSession }: { onSelectSession: (id: string) => voi
             </select>
           )}
           {autoScore && (
-            <span style={{ color: "#888", fontSize: "0.8rem" }}>
+            <span style={{ color: "#7878a0", fontSize: "0.8rem" }}>
               (uses scenario rubrics as evaluation criteria)
             </span>
           )}
@@ -150,7 +150,7 @@ function SessionList({ onSelectSession }: { onSelectSession: (id: string) => voi
       </div>
 
       {sessions.length > 0 && (
-        <table style={{ width: "100%", borderCollapse: "collapse", background: "#fff", borderRadius: 8 }}>
+        <table style={{ width: "100%", borderCollapse: "collapse", background: "#1e1e32", borderRadius: 8 }}>
           <thead>
             <tr>
               <th style={thStyle}>Session</th>
@@ -171,7 +171,7 @@ function SessionList({ onSelectSession }: { onSelectSession: (id: string) => voi
                   <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                     <span>{s.scored_items}/{s.total_items}</span>
                     {s.scored_items > 0 && s.scored_items < s.total_items && (
-                      <div style={{ background: "#e0e0e0", borderRadius: 4, height: 6, width: 60, overflow: "hidden" }}>
+                      <div style={{ background: "#2e2e50", borderRadius: 4, height: 6, width: 60, overflow: "hidden" }}>
                         <div style={{ background: "#6c63ff", height: "100%", width: `${(s.scored_items / s.total_items) * 100}%` }} />
                       </div>
                     )}
@@ -216,7 +216,7 @@ function SessionList({ onSelectSession }: { onSelectSession: (id: string) => voi
                           await deleteMutation.mutateAsync(s.session_id);
                         }
                       }}
-                      style={{ color: "#999", background: "none", border: "none", cursor: "pointer", textDecoration: "underline", fontSize: "0.85rem" }}
+                      style={{ color: "#6868a0", background: "none", border: "none", cursor: "pointer", textDecoration: "underline", fontSize: "0.85rem" }}
                     >
                       Delete
                     </button>
@@ -273,7 +273,7 @@ function ScoringInterface({ sessionId, onBack }: { sessionId: string; onBack: ()
         ) : (
           <div>
             <h3>Revealed Assignments</h3>
-            <table style={{ width: "100%", borderCollapse: "collapse", background: "#fff" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", background: "#1e1e32" }}>
               <thead>
                 <tr>
                   <th style={thStyle}>Item</th>
@@ -318,7 +318,7 @@ function ScoringInterface({ sessionId, onBack }: { sessionId: string; onBack: ()
 
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
         <h2 style={{ margin: 0 }}>Scoring {blindItem.position} of {blindItem.total}</h2>
-        <div style={{ background: "#e0e0e0", borderRadius: 8, height: 8, width: 200, overflow: "hidden" }}>
+        <div style={{ background: "#2e2e50", borderRadius: 8, height: 8, width: 200, overflow: "hidden" }}>
           <div
             style={{
               background: "#6c63ff",
@@ -330,20 +330,20 @@ function ScoringInterface({ sessionId, onBack }: { sessionId: string; onBack: ()
       </div>
 
       <details style={{ marginBottom: "1rem" }}>
-        <summary style={{ cursor: "pointer", fontWeight: 600, color: "#444" }}>
+        <summary style={{ cursor: "pointer", fontWeight: 600, color: "#e8e8f0" }}>
           Scenario Prompt ({blindItem.scenario_id})
         </summary>
         <pre style={preStyle}>{blindItem.scenario_prompt}</pre>
       </details>
 
-      <div style={{ background: "#fff", padding: "1.25rem", borderRadius: 8, border: "1px solid #e0e0e0", marginBottom: "1.5rem" }}>
-        <h3 style={{ margin: "0 0 0.75rem", fontSize: "0.95rem", color: "#444" }}>Model Response</h3>
+      <div style={{ background: "#1e1e32", padding: "1.25rem", borderRadius: 8, border: "1px solid #2e2e50", marginBottom: "1.5rem" }}>
+        <h3 style={{ margin: "0 0 0.75rem", fontSize: "0.95rem", color: "#e8e8f0" }}>Model Response</h3>
         <div style={{ maxHeight: 400, overflow: "auto", whiteSpace: "pre-wrap", fontSize: "0.9rem", lineHeight: 1.6 }}>
           {blindItem.response_text}
         </div>
       </div>
 
-      <div style={{ background: "#fff", padding: "1.25rem", borderRadius: 8, marginBottom: "1rem" }}>
+      <div style={{ background: "#1e1e32", padding: "1.25rem", borderRadius: 8, marginBottom: "1rem" }}>
         <h3 style={{ margin: "0 0 1rem", fontSize: "0.95rem" }}>Score Dimensions (1-5)</h3>
         {blindItem.dimensions.map((dim) => (
           <div key={dim} style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "0.75rem" }}>
@@ -358,8 +358,8 @@ function ScoringInterface({ sessionId, onBack }: { sessionId: string; onBack: ()
                     height: 36,
                     borderRadius: 6,
                     border: scores[dim] === v ? "2px solid #6c63ff" : "1px solid #d0d0d0",
-                    background: scores[dim] === v ? "#6c63ff" : "#fff",
-                    color: scores[dim] === v ? "#fff" : "#333",
+                    background: scores[dim] === v ? "#6c63ff" : "#1e1e32",
+                    color: scores[dim] === v ? "#fff" : "#e8e8f0",
                     fontWeight: 600,
                     cursor: "pointer",
                   }}
@@ -380,10 +380,12 @@ function ScoringInterface({ sessionId, onBack }: { sessionId: string; onBack: ()
             minHeight: 60,
             padding: "0.5rem",
             borderRadius: 6,
-            border: "1px solid #d0d0d0",
+            border: "1px solid #2e2e50",
             marginTop: "0.5rem",
             fontSize: "0.85rem",
             resize: "vertical",
+            background: "#1e1e32",
+            color: "#e8e8f0",
           }}
         />
       </div>
@@ -392,7 +394,7 @@ function ScoringInterface({ sessionId, onBack }: { sessionId: string; onBack: ()
         onClick={handleSubmit}
         disabled={!allScored || submitMutation.isPending}
         style={{
-          background: allScored ? "#6c63ff" : "#ccc",
+          background: allScored ? "#6c63ff" : "#2e2e50",
           color: "#fff",
           border: "none",
           padding: "0.6rem 1.5rem",
@@ -420,24 +422,26 @@ const backBtn: React.CSSProperties = {
 
 const preStyle: React.CSSProperties = {
   whiteSpace: "pre-wrap",
-  background: "#fafafa",
+  background: "#161625",
   padding: "1rem",
   borderRadius: 6,
   fontSize: "0.85rem",
   lineHeight: 1.5,
   marginTop: "0.5rem",
+  color: "#e8e8f0",
 };
 
 const thStyle: React.CSSProperties = {
   textAlign: "left",
   padding: "0.5rem 0.75rem",
-  borderBottom: "2px solid #e0e0e0",
+  borderBottom: "2px solid #2e2e50",
   fontSize: "0.8rem",
-  color: "#666",
+  color: "#9898b8",
+  background: "transparent",
 };
 
 const tdStyle: React.CSSProperties = {
   padding: "0.5rem 0.75rem",
-  borderBottom: "1px solid #f0f0f0",
+  borderBottom: "1px solid #22223a",
   fontSize: "0.85rem",
 };

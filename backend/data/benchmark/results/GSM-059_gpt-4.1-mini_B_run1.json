@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-059",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:26:46.903047Z",
+  "latency_seconds": 3.52,
+  "input_tokens": 342,
+  "output_tokens": 189,
+  "cost_usd": 0.000439,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nChad ordered a build-your-own burrito for lunch.  The base burrito is $6.50.  He adds extra meat for $2.00, extra cheese for $1.00, avocado for $1.00 and 2 sauces for $0.25 each.  He decides to upgrade his meal for an extra $3.00 which will add chips and a drink.  He has a gift card for $5.00 that he uses at check out.  How much does he still owe?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Start with the base burrito price:\n$6.50\n\nStep 2: Add extra meat\n$6.50 + $2.00 = $8.50\n\nStep 3: Add extra cheese\n$8.50 + $1.00 = $9.50\n\nStep 4: Add avocado\n$9.50 + $1.00 = $10.50\n\nStep 5: Add sauces, 2 at $0.25 each\n$0.25 * 2 = $0.50\n$10.50 + $0.50 = $11.00\n\nStep 6: Add meal upgrade (chips and drink)\n$11.00 + $3.00 = $14.00\n\nStep 7: Subtract gift card value\n$14.00 - $5.00 = $9.00\n\nFINAL ANSWER: 9.00",
+  "extracted_answer": "9.00",
+  "is_correct": true,
+  "correct_answer": "9",
+  "answer_type": "numeric_exact",
+  "question": "Chad ordered a build-your-own burrito for lunch.  The base burrito is $6.50.  He adds extra meat for $2.00, extra cheese for $1.00, avocado for $1.00 and 2 sauces for $0.25 each.  He decides to upgrade his meal for an extra $3.00 which will add chips and a drink.  He has a gift card for $5.00 that he uses at check out.  How much does he still owe?",
+  "source": "GSM8K"
+}

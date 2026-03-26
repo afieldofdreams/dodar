@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-057",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:27:01.060610Z",
+  "latency_seconds": 2.53,
+  "input_tokens": 101,
+  "output_tokens": 102,
+  "cost_usd": 0.000204,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Joe has $50 to buy an outfit for his new field trip. There is a 30% off sale at the clothing store. The shirt he picks out has a price of $25. He also picks out a pair of shorts for $35. Assuming that sales tax is included, how much money will Joe have left after the purchase?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "First, find the total price of the shirt and the shorts before discount:\n$25 + $35 = $60\n\nNext, calculate the discount amount:\n30% of $60 = 0.30 × $60 = $18\n\nSubtract the discount from the total price to get the sale price:\n$60 - $18 = $42\n\nJoe started with $50, so the amount of money left after the purchase is:\n$50 - $42 = $8\n\nFINAL ANSWER: 8",
+  "extracted_answer": "8",
+  "is_correct": true,
+  "correct_answer": "8",
+  "answer_type": "numeric_exact",
+  "question": "Joe has $50 to buy an outfit for his new field trip. There is a 30% off sale at the clothing store. The shirt he picks out has a price of $25. He also picks out a pair of shorts for $35. Assuming that sales tax is included, how much money will Joe have left after the purchase?",
+  "source": "GSM8K"
+}

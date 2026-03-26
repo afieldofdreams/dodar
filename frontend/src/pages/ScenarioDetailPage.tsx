@@ -22,13 +22,13 @@ export default function ScenarioDetailPage() {
 
       <div style={{ display: "flex", gap: "1rem", alignItems: "center", margin: "1rem 0" }}>
         <h1 style={{ margin: 0 }}>{scenario.id}</h1>
-        <span style={{ background: "#e8e8f0", padding: "4px 10px", borderRadius: 6, fontSize: "0.85rem" }}>
+        <span style={{ background: "#262640", padding: "4px 10px", borderRadius: 6, fontSize: "0.85rem" }}>
           {scenario.category}
         </span>
-        <span style={{ background: "#e8e8f0", padding: "4px 10px", borderRadius: 6, fontSize: "0.85rem" }}>
+        <span style={{ background: "#262640", padding: "4px 10px", borderRadius: 6, fontSize: "0.85rem" }}>
           {scenario.domain}
         </span>
-        <span style={{ background: "#e8e8f0", padding: "4px 10px", borderRadius: 6, fontSize: "0.85rem" }}>
+        <span style={{ background: "#262640", padding: "4px 10px", borderRadius: 6, fontSize: "0.85rem" }}>
           {scenario.difficulty}
         </span>
       </div>
@@ -60,7 +60,7 @@ export default function ScenarioDetailPage() {
                       {status ? (
                         <span style={{ color: "#4caf50", fontWeight: 600 }}>Done</span>
                       ) : (
-                        <span style={{ color: "#ccc" }}>--</span>
+                        <span style={{ color: "#5858a0" }}>--</span>
                       )}
                     </td>
                   );
@@ -92,7 +92,7 @@ export default function ScenarioDetailPage() {
           <div
             key={i}
             style={{
-              background: "#f0f0ff",
+              background: "#1e1e32",
               padding: "0.75rem 1rem",
               borderRadius: 6,
               marginBottom: "0.5rem",
@@ -109,7 +109,7 @@ export default function ScenarioDetailPage() {
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div style={{ marginBottom: "1.5rem" }}>
-      <h3 style={{ fontSize: "0.95rem", color: "#444", borderBottom: "1px solid #e0e0e0", paddingBottom: 6 }}>
+      <h3 style={{ fontSize: "0.95rem", color: "#e8e8f0", borderBottom: "1px solid #2e2e50", paddingBottom: 6 }}>
         {title}
       </h3>
       {children}
@@ -119,12 +119,13 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 const preStyle: React.CSSProperties = {
   whiteSpace: "pre-wrap",
-  background: "#fafafa",
+  background: "#161625",
   padding: "1rem",
   borderRadius: 6,
-  border: "1px solid #e0e0e0",
+  border: "1px solid #2e2e50",
   fontSize: "0.9rem",
   lineHeight: 1.6,
+  color: "#e8e8f0",
 };
 
 const tableStyle: React.CSSProperties = {
@@ -136,12 +137,13 @@ const tableStyle: React.CSSProperties = {
 const thStyle: React.CSSProperties = {
   textAlign: "left",
   padding: "0.5rem",
-  borderBottom: "2px solid #e0e0e0",
+  borderBottom: "2px solid #2e2e50",
   fontSize: "0.8rem",
-  color: "#666",
+  color: "#9898b8",
+  background: "transparent",
 };
 
 const tdStyle: React.CSSProperties = {
   padding: "0.5rem",
-  borderBottom: "1px solid #f0f0f0",
+  borderBottom: "1px solid #22223a",
 };

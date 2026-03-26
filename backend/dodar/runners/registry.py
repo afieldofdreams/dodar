@@ -17,8 +17,10 @@ _REGISTRY: dict[str, Callable[[], ModelRunner]] = {
     "gpt-5.4": lambda: OpenAIRunner(model_override="gpt-5.4"),
     "gpt-4o": lambda: OpenAIRunner(model_override="gpt-4o"),
     "gpt-4o-mini": lambda: OpenAIRunner(model_override="gpt-4o-mini"),
+    "gpt-4.1": lambda: OpenAIRunner(model_override="gpt-4.1"),
     "gpt-4.1-mini": lambda: OpenAIRunner(model_override="gpt-4.1-mini"),
     "gpt-4.1-nano": lambda: OpenAIRunner(model_override="gpt-4.1-nano"),
+    "o4-mini": lambda: OpenAIRunner(model_override="o4-mini"),
     "gemini-2.0-flash": lambda: GoogleRunner(),
     # Local models (Ollama)
     "qwen2.5:32b": lambda: OllamaRunner(model_override="qwen2.5:32b-instruct-q4_K_M"),

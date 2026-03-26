@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-051",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:21:00.894111Z",
+  "latency_seconds": 5.67,
+  "input_tokens": 72,
+  "output_tokens": 255,
+  "cost_usd": 0.000437,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Adrian's age is three times the age of Harriet, and Harriet is half the age of Zack. Calculate the average age of the three in three years if Harriet is 21 years old now.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's denote the ages as follows:\n- Harriet's age = H = 21 years\n- Zack's age = Z\n- Adrian's age = A\n\nGiven:\n1. Adrian's age is three times Harriet's age: \\( A = 3H \\)\n2. Harriet is half the age of Zack: \\( H = \\frac{1}{2}Z \\)\n\nFrom the second equation:\n\\[\nH = \\frac{1}{2}Z \\implies Z = 2H = 2 \\times 21 = 42\n\\]\n\nFrom the first equation:\n\\[\nA = 3H = 3 \\times 21 = 63\n\\]\n\nCurrent ages:\n- Adrian = 63\n- Harriet = 21\n- Zack = 42\n\nIn three years, their ages will be:\n- Adrian = 63 + 3 = 66\n- Harriet = 21 + 3 = 24\n- Zack = 42 + 3 = 45\n\nCalculate the average age in three years:\n\\[\n\\text{Average} = \\frac{66 + 24 + 45}{3} = \\frac{135}{3} = 45\n\\]\n\nFINAL ANSWER: 45",
+  "extracted_answer": "45",
+  "is_correct": true,
+  "correct_answer": "45",
+  "answer_type": "numeric_exact",
+  "question": "Adrian's age is three times the age of Harriet, and Harriet is half the age of Zack. Calculate the average age of the three in three years if Harriet is 21 years old now.",
+  "source": "GSM8K"
+}

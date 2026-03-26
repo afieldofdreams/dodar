@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-061",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:32:15.901636Z",
+  "latency_seconds": 4.86,
+  "input_tokens": 327,
+  "output_tokens": 328,
+  "cost_usd": 0.000656,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nOn a hot day, Jenny walked home from the grocery store with a bag of chocolate chips. When she arrived home the chocolate chips had melted in the bag. Why did the chocolate chips melt?\n\n  A: Heat transferred from the chocolate chips to the bag.\n  B: Heat evaporated from the bag to the chocolate chips.\n  C: Heat transferred from the environment to the chocolate chips.\n  D: Heat condensed from her hand to the chocolate chips.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1: Identify what has changed - The chocolate chips went from solid to melted, meaning they absorbed heat to increase their temperature to the melting point.\n\nStep 2: Consider the environment - It was a hot day, so the surrounding environment had a higher temperature than the chocolate chips.\n\nStep 3: Understand heat transfer - Heat naturally moves from a warmer area to a cooler area until temperatures equalize.\n\nStep 4: Analyze the options:\n\n- A: Heat transferred from the chocolate chips to the bag. \n  This implies heat moved from the chocolate chips to the bag, but since the chips melted, they must have gained heat, not lost it. So this is incorrect.\n\n- B: Heat evaporated from the bag to the chocolate chips. \n  Heat does not \"evaporate\"; evaporation is the process where liquid changes to gas, not a form of heat transfer. This statement is inaccurate.\n\n- C: Heat transferred from the environment to the chocolate chips. \n  Since it's a hot day, the warmer environment transfers heat to the cooler chocolate chips, causing them to melt. This aligns with physical laws.\n\n- D: Heat condensed from her hand to the chocolate chips.\n  Condensation is the process where gas turns to liquid, releasing heat. However, her hand is at roughly body temperature, which may or may not be hotter than the chocolate chips. Also, it's less direct than the environment's heat. So this option is less likely.\n\nStep 5: Conclusion - The most reasonable explanation is that heat transferred from the hot environment to the chocolate chips, causing them to melt.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "On a hot day, Jenny walked home from the grocery store with a bag of chocolate chips. When she arrived home the chocolate chips had melted in the bag. Why did the chocolate chips melt?",
+  "source": "ARC-Challenge"
+}

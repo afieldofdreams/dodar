@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-064",
+  "condition": "F",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:33:10.760479Z",
+  "latency_seconds": 7.59,
+  "input_tokens": 274,
+  "output_tokens": 405,
+  "cost_usd": 0.000758,
+  "system_prompt_sent": "When answering this question, work through these five phases:\n\n1. REVIEW: Check your understanding of the problem. What is actually being asked? Are there errors in your initial reading? Identify at least one way you might misinterpret this question.\n\n2. ACTION: Begin working through the problem. Show your reasoning and calculations. Identify which parts of your work are certain and which are tentative.\n\n3. OPTIONS: Step back and generate at least three possible approaches or answers. For each option, identify the key trade-off or risk. Do not commit yet.\n\n4. DIAGNOSE: Now identify the core problem more precisely. What are the key constraints? What information is given and what is missing? What assumptions should you question?\n\n5. DECIDE: Select your final approach. State explicitly why you are choosing it and why you are rejecting each alternative. State your confidence level and what evidence would change your mind.",
+  "user_prompt_sent": "Follow the five phases (Review, Action, Options, Diagnose, Decide).\n\nFormation of the ozone layer helped protect which type of living organisms as they evolved?\n\n  A: marine\n  B: terrestrial\n  C: photosynthetic\n  D: eukaryotic\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "1. REVIEW:\nThe question asks which type of living organisms were protected by the formation of the ozone layer as they evolved. The key is that the ozone layer protects living organisms from harmful ultraviolet (UV) radiation from the sun. One potential misinterpretation is confusing whether the ozone layer helped protect organisms already existing or those evolving into new habitats (for example, from aquatic to land).\n\n2. ACTION:\nThe ozone layer forms in the Earth's stratosphere and absorbs much of the Sun's ultraviolet radiation, which can damage living cells. Before the ozone layer formed, UV radiation was strong on Earth's surface, especially on land.\n\n- Marine organisms are protected underwater because water absorbs UV radiation.\n- Terrestrial (land) organisms are exposed directly to UV radiation.\n- Photosynthetic organisms include both marine and terrestrial organisms.\n- Eukaryotic organisms include a vast array of life forms, marine and terrestrial.\n  \nThe key effect of the ozone layer formation is primarily the protection of terrestrial organisms, enabling life to thrive on land by blocking harmful UV rays.\n\n3. OPTIONS:\nA: Marine - risk: less likely because water itself provides UV protection; ozone layer formation less critical specifically for marine organisms.\nB: Terrestrial - trade-off: directly exposed to UV, benefit greatly from the ozone layer.\nC: Photosynthetic - photosynthetic organisms exist in both environments; the key role was protecting those on land.\nD: Eukaryotic - broad grouping; includes marine and terrestrial; less specific.\n\n4. DIAGNOSE:\nKey constraint: The ozone layer absorbs UV radiation, which is critically damaging on land, not as much underwater.\nInformation given: Types of living organisms and formation of the ozone layer.\nMissing: explicit mention of habitat; however, the question implies which group received the protective effect facilitating their evolution.\n\n5. DECIDE:\nGiven the direct role of the ozone layer in filtering UV radiation and its importance in allowing life to move from water to land, the correct answer is terrestrial organisms.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Formation of the ozone layer helped protect which type of living organisms as they evolved?",
+  "source": "ARC-Challenge"
+}

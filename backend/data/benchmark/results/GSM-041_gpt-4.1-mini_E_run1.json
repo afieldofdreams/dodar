@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-041",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:29:59.808519Z",
+  "latency_seconds": 2.91,
+  "input_tokens": 208,
+  "output_tokens": 239,
+  "cost_usd": 0.000466,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nEach solid 10-foot section of a redwood tree weighs 400 pounds. Termites ate 30% of this redwood's wood. If the redwood is 200 feet tall, how much does it weigh?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nTo solve this problem, we need to understand the relationship between length, weight, and percentage loss of material. Each 10-foot section weighs a fixed amount (400 pounds), so the total weight can be found by multiplying the number of sections by the weight per section. However, since termites have eaten 30% of the wood, only 70% of the original weight remains. Thus, the total weight must be adjusted to account for this loss by multiplying by (1 - 0.30) = 0.70.\n\nStep 2 - REASON:  \n- The tree is 200 feet tall.  \n- Each 10-foot section weighs 400 pounds.  \n- Number of 10-foot sections in 200 feet = 200 / 10 = 20 sections.  \n- Total weight before termite damage = 20 sections × 400 pounds/section = 8,000 pounds.  \n- Termites ate 30% of the wood, meaning 70% remains.  \n- Weight after termite damage = 8,000 × 0.70 = 5,600 pounds.\n\nFINAL ANSWER: 5600",
+  "extracted_answer": "5600",
+  "is_correct": true,
+  "correct_answer": "5600",
+  "answer_type": "numeric_exact",
+  "question": "Each solid 10-foot section of a redwood tree weighs 400 pounds. Termites ate 30% of this redwood's wood. If the redwood is 200 feet tall, how much does it weigh?",
+  "source": "GSM8K"
+}

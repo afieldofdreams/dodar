@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-045",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:23:27.799085Z",
+  "latency_seconds": 2.24,
+  "input_tokens": 98,
+  "output_tokens": 121,
+  "cost_usd": 0.000233,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Zoey and Sydney are having a watermelon seed spitting contest. Whoever spits their seeds the most total distance wins. They each get one watermelon. Zoey's has 40 seeds and she spits each one 10 feet. Sydney's has 35 she spits each one 12 feet. What is the average total distance spat?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "First, let's calculate the total distance each person spits:\n\nZoey:\n- Number of seeds = 40\n- Distance per seed = 10 feet\n- Total distance = 40 × 10 = 400 feet\n\nSydney:\n- Number of seeds = 35\n- Distance per seed = 12 feet\n- Total distance = 35 × 12 = 420 feet\n\nNow, find the average total distance spat by both:\n\n\\(\\frac{400 + 420}{2} = \\frac{820}{2} = 410\\) feet\n\nFINAL ANSWER: 410",
+  "extracted_answer": "410",
+  "is_correct": true,
+  "correct_answer": "410",
+  "answer_type": "numeric_exact",
+  "question": "Zoey and Sydney are having a watermelon seed spitting contest. Whoever spits their seeds the most total distance wins. They each get one watermelon. Zoey's has 40 seeds and she spits each one 10 feet. Sydney's has 35 she spits each one 12 feet. What is the average total distance spat?",
+  "source": "GSM8K"
+}

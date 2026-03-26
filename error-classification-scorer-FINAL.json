@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "version": "4.1-FINAL",
+    "purpose": "Blinded error classification for incorrect responses. Used by human rater (primary, 50% of errors) and two LLM scorers (scalability extension, all errors)."
+  },
+
+  "llm_scorer_system_prompt": "You are an expert in cognitive error analysis. You will be shown a question, the correct answer, and an incorrect response from an AI model. You do not know which prompting method produced this response.\n\nYour task is to classify the PRIMARY reasoning failure that caused the incorrect answer. Choose exactly ONE category from the list below. If multiple failures are present, identify the one that occurred earliest in the reasoning chain (the root cause).\n\nIMPORTANT: You must respond with ONLY a JSON object. No other text.",
+
+  "llm_scorer_user_prompt_template": "QUESTION:\n{question}\n\nCORRECT ANSWER:\n{correct_answer}\n\nMODEL'S ANSWER:\n{model_answer}\n\nMODEL'S REASONING:\n{model_response}\n\n---\n\nClassify the primary reasoning failure into exactly ONE of these categories:\n\n1. PREMATURE_CLOSURE: The model committed to an answer before adequately exploring the problem space or identifying all relevant constraints. It locked onto an early interpretation without considering alternatives.\n\n2. ANCHORING_ERROR: The model fixated on one piece of information (often a salient but misleading detail) and failed to adjust its reasoning despite contradictory evidence appearing later in its own output.\n\n3. INCOMPLETE_SEARCH: The model considered too few options or approaches before selecting an answer. It tried one path and committed without exploring alternatives that would have revealed the correct answer.\n\n4. FAILURE_TO_REVISE: The model identified an error, inconsistency, or uncertainty during its reasoning but did not correct the final answer. It noticed something was wrong but proceeded anyway.\n\n5. EXECUTION_ERROR: The model reasoned correctly to the right approach but made a mechanical error in implementation (arithmetic mistake, logic error, transcription error, misread option letter).\n\n6. COMPREHENSION_FAILURE: The model fundamentally misunderstood what was being asked. It answered a different question than the one posed, or could not parse the problem structure.\n\n7. ABSTENTION: The model declined to answer, stated it could not determine the answer, or produced no clear final answer.\n\nRespond with a JSON object:\n{\n  \"classification\": \"ONE_OF_THE_SEVEN_CATEGORIES\",\n  \"reasoning\": \"2-3 sentences explaining why this classification applies and why the most plausible alternative classification does not.\",\n  \"root_cause_quote\": \"Quote the specific sentence or phrase in the model's reasoning where the failure first manifests. If abstention, write 'N/A'.\",\n  \"confidence\": \"high|medium|low\"\n}",
+
+  "human_classification_instructions": "For each incorrect response, read the model's reasoning and identify WHERE it first went wrong. Classify into ONE category:\n\n  premature_closure    - Jumped to answer without exploring the problem properly\n  anchoring_error      - Fixated on one detail, couldn't adjust despite evidence\n  incomplete_search    - Tried too few approaches before committing\n  failure_to_revise    - Noticed something wrong but didn't fix the final answer\n  execution_error      - Right approach, wrong arithmetic or transcription\n  comprehension_failure - Misunderstood what the question was asking\n  abstention           - Refused or couldn't produce an answer\n\nFor each response, write:\n  1. Your classification (one of the seven codes above)\n  2. A one-line justification (what specifically went wrong)\n\nYou should NOT know which prompting condition produced each response. If you can infer it from the response structure, note this but classify based on the reasoning failure, not the structure.",
+
+  "classification_categories": [
+    {
+      "code": "PREMATURE_CLOSURE",
+      "definition": "Model commits to an answer before adequately exploring the problem space or identifying all relevant constraints.",
+      "look_for": "Did the model consider only one interpretation of the problem? Did it jump to the first plausible answer? Did it skip identifying constraints or assumptions?",
+      "examples": [
+        "Selects a diagnosis based on the first matching symptom without differential.",
+        "Picks the first formula that seems relevant without checking applicability.",
+        "Immediately answers based on surface pattern match."
+      ]
+    },
+    {
+      "code": "ANCHORING_ERROR",
+      "definition": "Model fixates on one piece of information and fails to adjust despite contradictory evidence in its own reasoning.",
+      "look_for": "Did the model identify contradictory evidence but not change course? Did one detail dominate the analysis despite other evidence pointing elsewhere?",
+      "examples": [
+        "Focuses on a red-herring detail and builds entire reasoning around it.",
+        "Initial estimate is wrong but model adjusts insufficiently.",
+        "Salient but irrelevant detail dominates the analysis."
+      ]
+    },
+    {
+      "code": "INCOMPLETE_SEARCH",
+      "definition": "Model considers too few options or approaches before selecting an answer.",
+      "look_for": "Did the model try only one approach? Did it consider fewer than the obvious alternatives? Would exploring one more option have led to the correct answer?",
+      "examples": [
+        "Tries one approach to a maths problem and gives up.",
+        "Only considers two of four possible interpretations.",
+        "Doesn't explore the option space before committing."
+      ]
+    },
+    {
+      "code": "FAILURE_TO_REVISE",
+      "definition": "Model identifies an error or inconsistency during reasoning but does not correct the final answer.",
+      "look_for": "Did the model express doubt? Did it note an inconsistency? Did it say 'this doesn't seem right' but proceed anyway? Did a sanity check fail but get ignored?",
+      "examples": [
+        "Notes 'this doesn't seem right' but outputs the flawed answer anyway.",
+        "Calculates a sanity check that fails but ignores it.",
+        "Detects a contradiction with a constraint but doesn't backtrack."
+      ]
+    },
+    {
+      "code": "EXECUTION_ERROR",
+      "definition": "Model reasons correctly to the right approach but makes a mechanical error in implementation.",
+      "look_for": "Was the strategy correct? Is the error purely mechanical (arithmetic, copying, letter selection)? If you fix the mechanical error, would the answer be correct?",
+      "examples": [
+        "Correct formula, wrong multiplication.",
+        "Right reasoning chain, copies wrong option letter.",
+        "Correct logic, adds instead of subtracts."
+      ]
+    },
+    {
+      "code": "COMPREHENSION_FAILURE",
+      "definition": "Model fundamentally misunderstands what is being asked. Not differentiable by prompting scaffold.",
+      "look_for": "Did the model answer a different question? Did it misparse the problem structure? Is the misunderstanding at the comprehension level, not the reasoning level?",
+      "examples": [
+        "Answers a different question than the one posed.",
+        "Cannot parse the problem structure.",
+        "Misinterprets the task type entirely."
+      ]
+    },
+    {
+      "code": "ABSTENTION",
+      "definition": "Model declines to answer or produces no extractable answer.",
+      "look_for": "Did the model explicitly refuse? Did it say 'I cannot determine'? Was no answer extractable?",
+      "examples": [
+        "States 'I'm not sure and cannot provide a definitive answer.'",
+        "Produces reasoning but no final answer.",
+        "Response is truncated before reaching a conclusion."
+      ]
+    }
+  ],
+
+  "inter_rater_protocol": {
+    "primary_analysis": "Human-labelled classifications on 50% of incorrect responses (randomly sampled, stratified by condition).",
+    "scalability_extension": "LLM classifications on all incorrect responses (including the human-labelled subset).",
+    "validation": "Cohen's kappa between human and each LLM rater on the overlapping 50%. If kappa > 0.7 for both LLM raters, full LLM-scored dataset reported as supplementary. If kappa < 0.7, only human labels reported.",
+    "llm_agreement": "Cohen's kappa between the two LLM raters on all responses. Reported as a measure of classification stability.",
+    "blinding": "All responses stripped of condition markers and phase labels. Randomised IDs. Neither humans nor LLMs know which condition produced each response."
+  }
+}

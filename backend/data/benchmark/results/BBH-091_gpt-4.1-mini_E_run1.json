@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-091",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:38:59.444886Z",
+  "latency_seconds": 5.98,
+  "input_tokens": 324,
+  "output_tokens": 387,
+  "cost_usd": 0.000749,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nAlice, Bob, Claire, Dave, and Eve are holding a white elephant gift exchange. At the start of the event, they are each holding a present of a different color: Alice has a purple present, Bob has a brown present, Claire has a white present, Dave has a blue present, and Eve has a orange ball.\nAs the event progresses, pairs of people swap gifts. First, Eve and Alice swap their gifts. Then, Bob and Dave swap their gifts. Then, Bob and Alice swap their gifts. Then, Claire and Eve swap their gifts. Finally, Alice and Eve swap their gifts. At the end of the event, Dave has the\nOptions:\n(A) purple present\n(B) brown present\n(C) white present\n(D) blue present\n(E) orange ball\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Step 1 - STEP BACK:\nThis problem involves tracking the movement of five distinct items (presents of different colors) among five people through a sequence of swaps. The key principle here is to consider each swap as an exchange of items between two individuals. To solve the problem, we need to carefully keep track of who ends up with what item after each swap. This is essentially a permutation and tracking problem.\n\nStep 2 - REASON:\nInitial distribution:\n- Alice: purple\n- Bob: brown\n- Claire: white\n- Dave: blue\n- Eve: orange\n\nSwaps happen in this order:\n\n1. Eve and Alice swap:\n   - Alice takes eve's orange ball\n   - Eve takes Alice's purple present\n\n   After swap:\n   - Alice: orange\n   - Eve: purple\n\n2. Bob and Dave swap:\n   - Bob takes Dave's blue present\n   - Dave takes Bob's brown present\n\n   After swap:\n   - Bob: blue\n   - Dave: brown\n\n3. Bob and Alice swap:\n   - Bob takes Alice's orange ball\n   - Alice takes Bob's blue present\n\n   After swap:\n   - Bob: orange\n   - Alice: blue\n\n4. Claire and Eve swap:\n   - Claire takes Eve's purple present\n   - Eve takes Claire's white present\n\n   After swap:\n   - Claire: purple\n   - Eve: white\n\n5. Alice and Eve swap:\n   - Alice takes Eve's white present\n   - Eve takes Alice's blue present\n\n   After swap:\n   - Alice: white\n   - Eve: blue\n\nAfter all swaps, the final holdings are:\n\n- Alice: white\n- Bob: orange\n- Claire: purple\n- Dave: brown\n- Eve: blue\n\nThe question: At the end, what does Dave have?\n\nDave has the brown present.\n\nFINAL ANSWER: brown present",
+  "extracted_answer": "brown present",
+  "is_correct": false,
+  "correct_answer": "(B)",
+  "answer_type": "exact_match",
+  "question": "Alice, Bob, Claire, Dave, and Eve are holding a white elephant gift exchange. At the start of the event, they are each holding a present of a different color: Alice has a purple present, Bob has a brown present, Claire has a white present, Dave has a blue present, and Eve has a orange ball.\nAs the event progresses, pairs of people swap gifts. First, Eve and Alice swap their gifts. Then, Bob and Dave swap their gifts. Then, Bob and Alice swap their gifts. Then, Claire and Eve swap their gifts. Finally, Alice and Eve swap their gifts. At the end of the event, Dave has the\nOptions:\n(A) purple present\n(B) brown present\n(C) white present\n(D) blue present\n(E) orange ball",
+  "source": "BBH/tracking_shuffled_objects_five_objects"
+}

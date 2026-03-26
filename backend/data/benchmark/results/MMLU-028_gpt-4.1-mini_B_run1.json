@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-028",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:23:00.616823Z",
+  "latency_seconds": 4.82,
+  "input_tokens": 330,
+  "output_tokens": 301,
+  "cost_usd": 0.000614,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nA witness is scheduled to testify in a criminal case. To prove that he was a juvenile on a given date, evidence is offered that on that date he was confined in a juvenile detention facility. If a party wished to argue that this evidence is hearsay, whom would he point to as the hearsay declarant?\n\n  A: The witness on the stand.\n  B: The party offering the evidence.\n  C: The juvenile authorities.\n  D: The witness.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step-by-step reasoning:\n\n1. The issue revolves around whether evidence that \"the witness was confined in a juvenile detention facility\" on a given date constitutes hearsay.\n\n2. Hearsay is an out-of-court statement offered to prove the truth of the matter asserted.\n\n3. To argue that the evidence is hearsay, we have to identify the declarant—meaning the person or entity who made the out-of-court statement that is being used as evidence.\n\n4. The witness on the stand is testifying currently. If this witness says, \"I was confined,\" that is not hearsay because it's the witness's own statement made in court.\n\n5. The party offering the evidence is just presenting it; they are not the declarant.\n\n6. If the evidence is some record or report or statement from juvenile authorities that says \"This person was confined here on that date,\" then the declaration is coming from the juvenile authorities.\n\n7. So, a party arguing hearsay would say the out-of-court statement is from the juvenile authorities.\n\n8. \"The witness\" and \"the witness on the stand\" could be the same person, but only if the witness is making an out-of-court statement. If the evidence is a record or a statement from the juvenile authorities, then they are the declarant.\n\n9. Therefore, the hearsay declarant would be the juvenile authorities who made the out-of-court statement or record indicating the witness was confined.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "A witness is scheduled to testify in a criminal case. To prove that he was a juvenile on a given date, evidence is offered that on that date he was confined in a juvenile detention facility. If a party wished to argue that this evidence is hearsay, whom would he point to as the hearsay declarant?",
+  "source": "MMLU/professional_law"
+}

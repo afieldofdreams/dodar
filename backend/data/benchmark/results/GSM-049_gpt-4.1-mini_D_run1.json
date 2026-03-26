@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-049",
+  "condition": "D",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:23:06.414177Z",
+  "latency_seconds": 5.65,
+  "input_tokens": 254,
+  "output_tokens": 174,
+  "cost_usd": 0.00038,
+  "system_prompt_sent": "When answering this question, use the Thought-Action-Observation reasoning pattern. Alternate between reasoning about the problem and taking concrete analytical actions.\n\nFor each step:\n\nThought: Reason about what you currently know, what you need to figure out, and what approach to try next.\n\nAction: Perform a specific analytical action (e.g., identify key information, apply a formula, evaluate an option, check a constraint, test a hypothesis).\n\nObservation: State what you learned from that action and whether it changes your understanding.\n\nRepeat this Thought-Action-Observation cycle until you have enough information to answer confidently. Then provide your final answer.\n\nYou may use as many cycles as needed. Each cycle should build on what you learned in the previous one.",
+  "user_prompt_sent": "Use the Thought-Action-Observation pattern.\n\nDean's mother gave him $28 to go to the toy store. Dean bought 6 toy cars and 5 teddy bears. Each toy car cost $2 and each teddy bear cost $1. His mother then feels generous and decides to give him an extra $10. How much money does Dean have left?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Thought: Dean originally has $28. He buys 6 toy cars at $2 each and 5 teddy bears at $1 each. I need to calculate the total cost of the toys he bought, subtract that from his initial money, then add the extra $10 his mother gave.\n\nAction: Calculate the total cost of the 6 toy cars: 6 × $2 = $12. Calculate the total cost of the 5 teddy bears: 5 × $1 = $5. Calculate the total cost of all toys: $12 + $5 = $17. Subtract the total cost from initial money: $28 - $17 = $11. Add the extra $10: $11 + $10 = $21.\n\nObservation: Dean has $21 left after the purchase and the additional gift from his mother.\n\nFINAL ANSWER: 21",
+  "extracted_answer": "21",
+  "is_correct": true,
+  "correct_answer": "21",
+  "answer_type": "numeric_exact",
+  "question": "Dean's mother gave him $28 to go to the toy store. Dean bought 6 toy cars and 5 teddy bears. Each toy car cost $2 and each teddy bear cost $1. His mother then feels generous and decides to give him an extra $10. How much money does Dean have left?",
+  "source": "GSM8K"
+}

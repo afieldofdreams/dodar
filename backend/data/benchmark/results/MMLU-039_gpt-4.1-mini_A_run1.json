@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-039",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:22:27.869756Z",
+  "latency_seconds": 4.21,
+  "input_tokens": 154,
+  "output_tokens": 229,
+  "cost_usd": 0.000428,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Greene is the sole shareholder of Seagull, a calendar-year S corporation. Greene's basis at the beginning of the year is $15,000. Seagull reported an ordinary loss of $5,000 and $2,000 of municipal bond interest for the year. Seagull distributed cash of $6,000 to Greene on November 1. What is Greene's basis in Seagull at the end of the year?\n\n  A: $4,000\n  B: $6,000\n  C: $14,000\n  D: $15,000\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the changes to Greene's basis step by step.\n\n**Given data:**\n\n- Beginning basis = $15,000\n- Ordinary loss = $5,000\n- Tax-exempt interest (municipal bond interest) = $2,000\n- Distribution = $6,000\n\n---\n\n**Step 1: Adjust basis for ordinary loss**\n\nThe shareholder's basis is decreased by losses passed through by the S corporation but can't go below zero.\n\nBasis after loss = $15,000 - $5,000 = $10,000\n\n---\n\n**Step 2: Add tax-exempt interest**\n\nTax-exempt income increases basis (it is income, just not taxable).\n\nBasis after tax-exempt income = $10,000 + $2,000 = $12,000\n\n---\n\n**Step 3: Subtract distribution**\n\nDistributions decrease basis but only to zero (no negative basis from distributions).\n\nBasis after distribution = $12,000 - $6,000 = $6,000\n\n---\n\n**Final basis at year-end is $6,000.**\n\nSo the correct answer is:\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Greene is the sole shareholder of Seagull, a calendar-year S corporation. Greene's basis at the beginning of the year is $15,000. Seagull reported an ordinary loss of $5,000 and $2,000 of municipal bond interest for the year. Seagull distributed cash of $6,000 to Greene on November 1. What is Greene's basis in Seagull at the end of the year?",
+  "source": "MMLU/professional_accounting"
+}

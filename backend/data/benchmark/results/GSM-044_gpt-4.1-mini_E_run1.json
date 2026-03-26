@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-044",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:31:29.514744Z",
+  "latency_seconds": 3.47,
+  "input_tokens": 203,
+  "output_tokens": 220,
+  "cost_usd": 0.000433,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nNani is 8 years old. His brother is twice his age. Nani's sister is 25% younger than him. What is the total age of all three of the family members?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nWhen dealing with age problems, the main principles are understanding relationships between ages and percentages.  \n- \"Twice his age\" means the other person's age is 2 times Nani's age.  \n- \"25% younger than him\" means the sister's age is 25% less than Nani's age. To calculate this, subtract 25% of Nani's age from Nani's age:  \n  Sister's age = Nani's age - (25% of Nani's age) = Nani's age × (1 - 0.25) = Nani's age × 0.75  \n\nStep 2 - REASON:  \nNani's age = 8 years  \nBrother's age = 2 × 8 = 16 years  \nSister's age = 8 × 0.75 = 6 years  \n\nTotal age = Nani's age + Brother's age + Sister's age  \n= 8 + 16 + 6  \n= 30\n\nFINAL ANSWER: 30",
+  "extracted_answer": "30",
+  "is_correct": true,
+  "correct_answer": "30",
+  "answer_type": "numeric_exact",
+  "question": "Nani is 8 years old. His brother is twice his age. Nani's sister is 25% younger than him. What is the total age of all three of the family members?",
+  "source": "GSM8K"
+}

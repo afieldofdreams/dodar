@@ -1,0 +1,21 @@
+{
+  "task_id": "MED-017",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:37:18.177765Z",
+  "latency_seconds": 7.85,
+  "input_tokens": 212,
+  "output_tokens": 436,
+  "cost_usd": 0.000782,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A 24-year-old woman presents to the emergency department with a severe headache. She states it is 10/10 in intensity and states that it is associated with chewing. She describes it as a dull pain over the sides of her head. The patient is otherwise healthy and is not currently taking any medications. Her temperature is 97.0°F (36.4°C), blood pressure is 111/74 mmHg, pulse is 83/min, respirations are 13/min, and oxygen saturation is 98% on room air. Physical exam is notable for pain and tenderness over the mandibular and temporal region that is worsened when the patient opens and closes their mouth. Which of the following is the most likely diagnosis?\n\n  A: Migraine headache\n  B: Temporal arteritis\n  C: Temporomandibular joint dysfunction\n  D: Tension headache\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the clinical presentation and each answer choice carefully:\n\n**Patient Presentation:**\n- 24-year-old woman\n- Severe headache, 10/10 intensity\n- Pain is associated with chewing\n- Dull pain localized over the sides of her head (mandibular and temporal regions)\n- Tenderness over mandibular and temporal region, worsened with opening/closing mouth\n- Vitals: normal, afebrile\n- Otherwise healthy, no medications\n\n---\n\n**Answer Choices:**\n\n**A: Migraine headache**  \n- Migraines often present with unilateral, pulsatile/throbbing pain, sometimes associated with nausea/vomiting, photophobia, phonophobia.\n- Migraine pain is not typically worsened by chewing or jaw movement.\n- Age fits, but the pain description and associated symptoms do not match well.\n\n**B: Temporal arteritis (Giant cell arteritis)**  \n- Usually occurs in patients >50 years old.\n- Presents with a new headache, scalp tenderness, jaw claudication (pain on chewing), and often systemic symptoms like fever, jaw pain caused by ischemia (arterial inflammation).\n- This patient is 24, much younger than usual, no systemic symptoms, and normal temperature.\n- Temporal arteritis is unlikely.\n\n**C: Temporomandibular joint dysfunction (TMJ dysfunction)**  \n- Characterized by pain over the jaw, temples, or sides of the head.\n- Pain worsened by jaw movement, such as opening/closing the mouth or chewing.\n- Common in young adults, often dull aching pain.\n- Physical exam shows tenderness over the joint.\n- Fits the clinical presentation perfectly.\n\n**D: Tension headache**  \n- Usually bilateral, pressing/tightening pain.\n- Not worsened by jaw movement or chewing.\n- Typically no tenderness over the temporomandibular joint.\n\n---\n\n**Conclusion:**\n\nThe patient's severe, dull pain over the temporal and mandibular areas, tenderness worsened with chewing and jaw movement, with no systemic symptoms and being in the young age group, is most consistent with **Temporomandibular joint dysfunction**.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "A 24-year-old woman presents to the emergency department with a severe headache. She states it is 10/10 in intensity and states that it is associated with chewing. She describes it as a dull pain over the sides of her head. The patient is otherwise healthy and is not currently taking any medications. Her temperature is 97.0°F (36.4°C), blood pressure is 111/74 mmHg, pulse is 83/min, respirations are 13/min, and oxygen saturation is 98% on room air. Physical exam is notable for pain and tenderness over the mandibular and temporal region that is worsened when the patient opens and closes their mouth. Which of the following is the most likely diagnosis?",
+  "source": "MedQA-USMLE"
+}

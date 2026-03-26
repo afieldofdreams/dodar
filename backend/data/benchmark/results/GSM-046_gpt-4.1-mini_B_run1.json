@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-046",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:22:33.973971Z",
+  "latency_seconds": 5.95,
+  "input_tokens": 315,
+  "output_tokens": 245,
+  "cost_usd": 0.000518,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nMarcus ordered 5 croissants at $3.00 apiece, 4 cinnamon rolls at $2.50 each, 3 mini quiches for $4.00 apiece and 13 blueberry muffins that were $1.00 apiece.  At check out, Marcus shows his loyalty card that gives him 10% off of his purchase.  What is Marcus' total bill?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Calculate the cost of the croissants.\n5 croissants at $3.00 each:\n5 × $3.00 = $15.00\n\nStep 2: Calculate the cost of the cinnamon rolls.\n4 cinnamon rolls at $2.50 each:\n4 × $2.50 = $10.00\n\nStep 3: Calculate the cost of the mini quiches.\n3 mini quiches at $4.00 each:\n3 × $4.00 = $12.00\n\nStep 4: Calculate the cost of the blueberry muffins.\n13 blueberry muffins at $1.00 each:\n13 × $1.00 = $13.00\n\nStep 5: Calculate the total cost before discount.\nTotal = $15.00 + $10.00 + $12.00 + $13.00 = $50.00\n\nStep 6: Apply the 10% loyalty discount.\n10% of $50.00 = 0.10 × $50.00 = $5.00\n\nStep 7: Calculate the final bill after discount.\n$50.00 - $5.00 = $45.00\n\nFINAL ANSWER: 45.00",
+  "extracted_answer": "45.00",
+  "is_correct": true,
+  "correct_answer": "45",
+  "answer_type": "numeric_exact",
+  "question": "Marcus ordered 5 croissants at $3.00 apiece, 4 cinnamon rolls at $2.50 each, 3 mini quiches for $4.00 apiece and 13 blueberry muffins that were $1.00 apiece.  At check out, Marcus shows his loyalty card that gives him 10% off of his purchase.  What is Marcus' total bill?",
+  "source": "GSM8K"
+}

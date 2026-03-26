@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-059",
+  "condition": "D",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:27:28.429526Z",
+  "latency_seconds": 11.26,
+  "input_tokens": 298,
+  "output_tokens": 324,
+  "cost_usd": 0.000638,
+  "system_prompt_sent": "When answering this question, use the Thought-Action-Observation reasoning pattern. Alternate between reasoning about the problem and taking concrete analytical actions.\n\nFor each step:\n\nThought: Reason about what you currently know, what you need to figure out, and what approach to try next.\n\nAction: Perform a specific analytical action (e.g., identify key information, apply a formula, evaluate an option, check a constraint, test a hypothesis).\n\nObservation: State what you learned from that action and whether it changes your understanding.\n\nRepeat this Thought-Action-Observation cycle until you have enough information to answer confidently. Then provide your final answer.\n\nYou may use as many cycles as needed. Each cycle should build on what you learned in the previous one.",
+  "user_prompt_sent": "Use the Thought-Action-Observation pattern.\n\nChad ordered a build-your-own burrito for lunch.  The base burrito is $6.50.  He adds extra meat for $2.00, extra cheese for $1.00, avocado for $1.00 and 2 sauces for $0.25 each.  He decides to upgrade his meal for an extra $3.00 which will add chips and a drink.  He has a gift card for $5.00 that he uses at check out.  How much does he still owe?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Thought:  \nI need to calculate the total cost of the burrito and extras, then subtract the gift card value to find out how much Chad still owes. I will start by summing the base burrito price and the cost of each additional item.\n\nAction:  \nSum base price + extra meat + extra cheese + avocado + 2 sauces + meal upgrade.  \n- Base: $6.50  \n- Extra meat: $2.00  \n- Extra cheese: $1.00  \n- Avocado: $1.00  \n- 2 sauces at $0.25 each = $0.50  \n- Upgrade meal: $3.00  \nTotal before gift card = 6.50 + 2.00 + 1.00 + 1.00 + 0.50 + 3.00\n\nObservation:  \nCalculate the total:  \n6.50 + 2.00 = 8.50  \n8.50 + 1.00 = 9.50  \n9.50 + 1.00 = 10.50  \n10.50 + 0.50 = 11.00  \n11.00 + 3.00 = 14.00  \nTotal cost before gift card is $14.00.\n\nThought:  \nNow subtract the $5.00 gift card value from the total to get the amount Chad still owes.\n\nAction:  \n$14.00 - $5.00 = $9.00\n\nObservation:  \nAfter applying the gift card, Chad owes $9.00.\n\nFINAL ANSWER: 9.00",
+  "extracted_answer": "9.00",
+  "is_correct": true,
+  "correct_answer": "9",
+  "answer_type": "numeric_exact",
+  "question": "Chad ordered a build-your-own burrito for lunch.  The base burrito is $6.50.  He adds extra meat for $2.00, extra cheese for $1.00, avocado for $1.00 and 2 sauces for $0.25 each.  He decides to upgrade his meal for an extra $3.00 which will add chips and a drink.  He has a gift card for $5.00 that he uses at check out.  How much does he still owe?",
+  "source": "GSM8K"
+}

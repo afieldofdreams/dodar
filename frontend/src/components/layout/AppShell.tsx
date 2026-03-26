@@ -4,102 +4,73 @@ const NAV_SECTIONS = [
   {
     label: "Framework",
     items: [
-      { to: "/", label: "Playground", icon: "▸" },
-      { to: "/docs", label: "Documentation", icon: "◆" },
+      { to: "/", label: "Playground" },
+      { to: "/docs", label: "Documentation" },
     ],
   },
   {
     label: "Benchmark",
     items: [
-      { to: "/dashboard", label: "Results", icon: "◉" },
-      { to: "/scenarios", label: "Scenarios", icon: "▦" },
-      { to: "/runs", label: "Runs", icon: "↻" },
-      { to: "/scoring", label: "Scoring", icon: "★" },
-      { to: "/export", label: "Export", icon: "↓" },
+      { to: "/benchmark/new", label: "New Run" },
+      { to: "/benchmark/results", label: "Results" },
+    ],
+  },
+  {
+    label: "Scenarios",
+    items: [
+      { to: "/runs/new", label: "New Run" },
+      { to: "/dashboard", label: "Results" },
+      { to: "/scenarios", label: "Browse" },
+      { to: "/runs", label: "Run History" },
+      { to: "/scoring", label: "Scoring" },
+      { to: "/export", label: "Export" },
     ],
   },
 ];
 
 export default function AppShell() {
   return (
-    <div style={{ display: "flex", minHeight: "100vh" }}>
-      <nav
-        style={{
-          width: 240,
-          background: "var(--bg-surface)",
-          borderRight: "1px solid var(--border)",
-          padding: "1.5rem 0",
-          flexShrink: 0,
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
+    <div className="flex min-h-screen">
+      {/* Sidebar */}
+      <nav className="w-56 shrink-0 bg-surface border-r border-border flex flex-col">
         {/* Logo */}
-        <div style={{ padding: "0 1.25rem 1.5rem" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-            <div
-              style={{
-                width: 32,
-                height: 32,
-                borderRadius: 8,
-                background: "linear-gradient(135deg, var(--accent), #a78bfa)",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "0.9rem",
-                fontWeight: 800,
-                color: "#fff",
-              }}
-            >
+        <div className="px-5 pt-5 pb-6">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent to-purple-400 flex items-center justify-center text-sm font-extrabold text-white">
               D
             </div>
             <div>
-              <h1 style={{ fontSize: "1.05rem", margin: 0, color: "#fff", fontWeight: 700, letterSpacing: "-0.02em" }}>
+              <h1 className="text-[15px] font-bold text-white tracking-tight leading-none">
                 DODAR
               </h1>
-              <p style={{ fontSize: "0.65rem", margin: 0, color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+              <p className="text-[10px] text-zinc-500 uppercase tracking-widest mt-0.5">
                 Reasoning Framework
               </p>
             </div>
           </div>
         </div>
 
-        {/* Nav sections */}
-        <div style={{ flex: 1 }}>
+        {/* Nav */}
+        <div className="flex-1 overflow-y-auto">
           {NAV_SECTIONS.map((section) => (
-            <div key={section.label} style={{ marginBottom: "0.5rem" }}>
-              <div
-                style={{
-                  padding: "0.5rem 1.25rem 0.3rem",
-                  fontSize: "0.65rem",
-                  color: "var(--text-muted)",
-                  textTransform: "uppercase",
-                  letterSpacing: "0.12em",
-                  fontWeight: 600,
-                }}
-              >
+            <div key={section.label} className="mb-2">
+              <div className="px-5 pt-3 pb-1.5 text-[10px] font-semibold text-zinc-500 uppercase tracking-[0.12em]">
                 {section.label}
               </div>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+              <ul className="space-y-0.5">
                 {section.items.map((item) => (
                   <li key={item.to}>
                     <NavLink
                       to={item.to}
                       end={item.to === "/"}
-                      style={({ isActive }) => ({
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.6rem",
-                        padding: "0.5rem 1.25rem",
-                        color: isActive ? "#fff" : "var(--text-secondary)",
-                        background: isActive ? "var(--accent-dim)" : "transparent",
-                        textDecoration: "none",
-                        fontSize: "0.85rem",
-                        borderLeft: isActive ? "2px solid var(--accent)" : "2px solid transparent",
-                        transition: "all 0.15s",
-                      })}
+                      className={({ isActive }) =>
+                        `block px-5 py-2 text-[13px] transition-colors border-l-2 ${
+                          isActive
+                            ? "bg-accent-dim text-white font-medium border-accent"
+                            : "text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.03] border-transparent"
+                        }`
+                      }
                     >
-                      <span style={{ opacity: 0.6, fontSize: "0.75rem" }}>{item.icon}</span>
                       {item.label}
                     </NavLink>
                   </li>
@@ -110,28 +81,22 @@ export default function AppShell() {
         </div>
 
         {/* Footer */}
-        <div
-          style={{
-            padding: "1rem 1.25rem",
-            borderTop: "1px solid var(--border)",
-            fontSize: "0.75rem",
-            color: "var(--text-muted)",
-          }}
-        >
+        <div className="px-5 py-4 border-t border-border text-xs text-zinc-500">
           <a
             href="https://github.com/afieldofdreams/dodar"
             target="_blank"
             rel="noopener"
-            style={{ color: "var(--text-secondary)", textDecoration: "none" }}
+            className="text-zinc-400 hover:text-zinc-200 no-underline"
           >
             GitHub ↗
           </a>
-          <span style={{ margin: "0 0.5rem" }}>·</span>
-          <span>pip install dodar</span>
+          <span className="mx-2">·</span>
+          <span className="text-zinc-600">pip install dodar</span>
         </div>
       </nav>
 
-      <main style={{ flex: 1, padding: "2rem 3rem", overflow: "auto", maxHeight: "100vh" }}>
+      {/* Main content */}
+      <main className="flex-1 overflow-y-auto max-h-screen p-8">
         <Outlet />
       </main>
     </div>

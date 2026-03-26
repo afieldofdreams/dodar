@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-064",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:33:46.881763Z",
+  "latency_seconds": 2.94,
+  "input_tokens": 275,
+  "output_tokens": 184,
+  "cost_usd": 0.000404,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nFormation of the ozone layer helped protect which type of living organisms as they evolved?\n\n  A: marine\n  B: terrestrial\n  C: photosynthetic\n  D: eukaryotic\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1: Consider what the ozone layer does. The ozone layer absorbs most of the Sun's harmful ultraviolet (UV) radiation.\n\nStep 2: Before the formation of the ozone layer, UV radiation was much more intense at the Earth's surface, which would have been harmful to life on land.\n\nStep 3: Life initially evolved in the oceans (marine environment), where water offered protection against UV radiation, so marine organisms were less affected by UV rays.\n\nStep 4: The formation of the ozone layer allowed organisms to survive on land by blocking harmful UV rays, thus enabling terrestrial life to evolve and thrive.\n\nStep 5: While photosynthetic organisms and eukaryotes certainly benefited from reduced UV radiation, the crucial evolutionary impact of the ozone layer was enabling the colonization of land (terrestrial organisms).\n\nTherefore, the formation of the ozone layer helped protect terrestrial organisms as they evolved.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Formation of the ozone layer helped protect which type of living organisms as they evolved?",
+  "source": "ARC-Challenge"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-042",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:25:36.403305Z",
+  "latency_seconds": 7.01,
+  "input_tokens": 297,
+  "output_tokens": 386,
+  "cost_usd": 0.000736,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nA tank has a capacity of 18000 gallons. Wanda and Ms. B decided to pump water from a pond to fill the tank in two days. On the first day, working in shifts, Wanda filled 1/4 of the tank's capacity with water, and Ms. B pumped 3/4 as much water as Wanda pumped into the tank that day. On the second day, Wanda pumped 2/3 of the amount of water she pumped on the previous day, while Ms. B only pumped 1/3 of the number of gallons she pumped on the first day. How many gallons of water are remaining for the tank to be full?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 – STEP BACK:\nThe problem involves calculating water volumes pumped into a tank by two people on two different days and determining how much water is left to fill the tank. The key principles are:\n- Fractional parts of quantities: expressing portions of the tank capacity and parts pumped.\n- Ratio and proportion: comparing amounts pumped by Wanda and Ms. B.\n- Basic arithmetic operations: addition and subtraction of water volumes.\n- Understanding the total capacity and cumulative contributions to find what's remaining.\n\nStep 2 – REASON:\n- Total tank capacity = 18,000 gallons.\n\n**Day 1:**\n- Wanda pumps 1/4 of tank capacity = (1/4) * 18,000 = 4,500 gallons.\n- Ms. B pumps 3/4 as much as Wanda did:\n  Ms. B's amount = (3/4) * 4,500 = 3,375 gallons.\n\n**Day 2:**\n- Wanda pumps 2/3 of what she pumped on Day 1:\n  Wanda's Day 2 amount = (2/3) * 4,500 = 3,000 gallons.\n- Ms. B pumps 1/3 of what she pumped on Day 1:\n  Ms. B's Day 2 amount = (1/3) * 3,375 = 1,125 gallons.\n\n**Total water pumped in 2 days:**\n- Wanda total = 4,500 + 3,000 = 7,500 gallons.\n- Ms. B total = 3,375 + 1,125 = 4,500 gallons.\n- Total pumped = 7,500 + 4,500 = 12,000 gallons.\n\n**Water remaining to fill the tank:**\n- 18,000 - 12,000 = 6,000 gallons.\n\nFINAL ANSWER: 6000",
+  "extracted_answer": "6000",
+  "is_correct": true,
+  "correct_answer": "6000",
+  "answer_type": "numeric_exact",
+  "question": "A tank has a capacity of 18000 gallons. Wanda and Ms. B decided to pump water from a pond to fill the tank in two days. On the first day, working in shifts, Wanda filled 1/4 of the tank's capacity with water, and Ms. B pumped 3/4 as much water as Wanda pumped into the tank that day. On the second day, Wanda pumped 2/3 of the amount of water she pumped on the previous day, while Ms. B only pumped 1/3 of the number of gallons she pumped on the first day. How many gallons of water are remaining for the tank to be full?",
+  "source": "GSM8K"
+}

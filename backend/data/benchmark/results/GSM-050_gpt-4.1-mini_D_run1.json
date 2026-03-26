@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-050",
+  "condition": "D",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:39:30.161425Z",
+  "latency_seconds": 4.85,
+  "input_tokens": 267,
+  "output_tokens": 323,
+  "cost_usd": 0.000624,
+  "system_prompt_sent": "When answering this question, use the Thought-Action-Observation reasoning pattern. Alternate between reasoning about the problem and taking concrete analytical actions.\n\nFor each step:\n\nThought: Reason about what you currently know, what you need to figure out, and what approach to try next.\n\nAction: Perform a specific analytical action (e.g., identify key information, apply a formula, evaluate an option, check a constraint, test a hypothesis).\n\nObservation: State what you learned from that action and whether it changes your understanding.\n\nRepeat this Thought-Action-Observation cycle until you have enough information to answer confidently. Then provide your final answer.\n\nYou may use as many cycles as needed. Each cycle should build on what you learned in the previous one.",
+  "user_prompt_sent": "Use the Thought-Action-Observation pattern.\n\nBrook Hills High School currently enrolls 3000 students. Half of these students are over 16 years old, and one-fourth of the students over 16 years old are male. The remaining half of the students are under 16 years old, and one-half of the students under 16 are male. In total, how many female students are enrolled at this school?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Thought: I need to find the total number of female students at Brook Hills High School. I know the total enrollment is 3000. Half are over 16 years old, and the other half are under 16 years old. I also know the proportion of males in each group, so I can calculate the number of males and females in each age group.\n\nAction: Calculate the number of students over 16 and the number under 16.\n- Number over 16 = 3000 / 2 = 1500\n- Number under 16 = 3000 / 2 = 1500\n\nObservation: The students are evenly split between the two age groups.\n\nThought: Now calculate the number of male students in each group.\n- One-fourth of students over 16 are male: 1500 * 1/4 = 375 males over 16.\n- One-half of students under 16 are male: 1500 * 1/2 = 750 males under 16.\n\nAction: Calculate female students in each group by subtracting males from total students in each group.\n- Females over 16 = 1500 - 375 = 1125\n- Females under 16 = 1500 - 750 = 750\n\nObservation: The total number of female students is the sum of females over and under 16.\n\nAction: Sum the female students:\n- Total females = 1125 + 750 = 1875\n\nObservation: I have computed the total number of female students as 1875.\n\nFINAL ANSWER: 1875",
+  "extracted_answer": "1875",
+  "is_correct": true,
+  "correct_answer": "1,875",
+  "answer_type": "numeric_exact",
+  "question": "Brook Hills High School currently enrolls 3000 students. Half of these students are over 16 years old, and one-fourth of the students over 16 years old are male. The remaining half of the students are under 16 years old, and one-half of the students under 16 are male. In total, how many female students are enrolled at this school?",
+  "source": "GSM8K"
+}

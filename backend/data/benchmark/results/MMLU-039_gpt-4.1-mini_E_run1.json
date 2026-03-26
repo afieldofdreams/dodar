@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-039",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:37:33.617895Z",
+  "latency_seconds": 4.33,
+  "input_tokens": 285,
+  "output_tokens": 281,
+  "cost_usd": 0.000564,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nGreene is the sole shareholder of Seagull, a calendar-year S corporation. Greene's basis at the beginning of the year is $15,000. Seagull reported an ordinary loss of $5,000 and $2,000 of municipal bond interest for the year. Seagull distributed cash of $6,000 to Greene on November 1. What is Greene's basis in Seagull at the end of the year?\n\n  A: $4,000\n  B: $6,000\n  C: $14,000\n  D: $15,000\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK: Relevant Principles\n\nWhen dealing with shareholder basis in an S corporation, it's important to remember how basis is adjusted during the year:\n\n- Basis at beginning of year is increased by income items (both taxable and tax-exempt income like municipal bond interest).\n- Basis is decreased by losses and distributions. \n- Losses can only be deducted to the extent of the shareholder's basis; the basis can't go below zero.\n- Distributions reduce the basis but generally cannot create a negative basis (unless the distribution exceeds the basis, which may cause capital gain).\n- Municipal bond interest is tax-exempt income, but it increases shareholder basis since it is income reported by the S corporation.\n\nStep 2 - REASON:\n\nGiven:\n- Beginning basis = $15,000\n- Ordinary loss = $5,000 (this decreases basis)\n- Municipal bond interest = $2,000 (this increases basis)\n- Cash distribution = $6,000 (this decreases basis)\n\nCalculate end-of-year basis step-by-step:\n\nStart basis: 15,000  \n+ Municipal bond interest (tax-exempt income, increases basis): +2,000 = 17,000  \n- Ordinary loss: -5,000 = 12,000  \n- Distribution: -6,000 = 6,000  \n\nNo negative basis occurs here, so no complications.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Greene is the sole shareholder of Seagull, a calendar-year S corporation. Greene's basis at the beginning of the year is $15,000. Seagull reported an ordinary loss of $5,000 and $2,000 of municipal bond interest for the year. Seagull distributed cash of $6,000 to Greene on November 1. What is Greene's basis in Seagull at the end of the year?",
+  "source": "MMLU/professional_accounting"
+}

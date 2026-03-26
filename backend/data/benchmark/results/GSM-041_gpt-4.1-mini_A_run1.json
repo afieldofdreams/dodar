@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-041",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:21:33.027624Z",
+  "latency_seconds": 2.96,
+  "input_tokens": 77,
+  "output_tokens": 170,
+  "cost_usd": 0.000303,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Each solid 10-foot section of a redwood tree weighs 400 pounds. Termites ate 30% of this redwood's wood. If the redwood is 200 feet tall, how much does it weigh?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Determine how many 10-foot sections are in the tree.\nThe tree is 200 feet tall, so:\n\\[\n\\frac{200 \\text{ feet}}{10 \\text{ feet per section}} = 20 \\text{ sections}\n\\]\n\nStep 2: Determine the total weight if there were no termites.\nEach section weighs 400 pounds, so:\n\\[\n20 \\text{ sections} \\times 400 \\text{ pounds per section} = 8000 \\text{ pounds}\n\\]\n\nStep 3: Termites ate 30% of the wood, so the tree now weighs only 70% of its original weight.\n\\[\n8000 \\text{ pounds} \\times 0.70 = 5600 \\text{ pounds}\n\\]\n\nFINAL ANSWER: 5600",
+  "extracted_answer": "5600",
+  "is_correct": true,
+  "correct_answer": "5600",
+  "answer_type": "numeric_exact",
+  "question": "Each solid 10-foot section of a redwood tree weighs 400 pounds. Termites ate 30% of this redwood's wood. If the redwood is 200 feet tall, how much does it weigh?",
+  "source": "GSM8K"
+}

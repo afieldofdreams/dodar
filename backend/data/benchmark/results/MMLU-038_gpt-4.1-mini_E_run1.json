@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-038",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:25:21.277251Z",
+  "latency_seconds": 6.39,
+  "input_tokens": 237,
+  "output_tokens": 304,
+  "cost_usd": 0.000581,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nWhich of the following documents is typically issued as part of the due-process activities of the Financial Accounting Standards Board (FASB) for amending the FASB Accounting Standards Codification?\n\n  A: A proposed statement of position.\n  B: A proposed accounting standards update.\n  C: A proposed accounting research bulletin.\n  D: A proposed staff accounting bulletin.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK:\nThe Financial Accounting Standards Board (FASB) is responsible for developing and issuing accounting standards in the United States. They maintain the FASB Accounting Standards Codification, which organizes and simplifies all authoritative GAAP into one structure.\n\nWhen the FASB updates or amends the Codification, it follows due process which involves issuing exposure drafts for public comment. The formal documents issued for this purpose are known as Accounting Standards Updates (ASUs). ASUs communicate changes to the Codification and provide background, basis for conclusions, and implementation guidance.\n\nOther documents referenced in the question have different roles:\n- Statement of Position (SOP): Issued by the AICPA, typically related to industry or specific accounting issues, not by the FASB.\n- Accounting Research Bulletin (ARB): Historical documents issued by the predecessor to the FASB prior to 1973, no longer current.\n- Staff Accounting Bulletin (SAB): Issued by the SEC staff to provide guidance on SEC rules and regulations affecting financial reporting, not issued by FASB.\n\nStep 2 - REASON:\nSince the question asks which document is issued as part of the FASB's due process for amending the Accounting Standards Codification, the correct instrument would be the proposed Accounting Standards Update. This document alerts stakeholders to proposed changes and gathers public input before finalizing amendments.\n\nThe other options do not align with the FASB's process to amend the Codification.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following documents is typically issued as part of the due-process activities of the Financial Accounting Standards Board (FASB) for amending the FASB Accounting Standards Codification?",
+  "source": "MMLU/professional_accounting"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-055",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:25:27.678632Z",
+  "latency_seconds": 6.25,
+  "input_tokens": 229,
+  "output_tokens": 252,
+  "cost_usd": 0.000495,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nJohn wins an award at work.  The award has a 1 time monetary reward of $5000 and a 5% raise in salary.  If he makes 2000 a week, every week of the year and he got the award on the first day of the year how much money did he make that year?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:\n\nThe problem involves calculating total annual earnings given a fixed weekly salary, a one-time monetary award, and a percentage salary raise effective from the beginning of the year.\n\nKey concepts:\n- Weekly salary multiplied by number of weeks in a year (52) gives annual salary.\n- A percentage raise increases the salary by multiplying the original salary by (1 + raise percentage).\n- The raise applies before calculating annual salary because it starts on the first day of the year.\n- The one-time award is added as a lump sum to total annual earnings.\n\nStep 2 - REASON:\n\nJohn's original weekly salary = $2000  \nRaise = 5% → 0.05 increase  \nJohn's new weekly salary after 5% raise = 2000 * (1 + 0.05) = 2000 * 1.05 = $2100 per week  \n\nNumber of weeks in a year = 52  \n\nAnnual salary with raise = 2100 * 52 = $109,200  \n\nOne-time award = $5000  \n\nTotal money made = annual salary + one-time award  \n= $109,200 + $5,000  \n= $114,200\n\nFINAL ANSWER: 114200",
+  "extracted_answer": "114200",
+  "is_correct": true,
+  "correct_answer": "114,200",
+  "answer_type": "numeric_exact",
+  "question": "John wins an award at work.  The award has a 1 time monetary reward of $5000 and a 5% raise in salary.  If he makes 2000 a week, every week of the year and he got the award on the first day of the year how much money did he make that year?",
+  "source": "GSM8K"
+}

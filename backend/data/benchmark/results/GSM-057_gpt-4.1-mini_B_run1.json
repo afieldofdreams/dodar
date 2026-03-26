@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-057",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:30:07.907981Z",
+  "latency_seconds": 2.6,
+  "input_tokens": 304,
+  "output_tokens": 166,
+  "cost_usd": 0.000387,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nJoe has $50 to buy an outfit for his new field trip. There is a 30% off sale at the clothing store. The shirt he picks out has a price of $25. He also picks out a pair of shorts for $35. Assuming that sales tax is included, how much money will Joe have left after the purchase?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Identify the original prices of the items Joe wants to buy.\n- Shirt: $25\n- Shorts: $35\n\nStep 2: Calculate the total original price before the discount.\nTotal before discount = $25 + $35 = $60\n\nStep 3: Calculate the discount amount.\nDiscount = 30% of $60 = 0.30 × $60 = $18\n\nStep 4: Calculate the price after discount.\nPrice after discount = $60 - $18 = $42\n\nStep 5: Since sales tax is included, the total cost Joe has to pay is $42.\n\nStep 6: Calculate how much money Joe has left.\nMoney left = Original budget - Total cost\nMoney left = $50 - $42 = $8\n\nFINAL ANSWER: 8",
+  "extracted_answer": "8",
+  "is_correct": true,
+  "correct_answer": "8",
+  "answer_type": "numeric_exact",
+  "question": "Joe has $50 to buy an outfit for his new field trip. There is a 30% off sale at the clothing store. The shirt he picks out has a price of $25. He also picks out a pair of shorts for $35. Assuming that sales tax is included, how much money will Joe have left after the purchase?",
+  "source": "GSM8K"
+}

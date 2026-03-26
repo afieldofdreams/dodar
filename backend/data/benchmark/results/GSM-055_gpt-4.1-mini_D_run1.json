@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-055",
+  "condition": "D",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:26:20.304817Z",
+  "latency_seconds": 3.6,
+  "input_tokens": 257,
+  "output_tokens": 200,
+  "cost_usd": 0.000423,
+  "system_prompt_sent": "When answering this question, use the Thought-Action-Observation reasoning pattern. Alternate between reasoning about the problem and taking concrete analytical actions.\n\nFor each step:\n\nThought: Reason about what you currently know, what you need to figure out, and what approach to try next.\n\nAction: Perform a specific analytical action (e.g., identify key information, apply a formula, evaluate an option, check a constraint, test a hypothesis).\n\nObservation: State what you learned from that action and whether it changes your understanding.\n\nRepeat this Thought-Action-Observation cycle until you have enough information to answer confidently. Then provide your final answer.\n\nYou may use as many cycles as needed. Each cycle should build on what you learned in the previous one.",
+  "user_prompt_sent": "Use the Thought-Action-Observation pattern.\n\nJohn wins an award at work.  The award has a 1 time monetary reward of $5000 and a 5% raise in salary.  If he makes 2000 a week, every week of the year and he got the award on the first day of the year how much money did he make that year?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Thought: John receives a $5000 one-time award plus a 5% raise in his weekly salary. He earns $2000 per week normally. The raise applies to every week of the year since he got the award on the first day. First, calculate the new weekly salary after the raise. Then multiply that by 52 weeks (a full year), and add the $5000 award.\n\nAction: Calculate the new weekly salary:  \nOriginal weekly salary = $2000  \nRaise = 5% of $2000 = 0.05 × 2000 = $100  \nNew weekly salary = 2000 + 100 = $2100  \n\nMultiply by 52 weeks:  \n2100 × 52 = 109,200  \n\nAdd the $5000 award:  \n109,200 + 5000 = 114,200\n\nObservation: The total yearly earnings accounting for the raise and the award is $114,200.\n\nFINAL ANSWER: 114200",
+  "extracted_answer": "114200",
+  "is_correct": true,
+  "correct_answer": "114,200",
+  "answer_type": "numeric_exact",
+  "question": "John wins an award at work.  The award has a 1 time monetary reward of $5000 and a 5% raise in salary.  If he makes 2000 a week, every week of the year and he got the award on the first day of the year how much money did he make that year?",
+  "source": "GSM8K"
+}

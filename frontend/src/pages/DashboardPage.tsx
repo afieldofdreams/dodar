@@ -42,7 +42,7 @@ export default function DashboardPage() {
     return (
       <div>
         <h1 style={{ marginTop: 0 }}>Dashboard</h1>
-        <div style={{ background: "#fff", padding: "3rem", borderRadius: 8, textAlign: "center", color: "#666" }}>
+        <div style={{ background: "#1e1e32", padding: "3rem", borderRadius: 8, textAlign: "center", color: "#9898b8" }}>
           <p>No scored data available yet.</p>
           <p>Run benchmarks, then score responses to see results here.</p>
         </div>
@@ -88,15 +88,16 @@ export default function DashboardPage() {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
         <h1 style={{ margin: 0 }}>Dashboard</h1>
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          <label style={{ fontSize: "0.85rem", color: "#666" }}>Prompt Version:</label>
+          <label style={{ fontSize: "0.85rem", color: "#9898b8" }}>Prompt Version:</label>
           <select
             value={selectedVersion ?? ""}
             onChange={(e) => setSelectedVersion(e.target.value || undefined)}
             style={{
               padding: "0.4rem 0.75rem",
               borderRadius: 6,
-              border: "1px solid #d0d0d0",
-              background: "#fff",
+              border: "1px solid #2e2e50",
+              background: "#1e1e32",
+              color: "#e8e8f0",
               fontSize: "0.85rem",
               fontWeight: 600,
             }}
@@ -116,7 +117,7 @@ export default function DashboardPage() {
         <StatCard label="Conditions" value={conditions.length} />
       </div>
 
-      <div style={{ background: "#fff", padding: "1.5rem", borderRadius: 8, marginBottom: "2rem" }}>
+      <div style={{ background: "#1e1e32", padding: "1.5rem", borderRadius: 8, marginBottom: "2rem" }}>
         <h2 style={{ fontSize: "1rem", margin: "0 0 1rem" }}>Average Score by Dimension & Condition</h2>
         <ResponsiveContainer width="100%" height={350}>
           <BarChart data={barData}>
@@ -146,7 +147,7 @@ export default function DashboardPage() {
         }}
       >
         {radarByModel.map(({ model, data: rData }) => (
-          <div key={model} style={{ background: "#fff", padding: "1.25rem", borderRadius: 8 }}>
+          <div key={model} style={{ background: "#1e1e32", padding: "1.25rem", borderRadius: 8 }}>
             <h3 style={{ fontSize: "0.9rem", margin: "0 0 0.5rem", textAlign: "center" }}>{model}</h3>
             <ResponsiveContainer width="100%" height={280}>
               <RadarChart data={rData}>
@@ -171,7 +172,7 @@ export default function DashboardPage() {
       </div>
 
       {data.effect_sizes.length > 0 && (
-        <div style={{ background: "#fff", padding: "1.5rem", borderRadius: 8 }}>
+        <div style={{ background: "#1e1e32", padding: "1.5rem", borderRadius: 8 }}>
           <h2 style={{ fontSize: "1rem", margin: "0 0 1rem" }}>Effect Sizes (DODAR vs. Baseline)</h2>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
             <thead>
@@ -196,7 +197,7 @@ export default function DashboardPage() {
                     <span
                       style={{
                         fontWeight: 600,
-                        color: e.cohens_d > 0.5 ? "#4caf50" : e.cohens_d > 0.2 ? "#ff9800" : "#666",
+                        color: e.cohens_d > 0.5 ? "#4caf50" : e.cohens_d > 0.2 ? "#ff9800" : "#9898b8",
                       }}
                     >
                       {e.cohens_d.toFixed(3)}
@@ -214,9 +215,9 @@ export default function DashboardPage() {
 
 function StatCard({ label, value }: { label: string; value: number }) {
   return (
-    <div style={{ background: "#fff", padding: "1rem 1.5rem", borderRadius: 8, flex: 1, textAlign: "center" }}>
-      <div style={{ fontSize: "0.75rem", color: "#666" }}>{label}</div>
-      <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "#1a1a2e" }}>{value}</div>
+    <div style={{ background: "#1e1e32", padding: "1rem 1.5rem", borderRadius: 8, flex: 1, textAlign: "center" }}>
+      <div style={{ fontSize: "0.75rem", color: "#9898b8" }}>{label}</div>
+      <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "#e8e8f0" }}>{value}</div>
     </div>
   );
 }
@@ -224,13 +225,14 @@ function StatCard({ label, value }: { label: string; value: number }) {
 const thStyle: React.CSSProperties = {
   textAlign: "left",
   padding: "0.5rem 0.75rem",
-  borderBottom: "2px solid #e0e0e0",
+  borderBottom: "2px solid #2e2e50",
   fontSize: "0.8rem",
-  color: "#666",
+  color: "#9898b8",
+  background: "transparent",
 };
 
 const tdStyle: React.CSSProperties = {
   padding: "0.5rem 0.75rem",
-  borderBottom: "1px solid #f0f0f0",
+  borderBottom: "1px solid #22223a",
   fontSize: "0.85rem",
 };

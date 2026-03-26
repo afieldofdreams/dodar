@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-045",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:29:36.776681Z",
+  "latency_seconds": 2.38,
+  "input_tokens": 301,
+  "output_tokens": 156,
+  "cost_usd": 0.00037,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nZoey and Sydney are having a watermelon seed spitting contest. Whoever spits their seeds the most total distance wins. They each get one watermelon. Zoey's has 40 seeds and she spits each one 10 feet. Sydney's has 35 she spits each one 12 feet. What is the average total distance spat?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Calculate Zoey's total distance.\nZoey has 40 seeds, each spat 10 feet.\nTotal distance spat by Zoey = 40 seeds * 10 feet/seed = 400 feet\n\nStep 2: Calculate Sydney's total distance.\nSydney has 35 seeds, each spat 12 feet.\nTotal distance spat by Sydney = 35 seeds * 12 feet/seed = 420 feet\n\nStep 3: Calculate the average total distance spat by both Zoey and Sydney.\nAverage total distance = (Zoey's total distance + Sydney's total distance) / 2\n= (400 feet + 420 feet) / 2\n= 820 feet / 2\n= 410 feet\n\nFINAL ANSWER: 410",
+  "extracted_answer": "410",
+  "is_correct": true,
+  "correct_answer": "410",
+  "answer_type": "numeric_exact",
+  "question": "Zoey and Sydney are having a watermelon seed spitting contest. Whoever spits their seeds the most total distance wins. They each get one watermelon. Zoey's has 40 seeds and she spits each one 10 feet. Sydney's has 35 she spits each one 12 feet. What is the average total distance spat?",
+  "source": "GSM8K"
+}

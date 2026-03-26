@@ -1,0 +1,21 @@
+{
+  "task_id": "MED-010",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:29:18.316112Z",
+  "latency_seconds": 6.34,
+  "input_tokens": 306,
+  "output_tokens": 384,
+  "cost_usd": 0.000737,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nA 43-year-old man comes to the emergency department with nausea, abdominal discomfort, diarrhea, and progressive perioral numbness for the past 24 hours. 3 days ago, he underwent a total thyroidectomy for treatment of papillary thyroid cancer. His only medication is a multivitamin supplement. He appears fatigued. While measuring the patient's blood pressure, the nurse observes a spasm in the patient's hand. Physical examination shows a well-healing surgical wound on the neck. Which of the following ECG findings are most likely in this patient?\n\n  A: Torsade de pointes\n  B: QT prolongation\n  C: Peaked T waves\n  D: PR prolongation\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK: Relevant principles and concepts\n\nThis is a clinical problem about a patient who underwent total thyroidectomy and now presents with symptoms suggestive of hypocalcemia: perioral numbness, hand spasm (likely carpopedal spasm or Trousseau's sign), nausea, diarrhea, and fatigue.\n\nTotal thyroidectomy can inadvertently damage or remove the parathyroid glands, which regulate calcium metabolism through parathyroid hormone (PTH). Loss of PTH leads to hypocalcemia.\n\nHypocalcemia manifests with neuromuscular irritability (perioral numbness, carpopedal spasm) and specific ECG changes.\n\nCalcium has an important effect on cardiac repolarization. Decreased serum calcium prolongs phase 2 of myocardial action potential, leading to a prolonged QT interval on ECG, increasing risk for arrhythmias like torsades de pointes.\n\nTypical ECG changes in hypocalcemia:\n- Prolonged QT interval (due to prolonged ST segment)\n- Possible risk of torsades de pointes due to QT prolongation\n\nHyperkalemia causes peaked T waves.\n\nHypercalcemia causes short QT interval.\n\nPR prolongation is not a classic feature of hypocalcemia.\n\nStep 2 - REASON:\n\nThe patient had a total thyroidectomy, and the timing, symptoms, and signs (perioral numbness, carpopedal spasm) strongly suggest hypocalcemia due to hypoparathyroidism.\n\nHypocalcemia would cause QT prolongation on ECG.\n\nThis can predispose to torsades de pointes, but torsades is a specific arrhythmia and not a common immediate ECG finding; rather, the initial consistent finding is prolonged QT.\n\nPeaked T waves indicate hyperkalemia, unlikely here.\n\nPR prolongation is not related to hypocalcemia.\n\nTherefore, the most likely ECG finding is QT prolongation.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "A 43-year-old man comes to the emergency department with nausea, abdominal discomfort, diarrhea, and progressive perioral numbness for the past 24 hours. 3 days ago, he underwent a total thyroidectomy for treatment of papillary thyroid cancer. His only medication is a multivitamin supplement. He appears fatigued. While measuring the patient's blood pressure, the nurse observes a spasm in the patient's hand. Physical examination shows a well-healing surgical wound on the neck. Which of the following ECG findings are most likely in this patient?",
+  "source": "MedQA-USMLE"
+}

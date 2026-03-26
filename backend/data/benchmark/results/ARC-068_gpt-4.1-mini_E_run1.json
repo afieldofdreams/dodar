@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-068",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:23:15.801748Z",
+  "latency_seconds": 7.23,
+  "input_tokens": 265,
+  "output_tokens": 316,
+  "cost_usd": 0.000612,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nPropane (C_{3}H_{8}) is a gas at room temperature. Which statement best describes the physical characteristics of a sample of propane at room temperature?\n\n  A: It has a definite volume and takes the shape of its container.\n  B: It has an indefinite volume and takes the shape of its container.\n  C: It has a definite volume, and its shape is independent of its container.\n  D: It has an indefinite volume, and its shape is independent of its container.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK:  \nConsider the states of matter (solid, liquid, gas) and their general physical properties regarding shape and volume.  \n- Solids have a definite shape and definite volume.  \n- Liquids have a definite volume but take the shape of their container (indefinite shape).  \n- Gases have neither definite shape nor definite volume: they expand to fill the entire volume of their container and take its shape.\n\nPropane (C₃H₈) at room temperature is a gas. So its physical characteristics should align with those typical of gases.  \n\nStep 2 - REASON:  \nSince propane is a gas at room temperature, it does not have a fixed volume; it expands or contracts to fill the available container volume, making its volume indefinite. Similarly, it takes the shape of the container. So propane gas would have an indefinite volume and take the shape of its container.\n\nNow, reviewing the options:  \n- A: \"definite volume and takes shape of container\" – this describes a liquid, not gas.  \n- B: \"indefinite volume and takes shape of container\" – this describes a gas, matching propane.  \n- C: \"definite volume, and shape independent of container\" – definite shape and volume, like a solid, incorrect.  \n- D: \"indefinite volume, and shape independent of container\" – indefinite volume but shape independent of container is contradictory; gases take shape of container.\n\nTherefore, option B best describes propane at room temperature.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Propane (C_{3}H_{8}) is a gas at room temperature. Which statement best describes the physical characteristics of a sample of propane at room temperature?",
+  "source": "ARC-Challenge"
+}

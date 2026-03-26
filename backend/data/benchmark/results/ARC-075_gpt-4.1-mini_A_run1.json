@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-075",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:26:36.350696Z",
+  "latency_seconds": 4.05,
+  "input_tokens": 99,
+  "output_tokens": 261,
+  "cost_usd": 0.000457,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A researcher uses several procedures to separate a rock sample into different chemicals. A mass of 50 grams of one chemical is produced. If this chemical cannot be separated into other chemicals, then it is best described as\n\n  A: a compound.\n  B: a mixture.\n  C: a solution.\n  D: an element.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the problem step-by-step:\n\n1. The researcher starts with a rock sample, which is a mixture of various substances.\n2. The sample is separated into different chemicals using several procedures.\n3. One resulting chemical weighs 50 grams.\n4. This chemical **cannot be separated into other chemicals**.\n\nGiven that the chemical cannot be separated into other chemicals, it means it is a pure substance that does not break down into simpler substances by chemical means.\n\n- **Option A: a compound**  \n  A compound is a pure substance made of two or more elements chemically combined. Compounds can be broken down into simpler substances (elements) by chemical means.\n\n- **Option B: a mixture**  \n  A mixture consists of two or more substances that are physically combined and can be separated by physical means.\n\n- **Option C: a solution**  \n  A solution is a homogeneous mixture of two or more substances.\n\n- **Option D: an element**  \n  An element is a pure substance that cannot be broken down into simpler substances by chemical means.\n\nBecause the chemical **cannot be separated into other chemicals**, it cannot be a compound (which can be broken down), nor a mixture or solution (which are physically combined substances). Therefore, it must be an element.\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "A researcher uses several procedures to separate a rock sample into different chemicals. A mass of 50 grams of one chemical is produced. If this chemical cannot be separated into other chemicals, then it is best described as",
+  "source": "ARC-Challenge"
+}

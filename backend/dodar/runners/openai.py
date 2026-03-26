@@ -16,7 +16,9 @@ class OpenAIRunner(ModelRunner):
         self._client = openai.AsyncOpenAI(api_key=settings.openai_api_key)
         self._model = model_override or settings.openai_model
 
-    async def _call_api(self, prompt: str) -> ModelResponse:
+    async def _call_api(
+        self, prompt: str, *, system_prompt: str | None = None
+    ) -> ModelResponse:
         start = time.monotonic()
         # GPT-5.x and o-series models require max_completion_tokens instead of max_tokens
         use_completion_tokens = any(
@@ -27,10 +29,15 @@ class OpenAIRunner(ModelRunner):
             if use_completion_tokens
             else {"max_tokens": 4096}
         )
+        messages: list[dict[str, str]] = []
+        if system_prompt:
+            messages.append({"role": "system", "content": system_prompt})
+        messages.append({"role": "user", "content": prompt})
+
         response = await self._client.chat.completions.create(
             model=self._model,
             **token_param,
-            messages=[{"role": "user", "content": prompt}],
+            messages=messages,
         )
         latency = time.monotonic() - start
 

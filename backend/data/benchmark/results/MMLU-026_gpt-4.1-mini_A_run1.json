@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-026",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:38:23.777491Z",
+  "latency_seconds": 8.97,
+  "input_tokens": 191,
+  "output_tokens": 469,
+  "cost_usd": 0.000827,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A 32-year-old man and his 29-year-old wife come to the office for evaluation for infertility. The wife's gynecologist has reported that her anatomic and physiologic evaluation disclosed no abnormalities and that assessment of potential male factors is needed. The husband is 188 cm (6 ft 3 in) tall with fair skin and little facial hair. He has mild gynecomastia and small, firm testicles. No sperm are seen on semen analysis. Which of the following tests is most likely to establish the underlying cause of this couple's infertility?\n\n  A: Karyotype from peripheral leukocytes\n  B: Serum estrogen and testosterone concentrations\n  C: Serum follicle-stimulating hormone and luteinizing hormone concentrations\n  D: Serum prolactin concentration\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the information step-by-step:\n\n**Clinical Presentation:**\n\n- 32-year-old man evaluated for infertility.\n- Wife has no identified abnormalities, so male factor is suspected.\n- Man's physical features:\n  - Tall stature (6 ft 3 in)\n  - Fair skin\n  - Little facial hair\n  - Mild gynecomastia (enlargement of male breast tissue)\n  - Small, firm testicles\n- Semen analysis: azoospermia (no sperm)\n\n---\n\n**Interpretation:**\n\nThese findings suggest a disorder of male hypogonadism. Specific clues:\n\n- Tall stature and infertility with small, firm testes and gynecomastia point toward **Klinefelter syndrome (47,XXY)**, the most common chromosomal cause of male infertility.\n- Features of Klinefelter syndrome include:\n  - Tall height (due to extra X chromosome)\n  - Small, firm testes (testicular atrophy)\n  - Gynecomastia (due to relative estrogen excess)\n  - Infertility (often azoospermia)\n  - Reduced facial/body hair\n\n---\n\n**Key Diagnostic Approach:**\n\n- Confirm diagnosis by looking at the **karyotype** (to detect extra X chromosome).\n- Hormone levels in Klinefelter syndrome:\n  - Elevated FSH and LH due to testicular failure\n  - Low testosterone\n  - But hormone tests alone won't confirm diagnosis of Klinefelter's.\n\n---\n\n**Options Analysis:**\n\n- **A. Karyotype from peripheral leukocytes**  \n  - This is the best test to confirm Klinefelter syndrome (extra X chromosome), which explains all clinical features here.\n\n- **B. Serum estrogen and testosterone concentrations**  \n  - May show low testosterone, slightly elevated estrogen; helpful but not diagnostic.\n\n- **C. Serum follicle-stimulating hormone and luteinizing hormone concentrations**  \n  - Often elevated in testicular failure but nonspecific.\n\n- **D. Serum prolactin concentration**  \n  - Usually normal; prolactin disorders cause erectile dysfunction and hypogonadism but no testicular atrophy or tall stature.\n\n---\n\n**Conclusion:**  \nThis man most likely has Klinefelter syndrome, which is diagnosed by karyotype analysis.\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "A 32-year-old man and his 29-year-old wife come to the office for evaluation for infertility. The wife's gynecologist has reported that her anatomic and physiologic evaluation disclosed no abnormalities and that assessment of potential male factors is needed. The husband is 188 cm (6 ft 3 in) tall with fair skin and little facial hair. He has mild gynecomastia and small, firm testicles. No sperm are seen on semen analysis. Which of the following tests is most likely to establish the underlying cause of this couple's infertility?",
+  "source": "MMLU/professional_medicine"
+}

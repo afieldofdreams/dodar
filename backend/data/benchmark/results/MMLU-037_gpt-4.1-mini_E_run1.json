@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-037",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:20:14.319380Z",
+  "latency_seconds": 10.13,
+  "input_tokens": 246,
+  "output_tokens": 328,
+  "cost_usd": 0.000623,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nZokro a nongovernmental not-for-profit organization uses the indirect method to prepare its statement of cash flows. In determining its net cash provided (used) by operating activities Sokro must add back which of the following to the change in net assets?\n\n  A: Purchase of equipment.\n  B: Payment on long-term debt.\n  C: Depreciation.\n  D: Decrease in accounts payable.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK:  \nWhen preparing a statement of cash flows using the indirect method, the main goal is to convert net income (or change in net assets for nonprofits) from accrual basis accounting to cash basis accounting. This involves adjusting for non-cash expenses and changes in working capital accounts. \n\nKey principles for the indirect method include:  \n- Adding back non-cash expenses such as depreciation because these reduce net income but do not affect cash.  \n- Adjusting for changes in working capital (like accounts payable, accounts receivable). An increase in liabilities (e.g., accounts payable) increases cash, while a decrease lowers cash.  \n- Investing and financing activities (like purchasing equipment or paying long-term debt) are not part of operating activities and therefore are not adjusted in the operating activities section.  \n\nStep 2 - REASON:  \nGiven these principles:  \nA: Purchase of equipment is an investing activity and cash outflow, so it is not added back to net assets in operating activities.  \nB: Payment on long-term debt is a financing activity, not included in the operating section.  \nC: Depreciation is a non-cash expense that reduces net assets but does not affect cash, so it must be added back in the operating activities section.  \nD: Decrease in accounts payable means the organization paid off some liabilities, which results in a cash outflow, so it should be subtracted, not added back.  \n\nThus, the correct item to add back to the change in net assets in the indirect method statement of cash flows for operating activities is depreciation.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Zokro a nongovernmental not-for-profit organization uses the indirect method to prepare its statement of cash flows. In determining its net cash provided (used) by operating activities Sokro must add back which of the following to the change in net assets?",
+  "source": "MMLU/professional_accounting"
+}

@@ -42,7 +42,9 @@ class Settings(BaseSettings):
         "gpt-4o": {"input": 2.5, "output": 10.0},
         "gpt-4o-mini": {"input": 0.15, "output": 0.60},
         "gpt-4.1-mini": {"input": 0.40, "output": 1.60},
+        "gpt-4.1": {"input": 2.0, "output": 8.0},
         "gpt-4.1-nano": {"input": 0.10, "output": 0.40},
+        "o4-mini": {"input": 1.10, "output": 4.40},
         "gemini-2.0-flash": {"input": 0.10, "output": 0.40},
         "qwen2.5:32b": {"input": 0.0, "output": 0.0},
         "qwen2.5:14b": {"input": 0.0, "output": 0.0},
@@ -83,7 +85,9 @@ MODEL_IDS = {
     "gpt-4o": "gpt-4o",
     "gpt-4o-mini": "gpt-4o-mini",
     "gpt-4.1-mini": "gpt-4.1-mini",
+    "gpt-4.1": "gpt-4.1",
     "gpt-4.1-nano": "gpt-4.1-nano",
+    "o4-mini": "o4-mini",
     "gemini-2.0-flash": "gemini-2.0-flash",
     "qwen2.5:32b": "qwen2.5:32b",
     "qwen2.5:14b": "qwen2.5:14b",
@@ -92,7 +96,11 @@ MODEL_IDS = {
     "phi3:3.8b": "phi3:3.8b",
 }
 
+# Phase 1 scenario-based conditions
 CONDITION_IDS = ["zero_shot", "cot", "length_matched", "dodar", "dodar_pipeline"]
+
+# Phase 2 benchmark conditions (letter codes from protocol)
+BENCHMARK_CONDITION_CODES = ["A", "B", "C", "D", "E", "F", "G"]
 
 SCORING_DIMENSIONS = [
     "Diagnosis Quality",

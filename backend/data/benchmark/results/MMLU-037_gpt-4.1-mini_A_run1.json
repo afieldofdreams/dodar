@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-037",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:37:38.268180Z",
+  "latency_seconds": 4.35,
+  "input_tokens": 115,
+  "output_tokens": 257,
+  "cost_usd": 0.000457,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Zokro a nongovernmental not-for-profit organization uses the indirect method to prepare its statement of cash flows. In determining its net cash provided (used) by operating activities Sokro must add back which of the following to the change in net assets?\n\n  A: Purchase of equipment.\n  B: Payment on long-term debt.\n  C: Depreciation.\n  D: Decrease in accounts payable.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "When a nongovernmental not-for-profit organization uses the indirect method to prepare its statement of cash flows, the starting point is the change in net assets (similar to net income in for-profits). From this, adjustments are made to reconcile to net cash provided (used) by operating activities.\n\nLet's analyze each option:\n\nA: Purchase of equipment  \n- This is an investing activity, not an operating activity. It represents cash outflow for investing purposes and is not added back to net assets in the operating section.\n\nB: Payment on long-term debt  \n- This relates to financing activities; it’s a cash outflow for financing and not part of operating activities. Not added back to net assets.\n\nC: Depreciation  \n- Depreciation is a non-cash expense that reduces net assets but does not affect cash. When using the indirect method, depreciation expense needs to be added back to the change in net assets to reconcile net cash from operating activities.\n\nD: Decrease in accounts payable  \n- A decrease in accounts payable means the organization paid off some liabilities, which represents a reduction in cash. Therefore, it is subtracted in the indirect method; it is not added back.\n\nTherefore, the only item that should be added back is depreciation.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Zokro a nongovernmental not-for-profit organization uses the indirect method to prepare its statement of cash flows. In determining its net cash provided (used) by operating activities Sokro must add back which of the following to the change in net assets?",
+  "source": "MMLU/professional_accounting"
+}

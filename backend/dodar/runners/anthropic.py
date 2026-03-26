@@ -16,13 +16,19 @@ class AnthropicRunner(ModelRunner):
         self._client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
         self._model = model_override or settings.anthropic_model
 
-    async def _call_api(self, prompt: str) -> ModelResponse:
+    async def _call_api(
+        self, prompt: str, *, system_prompt: str | None = None
+    ) -> ModelResponse:
         start = time.monotonic()
-        response = await self._client.messages.create(
+        kwargs: dict = dict(
             model=self._model,
             max_tokens=4096,
             messages=[{"role": "user", "content": prompt}],
         )
+        if system_prompt:
+            kwargs["system"] = system_prompt
+
+        response = await self._client.messages.create(**kwargs)
         latency = time.monotonic() - start
 
         text = ""

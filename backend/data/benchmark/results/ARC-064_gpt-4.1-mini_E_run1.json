@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-064",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:26:10.326677Z",
+  "latency_seconds": 4.91,
+  "input_tokens": 203,
+  "output_tokens": 245,
+  "cost_usd": 0.000473,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nFormation of the ozone layer helped protect which type of living organisms as they evolved?\n\n  A: marine\n  B: terrestrial\n  C: photosynthetic\n  D: eukaryotic\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK:  \nThe ozone layer is a layer of ozone (O3) in the Earth's stratosphere that absorbs most of the Sun's harmful ultraviolet (UV) radiation. Before the ozone layer formed, intense UV radiation reached Earth's surface, making it difficult for many forms of life to survive on land. The formation of the ozone layer significantly reduced UV radiation reaching the surface, creating safer conditions for life to exist outside of water. Since water absorbs UV radiation, marine organisms were protected regardless of the ozone layer, but life on land would have been highly vulnerable without it. Therefore, the evolution of the ozone layer primarily facilitated the survival and diversification of terrestrial organisms.\n\nStep 2 - REASON:  \nGiven the role of the ozone layer in blocking harmful UV radiation, it directly enabled living organisms to inhabit terrestrial (land) environments by reducing lethal radiation exposure. While marine organisms might have been protected by the water itself, terrestrial organisms benefited especially from ozone because they were directly exposed to sunlight. Photosynthetic and eukaryotic organisms include many marine and terrestrial forms, so the key distinction facilitated by the ozone layer is the move to land. Hence, the correct option is terrestrial.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Formation of the ozone layer helped protect which type of living organisms as they evolved?",
+  "source": "ARC-Challenge"
+}

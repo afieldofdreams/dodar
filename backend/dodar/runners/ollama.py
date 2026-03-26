@@ -14,15 +14,22 @@ class OllamaRunner(ModelRunner):
         self._model = model_override
         self._base_url = base_url
 
-    async def _call_api(self, prompt: str) -> ModelResponse:
+    async def _call_api(
+        self, prompt: str, *, system_prompt: str | None = None
+    ) -> ModelResponse:
         start = time.monotonic()
+
+        messages: list[dict[str, str]] = []
+        if system_prompt:
+            messages.append({"role": "system", "content": system_prompt})
+        messages.append({"role": "user", "content": prompt})
 
         async with httpx.AsyncClient(timeout=600.0) as client:
             response = await client.post(
                 f"{self._base_url}/api/chat",
                 json={
                     "model": self._model,
-                    "messages": [{"role": "user", "content": prompt}],
+                    "messages": messages,
                     "stream": False,
                     "options": {
                         "num_predict": 4096,

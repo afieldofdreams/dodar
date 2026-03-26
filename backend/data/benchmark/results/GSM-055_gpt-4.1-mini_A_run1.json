@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-055",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:21:05.003303Z",
+  "latency_seconds": 3.96,
+  "input_tokens": 98,
+  "output_tokens": 210,
+  "cost_usd": 0.000375,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "John wins an award at work.  The award has a 1 time monetary reward of $5000 and a 5% raise in salary.  If he makes 2000 a week, every week of the year and he got the award on the first day of the year how much money did he make that year?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's break down the problem step-by-step:\n\n1. John makes $2000 every week.\n2. There are 52 weeks in a year.\n3. Without the raise, his annual salary would be:\n   \\[\n   2000 \\times 52 = 104,000\n   \\]\n\n4. He gets a 5% raise in salary starting from the first day of the year. This means his new weekly salary is:\n   \\[\n   2000 + (0.05 \\times 2000) = 2000 + 100 = 2100\n   \\]\n\n5. His annual salary with the raise is:\n   \\[\n   2100 \\times 52 = 109,200\n   \\]\n\n6. He also gets a one-time monetary reward of $5000.\n\n7. Total money earned that year is his salary plus the bonus:\n   \\[\n   109,200 + 5000 = 114,200\n   \\]\n\nFINAL ANSWER: 114200",
+  "extracted_answer": "114200",
+  "is_correct": true,
+  "correct_answer": "114,200",
+  "answer_type": "numeric_exact",
+  "question": "John wins an award at work.  The award has a 1 time monetary reward of $5000 and a 5% raise in salary.  If he makes 2000 a week, every week of the year and he got the award on the first day of the year how much money did he make that year?",
+  "source": "GSM8K"
+}

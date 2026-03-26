@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-041",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3",
+  "timestamp": "2026-03-26T14:39:37.385395Z",
+  "latency_seconds": 4.98,
+  "input_tokens": 429,
+  "output_tokens": 190,
+  "cost_usd": 0.000476,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nEach solid 10-foot section of a redwood tree weighs 400 pounds. Termites ate 30% of this redwood's wood. If the redwood is 200 feet tall, how much does it weigh?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me reason through this step-by-step:\n\n1. Each 10-foot section of the redwood weighs 400 pounds.\n2. The redwood is 200 feet tall.\n\nFirst, find how many 10-foot sections are in the 200-foot tree:\n\n200 feet ÷ 10 feet per section = 20 sections.\n\n3. Find the total original weight of the tree before termites ate the wood:\n\n20 sections × 400 pounds per section = 8,000 pounds.\n\n4. Termites ate 30% of the tree's wood, so 30% of the weight is gone.\n\nCalculate 30% of 8,000 pounds:\n\n0.30 × 8,000 = 2,400 pounds eaten by termites.\n\n5. Calculate the remaining weight of the tree after termites ate the wood:\n\n8,000 pounds - 2,400 pounds = 5,600 pounds.\n\nFINAL ANSWER: 5600",
+  "extracted_answer": "5600",
+  "is_correct": true,
+  "correct_answer": "5600",
+  "answer_type": "numeric_exact",
+  "question": "Each solid 10-foot section of a redwood tree weighs 400 pounds. Termites ate 30% of this redwood's wood. If the redwood is 200 feet tall, how much does it weigh?",
+  "source": "GSM8K"
+}
