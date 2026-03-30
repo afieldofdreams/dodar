@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import FrameworkPage from "./pages/FrameworkPage";
 import ResearchPage from "./pages/ResearchPage";
 import AboutPage from "./pages/AboutPage";
+import StudyPage from "./pages/StudyPage";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/framework" element={<FrameworkPage />} />
           <Route path="/research" element={<ResearchPage />} />
+          <Route path="/study" element={<StudyPage />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
       </main>
