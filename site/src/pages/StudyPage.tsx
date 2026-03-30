@@ -1,4 +1,67 @@
+import { useState } from "react";
+
+// ── Data ────────────────────────────────────────────────────────
+const accuracyData = [
+  { category: "ARC-Challenge", A: 95.0, B: 95.0, C: 95.0, C_prev: 95.0, G: 95.0 },
+  { category: "BBH/causal judgement", A: 60.0, B: 60.0, C: 80.0, C_prev: 60.0, G: 66.7 },
+  { category: "BBH/logical deduction", A: 100.0, B: 93.3, C: 100.0, C_prev: 86.7, G: 100.0 },
+  { category: "BBH/tracking shuffled", A: 0.0, B: 0.0, C: 6.7, C_prev: 13.3, G: 66.7 },
+  { category: "BBH/web of lies", A: 100.0, B: 100.0, C: 100.0, C_prev: 100.0, G: 93.3 },
+  { category: "GSM8K", A: 93.3, B: 93.3, C: 95.0, C_prev: 95.0, G: 93.3 },
+  { category: "MMLU/accounting", A: 83.3, B: 83.3, C: 83.3, C_prev: 83.3, G: 83.3 },
+  { category: "MMLU/law", A: 95.2, B: 81.0, C: 90.5, C_prev: 85.7, G: 100.0 },
+  { category: "MMLU/medicine", A: 100.0, B: 100.0, C: 95.2, C_prev: 100.0, G: 90.5 },
+  { category: "MedQA-USMLE", A: 96.7, B: 88.3, C: 90.0, C_prev: 91.7, G: 93.3 },
+];
+
+const conditions: { key: string; label: string; color: string }[] = [
+  { key: "A", label: "Baseline", color: "#2E75B6" },
+  { key: "B", label: "ZS-CoT", color: "#0EA5E9" },
+  { key: "C", label: "PGR Late", color: "#F59E0B" },
+  { key: "C_prev", label: "PGR Early", color: "#8B5CF6" },
+  { key: "G", label: "FS-CoT", color: "#10B981" },
+];
+
+const errorData: Record<string, Record<string, number>> = {
+  A:      { Anchoring: 17, "Failure to Revise": 11, Comprehension: 44, Execution: 54, "Incomplete Search": 7, "Premature Closure": 0 },
+  B:      { Anchoring: 28, "Failure to Revise": 14, Comprehension: 48, Execution: 53, "Incomplete Search": 9, "Premature Closure": 0 },
+  C:      { Anchoring: 36, "Failure to Revise": 22, Comprehension: 32, Execution: 53, "Incomplete Search": 4, "Premature Closure": 2 },
+  C_prev: { Anchoring: 20, "Failure to Revise": 16, Comprehension: 26, Execution: 36, "Incomplete Search": 3, "Premature Closure": 2 },
+  G:      { Anchoring: 17, "Failure to Revise": 11, Comprehension: 58, Execution: 22, "Incomplete Search": 8, "Premature Closure": 1 },
+};
+
+const errorTypes = ["Anchoring", "Failure to Revise", "Comprehension", "Execution", "Incomplete Search", "Premature Closure"];
+const errorColors = ["#EF4444", "#F59E0B", "#F97316", "#2E75B6", "#0EA5E9", "#94A3B8"];
+
+// ── Helpers ─────────────────────────────────────────────────────
+function heatColor(value: number, min: number, max: number) {
+  if (max === min) return "#10B981";
+  const t = (value - min) / (max - min);
+  if (t > 0.8) return "#059669";
+  if (t > 0.6) return "#10B981";
+  if (t > 0.4) return "#F59E0B";
+  if (t > 0.2) return "#F97316";
+  return "#EF4444";
+}
+
+function diffColor(diff: number) {
+  if (diff > 5) return "#059669";
+  if (diff > 0) return "#6EE7B7";
+  if (diff > -5) return "#FCD34D";
+  return "#EF4444";
+}
+
+// ── Main page ───────────────────────────────────────────────────
 export default function StudyPage() {
+  const [tab, setTab] = useState("heatmap");
+
+  const tabs = [
+    { id: "heatmap", label: "Accuracy Heatmap" },
+    { id: "diff", label: "Difference vs Baseline" },
+    { id: "errors", label: "Error Distribution" },
+    { id: "redistribution", label: "Error Redistribution" },
+  ];
+
   return (
     <div className="container">
       <section style={{ padding: "3rem 0 1rem" }}>
@@ -134,47 +197,6 @@ export default function StudyPage() {
           Error classifications from dual-rater system (Claude Opus 4.6 + GPT-5.4). Cohen's Kappa = 0.456.
         </p>
 
-        {/* Stacked error distribution bars */}
-        <div style={{ margin: "2rem 0" }}>
-          <StackedErrorBar
-            label="A Baseline"
-            segments={[
-              { pct: 12.8, color: "var(--red, #dc2626)", label: "13%" },
-              { pct: 33.1, color: "#F59E0B", label: "33%" },
-              { pct: 40.6, color: "var(--navy)", label: "41%" },
-              { pct: 8.3, color: "#8B5CF6", label: "8%" },
-              { pct: 5.3, color: "#0EA5E9", label: "" },
-            ]}
-          />
-          <StackedErrorBar
-            label="C PGR Late"
-            segments={[
-              { pct: 24.2, color: "var(--red, #dc2626)", label: "24%" },
-              { pct: 21.5, color: "#F59E0B", label: "21%" },
-              { pct: 35.6, color: "var(--navy)", label: "36%" },
-              { pct: 14.8, color: "#8B5CF6", label: "15%" },
-              { pct: 4, color: "#0EA5E9", label: "" },
-            ]}
-          />
-          <StackedErrorBar
-            label="G FS-CoT"
-            segments={[
-              { pct: 14.5, color: "var(--red, #dc2626)", label: "15%" },
-              { pct: 49.6, color: "#F59E0B", label: "50%" },
-              { pct: 18.8, color: "var(--navy)", label: "19%" },
-              { pct: 9.4, color: "#8B5CF6", label: "9%" },
-              { pct: 7.7, color: "#0EA5E9", label: "" },
-            ]}
-          />
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", marginTop: "0.75rem", fontSize: "0.75rem", color: "var(--text-light)" }}>
-            <LegendItem color="var(--red, #dc2626)" label="Anchoring" />
-            <LegendItem color="#F59E0B" label="Comprehension" />
-            <LegendItem color="var(--navy)" label="Execution" />
-            <LegendItem color="#8B5CF6" label="Failure to Revise" />
-            <LegendItem color="#0EA5E9" label="Other" />
-          </div>
-        </div>
-
         <h3>Few-Shot CoT wins (p&nbsp;=&nbsp;0.033)</h3>
         <p>
           The only significant accuracy result: Few-Shot CoT (91%) significantly outperforms
@@ -190,6 +212,73 @@ export default function StudyPage() {
           its own answer. It made things worse&mdash;the model performed the review ritual
           perfectly and changed nothing.
         </p>
+      </section>
+
+      {/* ── Detailed analysis visuals ── */}
+      <section className="section" style={{ paddingTop: 0 }}>
+        <h2>Detailed Analysis</h2>
+        <p style={{ color: "var(--text-light)", marginBottom: "1.5rem" }}>
+          1,500 runs &middot; 100 tasks &middot; 5 conditions &middot; GPT-4.1-mini
+        </p>
+
+        <div style={{ display: "flex", gap: 4, marginBottom: "1.5rem", flexWrap: "wrap" }}>
+          {tabs.map(t => (
+            <button
+              key={t.id}
+              onClick={() => setTab(t.id)}
+              className={tab === t.id ? "btn btn-primary" : "btn btn-secondary"}
+              style={{ fontSize: "0.8125rem", padding: "0.5rem 1rem" }}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+
+        <div className="chart-container">
+          {tab === "heatmap" && (
+            <>
+              <h3 style={{ marginTop: 0 }}>Accuracy by Condition &times; Task Category</h3>
+              <AccuracyHeatmap />
+              <p style={{ fontSize: "0.8125rem", color: "var(--text-light)", marginTop: "0.75rem", fontStyle: "italic", marginBottom: 0 }}>
+                Green = high accuracy, red = low. Most categories are saturated (all conditions score similarly).
+                BBH/tracking shuffled objects is the outlier&mdash;FS-CoT jumps to 66.7% where all others are near 0%.
+              </p>
+            </>
+          )}
+
+          {tab === "diff" && (
+            <>
+              <h3 style={{ marginTop: 0 }}>Per-Category Advantage vs Baseline</h3>
+              <DiffHeatmap />
+              <p style={{ fontSize: "0.8125rem", color: "var(--text-light)", marginTop: "0.75rem", fontStyle: "italic", marginBottom: 0 }}>
+                Green = beats baseline, yellow = similar, red = worse. PGR Late wins on causal judgement (+20pp)
+                but loses on MedQA and law. FS-CoT's +66.7pp on tracking shuffled objects is the single largest effect.
+              </p>
+            </>
+          )}
+
+          {tab === "errors" && (
+            <>
+              <h3 style={{ marginTop: 0 }}>Error Distribution by Condition</h3>
+              <ErrorRedistribution />
+              <p style={{ fontSize: "0.8125rem", color: "var(--text-light)", marginTop: "0.75rem", fontStyle: "italic", marginBottom: 0 }}>
+                Chi-squared p = 0.0003. PGR shows elevated anchoring (red) and failure-to-revise (amber).
+                FS-CoT's errors are dominated by comprehension failure&mdash;it fails when it doesn't understand, not when it gets stuck.
+              </p>
+            </>
+          )}
+
+          {tab === "redistribution" && (
+            <>
+              <h3 style={{ marginTop: 0 }}>Error Redistribution: PGR vs Baseline</h3>
+              <RedistributionDelta />
+              <p style={{ fontSize: "0.8125rem", color: "var(--text-light)", marginTop: "0.75rem", fontStyle: "italic", marginBottom: 0 }}>
+                PGR doesn't reduce errors&mdash;it redistributes them. Anchoring and failure-to-revise increase by +11.4pp and +6.5pp respectively,
+                while comprehension failure drops by -11.6pp. The structured phases trade simple failures for self-inflicted traps.
+              </p>
+            </>
+          )}
+        </div>
       </section>
 
       <section className="section" style={{ paddingTop: 0 }}>
@@ -268,7 +357,7 @@ export default function StudyPage() {
 }
 
 
-/* ---- Helper components ---- */
+/* ── Helper components ─────────────────────────────────────────── */
 
 function AccuracyBar({ label, pct, color }: { label: string; pct: number; color: string }) {
   return (
@@ -297,32 +386,123 @@ function AccuracyBar({ label, pct, color }: { label: string; pct: number; color:
   );
 }
 
-function StackedErrorBar({
-  label,
-  segments,
-}: {
-  label: string;
-  segments: { pct: number; color: string; label: string }[];
-}) {
+function AccuracyHeatmap() {
+  const allVals = accuracyData.flatMap(d => conditions.map(c => d[c.key as keyof typeof d] as number));
+  const min = Math.min(...allVals);
+  const max = Math.max(...allVals);
+
   return (
-    <div style={{ display: "flex", alignItems: "center", marginBottom: "0.375rem" }}>
-      <span style={{ width: 140, fontSize: "0.8125rem", fontWeight: 600, flexShrink: 0 }}>{label}</span>
-      <div style={{ flex: 1, display: "flex", height: 28, borderRadius: 4, overflow: "hidden" }}>
-        {segments.map((seg, i) => (
-          <div
-            key={i}
-            style={{
-              width: `${seg.pct}%`,
-              background: seg.color,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "0.6875rem",
-              fontWeight: 600,
-              color: "#fff",
-            }}
-          >
-            {seg.label}
+    <div style={{ overflowX: "auto" }}>
+      <table className="data-table">
+        <thead>
+          <tr>
+            <th style={{ minWidth: 160 }}>Category</th>
+            {conditions.map(c => (
+              <th key={c.key} style={{ textAlign: "center", minWidth: 80 }}>{c.label}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {accuracyData.map((row, i) => (
+            <tr key={i}>
+              <td style={{ fontWeight: 500 }}>{row.category}</td>
+              {conditions.map(c => {
+                const val = row[c.key as keyof typeof row] as number;
+                const bg = heatColor(val, min, max);
+                const textCol = val < 40 ? "#fff" : val < 70 ? "#1E293B" : "#fff";
+                return (
+                  <td key={c.key} style={{
+                    textAlign: "center", background: bg, color: textCol, fontWeight: 600,
+                  }}>
+                    {val.toFixed(1)}%
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function DiffHeatmap() {
+  return (
+    <div style={{ overflowX: "auto" }}>
+      <p style={{ fontSize: "0.8125rem", color: "var(--text-light)", margin: "0 0 0.5rem" }}>
+        Difference vs Baseline (A) in percentage points
+      </p>
+      <table className="data-table">
+        <thead>
+          <tr>
+            <th style={{ minWidth: 160 }}>Category</th>
+            {conditions.filter(c => c.key !== "A").map(c => (
+              <th key={c.key} style={{ textAlign: "center", minWidth: 80 }}>{c.label}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {accuracyData.map((row, i) => (
+            <tr key={i}>
+              <td style={{ fontWeight: 500 }}>{row.category}</td>
+              {conditions.filter(c => c.key !== "A").map(c => {
+                const diff = (row[c.key as keyof typeof row] as number) - row.A;
+                const bg = diffColor(diff);
+                return (
+                  <td key={c.key} style={{
+                    textAlign: "center", background: bg, color: "#1E293B", fontWeight: 600,
+                  }}>
+                    {diff > 0 ? "+" : ""}{diff.toFixed(1)}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
+function ErrorRedistribution() {
+  const condKeys = ["A", "B", "C", "C_prev", "G"] as const;
+  const condLabels: Record<string, string> = { A: "Baseline", B: "ZS-CoT", C: "PGR Late", C_prev: "PGR Early", G: "FS-CoT" };
+
+  return (
+    <div>
+      {condKeys.map(ck => {
+        const errs = errorData[ck];
+        const total = Object.values(errs).reduce((a, b) => a + b, 0);
+        return (
+          <div key={ck} style={{ marginBottom: 12 }}>
+            <div style={{ display: "flex", alignItems: "center", marginBottom: 4 }}>
+              <span style={{ width: 90, fontSize: "0.8125rem", fontWeight: 600, flexShrink: 0 }}>{condLabels[ck]}</span>
+              <div style={{ flex: 1, display: "flex", height: 32, borderRadius: 4, overflow: "hidden" }}>
+                {errorTypes.map((et, i) => {
+                  const val = errs[et];
+                  const pct = total > 0 ? (val / total) * 100 : 0;
+                  if (pct < 1) return null;
+                  return (
+                    <div key={et} title={`${et}: ${val} (${pct.toFixed(0)}%)`} style={{
+                      width: `${pct}%`, background: errorColors[i],
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      fontSize: 11, fontWeight: 700, color: "#fff",
+                    }}>
+                      {pct > 6 ? `${pct.toFixed(0)}%` : ""}
+                    </div>
+                  );
+                })}
+              </div>
+              <span style={{ width: 45, fontSize: "0.75rem", color: "var(--text-light)", textAlign: "right", flexShrink: 0 }}>n={total}</span>
+            </div>
+          </div>
+        );
+      })}
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 8 }}>
+        {errorTypes.map((et, i) => (
+          <div key={et} style={{ display: "flex", alignItems: "center", gap: 4, fontSize: "0.75rem", color: "var(--text-light)" }}>
+            <div style={{ width: 10, height: 10, borderRadius: 2, background: errorColors[i] }} />
+            {et}
           </div>
         ))}
       </div>
@@ -330,11 +510,54 @@ function StackedErrorBar({
   );
 }
 
-function LegendItem({ color, label }: { color: string; label: string }) {
+function RedistributionDelta() {
+  const baseErrs = errorData.A;
+  const pgrErrs = errorData.C;
+  const baseTotal = Object.values(baseErrs).reduce((a, b) => a + b, 0);
+  const pgrTotal = Object.values(pgrErrs).reduce((a, b) => a + b, 0);
+
+  const deltas = errorTypes.map(et => ({
+    type: et,
+    basePct: (baseErrs[et] / baseTotal) * 100,
+    pgrPct: (pgrErrs[et] / pgrTotal) * 100,
+    diff: (pgrErrs[et] / pgrTotal) * 100 - (baseErrs[et] / baseTotal) * 100,
+  })).sort((a, b) => b.diff - a.diff);
+
+  const maxAbs = Math.max(...deltas.map(d => Math.abs(d.diff)));
+
   return (
-    <span style={{ display: "flex", alignItems: "center", gap: 4 }}>
-      <span style={{ width: 10, height: 10, borderRadius: 2, background: color, flexShrink: 0 }} />
-      {label}
-    </span>
+    <div>
+      <p style={{ fontSize: "0.8125rem", color: "var(--text-light)", margin: "0 0 0.75rem" }}>
+        PGR (Late) vs Baseline&mdash;shift in error share (percentage points)
+      </p>
+      {deltas.map(d => {
+        const barWidth = (Math.abs(d.diff) / maxAbs) * 50;
+        const isPositive = d.diff > 0;
+        return (
+          <div key={d.type} style={{ display: "flex", alignItems: "center", marginBottom: 6 }}>
+            <span style={{ width: 130, fontSize: "0.8125rem", fontWeight: 500, textAlign: "right", paddingRight: 12, flexShrink: 0 }}>{d.type}</span>
+            <div style={{ width: "50%", display: "flex", justifyContent: "flex-end" }}>
+              {!isPositive && (
+                <div style={{ width: `${barWidth}%`, height: 24, background: "#10B981", borderRadius: "4px 0 0 4px", display: "flex", alignItems: "center", justifyContent: "flex-start", paddingLeft: 6, fontSize: 11, fontWeight: 700, color: "#fff" }}>
+                  {d.diff.toFixed(1)}pp
+                </div>
+              )}
+            </div>
+            <div style={{ width: 2, height: 24, background: "var(--navy)" }} />
+            <div style={{ width: "50%" }}>
+              {isPositive && (
+                <div style={{ width: `${barWidth}%`, height: 24, background: "#EF4444", borderRadius: "0 4px 4px 0", display: "flex", alignItems: "center", justifyContent: "flex-end", paddingRight: 6, fontSize: 11, fontWeight: 700, color: "#fff" }}>
+                  +{d.diff.toFixed(1)}pp
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      })}
+      <div style={{ display: "flex", justifyContent: "center", gap: 24, marginTop: 8, fontSize: "0.75rem", color: "var(--text-light)" }}>
+        <span>&larr; fewer errors (good)</span>
+        <span>more errors (bad) &rarr;</span>
+      </div>
+    </div>
   );
 }
