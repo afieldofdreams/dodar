@@ -1,0 +1,21 @@
+{
+  "task_id": "MED-014",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:37:27.818965Z",
+  "latency_seconds": 3.17,
+  "input_tokens": 384,
+  "output_tokens": 195,
+  "cost_usd": 0.000466,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nPublic health researchers are reviewing data from an outbreak of hepatitis A that was traced to contaminated produce from a popular restaurant. A case series investigation with prospective and retrospective follow-up found that 500 individuals dined at the restaurant during the week of study. The incidence of hepatitis A infection was found to be 25%, and the total number of deaths recorded among the incident cases was 5 individuals. What was the case-fatality rate for the hepatitis A outbreak?\n\n  A: 4%\n  B: 10%\n  C: 20%\n  D: 25%\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's break down the problem step by step:\n\n1. Total number of individuals who dined at the restaurant = 500.\n2. Incidence of hepatitis A infection = 25%.\n   - This means 25% of 500 individuals got infected.\n   - Number of infected individuals = 25% of 500 = 0.25 × 500 = 125.\n3. Total number of deaths among the infected (cases) = 5.\n4. We need to calculate the case-fatality rate (CFR), which is the proportion of deaths among the diagnosed cases and is calculated as:\n   \n   CFR = (Number of deaths / Number of cases) × 100%\n\nPlugging in the numbers:\n   \n   CFR = (5 / 125) × 100% = 0.04 × 100% = 4%\n\nTherefore, the case-fatality rate for the hepatitis A outbreak is 4%.\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "Public health researchers are reviewing data from an outbreak of hepatitis A that was traced to contaminated produce from a popular restaurant. A case series investigation with prospective and retrospective follow-up found that 500 individuals dined at the restaurant during the week of study. The incidence of hepatitis A infection was found to be 25%, and the total number of deaths recorded among the incident cases was 5 individuals. What was the case-fatality rate for the hepatitis A outbreak?",
+  "source": "MedQA-USMLE"
+}

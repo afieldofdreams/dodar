@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-012",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:46:07.921529Z",
+  "latency_seconds": 4.43,
+  "input_tokens": 120,
+  "output_tokens": 318,
+  "cost_usd": 0.000557,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Sasha notices that prices for lumber have gone up 50% in the last few months after she bought some lumber. Since she has leftovers, she decides to sell them. She has leftover ten 2 x 4 x 10 boards that cost her $10 each. She also has five 4 x 4 x 10 boards she bought for $16 each. If she sells them all, how much profit does she make?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "First, let's analyze the problem step-by-step:\n\n1. Sasha bought:\n   - Ten 2 x 4 x 10 boards at $10 each.\n   - Five 4 x 4 x 10 boards at $16 each.\n\n2. Prices have gone up 50%.\n\nThis means the current selling prices are:\n\n- For 2 x 4 x 10 boards:\n  Original price = $10\n  Increased price = $10 + 50% of $10 = $10 + $5 = $15 each\n\n- For 4 x 4 x 10 boards:\n  Original price = $16\n  Increased price = $16 + 50% of $16 = $16 + $8 = $24 each\n\n3. Calculate total cost of leftover boards:\n\n- Cost of ten 2 x 4 x 10 boards = 10 * $10 = $100\n- Cost of five 4 x 4 x 10 boards = 5 * $16 = $80\n- Total cost = $100 + $80 = $180\n\n4. Calculate total selling price:\n\n- Selling price for ten 2 x 4 x 10 boards = 10 * $15 = $150\n- Selling price for five 4 x 4 x 10 boards = 5 * $24 = $120\n- Total selling price = $150 + $120 = $270\n\n5. Calculate profit:\n\nProfit = Total selling price - Total cost = $270 - $180 = $90\n\nFINAL ANSWER: 90",
+  "extracted_answer": "90",
+  "is_correct": true,
+  "correct_answer": "90",
+  "answer_type": "numeric_exact",
+  "question": "Sasha notices that prices for lumber have gone up 50% in the last few months after she bought some lumber. Since she has leftovers, she decides to sell them. She has leftover ten 2 x 4 x 10 boards that cost her $10 each. She also has five 4 x 4 x 10 boards she bought for $16 each. If she sells them all, how much profit does she make?",
+  "source": "GSM8K"
+}

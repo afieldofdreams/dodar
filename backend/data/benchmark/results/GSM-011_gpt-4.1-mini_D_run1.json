@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-011",
+  "condition": "D",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T11:58:28.002213Z",
+  "latency_seconds": 3.95,
+  "input_tokens": 236,
+  "output_tokens": 222,
+  "cost_usd": 0.00045,
+  "system_prompt_sent": "When answering this question, use the Thought-Action-Observation reasoning pattern. Alternate between reasoning about the problem and taking concrete analytical actions.\n\nFor each step:\n\nThought: Reason about what you currently know, what you need to figure out, and what approach to try next.\n\nAction: Perform a specific analytical action (e.g., identify key information, apply a formula, evaluate an option, check a constraint, test a hypothesis).\n\nObservation: State what you learned from that action and whether it changes your understanding.\n\nRepeat this Thought-Action-Observation cycle until you have enough information to answer confidently. Then provide your final answer.\n\nYou may use as many cycles as needed. Each cycle should build on what you learned in the previous one.",
+  "user_prompt_sent": "Use the Thought-Action-Observation pattern.\n\nIf two trains depart from a station in opposite directions, and one train is traveling 60 miles an hour while the other is traveling half that distance per hour, how far apart are they from each other after 3 hours?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Thought:  \nTwo trains start from the same station and travel in opposite directions. One travels at 60 mph, the other at half that speed. To find the distance between them after 3 hours, we need to calculate the distance each train covers, then add these distances since they move apart.\n\nAction:  \nCalculate the speed of the second train: Half of 60 mph = 60/2 = 30 mph.  \nCalculate the distance each train travels in 3 hours:  \n- First train: 60 mph × 3 hours = 180 miles  \n- Second train: 30 mph × 3 hours = 90 miles  \n\nObservation:  \nAfter 3 hours, the first train has gone 180 miles, and the second has gone 90 miles in the opposite direction. The total distance between them is the sum of these distances.\n\nAction:  \nAdd the two distances to find how far apart the trains are: 180 miles + 90 miles = 270 miles.\n\nObservation:  \nThe trains are 270 miles apart after 3 hours.\n\nFINAL ANSWER: 270",
+  "extracted_answer": "270",
+  "is_correct": true,
+  "correct_answer": "270",
+  "answer_type": "numeric_exact",
+  "question": "If two trains depart from a station in opposite directions, and one train is traveling 60 miles an hour while the other is traveling half that distance per hour, how far apart are they from each other after 3 hours?",
+  "source": "GSM8K"
+}

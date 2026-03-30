@@ -1,0 +1,21 @@
+{
+  "task_id": "MED-014",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:29:58.840944Z",
+  "latency_seconds": 1.78,
+  "input_tokens": 149,
+  "output_tokens": 147,
+  "cost_usd": 0.000295,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Public health researchers are reviewing data from an outbreak of hepatitis A that was traced to contaminated produce from a popular restaurant. A case series investigation with prospective and retrospective follow-up found that 500 individuals dined at the restaurant during the week of study. The incidence of hepatitis A infection was found to be 25%, and the total number of deaths recorded among the incident cases was 5 individuals. What was the case-fatality rate for the hepatitis A outbreak?\n\n  A: 4%\n  B: 10%\n  C: 20%\n  D: 25%\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the problem step by step:\n\n- Total individuals who dined at the restaurant: 500\n- Incidence of hepatitis A infection: 25%\n- Number of deaths among incident cases: 5 individuals\n\nFirst, calculate the number of hepatitis A cases:\n\nNumber of cases = 25% of 500 = 0.25 × 500 = 125 cases\n\nThe case-fatality rate (CFR) is defined as:\n\nCFR = (Number of deaths among cases / Total number of cases) × 100%\n\nPlugging in the numbers:\n\nCFR = (5 / 125) × 100% = 0.04 × 100% = 4%\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "Public health researchers are reviewing data from an outbreak of hepatitis A that was traced to contaminated produce from a popular restaurant. A case series investigation with prospective and retrospective follow-up found that 500 individuals dined at the restaurant during the week of study. The incidence of hepatitis A infection was found to be 25%, and the total number of deaths recorded among the incident cases was 5 individuals. What was the case-fatality rate for the hepatitis A outbreak?",
+  "source": "MedQA-USMLE"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-013",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:31:17.694151Z",
+  "latency_seconds": 3.68,
+  "input_tokens": 117,
+  "output_tokens": 347,
+  "cost_usd": 0.000602,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A scientist maps a long region in which earthquakes originate and determines this region is a transform plate boundary. Which evidence would cause the scientist to reevaluate this determination?\n\n  A: Volcanism also characterizes the region.\n  B: Earthquake centers in the region occur at shallow depths.\n  C: The region shows extensive faulting of sediments.\n  D: Equal crust densities are found on opposite sides of the region.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the characteristics of transform plate boundaries and then evaluate each choice:\n\n**Transform plate boundaries** are where two tectonic plates slide past each other horizontally. Key characteristics:\n\n- Earthquakes are common due to friction along the fault.\n- Earthquake depths are typically shallow because the plates only slide horizontally.\n- There is usually little to no volcanism associated with transform boundaries because there is no significant creation or destruction of crust.\n- Faulting is expected, as these boundaries are essentially large faults.\n- Crustal densities on either side can vary, but the presence of equal densities wouldn't contradict the transform boundary nature.\n\nNow, look at each option:\n\n**A: Volcanism also characterizes the region.**  \n- Volcanism is typical of divergent boundaries (mid-ocean ridges) and convergent boundaries (subduction zones), but **not typical of transform boundaries.**  \n- Presence of widespread volcanism would suggest reevaluation because it conflicts with what we expect at a transform boundary.\n\n**B: Earthquake centers in the region occur at shallow depths.**  \n- Shallow earthquakes are consistent with transform boundaries.  \n- So, this would support the original determination, not cause reevaluation.\n\n**C: The region shows extensive faulting of sediments.**  \n- Faulting is consistent with transform boundaries.  \n- This evidence supports the initial determination.\n\n**D: Equal crust densities are found on opposite sides of the region.**  \n- Equal crust densities on both sides do not contradict the presence of a transform boundary.  \n- This alone wouldn't cause reevaluation.\n\n**Conclusion:** Only the presence of volcanism is contradictory evidence since transform plate boundaries typically have little or no volcanic activity.\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "A scientist maps a long region in which earthquakes originate and determines this region is a transform plate boundary. Which evidence would cause the scientist to reevaluate this determination?",
+  "source": "ARC-Challenge"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-004",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:06:03.551080Z",
+  "latency_seconds": 4.99,
+  "input_tokens": 219,
+  "output_tokens": 252,
+  "cost_usd": 0.000491,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nHow would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Step 1 - STEP BACK:  \nTo understand causation in a typical context, especially in social or workplace situations, it is important to consider the concept of cause and effect. Causation means that one event (the cause) directly leads to another event (the effect). A typical person will look for a clear link where the cause makes the effect happen. In legal or workplace terms, policies often establish rules defining cause for discipline or consequences. If a person’s actions violate a policy and a consequence follows directly as a result, the action typically is seen as causing the consequence.\n\nStep 2 - REASON:  \nThe company’s HR policy explicitly forbids employees from dating their direct reports. Alex, a manager, violates this rule by dating Jamie, who reports directly to Alex. Shortly after, Alex is fired. Since the firing follows the policy violation, and the policy sets the grounds for firing for that specific behavior, the typical understanding is that Alex’s dating Jamie was the reason (cause) for the firing (effect). Without this violation, Alex would presumably not have been fired. Therefore, from a typical person's perspective, Alex dating Jamie caused Alex to be fired.\n\nFINAL ANSWER: Yes, Alex's dating Jamie caused Alex to be fired.",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?",
+  "source": "BBH/causal_judgement"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-009",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:44:12.874082Z",
+  "latency_seconds": 3.22,
+  "input_tokens": 330,
+  "output_tokens": 270,
+  "cost_usd": 0.000564,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nAli has four $10 bills and six $20 bills that he saved after working for Mr. James on his farm. Ali gives her sister half of the total money he has and uses 3/5 of the remaining amount of money to buy dinner. Calculate the amount of money he has after buying the dinner.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Calculate the total amount of money Ali has initially.\n- Ali has four $10 bills, so $10 × 4 = $40.\n- Ali has six $20 bills, so $20 × 6 = $120.\n- Total money = $40 + $120 = $160.\n\nStep 2: Calculate how much money Ali gives to her sister.\n- He gives her half of the total money.\n- Half of $160 is $160 ÷ 2 = $80.\n- So, Ali gives $80 to his sister.\n\nStep 3: Calculate how much money Ali has left after giving half to his sister.\n- Remaining money = Total money − Money given to sister\n- Remaining money = $160 − $80 = $80.\n\nStep 4: Calculate how much money Ali uses to buy dinner.\n- Ali uses 3/5 of the remaining money to buy dinner.\n- Amount used for dinner = (3/5) × $80 = (3 × 80) ÷ 5 = 240 ÷ 5 = $48.\n\nStep 5: Calculate the amount of money Ali has after buying dinner.\n- Money left after dinner = Remaining money − Money used for dinner\n- Money left = $80 − $48 = $32.\n\nFINAL ANSWER: 32",
+  "extracted_answer": "32",
+  "is_correct": true,
+  "correct_answer": "32",
+  "answer_type": "numeric_exact",
+  "question": "Ali has four $10 bills and six $20 bills that he saved after working for Mr. James on his farm. Ali gives her sister half of the total money he has and uses 3/5 of the remaining amount of money to buy dinner. Calculate the amount of money he has after buying the dinner.",
+  "source": "GSM8K"
+}

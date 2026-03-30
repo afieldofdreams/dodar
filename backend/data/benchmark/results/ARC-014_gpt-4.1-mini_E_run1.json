@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-014",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T11:56:24.601946Z",
+  "latency_seconds": 3.77,
+  "input_tokens": 226,
+  "output_tokens": 255,
+  "cost_usd": 0.000498,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nWhich of the following is a reason loggerhead turtles bury their eggs in holes that they dig on the beach?\n\n  A: to keep the eggs covered with water\n  B: to provide the eggs with nutrients\n  C: to hide the eggs from predators\n  D: to protect the eggs from sand\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK:  \nWhy do animals bury their eggs? Typically, many species bury eggs to protect them from environmental threats or predators. Burying can help regulate temperature and moisture, offer camouflage to prevent predators from finding the eggs, and provide a stable environment for development. In sea turtles specifically, the eggs are buried on beaches to prevent exposure to direct sun, overheating, drying out, and to hide from predators like birds, crabs, and mammals.\n\nStep 2 - REASON:  \nLooking at the options:  \nA: Keeping eggs covered with water is not accurate because turtle eggs need to be incubated in warm, moist sand, not underwater. Too much water could suffocate the eggs.  \nB: The sand does not provide nutrients to the eggs; the embryos develop from the yolk inside the eggs.  \nC: Burying eggs helps hide them from predators by camouflaging them in the sand, which is a well-known reason for their behavior.  \nD: Protecting eggs from sand is contradictory because they are actually buried in sand; the sand is part of the incubation environment rather than a threat.\n\nThus, the best answer consistent with the biological reasons for turtle egg-burying is C.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following is a reason loggerhead turtles bury their eggs in holes that they dig on the beach?",
+  "source": "ARC-Challenge"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "MED-109",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:29:40.036855Z",
+  "latency_seconds": 7.98,
+  "input_tokens": 101,
+  "output_tokens": 268,
+  "cost_usd": 0.000469,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A 52-year-old male with benign prostatic hyperplasia on finasteride presents with erectile dysfunction. He denies depression or relationship problems. PSA is normal. What is the most likely cause?\nA: Depression\nB: Testosterone deficiency\nC: Medication side effect (finasteride)\nD: Cavernous insufficiency from vascular disease\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the clinical scenario step-by-step:\n\n- Patient: 52-year-old male\n- History: Benign prostatic hyperplasia (BPH)\n- Medication: Finasteride\n- Presenting symptom: Erectile dysfunction (ED)\n- Denies: Depression or relationship problems (psychogenic causes less likely)\n- PSA: Normal\n\nPotential causes of ED in this patient:\n\nA: Depression — Patient denies depression, making this unlikely.\n\nB: Testosterone deficiency — Possible cause of ED but we have no data about testosterone levels or clinical features suggesting hypogonadism. Also, finasteride typically decreases dihydrotestosterone, not total testosterone, though some men may experience hormonal effects.\n\nC: Medication side effect (finasteride) — Finasteride is a 5-alpha-reductase inhibitor used to treat BPH. It lowers DHT levels, which can impair libido and cause erectile dysfunction as a side effect. Sexual side effects are well-documented with finasteride use.\n\nD: Cavernous insufficiency from vascular disease — Possible in older men or those with cardiovascular risk factors, but these are not given and the patient is only 52. No mention of vascular risk factors.\n\nGiven the medication use and the presentation, the most likely cause is medication side effect from finasteride.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "A 52-year-old male with benign prostatic hyperplasia on finasteride presents with erectile dysfunction. He denies depression or relationship problems. PSA is normal. What is the most likely cause?\nA: Depression\nB: Testosterone deficiency\nC: Medication side effect (finasteride)\nD: Cavernous insufficiency from vascular disease",
+  "source": "MedQA-USMLE"
+}

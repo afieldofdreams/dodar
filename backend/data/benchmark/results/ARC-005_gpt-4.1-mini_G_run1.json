@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-005",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:28:09.139178Z",
+  "latency_seconds": 3.95,
+  "input_tokens": 555,
+  "output_tokens": 246,
+  "cost_usd": 0.000616,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A 65-year-old man presents with sudden onset of slurred speech and right-sided weakness that started 2 hours ago. He has a history of atrial fibrillation and takes warfarin. His INR today is 1.4. CT head shows no haemorrhage. What is the most appropriate immediate management?\nA: Administer IV alteplase (thrombolysis)\nB: Increase warfarin dose\nC: Start aspirin 300mg\nD: Arrange urgent MRI brain\n\nEXAMPLE ANSWER: Let me work through this carefully.\n\nThe presentation is acute onset neurological deficit (slurred speech, right-sided weakness) within a 2-hour window. This is a clinical stroke presentation.\n\nKey factors to consider:\n- 2-hour onset puts him within the thrombolysis window (typically 4.5 hours)\n- CT shows no haemorrhage, so this is likely ischaemic\n- He has AF, which is a major risk factor for cardioembolic stroke\n- His INR is 1.4, which is subtherapeutic (target typically 2-3 for AF)\n- The subtherapeutic INR may explain why he had a stroke despite being on warfarin\n\nNow evaluating each option:\n- A (IV alteplase): Thrombolysis. Within time window, CT excludes haemorrhage. Guidelines generally consider thrombolysis if INR < 1.7.\n- B (Increase warfarin): Addresses long-term problem but nothing for acute stroke.\n- C (Aspirin 300mg): Standard if thrombolysis contraindicated, but thrombolysis is an option here.\n- D (Urgent MRI): Would delay treatment. CT already excluded haemorrhage.\n\nSince he is within the thrombolysis window, CT excludes haemorrhage, and INR 1.4 is below the 1.7 threshold, IV alteplase is most appropriate.\n\nFINAL ANSWER: A\n\nNow solve the following problem using the same careful reasoning approach.\n\nHousehold appliances convert electricity into one or more different forms of energy. An electric fan can best be described as converting electricity into\n\n  A: heat energy only\n  B: heat energy and sound energy only\n  C: heat energy, sound energy, and mechanical energy only\n  D: heat energy, sound energy, mechanical energy, and chemical energy\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the question carefully.\n\nAn electric fan converts electrical energy into other forms of energy.\n\nFirst, consider what an electric fan does:\n- It uses electrical energy to spin blades, producing mechanical energy (movement).\n- The motor and electrical components generate some heat as a byproduct, so heat energy is also produced.\n- The fan makes noise when operating, so sound energy is also produced.\n- Chemical energy relates to chemical reactions (like in batteries or fuel combustion), which are not involved directly in an electric fan's operation.\n\nNow, let's evaluate each answer choice:\n- A: heat energy only — Incorrect, because the fan produces mechanical energy to spin the blades, not only heat.\n- B: heat energy and sound energy only — Incorrect, missing mechanical energy, which is the main useful output.\n- C: heat energy, sound energy, and mechanical energy only — This includes all the relevant forms of energy converted by an electric fan.\n- D: heat energy, sound energy, mechanical energy, and chemical energy — Incorrect, as the electric fan does not convert electricity into chemical energy.\n\nThus, the electric fan converts electrical energy mainly into mechanical energy, with some heat and sound produced as byproducts.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Household appliances convert electricity into one or more different forms of energy. An electric fan can best be described as converting electricity into",
+  "source": "ARC-Challenge"
+}

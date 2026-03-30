@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-014",
+  "condition": "D",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T12:01:31.596905Z",
+  "latency_seconds": 4.1,
+  "input_tokens": 255,
+  "output_tokens": 132,
+  "cost_usd": 0.000313,
+  "system_prompt_sent": "When answering this question, use the Thought-Action-Observation reasoning pattern. Alternate between reasoning about the problem and taking concrete analytical actions.\n\nFor each step:\n\nThought: Reason about what you currently know, what you need to figure out, and what approach to try next.\n\nAction: Perform a specific analytical action (e.g., identify key information, apply a formula, evaluate an option, check a constraint, test a hypothesis).\n\nObservation: State what you learned from that action and whether it changes your understanding.\n\nRepeat this Thought-Action-Observation cycle until you have enough information to answer confidently. Then provide your final answer.\n\nYou may use as many cycles as needed. Each cycle should build on what you learned in the previous one.",
+  "user_prompt_sent": "Use the Thought-Action-Observation pattern.\n\nApril is donating plant pots to a local school for their new garden. They ask for 30 plant pots for the daisies, and twice as many for the roses. April had already bought 100 plant pots from the garden center before she knew how many she needed. How many plant pots does April have left over?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Thought: April needs to donate 30 plant pots for daisies. For roses, she needs twice as many as the daisies, so that means 2 × 30 = 60 pots for the roses. Total pots required = daisies' pots + roses' pots = 30 + 60. April originally bought 100 plant pots. To find the leftover, subtract the total pots needed from 100.\n\nAction: Calculate the total pots needed: 30 + 60 = 90. Then subtract from 100 to find leftover pots: 100 - 90.\n\nObservation: The leftover pots are 10.\n\nFINAL ANSWER: 10",
+  "extracted_answer": "10",
+  "is_correct": true,
+  "correct_answer": "10",
+  "answer_type": "numeric_exact",
+  "question": "April is donating plant pots to a local school for their new garden. They ask for 30 plant pots for the daisies, and twice as many for the roses. April had already bought 100 plant pots from the garden center before she knew how many she needed. How many plant pots does April have left over?",
+  "source": "GSM8K"
+}

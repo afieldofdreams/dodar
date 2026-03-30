@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-001",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:38:50.258157Z",
+  "latency_seconds": 2.51,
+  "input_tokens": 320,
+  "output_tokens": 139,
+  "cost_usd": 0.00035,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nCynthia eats one serving of ice cream every night.  She buys cartons of ice cream with 15 servings of ice cream per carton at a cost of $4.00 per carton.  After 60 days, how much will she spend on ice cream?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Identify how many servings Cynthia eats in 60 days.  \nShe eats 1 serving per day, so in 60 days she will eat 60 servings.\n\nStep 2: Determine how many cartons she needs to buy.  \nEach carton has 15 servings.  \nTo find the number of cartons, divide 60 servings by 15 servings per carton:  \n60 ÷ 15 = 4 cartons\n\nStep 3: Calculate the total cost.  \nEach carton costs $4.00.  \nSo, for 4 cartons, the cost is:  \n4 cartons × $4.00/carton = $16.00\n\nFINAL ANSWER: 16",
+  "extracted_answer": "16",
+  "is_correct": true,
+  "correct_answer": "16",
+  "answer_type": "numeric_exact",
+  "question": "Cynthia eats one serving of ice cream every night.  She buys cartons of ice cream with 15 servings of ice cream per carton at a cost of $4.00 per carton.  After 60 days, how much will she spend on ice cream?",
+  "source": "GSM8K"
+}

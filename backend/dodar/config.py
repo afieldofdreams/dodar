@@ -100,7 +100,7 @@ MODEL_IDS = {
 CONDITION_IDS = ["zero_shot", "cot", "length_matched", "dodar", "dodar_pipeline"]
 
 # Phase 2 benchmark conditions (letter codes from protocol)
-BENCHMARK_CONDITION_CODES = ["A", "B", "C", "D", "E", "F", "G"]
+BENCHMARK_CONDITION_CODES = ["A", "B", "C", "D", "E", "F", "G", "H"]
 
 SCORING_DIMENSIONS = [
     "Diagnosis Quality",

@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-019",
+  "condition": "C_previous",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:29:09.958474Z",
+  "latency_seconds": 5.11,
+  "input_tokens": 330,
+  "output_tokens": 432,
+  "cost_usd": 0.000823,
+  "system_prompt_sent": "Work through these five phases in order. Each phase must add new reasoning, not restate previous phases.\n\n1. DIAGNOSE: What exactly is being asked? Identify the constraints that will determine the answer. State the one thing most likely to cause an error on this type of problem.\n\n2. OPTIONS: Identify the most plausible answer and the strongest competing alternative. For each, state the specific evidence for and against. Do not simply list all choices.\n\n3. DECIDE: Commit to one answer. State the single strongest reason it is correct and the single strongest reason it might be wrong.\n\n4. ACTION: Verify your chosen answer by working through the problem with that answer in mind. If the problem involves calculation, show each step. If it involves reasoning, trace the logical chain.\n\n5. REVIEW: Look for the specific error you identified in DIAGNOSE. Check whether the concern you raised in DECIDE actually applies. If you find a genuine error, change your answer. If not, confirm it.\n\nState your final answer only after completing all five phases. Do not use the phrase \"final answer\" anywhere except the final line.",
+  "user_prompt_sent": "Follow the five phases (Diagnose, Options, Decide, Action, Review).\n\nHow is a skin cell from a mouse similar to an amoeba?\n\n  A: Both need energy.\n  B: Both have cell walls.\n  C: Both move with pseudopodia.\n  D: Both consume carbon dioxide.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "1. DIAGNOSE:\nThe question asks for a similarity between a mouse skin cell and an amoeba. The constraints are to find a characteristic that both share. The one most likely cause of error is confusing traits typical of one type of organism (animal cells like mouse cells) with those of single-celled organisms such as amoebas.\n\n2. OPTIONS:\n- A: Both need energy.\n  For: All living cells require energy to survive and function.\n  Against: None; this is a universal trait.\n- B: Both have cell walls.\n  For: Plants and some protists have cell walls.\n  Against: Animal cells (like mouse skin cells) do not have cell walls; they have cell membranes.\n- C: Both move with pseudopodia.\n  For: Amoebas move with pseudopodia.\n  Against: Mouse skin cells generally do not move with pseudopodia; they have other mechanisms for movement or are mostly fixed.\n- D: Both consume carbon dioxide.\n  For: Some organisms consume carbon dioxide.\n  Against: Animal cells do not consume CO2; they produce it as a waste product; amoebas typically do not consume CO2 but oxygen and organic molecules.\n\n3. DECIDE:\nCommit to A: Both need energy.\nStrongest reason correct: All living cells require energy to perform life processes.\nStrongest reason might be wrong: The answer might be too general or not specific enough, but the question just needs a similarity.\n\n4. ACTION:\nA mouse skin cell performs metabolism and requires energy from glucose and oxygen. An amoeba, being a single-celled organism, also performs metabolic processes that require energy. Therefore, both need energy. Mouse skin cells lack cell walls (B is false). Mouse skin cells do not move using pseudopodia (C is false). Both do not consume carbon dioxide (D is false).\n\n5. REVIEW:\nThe main possible error was confusing structural features (cell walls or pseudopodia). Upon review, this does not apply here. The reasoning that both need energy is solid and fits universally. Therefore, no correction needed.\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "How is a skin cell from a mouse similar to an amoeba?",
+  "source": "ARC-Challenge"
+}

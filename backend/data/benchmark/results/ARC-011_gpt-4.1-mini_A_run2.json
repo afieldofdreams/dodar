@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-011",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:32:32.122891Z",
+  "latency_seconds": 1.95,
+  "input_tokens": 85,
+  "output_tokens": 174,
+  "cost_usd": 0.000312,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Naomi has a pet dog. Which of the following characteristics did the dog most likely inherit from its parents?\n\n  A: its weight\n  B: its favorite food\n  C: the color of its fur\n  D: the place where it lives\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option in terms of what a dog most likely inherits from its parents:\n\nA: its weight  \nWeight is influenced by genetics, but it can also be affected by environmental factors such as diet and exercise. While the potential for size and weight can be inherited, the actual weight at a given time is not strictly genetic.\n\nB: its favorite food  \nFavorite food is usually a learned behavior or preference influenced by experience, exposure, and environment rather than genetics.\n\nC: the color of its fur  \nFur color is a genetic trait inherited directly from the dog's parents through its DNA.\n\nD: the place where it lives  \nThe place where a dog lives depends on its owner or environment and is not inherited genetically.\n\nSince the question is about characteristics most likely inherited from its parents, the best answer is C: the color of its fur.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Naomi has a pet dog. Which of the following characteristics did the dog most likely inherit from its parents?",
+  "source": "ARC-Challenge"
+}

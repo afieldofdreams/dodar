@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-005",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:45:57.966475Z",
+  "latency_seconds": 2.31,
+  "input_tokens": 321,
+  "output_tokens": 160,
+  "cost_usd": 0.000384,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nJohn injured his back and needs to go to physical therapy.  He went to physical therapy for 6 weeks.  Each week he went twice for 2 hours at a time.  If the sessions cost $125 per hour how much did the physical therapy cost?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Determine the number of weeks John attended physical therapy.\nGiven: 6 weeks.\n\nStep 2: Determine how many sessions per week.\nGiven: 2 sessions per week.\n\nStep 3: Calculate total number of sessions.\nTotal sessions = 6 weeks × 2 sessions/week = 12 sessions.\n\nStep 4: Determine the length of each session.\nGiven: 2 hours per session.\n\nStep 5: Calculate total hours spent in physical therapy.\nTotal hours = 12 sessions × 2 hours/session = 24 hours.\n\nStep 6: Determine the cost per hour.\nGiven: $125 per hour.\n\nStep 7: Calculate total cost.\nTotal cost = 24 hours × $125/hour = $3,000.\n\nFINAL ANSWER: 3000",
+  "extracted_answer": "3000",
+  "is_correct": true,
+  "correct_answer": "3000",
+  "answer_type": "numeric_exact",
+  "question": "John injured his back and needs to go to physical therapy.  He went to physical therapy for 6 weeks.  Each week he went twice for 2 hours at a time.  If the sessions cost $125 per hour how much did the physical therapy cost?",
+  "source": "GSM8K"
+}

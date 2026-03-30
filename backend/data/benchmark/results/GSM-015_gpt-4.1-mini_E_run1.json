@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-015",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T12:02:17.449340Z",
+  "latency_seconds": 5.42,
+  "input_tokens": 237,
+  "output_tokens": 328,
+  "cost_usd": 0.00062,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nThomas withdraws $1000 in 20 dollar bills from the bank account.  He loses 10 bills while getting home.  After that, he uses half of the remaining bills to pay for a bill.  Thomas then triples his money.  He then converts all his bills to 5 dollar bills.  How many 5 dollar bills does he have?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:\nWhen dealing with problems involving money and bills, the key principles are:\n- Count the number of bills first and recognize the denomination value of each bill.\n- Keep track of how many bills are lost or spent, adjusting the total.\n- When using a portion of the bills (such as half), divide the total number of bills accordingly.\n- When the total amount of money changes by an operation like tripling, multiply the total value of money (not the count of bills) by that factor.\n- When converting money to bills of a different denomination, calculate the total dollar amount and then divide by the new denomination value to get the number of bills.\n\nStep 2 - REASON:\n1. Thomas withdraws $1000 in $20 bills.\n   - Number of $20 bills initially = 1000 ÷ 20 = 50 bills.\n\n2. He loses 10 bills while getting home.\n   - Remaining bills = 50 - 10 = 40 bills.\n\n3. He uses half of the remaining bills to pay a bill.\n   - Half of 40 bills = 20 bills used.\n   - Remaining bills after payment = 40 - 20 = 20 bills.\n   - Dollar amount left after payment = 20 bills × $20 = $400.\n\n4. Thomas triples his money.\n   - Money after tripling = $400 × 3 = $1200.\n\n5. He converts all his money into $5 bills.\n   - Number of $5 bills = 1200 ÷ 5 = 240 bills.\n\nFINAL ANSWER: 240",
+  "extracted_answer": "240",
+  "is_correct": true,
+  "correct_answer": "240",
+  "answer_type": "numeric_exact",
+  "question": "Thomas withdraws $1000 in 20 dollar bills from the bank account.  He loses 10 bills while getting home.  After that, he uses half of the remaining bills to pay for a bill.  Thomas then triples his money.  He then converts all his bills to 5 dollar bills.  How many 5 dollar bills does he have?",
+  "source": "GSM8K"
+}

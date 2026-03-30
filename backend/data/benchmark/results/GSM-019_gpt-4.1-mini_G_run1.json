@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-019",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:44:12.944085Z",
+  "latency_seconds": 3.29,
+  "input_tokens": 473,
+  "output_tokens": 235,
+  "cost_usd": 0.000565,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nCandice put 80 post-it notes in her purse before she headed out to her job at the coffee shop.  On her way, she stopped off at the store and purchased a package of Post-it notes;  At work, she placed a single Post-it note on each of 220 different cups of coffee.  If she had 23 post-it notes remaining overall, how many Post-it notes were in the package that she purchased?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me analyze the problem step-by-step:\n\n1. Candice initially has 80 post-it notes.\n2. She buys a package of post-it notes at the store, let's call the number in this package \\( x \\).\n3. At work, she places one post-it note on each of 220 cups of coffee. So she uses 220 post-it notes.\n4. After placing the notes, she has 23 post-it notes remaining.\n\nWe want to find \\( x \\).\n\nSet up the equation for the total number of post-it notes after purchase:\n\nInitial notes + purchased notes = total notes before placing them on the cups\n\nSo,\n\n\\[\n80 + x - 220 = 23\n\\]\n\nBecause she uses 220 notes, so after using these, remaining notes = 23.\n\nRearranged:\n\n\\[\n80 + x - 220 = 23\n\\]\n\nSimplify:\n\n\\[\nx - 140 = 23\n\\]\n\nAdd 140 to both sides:\n\n\\[\nx = 23 + 140 = 163\n\\]\n\nSo the purchased package contained 163 post-it notes.\n\nFINAL ANSWER: 163",
+  "extracted_answer": "163",
+  "is_correct": true,
+  "correct_answer": "163",
+  "answer_type": "numeric_exact",
+  "question": "Candice put 80 post-it notes in her purse before she headed out to her job at the coffee shop.  On her way, she stopped off at the store and purchased a package of Post-it notes;  At work, she placed a single Post-it note on each of 220 different cups of coffee.  If she had 23 post-it notes remaining overall, how many Post-it notes were in the package that she purchased?",
+  "source": "GSM8K"
+}

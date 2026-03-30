@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-010",
+  "condition": "C_previous",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:40:33.503522Z",
+  "latency_seconds": 7.5,
+  "input_tokens": 329,
+  "output_tokens": 449,
+  "cost_usd": 0.00085,
+  "system_prompt_sent": "Work through these five phases in order. Each phase must add new reasoning, not restate previous phases.\n\n1. DIAGNOSE: What exactly is being asked? Identify the constraints that will determine the answer. State the one thing most likely to cause an error on this type of problem.\n\n2. OPTIONS: Identify the most plausible answer and the strongest competing alternative. For each, state the specific evidence for and against. Do not simply list all choices.\n\n3. DECIDE: Commit to one answer. State the single strongest reason it is correct and the single strongest reason it might be wrong.\n\n4. ACTION: Verify your chosen answer by working through the problem with that answer in mind. If the problem involves calculation, show each step. If it involves reasoning, trace the logical chain.\n\n5. REVIEW: Look for the specific error you identified in DIAGNOSE. Check whether the concern you raised in DECIDE actually applies. If you find a genuine error, change your answer. If not, confirm it.\n\nState your final answer only after completing all five phases. Do not use the phrase \"final answer\" anywhere except the final line.",
+  "user_prompt_sent": "Follow the five phases (Diagnose, Options, Decide, Action, Review).\n\nPoppy is solving a 1000-piece jigsaw puzzle. She places a quarter of the pieces on the board, then her mom places a third of the remaining pieces. How many jigsaw pieces are left to be placed?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "1. DIAGNOSE:\nThe problem asks for the number of jigsaw puzzle pieces left after Poppy places a quarter of the total pieces and then her mom places a third of the remaining pieces. The constraints are a total of 1000 pieces, fractional parts placed sequentially. The main risk of error is incorrectly calculating the fractions and leftover counts in sequence — particularly confusion between the total number of pieces and the \"remaining\" number when mom places pieces.\n\n2. OPTIONS:\n- Most plausible answer: Calculate each step correctly: Poppy places \\( \\frac{1}{4} \\times 1000 = 250 \\) pieces, then mom places \\( \\frac{1}{3} \\) of the remainder \\( 1000 - 250 = 750 \\), which is \\( 250 \\). Remaining pieces after both steps: \\( 750 - 250 = 500 \\).\n- Strongest alternative: Misinterpret the fractions or apply them directly to total 1000 pieces rather than the remaining pieces, leading to a different leftover count (e.g., \\( 1000 - 250 - 333 = 417 \\)).\n\n3. DECIDE:\nChosen answer is 500 leftover pieces. The strongest reason it's correct: correctly follow the sequence - Poppy places 1/4, then mom places 1/3 of the remaining. The strongest reason it might be wrong: incorrectly interpreting the \"remaining\" (mom's fraction could be misapplied).\n\n4. ACTION:\n- Total pieces: 1000\n- Poppy places: \\( \\frac{1}{4} \\times 1000 = 250 \\)\n- Remaining pieces after Poppy: \\( 1000 - 250 = 750 \\)\n- Mom places: \\( \\frac{1}{3} \\times 750 = 250 \\)\n- Remaining pieces after mom: \\( 750 - 250 = 500 \\)\n\n5. REVIEW:\nThe primary source of error (confusing the quantity mom's fraction applies to) is addressed correctly by calculating mom's fraction on the remaining 750 pieces, not the original 1000. Thus, no error present in the solution.\n\nFINAL ANSWER: 500",
+  "extracted_answer": "500",
+  "is_correct": true,
+  "correct_answer": "500",
+  "answer_type": "numeric_exact",
+  "question": "Poppy is solving a 1000-piece jigsaw puzzle. She places a quarter of the pieces on the board, then her mom places a third of the remaining pieces. How many jigsaw pieces are left to be placed?",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-002",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:26:58.916476Z",
+  "latency_seconds": 2.37,
+  "input_tokens": 323,
+  "output_tokens": 164,
+  "cost_usd": 0.000392,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nOn a certain day, the total cost of filling up 20 helium balloons was $900. Two days later, the cost of filling each balloon was increased by $20. How much did Bentley pay to fill 170 balloons if he went to fill them after the price increase?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's analyze the problem step by step:\n\n1. On a certain day, the total cost of filling up 20 helium balloons was $900.\n   - This means the cost per balloon that day was:\n     \\[\n     \\frac{900}{20} = 45 \\text{ dollars per balloon}\n     \\]\n\n2. Two days later, the cost of filling each balloon increased by $20.\n   - So new cost per balloon:\n     \\[\n     45 + 20 = 65 \\text{ dollars per balloon}\n     \\]\n\n3. Bentley went to fill 170 balloons after the price increase.\n   - The total cost Bentley paid:\n     \\[\n     170 \\times 65 = 11,050 \\text{ dollars}\n     \\]\n\nFINAL ANSWER: 11050",
+  "extracted_answer": "11050",
+  "is_correct": true,
+  "correct_answer": "11050",
+  "answer_type": "numeric_exact",
+  "question": "On a certain day, the total cost of filling up 20 helium balloons was $900. Two days later, the cost of filling each balloon was increased by $20. How much did Bentley pay to fill 170 balloons if he went to fill them after the price increase?",
+  "source": "GSM8K"
+}

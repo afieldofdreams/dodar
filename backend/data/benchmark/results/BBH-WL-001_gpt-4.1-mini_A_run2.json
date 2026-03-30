@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-WL-001",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:33:02.773119Z",
+  "latency_seconds": 4.6,
+  "input_tokens": 71,
+  "output_tokens": 458,
+  "cost_usd": 0.000761,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Question: Ka lies. Christie says Ka tells the truth. Jerry says Christie lies. Crista says Jerry lies. Yoland says Crista tells the truth. Does Yoland tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the statements step-by-step, assigning truth values (True = tells the truth, False = lies) to each person. The statements are:\n\n1. Ka lies.\n2. Christie says: \"Ka tells the truth.\"\n3. Jerry says: \"Christie lies.\"\n4. Crista says: \"Jerry lies.\"\n5. Yoland says: \"Crista tells the truth.\"\n\nWe want to find out if Yoland tells the truth.\n\n---\n\n### Step 1: Analyze Ka\n\nStatement: Ka lies.\n\n- If Ka tells the truth, then the statement \"Ka lies\" is false → contradiction.\n- If Ka lies, then the statement \"Ka lies\" is true → no contradiction.\n\nTherefore: **Ka lies (Ka is false).**\n\n---\n\n### Step 2: Analyze Christie's statement about Ka\n\nChristie says: \"Ka tells the truth.\"\n\n- We know Ka lies (Ka is false).\n- Christie's statement (\"Ka tells the truth\") is therefore false.\n- So Christie says a false statement.\n\nTherefore: **Christie lies (Christie is false).**\n\n---\n\n### Step 3: Analyze Jerry's statement about Christie\n\nJerry says: \"Christie lies.\"\n\n- We know Christie lies (Christie is false).\n- Jerry says Christie lies → true statement.\n\nTherefore: **Jerry tells the truth (Jerry is true).**\n\n---\n\n### Step 4: Analyze Crista's statement about Jerry\n\nCrista says: \"Jerry lies.\"\n\n- We know Jerry tells the truth (Jerry is true).\n- Crista claims Jerry lies → false statement.\n\nTherefore: **Crista lies (Crista is false).**\n\n---\n\n### Step 5: Analyze Yoland's statement about Crista\n\nYoland says: \"Crista tells the truth.\"\n\n- We know Crista lies (Crista is false).\n- Yoland says Crista tells the truth → false statement.\n\nTherefore: **Yoland lies (Yoland is false).**\n\n---\n\n### Summary:\n\n- Ka lies (false)\n- Christie lies (false)\n- Jerry tells the truth (true)\n- Crista lies (false)\n- Yoland lies (false)\n\n---\n\n### Final answer:\n\nDoes Yoland tell the truth?\n\nNo, Yoland lies.\n\n---\n\nFINAL ANSWER: No",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "Question: Ka lies. Christie says Ka tells the truth. Jerry says Christie lies. Crista says Jerry lies. Yoland says Crista tells the truth. Does Yoland tell the truth?",
+  "source": "BBH/web_of_lies"
+}

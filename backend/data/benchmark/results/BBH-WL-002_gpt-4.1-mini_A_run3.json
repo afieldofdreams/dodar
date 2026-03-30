@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-WL-002",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:21:40.473520Z",
+  "latency_seconds": 2.44,
+  "input_tokens": 77,
+  "output_tokens": 174,
+  "cost_usd": 0.000309,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Question: Elanor tells the truth. Crista says Elanor lies. Vernell says Crista lies. Shalonda says Vernell lies. Teressa says Shalonda lies. Does Teressa tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the statements step-by-step.\n\n1. Elanor tells the truth. (Given fact)\n\n2. Crista says Elanor lies.\n   Since Elanor tells the truth, Crista's statement is false.\n   Therefore, Crista lies.\n\n3. Vernell says Crista lies.\n   Since Crista lies, Vernell's statement that \"Crista lies\" is true.\n   Therefore, Vernell tells the truth.\n\n4. Shalonda says Vernell lies.\n   Since Vernell tells the truth, Shalonda's statement that \"Vernell lies\" is false.\n   Therefore, Shalonda lies.\n\n5. Teressa says Shalonda lies.\n   Since Shalonda lies, Teressa's statement that \"Shalonda lies\" is true.\n   Therefore, Teressa tells the truth.\n\nFINAL ANSWER: Yes",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "Question: Elanor tells the truth. Crista says Elanor lies. Vernell says Crista lies. Shalonda says Vernell lies. Teressa says Shalonda lies. Does Teressa tell the truth?",
+  "source": "BBH/web_of_lies"
+}

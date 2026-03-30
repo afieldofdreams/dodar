@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-017",
+  "condition": "C_previous",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:31:23.440912Z",
+  "latency_seconds": 4.38,
+  "input_tokens": 344,
+  "output_tokens": 386,
+  "cost_usd": 0.000755,
+  "system_prompt_sent": "Work through these five phases in order. Each phase must add new reasoning, not restate previous phases.\n\n1. DIAGNOSE: What exactly is being asked? Identify the constraints that will determine the answer. State the one thing most likely to cause an error on this type of problem.\n\n2. OPTIONS: Identify the most plausible answer and the strongest competing alternative. For each, state the specific evidence for and against. Do not simply list all choices.\n\n3. DECIDE: Commit to one answer. State the single strongest reason it is correct and the single strongest reason it might be wrong.\n\n4. ACTION: Verify your chosen answer by working through the problem with that answer in mind. If the problem involves calculation, show each step. If it involves reasoning, trace the logical chain.\n\n5. REVIEW: Look for the specific error you identified in DIAGNOSE. Check whether the concern you raised in DECIDE actually applies. If you find a genuine error, change your answer. If not, confirm it.\n\nState your final answer only after completing all five phases. Do not use the phrase \"final answer\" anywhere except the final line.",
+  "user_prompt_sent": "Follow the five phases (Diagnose, Options, Decide, Action, Review).\n\nThick fur on a mammal will trap heat close to the animal's body. A mammal with thick fur would be best fit for which type of environment?\n\n  A: a salt marsh\n  B: a frozen plain\n  C: a sandy beach\n  D: a humid rainforest\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "1. DIAGNOSE:  \nThe question asks which environment is best suited for a mammal with thick fur that traps heat close to the body. The critical constraint is matching the animal's thick fur adaptation with the environment it benefits most. The main source of error is mixing up environments where warm insulation is advantageous versus where it could be detrimental.\n\n2. OPTIONS:  \n- Most plausible answer: B (a frozen plain)  \n  Evidence for: Thick fur trapping heat helps mammals stay warm in cold environments. Frozen plains are cold, so thick fur would be advantageous.  \n  Evidence against: None notable for this choice.  \n  \n- Strongest competing alternative: D (a humid rainforest)  \n  Evidence for: Some mammals have dense fur in rainforests, but typically, dense fur is less common due to heat and humidity.  \n  Evidence against: Thick fur trapping heat would likely cause overheating in a warm, humid environment, which makes it less fit.\n\n3. DECIDE:  \nI choose B (a frozen plain).  \nStrongest reason correct: Thick fur is an adaptation primarily for cold environments to trap body heat.  \nStrongest reason it might be wrong: Possibly if the question intended \"best fit\" for other traits, but the main focus is on fur and heat trapping.\n\n4. ACTION:  \n- Thick fur works as insulation.  \n- Insulation is beneficial in cold conditions to prevent heat loss.  \n- A frozen plain is cold year-round, so heat retention is vital for survival.  \n- Other options (salt marsh, sandy beach, humid rainforest) are generally warmer or have conditions where retaining heat could lead to overheating.\n\n5. REVIEW:  \nThe specific error risk was confusing environment types and fur function. No such confusion occurred as reasoning focused on heat retention and cold environments. The chosen answer (frozen plain) aligns logically with the need for thick fur.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Thick fur on a mammal will trap heat close to the animal's body. A mammal with thick fur would be best fit for which type of environment?",
+  "source": "ARC-Challenge"
+}

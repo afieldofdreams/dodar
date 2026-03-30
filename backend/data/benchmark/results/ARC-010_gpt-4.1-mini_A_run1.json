@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-010",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:29:53.130728Z",
+  "latency_seconds": 1.01,
+  "input_tokens": 105,
+  "output_tokens": 64,
+  "cost_usd": 0.000144,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A light-year is the measure of how far light can travel in one year. How long has the light from a star 125,000 light-years away been traveling to reach Earth?\n\n  A: 12.5 years\n  B: 125 years\n  C: 125,000 years\n  D: 125,000,000 years\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "A light-year is the distance that light travels in one year. If a star is 125,000 light-years away, it means that light from that star takes 125,000 years to reach Earth.\n\nSo, the light from the star has been traveling for 125,000 years.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "A light-year is the measure of how far light can travel in one year. How long has the light from a star 125,000 light-years away been traveling to reach Earth?",
+  "source": "ARC-Challenge"
+}

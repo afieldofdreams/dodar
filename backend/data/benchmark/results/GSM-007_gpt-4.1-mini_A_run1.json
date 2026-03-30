@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-007",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:22:45.292203Z",
+  "latency_seconds": 1.43,
+  "input_tokens": 81,
+  "output_tokens": 115,
+  "cost_usd": 0.000216,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "To make a call from a payphone, you must pay $0.25 for each minute of your call. After 16 minutes, that price drops to $0.2 per minute. How much would a 36-minute call cost?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "The first 16 minutes cost $0.25 per minute:\n\\( 16 \\times 0.25 = 4.00 \\) dollars.\n\nThe remaining minutes are \\(36 - 16 = 20\\) minutes at $0.20 per minute:\n\\( 20 \\times 0.20 = 4.00 \\) dollars.\n\nTotal cost = cost of first 16 minutes + cost of remaining 20 minutes:\n\\(4.00 + 4.00 = 8.00\\) dollars.\n\nFINAL ANSWER: 8.00",
+  "extracted_answer": "8.00",
+  "is_correct": true,
+  "correct_answer": "8",
+  "answer_type": "numeric_exact",
+  "question": "To make a call from a payphone, you must pay $0.25 for each minute of your call. After 16 minutes, that price drops to $0.2 per minute. How much would a 36-minute call cost?",
+  "source": "GSM8K"
+}

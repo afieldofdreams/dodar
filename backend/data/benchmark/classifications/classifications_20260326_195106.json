@@ -1,0 +1,200 @@
+[
+  {
+    "task_id": "BBH-C-005",
+    "condition": "B",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "INCOMPLETE_SEARCH",
+    "reasoning": "The model failed to adequately consider the well-documented finding in folk causation research that people tend to attribute causation to abnormal or norm-violating factors rather than normal ones. The doctor prescribing medication is a normal action, while the patient taking an unknown supplement is the abnormal factor. A typical person would say 'No' because the doctor acted normally and was unaware of the supplement. The model considered partial blame but never seriously explored the possibility that people would fully exonerate the doctor.",
+    "root_cause_quote": "Since the doctor gave medication A, which is necessary for the reaction, some might say the doctor caused it.",
+    "confidence": "high",
+    "rater": "claude-opus-4-6"
+  },
+  {
+    "task_id": "BBH-C-005",
+    "condition": "B",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "ANCHORING_ERROR",
+    "reasoning": "The model fixated on the salient fact that the doctor prescribed medication A and treated that as sufficient for ordinary causal judgment, even after acknowledging that the reaction only occurs when A and B are taken together and that the doctor was unaware of B. This is better than INCOMPLETE_SEARCH because the model did consider multiple perspectives, but it failed to sufficiently adjust away from its initial anchor on the doctor's prescription.",
+    "root_cause_quote": "Since the doctor gave medication A, which is necessary for the reaction, some might say the doctor caused it.",
+    "confidence": "high",
+    "rater": "gpt-5.4"
+  },
+  {
+    "task_id": "BBH-C-005",
+    "condition": "C",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "ANCHORING_ERROR",
+    "reasoning": "The model anchored on the philosophical/logical notion that any necessary contributing cause counts as 'a cause,' and despite explicitly acknowledging the counterpoint that the doctor's ignorance of supplement B could break the causal chain (which is how typical people actually reason about this scenario), it refused to update its answer. Research on folk intuitions about causation shows that people tend to attribute causation more to abnormal or blameworthy actions, and the patient's undisclosed supplement use is seen as the more salient abnormal factor. The model recognized this counterpoint but remained anchored to its initial framing of necessary conditions as sufficient for causal attribution.",
+    "root_cause_quote": "I commit to Option 1: The doctor caused the adverse reaction. The strongest reason is that causation typically involves contributing causes, not just sole causes.",
+    "confidence": "medium",
+    "rater": "claude-opus-4-6"
+  },
+  {
+    "task_id": "BBH-C-005",
+    "condition": "C",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "ANCHORING_ERROR",
+    "reasoning": "The model fixated on the salient fact that the doctor's prescription of A was a necessary condition and treated that as sufficient for typical causal judgment, despite also articulating contrary evidence that the unknown supplement B and lack of foreseeability may block ordinary attribution. This is better than FAILURE_TO_REVISE because the core mistake appears when it centers the reasoning on 'necessary contributor' causation rather than on the question's lay-intuition standard; the later commitment simply follows that anchor.",
+    "root_cause_quote": "The strongest reason is that causation typically involves contributing causes, not just sole causes. The prescription was a necessary condition for the reaction and thus the doctor did cause it.",
+    "confidence": "high",
+    "rater": "gpt-5.4"
+  },
+  {
+    "task_id": "BBH-C-005",
+    "condition": "D",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "FAILURE_TO_REVISE",
+    "reasoning": "The model explicitly identified multiple factors that should have led to the correct answer: the doctor lacked knowledge of B, the patient independently chose to take B, and the doctor couldn't have reasonably predicted the reaction. The model even noted that 'typical judgment might split causation' and recognized reduced blameworthiness. Despite identifying these considerations pointing toward 'No,' the model failed to revise its answer, instead defaulting to a 'but-for' causation framework. Research on folk judgments of causation shows that people typically attribute causation to abnormal or blameworthy factors rather than using strict but-for reasoning, which the model acknowledged but didn't properly apply.",
+    "root_cause_quote": "The question focuses on causation, so the likely typical answer would be that yes, the doctor caused the adverse reaction because it wouldn't have occurred without A, which the doctor prescribed, but they might also recognize that the reaction only occurred due to the combination with supplement B.",
+    "confidence": "high",
+    "rater": "claude-opus-4-6"
+  },
+  {
+    "task_id": "BBH-C-005",
+    "condition": "D",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "COMPREHENSION_FAILURE",
+    "reasoning": "The model answered a different question by substituting factual but-for causation for the intended ordinary lay judgment about causation in a conjunctive-cause case. It explicitly reframed the task around technical causation versus blame, so the error is not mainly failure to revise but a misunderstanding of what 'a typical person' would count as caused here.",
+    "root_cause_quote": "Apply the common-sense principle of \"but-for\" causation: but for the doctor prescribing A, the adverse reaction would not have happened. Therefore, the doctor\u2019s act is a factual cause.",
+    "confidence": "high",
+    "rater": "gpt-5.4"
+  },
+  {
+    "task_id": "BBH-C-005",
+    "condition": "E",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "COMPREHENSION_FAILURE",
+    "reasoning": "The model failed to understand that this is a question about how a 'typical person' would make a binary causation judgment, not a nuanced legal/ethical analysis. Research in folk psychology shows that typical people tend to attribute causation to abnormal or unexpected factors rather than normal ones - the patient's undisclosed supplement use is the abnormal factor, so typical people would say 'No, the doctor did not cause it.' The model instead treated this as a question requiring sophisticated causal analysis and arrived at a 'partial causation' answer that doesn't match how ordinary people actually reason about such scenarios.",
+    "root_cause_quote": "To address causation, especially in an ethical or legal context, a typical person's reasoning usually hinges on several principles",
+    "confidence": "high",
+    "rater": "claude-opus-4-6"
+  },
+  {
+    "task_id": "BBH-C-005",
+    "condition": "E",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "COMPREHENSION_FAILURE",
+    "reasoning": "The model answered a different question\u2014about factual/legal causation and shared responsibility\u2014rather than the asked question of how a typical person would classify the doctor's causal role in this vignette. Its entire analysis substitutes normative and legal concepts like foreseeability and partial responsibility for the ordinary binary causation judgment the task targets. INCOMPLETE_SEARCH is less apt because the core problem is not lack of alternatives explored, but a misframing of what kind of judgment was being requested.",
+    "root_cause_quote": "To address causation, especially in an ethical or legal context, a typical person's reasoning usually hinges on several principles:",
+    "confidence": "high",
+    "rater": "gpt-5.4"
+  },
+  {
+    "task_id": "BBH-C-005",
+    "condition": "F",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "FAILURE_TO_REVISE",
+    "reasoning": "The model explicitly identified the competing alternative ('No, the doctor did not cause the reaction') and articulated strong evidence for it, including that the doctor was unaware of B and that B was equally necessary. It also noted the distinction between causation and responsibility, and acknowledged the joint causation issue. Despite recognizing these strong counterarguments, the model failed to revise its initial lean toward 'Yes' and did not adequately weight the key insight that typical people tend to excuse actors who lack knowledge of contributing factors. The model noticed the tension but proceeded with its initial answer anyway.",
+    "root_cause_quote": "Most plausible answer: A typical person would say, \"Yes, the doctor caused the adverse reaction,\" because the doctor prescribed medication A, which is part of the cause.",
+    "confidence": "high",
+    "rater": "claude-opus-4-6"
+  },
+  {
+    "task_id": "BBH-C-005",
+    "condition": "F",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "COMPREHENSION_FAILURE",
+    "reasoning": "The model shifted from the target question\u2014how a typical person would judge causation in this scenario\u2014to a different question about factual or partial causation, explicitly debating whether the doctor was 'a partial cause.' That misunderstanding drove the final answer, since it treated causal contribution as sufficient rather than modeling the ordinary judgment the prompt asked for. FAILURE_TO_REVISE is less fitting because the core error appears earlier as answering the wrong question, not merely noticing the alternative and failing to switch.",
+    "root_cause_quote": "I feel confident that the doctor is a partial cause, but the question might hinge on \"cause\" meaning sole cause or partial cause.",
+    "confidence": "high",
+    "rater": "gpt-5.4"
+  },
+  {
+    "task_id": "BBH-C-005",
+    "condition": "G",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "COMPREHENSION_FAILURE",
+    "reasoning": "The question asks how a 'typical person' would answer, which is an empirical question about folk intuitions regarding causation. Research shows typical people tend to attribute causation more to abnormal or blameworthy factors, and since the doctor didn't know about supplement B, typical people would say 'No' the doctor didn't cause it. The model instead analyzed the question as a philosophical/legal causation problem, applying but-for causation analysis rather than reasoning about how ordinary people actually think about causation in such scenarios.",
+    "root_cause_quote": "Generally in a legal or medical causation context, the question is whether the doctor's act (prescribing A) caused the adverse reaction.",
+    "confidence": "high",
+    "rater": "claude-opus-4-6"
+  },
+  {
+    "task_id": "BBH-C-005",
+    "condition": "G",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "COMPREHENSION_FAILURE",
+    "reasoning": "The model answered a different question from the one asked: instead of predicting how a typical person would judge causation, it analyzed legal/medical causation and apportioned responsibility. That shift led it to a nuanced 'partial cause' answer rather than the ordinary commonsense binary judgment of 'No'; this is more fundamental than incomplete search because the reasoning was directed at the wrong target from the start.",
+    "root_cause_quote": "Generally in a legal or medical causation context, the question is whether the doctor's act (prescribing A) caused the adverse reaction.",
+    "confidence": "high",
+    "rater": "gpt-5.4"
+  },
+  {
+    "task_id": "BBH-C-006",
+    "condition": "A",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "COMPREHENSION_FAILURE",
+    "reasoning": "The model misunderstood how a 'typical person' reasons about causation. The question asks about folk/intuitive causal judgment, not strict counterfactual necessity. Research in experimental philosophy shows that in overdetermination cases involving norm violations, people typically judge each norm-violating agent as a cause. The model applied a strict counterfactual ('but-for') test of causation rather than understanding that the question is about psychological/folk causal attribution, which treats norm-violating sufficient conditions as causes even in overdetermination cases.",
+    "root_cause_quote": "To say that Lauren caused the boss to see someone eating at their desk means that if Lauren hadn't eaten at her desk, then the boss wouldn't have seen anyone eating at their desk.",
+    "confidence": "high",
+    "rater": "claude-opus-4-6"
+  },
+  {
+    "task_id": "BBH-C-006",
+    "condition": "A",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "COMPREHENSION_FAILURE",
+    "reasoning": "The model interpreted the question using a strict but-for necessity test for causation, answering whether Lauren was necessary for the boss to see someone eating at a desk, rather than the commonsense causal judgment the prompt explicitly asks about ('a typical person'). In these causation vignettes, ordinary judgments allow multiple sufficient causes, so the earliest failure is misunderstanding the target notion of causation, not merely failing to search alternatives.",
+    "root_cause_quote": "To say that Lauren caused the boss to see someone eating at their desk means that if Lauren hadn\u2019t eaten at her desk, then the boss wouldn't have seen anyone eating at their desk.",
+    "confidence": "high",
+    "rater": "gpt-5.4"
+  },
+  {
+    "task_id": "BBH-C-006",
+    "condition": "D",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "ANCHORING_ERROR",
+    "reasoning": "The model anchored on a strict counterfactual/but-for test of causation (if Lauren hadn't acted, would the boss still have seen someone?). This is a well-known philosophical framework, but research on folk judgments of causation shows that typical people consider norm violations as causal even in overdetermination cases. The model fixated on the but-for test and never seriously considered that ordinary people attribute causation to each norm-violating individual independently, regardless of whether the other's action was sufficient.",
+    "root_cause_quote": "Since Jane's action alone was enough to cause the boss to see someone eating at their desk, Lauren's eating lunch was not the cause of the boss seeing someone eating at their desk.",
+    "confidence": "high",
+    "rater": "claude-opus-4-6"
+  },
+  {
+    "task_id": "BBH-C-006",
+    "condition": "D",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "COMPREHENSION_FAILURE",
+    "reasoning": "The model interpreted the question using a strict but-for necessity test, effectively answering whether Lauren was necessary for the boss to see someone eating at their desk, rather than the commonsense causation question being asked. Typical judgments in this setup treat Lauren as a cause even with overdetermination, so the error begins with misconstruing the target notion of causation, not merely failing to search more alternatives.",
+    "root_cause_quote": "If Lauren had not eaten lunch at her desk, would the boss still have seen someone eating at their desk? Since Jane also ate lunch at her desk, the boss would have still seen someone eating at their desk regardless of Lauren's action.",
+    "confidence": "high",
+    "rater": "gpt-5.4"
+  },
+  {
+    "task_id": "BBH-C-006",
+    "condition": "G",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "ANCHORING_ERROR",
+    "reasoning": "The model anchored on the counterfactual/necessity test for causation (if Lauren hadn't eaten, the boss still would have seen someone) and failed to adequately weight the alternative 'contributing cause' interpretation that typical people actually use. Research in folk psychology shows people tend to attribute causation to norm-violating actions even when they aren't strictly necessary conditions. The model even acknowledged Lauren could be seen as a contributing cause but dismissed this in favor of the necessity framework.",
+    "root_cause_quote": "If Lauren had not eaten lunch at her desk, Jane would still be eating at her desk, so the boss would see someone eating lunch regardless.",
+    "confidence": "high",
+    "rater": "claude-opus-4-6"
+  },
+  {
+    "task_id": "BBH-C-006",
+    "condition": "G",
+    "model_id": "gpt-4.1-mini",
+    "run_number": 1,
+    "classification": "COMPREHENSION_FAILURE",
+    "reasoning": "The model interpreted the causation question using a strict necessity/counterfactual standard rather than the ordinary-language notion the prompt explicitly asked about ('How would a typical person answer'). This led it to answer a different question\u2014whether Lauren was necessary for the boss to see someone eating\u2014rather than whether Lauren would ordinarily be seen as having caused the boss to see someone eating; INCOMPLETE_SEARCH is less apt because the error stems from adopting the wrong semantic frame from the outset, not merely failing to explore more options.",
+    "root_cause_quote": "\u201cCause\u201d in a typical, everyday sense usually means that an action was necessary or significantly contributed to the outcome.",
+    "confidence": "high",
+    "rater": "gpt-5.4"
+  }
+]

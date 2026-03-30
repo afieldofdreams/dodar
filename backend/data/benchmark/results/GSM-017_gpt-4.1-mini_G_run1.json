@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-017",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:35:15.181292Z",
+  "latency_seconds": 4.47,
+  "input_tokens": 488,
+  "output_tokens": 320,
+  "cost_usd": 0.000707,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nAmalia, Megan, and Dior divided the home chores so that each person had something to do while the others were working. Amalia's work was to mow the lawn, which took her 4 hours. Megan had to walk the dog and this took her 2 hours longer than Amalia to complete her chore. Dior's work was to do laundry and she took well over 4 hours longer than the time Amalia took to mow the lawn. Calculate the total time they all took to do their chores altogether.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's analyze the problem step by step.\n\n1. Amalia's chore is mowing the lawn and took 4 hours.\n\n2. Megan's chore is walking the dog and it took 2 hours longer than Amalia.\n   - Since Amalia took 4 hours, Megan took 4 + 2 = 6 hours.\n\n3. Dior's chore is doing laundry and it took well over 4 hours longer than Amalia.\n   - Amalia took 4 hours, so Dior took more than 4 + 4 = 8 hours.\n   - Since \"well over 4 hours longer\" is not an exact amount, but implies at least 5 hours longer, we interpret this as Dior took more than 8 hours.\n   - However, since we need a number for total time, the best we can do is assume the minimum \"well over 4 hours\" means at least 5 hours longer. So Dior took at least 9 hours.\n\n4. Total time taken by all three is Amalia's time + Megan's time + Dior's time.\n   - Amalia: 4 hours\n   - Megan: 6 hours\n   - Dior: at least 9 hours\n\n5. Adding these gives: 4 + 6 + 9 = 19 hours at minimum.\n\nSince the problem says \"well over 4 hours longer,\" not an exact number, but likely expecting a numerical answer, the safest assumption is to take Dior's time as 9 hours (4 hours + 5 hours = 9 hours).\n\nFINAL ANSWER: 19",
+  "extracted_answer": "19",
+  "is_correct": false,
+  "correct_answer": "18",
+  "answer_type": "numeric_exact",
+  "question": "Amalia, Megan, and Dior divided the home chores so that each person had something to do while the others were working. Amalia's work was to mow the lawn, which took her 4 hours. Megan had to walk the dog and this took her 2 hours longer than Amalia to complete her chore. Dior's work was to do laundry and she took well over 4 hours longer than the time Amalia took to mow the lawn. Calculate the total time they all took to do their chores altogether.",
+  "source": "GSM8K"
+}

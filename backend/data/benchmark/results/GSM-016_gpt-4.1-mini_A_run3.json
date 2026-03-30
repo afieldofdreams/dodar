@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-016",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:21:37.880588Z",
+  "latency_seconds": 1.8,
+  "input_tokens": 117,
+  "output_tokens": 118,
+  "cost_usd": 0.000236,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A simple folding newspaper or tabloid can be made by folding a piece of paper vertically and unfolding. Then, say, page 1 is printed on the left back, page 2 is printed on the left front, and then, perhaps page 32 is printed on the right back, and page 31 is printed on the right front. How many pieces of paper would be used in a 32-page tabloid?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "A tabloid is typically constructed from sheets of paper folded to create multiple pages. Each sheet, when folded once vertically, creates 4 pages:  \n- left front  \n- left back  \n- right front  \n- right back  \n\nIn the problem, one fold creates 4 pages per sheet.\n\nGiven that the total number of pages in the tabloid is 32, and each piece of paper yields 4 pages:\n\nNumber of pieces of paper needed = Total pages / Pages per sheet  \n= 32 / 4  \n= 8 pieces of paper\n\nFINAL ANSWER: 8",
+  "extracted_answer": "8",
+  "is_correct": true,
+  "correct_answer": "8",
+  "answer_type": "numeric_exact",
+  "question": "A simple folding newspaper or tabloid can be made by folding a piece of paper vertically and unfolding. Then, say, page 1 is printed on the left back, page 2 is printed on the left front, and then, perhaps page 32 is printed on the right back, and page 31 is printed on the right front. How many pieces of paper would be used in a 32-page tabloid?",
+  "source": "GSM8K"
+}

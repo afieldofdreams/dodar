@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-TSO-001",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:39:01.852638Z",
+  "latency_seconds": 4.73,
+  "input_tokens": 181,
+  "output_tokens": 270,
+  "cost_usd": 0.000504,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Alice, Bob, Claire, Dave, and Eve are playing a game. At the start of the game, they are each holding a ball: Alice has a red ball, Bob has a green ball, Claire has a brown ball, Dave has a black ball, and Eve has a orange ball.\nAs the game progresses, pairs of players trade balls. First, Claire and Alice swap balls. Then, Dave and Eve swap balls. Then, Claire and Eve swap balls. Then, Bob and Claire swap balls. Finally, Alice and Claire swap balls. At the end of the game, Eve has the\nOptions:\n(A) red ball\n(B) green ball\n(C) brown ball\n(D) black ball\n(E) orange ball\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Initially:\n- Alice has red\n- Bob has green\n- Claire has brown\n- Dave has black\n- Eve has orange\n\nStep 1: Claire and Alice swap balls\n- Alice gets brown (Claire's ball)\n- Claire gets red (Alice's ball)\nNow:\n- Alice: brown\n- Claire: red\n\nStep 2: Dave and Eve swap balls\n- Dave gets orange (Eve's ball)\n- Eve gets black (Dave's ball)\nNow:\n- Dave: orange\n- Eve: black\n\nStep 3: Claire and Eve swap balls\n- Claire gets black (Eve's ball)\n- Eve gets red (Claire's ball)\nNow:\n- Claire: black\n- Eve: red\n\nStep 4: Bob and Claire swap balls\n- Bob gets black (Claire's ball)\n- Claire gets green (Bob's ball)\nNow:\n- Bob: black\n- Claire: green\n\nStep 5: Alice and Claire swap balls\n- Alice gets green (Claire's ball)\n- Claire gets brown (Alice's ball)\nNow:\n- Alice: green\n- Claire: brown\n\nFinal balls:\n- Alice: green\n- Bob: black\n- Claire: brown\n- Dave: orange\n- Eve: red\n\nEve has the red ball.\n\nFINAL ANSWER: red ball",
+  "extracted_answer": "red ball",
+  "is_correct": false,
+  "correct_answer": "A",
+  "answer_type": "exact_match",
+  "question": "Alice, Bob, Claire, Dave, and Eve are playing a game. At the start of the game, they are each holding a ball: Alice has a red ball, Bob has a green ball, Claire has a brown ball, Dave has a black ball, and Eve has a orange ball.\nAs the game progresses, pairs of players trade balls. First, Claire and Alice swap balls. Then, Dave and Eve swap balls. Then, Claire and Eve swap balls. Then, Bob and Claire swap balls. Finally, Alice and Claire swap balls. At the end of the game, Eve has the\nOptions:\n(A) red ball\n(B) green ball\n(C) brown ball\n(D) black ball\n(E) orange ball",
+  "source": "BBH/tracking_shuffled_objects"
+}

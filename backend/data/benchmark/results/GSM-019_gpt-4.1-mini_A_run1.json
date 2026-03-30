@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-019",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:37:37.908695Z",
+  "latency_seconds": 2.81,
+  "input_tokens": 121,
+  "output_tokens": 152,
+  "cost_usd": 0.000292,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Candice put 80 post-it notes in her purse before she headed out to her job at the coffee shop.  On her way, she stopped off at the store and purchased a package of Post-it notes;  At work, she placed a single Post-it note on each of 220 different cups of coffee.  If she had 23 post-it notes remaining overall, how many Post-it notes were in the package that she purchased?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's define the variables:\n- Initial Post-it notes = 80\n- Number of Post-it notes on coffee cups = 220\n- Post-it notes remaining after all usage = 23\n- Number of Post-it notes in the purchased package = ?\n\nStep 1: Calculate the total number of Post-it notes used.\nUsed notes = 220 (one on each cup)\n\nStep 2: Write an equation for total Post-it notes:\nInitial + Purchased - Used = Remaining\n80 + Purchased - 220 = 23\n\nStep 3: Solve for Purchased:\n80 + Purchased - 220 = 23  \nPurchased - 140 = 23  \nPurchased = 23 + 140  \nPurchased = 163\n\nFINAL ANSWER: 163",
+  "extracted_answer": "163",
+  "is_correct": true,
+  "correct_answer": "163",
+  "answer_type": "numeric_exact",
+  "question": "Candice put 80 post-it notes in her purse before she headed out to her job at the coffee shop.  On her way, she stopped off at the store and purchased a package of Post-it notes;  At work, she placed a single Post-it note on each of 220 different cups of coffee.  If she had 23 post-it notes remaining overall, how many Post-it notes were in the package that she purchased?",
+  "source": "GSM8K"
+}

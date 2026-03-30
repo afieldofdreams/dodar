@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-WL-002",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:47:52.422658Z",
+  "latency_seconds": 3.53,
+  "input_tokens": 77,
+  "output_tokens": 328,
+  "cost_usd": 0.000556,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Question: Elanor tells the truth. Crista says Elanor lies. Vernell says Crista lies. Shalonda says Vernell lies. Teressa says Shalonda lies. Does Teressa tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the statements one by one, using logic.\n\nParticipants and their statements:\n\n1. Elanor tells the truth.\n2. Crista says Elanor lies.\n3. Vernell says Crista lies.\n4. Shalonda says Vernell lies.\n5. Teressa says Shalonda lies.\n\nQuestion: Does Teressa tell the truth?\n\n---\n\nStep 1: From the first statement, we know:  \n\"Elanor tells the truth.\"\n\nSo, Elanor is truthful.\n\n---\n\nStep 2: Crista says Elanor lies.  \n- Since Elanor is truthful, Crista's statement \"Elanor lies\" is false.  \n- Therefore, Crista lies.\n\n---\n\nStep 3: Vernell says Crista lies.  \n- We just determined Crista lies, so Vernell's statement \"Crista lies\" is true.  \n- Therefore, Vernell tells the truth.\n\n---\n\nStep 4: Shalonda says Vernell lies.  \n- From Step 3, Vernell tells the truth.  \n- So Shalonda's statement \"Vernell lies\" is false.  \n- Therefore, Shalonda lies.\n\n---\n\nStep 5: Teressa says Shalonda lies.  \n- From Step 4, Shalonda lies.  \n- Teressa's statement \"Shalonda lies\" is true.  \n- Therefore, Teressa tells the truth.\n\n---\n\n**Summary:**  \n- Elanor: truthful  \n- Crista: lies  \n- Vernell: truthful  \n- Shalonda: lies  \n- Teressa: truthful\n\nTherefore:\n\nFINAL ANSWER: Yes",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "Question: Elanor tells the truth. Crista says Elanor lies. Vernell says Crista lies. Shalonda says Vernell lies. Teressa says Shalonda lies. Does Teressa tell the truth?",
+  "source": "BBH/web_of_lies"
+}

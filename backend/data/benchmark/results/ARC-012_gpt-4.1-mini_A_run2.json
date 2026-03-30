@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-012",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:46:09.854074Z",
+  "latency_seconds": 2.04,
+  "input_tokens": 130,
+  "output_tokens": 165,
+  "cost_usd": 0.000316,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A student is investigating how light behaves when it strikes different surfaces. She has a frosted window glass pane, a clear window glass pane, a mirror, and a piece of cardboard. Which of these objects will scatter the most light?\n\n  A: the mirror, because it is reflective\n  B: the piece of cardboard, because it is opaque\n  C: the clear window glass, because it is transparent\n  D: the frosted window glass, because it is translucent\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze how light behaves with each surface:\n\n- **Mirror:** It reflects light in a very orderly way (specular reflection). It does not scatter the light in many directions; instead, it sends most light at a single angle.\n\n- **Piece of cardboard:** It is opaque, so it absorbs most light. It may scatter some light diffusely, but its main characteristic is blocking light, not necessarily scattering a lot.\n\n- **Clear window glass:** It is transparent, allowing light to pass through with very little scattering.\n\n- **Frosted window glass:** It is translucent, meaning it allows light to pass through but scatters it in many directions, causing diffusion of light.\n\nSince scattering light means sending the light in many directions diffusely, the frosted glass will scatter the most light.\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "A student is investigating how light behaves when it strikes different surfaces. She has a frosted window glass pane, a clear window glass pane, a mirror, and a piece of cardboard. Which of these objects will scatter the most light?",
+  "source": "ARC-Challenge"
+}

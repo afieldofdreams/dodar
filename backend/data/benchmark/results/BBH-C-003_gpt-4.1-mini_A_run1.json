@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-003",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T18:16:53.432316Z",
+  "latency_seconds": 4.35,
+  "input_tokens": 96,
+  "output_tokens": 206,
+  "cost_usd": 0.000368,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "How would a typical person answer each of the following questions about causation?\nThe city council enacted an ordinance that all fire hydrants in the city must be painted red. A resident paints their fire hydrant red. The ordinance is then repealed. Did the resident paint the fire hydrant red because of the ordinance?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "First, let's analyze the situation:\n\n1. The city council passed an ordinance requiring all fire hydrants to be painted red.\n2. A resident painted their fire hydrant red.\n3. Later, the ordinance was repealed.\n\nThe key question is whether the resident painted the hydrant red *because of* the ordinance.\n\n- The ordinance created a rule or requirement that all fire hydrants must be red.\n- The resident’s action of painting the hydrant red likely followed from obeying or complying with that ordinance.\n- The repeal of the ordinance happened after the resident painted the hydrant, so it did not influence the resident’s initial decision.\n- A typical person would understand that the ordinance was the motivating or causal factor for the resident painting the hydrant red, because if there had been no ordinance, the resident might not have painted it red.\n\nTherefore, the resident's painting the hydrant red was caused by the ordinance.\n\nFINAL ANSWER: Yes, the resident painted the fire hydrant red because of the ordinance.",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nThe city council enacted an ordinance that all fire hydrants in the city must be painted red. A resident paints their fire hydrant red. The ordinance is then repealed. Did the resident paint the fire hydrant red because of the ordinance?",
+  "source": "BBH/causal_judgement"
+}

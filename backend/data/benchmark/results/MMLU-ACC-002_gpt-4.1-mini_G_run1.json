@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-002",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:29:57.845228Z",
+  "latency_seconds": 4.91,
+  "input_tokens": 378,
+  "output_tokens": 381,
+  "cost_usd": 0.000761,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A student places a metal spoon in a cup of hot water. After one minute, the handle feels warm. Which best explains this?\nA: Heat energy was created in the spoon by the water\nB: Cold energy moved from the spoon into the water\nC: Heat energy was transferred through the metal by conduction\nD: The spoon absorbed light energy from the water\n\nEXAMPLE ANSWER: The observation is that a metal spoon's handle gets warm when the bowl end is in hot water. I need to identify the mechanism.\n\nKey physics: metal is a good thermal conductor. Heat transfers through solid materials by conduction.\n\nEvaluating each option:\n- A: Heat is not created. It is transferred. Violates conservation of energy. Incorrect.\n- B: No such thing as 'cold energy.' Heat moves from hot to cold. Incorrect.\n- C: Heat transfers from hot water to spoon, then through metal by conduction. Correct.\n- D: Light energy not involved. The transfer is thermal. Incorrect.\n\nFINAL ANSWER: C\n\nNow solve the following problem using the same careful reasoning approach.\n\nKanji Company had sales last year of $265 million, including cash sales of $25 million. If its average collection period was 36 days, its ending accounts receivable balance is closest to . (Assume a 365-day year.)\n\n  A: $26.1 million\n  B: $23.7 million\n  C: $7.4 million\n  D: $18.7 million\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the problem carefully step-by-step.\n\n**Given:**\n- Total sales last year = $265 million\n- Cash sales = $25 million\n- Average collection period = 36 days\n- Year length = 365 days\n\n**What is asked:**\nFind the ending accounts receivable balance, using the average collection period.\n\n---\n\n### Step 1: Understand the concept of average collection period\n\nThe average collection period is the average number of days it takes to collect accounts receivable. It is related to the accounts receivable balance and credit sales by:\n\n\\[\n\\text{Average collection period} = \\frac{\\text{Accounts receivable}}{\\text{Average daily credit sales}}\n\\]\n\nRearranged, we get:\n\n\\[\n\\text{Accounts receivable} = \\text{Average collection period} \\times \\text{Average daily credit sales}\n\\]\n\n---\n\n### Step 2: Find credit sales\n\nTotal sales are $265 million, but cash sales are $25 million, so:\n\n\\[\n\\text{Credit sales} = 265 - 25 = 240 \\text{ million}\n\\]\n\n---\n\n### Step 3: Calculate average daily credit sales\n\nThere are 365 days in the year, so:\n\n\\[\n\\text{Average daily credit sales} = \\frac{240 \\text{ million}}{365} \\approx 0.6575 \\text{ million per day}\n\\]\n\n---\n\n### Step 4: Calculate accounts receivable\n\nNow multiply the daily credit sales by the average collection period:\n\n\\[\n\\text{Accounts receivable} = 36 \\times 0.6575 \\approx 23.67 \\text{ million}\n\\]\n\n---\n\n### Step 5: Compare with the options\n\nThe closest choice is **$23.7 million (Option B)**.\n\n---\n\n**FINAL ANSWER: B**",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Kanji Company had sales last year of $265 million, including cash sales of $25 million. If its average collection period was 36 days, its ending accounts receivable balance is closest to . (Assume a 365-day year.)",
+  "source": "MMLU/professional_accounting"
+}

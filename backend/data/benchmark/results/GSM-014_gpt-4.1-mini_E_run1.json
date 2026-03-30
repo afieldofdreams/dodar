@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-014",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T11:55:24.019174Z",
+  "latency_seconds": 4.08,
+  "input_tokens": 227,
+  "output_tokens": 208,
+  "cost_usd": 0.000424,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nApril is donating plant pots to a local school for their new garden. They ask for 30 plant pots for the daisies, and twice as many for the roses. April had already bought 100 plant pots from the garden center before she knew how many she needed. How many plant pots does April have left over?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nThe general principle here involves finding quantities based on given ratios and totals, then comparing them to an initial amount to find a leftover amount. Specifically, if we have requests for quantities of items (in this case, plant pots) and some multiples (e.g., twice as many for one type), we first calculate each type's amount by applying these ratios. Then, we sum these amounts to find the total needed. Finally, subtract the total needed from the initial total available to find the leftover quantity.\n\nStep 2 - REASON:  \n- The school asks for 30 plant pots for daisies.  \n- They want twice as many for roses, so: 2 × 30 = 60 pots for roses.  \n- Total pots needed = 30 (daisies) + 60 (roses) = 90 pots.  \n- April bought 100 pots initially.  \n- Leftover pots = 100 - 90 = 10.\n\nFINAL ANSWER: 10",
+  "extracted_answer": "10",
+  "is_correct": true,
+  "correct_answer": "10",
+  "answer_type": "numeric_exact",
+  "question": "April is donating plant pots to a local school for their new garden. They ask for 30 plant pots for the daisies, and twice as many for the roses. April had already bought 100 plant pots from the garden center before she knew how many she needed. How many plant pots does April have left over?",
+  "source": "GSM8K"
+}

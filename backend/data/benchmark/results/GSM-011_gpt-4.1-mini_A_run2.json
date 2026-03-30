@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-011",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:23:56.578108Z",
+  "latency_seconds": 2.25,
+  "input_tokens": 77,
+  "output_tokens": 150,
+  "cost_usd": 0.000271,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "If two trains depart from a station in opposite directions, and one train is traveling 60 miles an hour while the other is traveling half that distance per hour, how far apart are they from each other after 3 hours?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's analyze the problem step-by-step:\n\n- The first train travels at 60 miles per hour.\n- The second train travels at half that speed, so its speed is 60 / 2 = 30 miles per hour.\n- Both trains are moving in opposite directions.\n- They both travel for 3 hours.\n\nDistance traveled by the first train in 3 hours = speed × time = 60 × 3 = 180 miles  \nDistance traveled by the second train in 3 hours = 30 × 3 = 90 miles\n\nSince they are moving in opposite directions, the distance between them after 3 hours is the sum of the individual distances:  \n180 + 90 = 270 miles\n\nFINAL ANSWER: 270",
+  "extracted_answer": "270",
+  "is_correct": true,
+  "correct_answer": "270",
+  "answer_type": "numeric_exact",
+  "question": "If two trains depart from a station in opposite directions, and one train is traveling 60 miles an hour while the other is traveling half that distance per hour, how far apart are they from each other after 3 hours?",
+  "source": "GSM8K"
+}

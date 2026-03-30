@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-MED-007",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:44:02.901857Z",
+  "latency_seconds": 6.57,
+  "input_tokens": 138,
+  "output_tokens": 478,
+  "cost_usd": 0.00082,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A 55-year-old man who is a business executive is admitted to the hospital for evaluation of abdominal pain. He is polite to the physician but berates the nurses and other staff. The patient's wife and two of his three adult children arrive for a visit. The patient says with disgust that the missing child is and always has been worthless. Which of the following is the most likely explanation for this patient's behavior?\n\n  A: Projection\n  B: Projective identification\n  C: Reaction formation\n  D: Splitting\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the patient's behavior and the options carefully:\n\n**Patient behavior:**\n- Polite to physician but berates the nurses and other staff.\n- He speaks with disgust about a missing child, calling them worthless.\n- This shows inconsistent attitudes toward different people—polite to some, harsh to others.\n- The attitude toward his family member is very negative, perhaps indicating labeling or devaluation of that person.\n- The overall pattern seems like polarized thinking or shifting attitudes between extremes of idealization and devaluation.\n\n---\n\n**Understanding the options:**\n\n**A: Projection**  \nProjection involves attributing one’s own unacceptable feelings or impulses to another person. For example, a person who is angry might say \"you are angry with me.\" Projection is about shifting inner feelings outward onto someone else.\n\n**B: Projective identification**  \nThis is a more complex form of projection seen in borderline or psychotic patients, where the projected feelings induce the other person to feel or behave in the projected way. It involves interpersonal dynamics beyond simple projection.\n\n**C: Reaction formation**  \nThis is when a person behaves in a way that is opposite to their true unacceptable feelings. For example, showing excessive affection when one really feels hatred.\n\n**D: Splitting**  \nSplitting refers to the tendency to view others or oneself in \"all good\" or \"all bad\" terms, with an inability to integrate positive and negative aspects. This results in sharply polarized evaluations—idealization vs devaluation—often seen in borderline personality disorder or in situations of emotional stress.\n\n---\n\n**Applying these definitions to the case:**\n\n- The patient is polite to the physician but berates the nurses and calls one child “worthless.”  \n- This seems like a pattern of viewing people as either all good (physician) or all bad (nurses, missing child).  \n- There is no mention of the patient attributing his own feelings to others (no direct fit with projection or projective identification).  \n- No indication that the patient is behaving in a way opposite to his true feelings (not reaction formation).  \n- The clear presence of polarized thinking toward people favors **splitting**.\n\n---\n\n**Conclusion:**\n\nThe most likely explanation for this patient’s behavior is **splitting**, characterized by all-or-nothing thinking about other people (idealizing some, devaluing others).\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "A 55-year-old man who is a business executive is admitted to the hospital for evaluation of abdominal pain. He is polite to the physician but berates the nurses and other staff. The patient's wife and two of his three adult children arrive for a visit. The patient says with disgust that the missing child is and always has been worthless. Which of the following is the most likely explanation for this patient's behavior?",
+  "source": "MMLU/professional_medicine"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-001",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:41:30.823526Z",
+  "latency_seconds": 2.05,
+  "input_tokens": 437,
+  "output_tokens": 126,
+  "cost_usd": 0.000376,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nCynthia eats one serving of ice cream every night.  She buys cartons of ice cream with 15 servings of ice cream per carton at a cost of $4.00 per carton.  After 60 days, how much will she spend on ice cream?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me reason through this step-by-step.\n\n1. Cynthia eats one serving of ice cream every night.\n2. Each carton contains 15 servings.\n3. Cynthia needs ice cream for 60 days, so she needs 60 servings total.\n4. To find the number of cartons needed, divide total servings by servings per carton:  \n   60 servings ÷ 15 servings per carton = 4 cartons.\n5. Each carton costs $4.00.\n6. Total cost = number of cartons × cost per carton = 4 × $4.00 = $16.00.\n\nFINAL ANSWER: 16",
+  "extracted_answer": "16",
+  "is_correct": true,
+  "correct_answer": "16",
+  "answer_type": "numeric_exact",
+  "question": "Cynthia eats one serving of ice cream every night.  She buys cartons of ice cream with 15 servings of ice cream per carton at a cost of $4.00 per carton.  After 60 days, how much will she spend on ice cream?",
+  "source": "GSM8K"
+}

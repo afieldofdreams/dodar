@@ -1,0 +1,21 @@
+{
+  "task_id": "MED-007",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:23:24.069622Z",
+  "latency_seconds": 11.42,
+  "input_tokens": 180,
+  "output_tokens": 330,
+  "cost_usd": 0.0006,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A 29-year-old man diagnosed with schizophrenia 4 years ago presents for follow-up to discuss his medication. The patient was diagnosed with schizophrenia 4 years ago and has since tried several antipsychotic medications, none of which have been able to treat his negative symptoms. He has changed to clozapine 2 weeks ago and says that he does feel better. His physical exam is unremarkable, and he is responding appropriately to questioning. If this patient’s current medication is to be continued, which of the following laboratory tests should be ordered at this time?\n\n  A: Slit-lamp examination\n  B: Electrocardiogram\n  C: Prolactin level\n  D: Complete blood count\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "This is a patient with schizophrenia who was started on clozapine 2 weeks ago. Clozapine is often used in treatment-resistant schizophrenia, especially when negative symptoms persist despite other antipsychotics.\n\nKey points about clozapine:\n\n- It has a unique side effect profile compared to other antipsychotics.\n\n- The most serious and life-threatening side effect is agranulocytosis (severe neutropenia), which can occur at any time but is most common within the first 6 months of therapy.\n\n- Due to this risk, regular monitoring of the complete blood count (CBC) with differential is mandatory during treatment.\n\n- Slit-lamp examination: This is mostly relevant for medications that cause ocular toxicity, such as thioridazine or chlorpromazine causing pigment deposits, or for hydroxychloroquine.\n\n- Electrocardiogram (ECG): While some antipsychotics can prolong the QT interval (e.g., ziprasidone), clozapine has a risk for myocarditis and cardiomyopathy. Although an initial ECG might be reasonable, the priority test after starting clozapine is CBC monitoring.\n\n- Prolactin level: Elevated prolactin is a side effect commonly seen with typical antipsychotics and risperidone but less commonly with clozapine, which can actually lower prolactin levels.\n\nTherefore, the essential test after starting clozapine is frequent CBCs to monitor for neutropenia/agranulocytosis.\n\nTherefore, the lab test that must be ordered now is a complete blood count (CBC).\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "A 29-year-old man diagnosed with schizophrenia 4 years ago presents for follow-up to discuss his medication. The patient was diagnosed with schizophrenia 4 years ago and has since tried several antipsychotic medications, none of which have been able to treat his negative symptoms. He has changed to clozapine 2 weeks ago and says that he does feel better. His physical exam is unremarkable, and he is responding appropriately to questioning. If this patient’s current medication is to be continued, which of the following laboratory tests should be ordered at this time?",
+  "source": "MedQA-USMLE"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-WL-003",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:39:27.174035Z",
+  "latency_seconds": 3.85,
+  "input_tokens": 75,
+  "output_tokens": 319,
+  "cost_usd": 0.00054,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Question: Delbert lies. Shalonda says Delbert tells the truth. Tamika says Shalonda lies. Sal says Tamika lies. Helene says Sal lies. Does Helene tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the statements step-by-step.\n\nWe are given:\n\n1. Delbert lies.\n2. Shalonda says Delbert tells the truth.\n3. Tamika says Shalonda lies.\n4. Sal says Tamika lies.\n5. Helene says Sal lies.\n\nWe want to determine: Does Helene tell the truth?\n\n---\n\n### Step 1: Known fact\n- Delbert lies.  \n  So, Delbert is a liar.\n\n### Step 2: Analyze Shalonda's statement\n- Shalonda says: \"Delbert tells the truth.\"  \n  Since Delbert lies (known fact), Shalonda's statement is false.  \n  Therefore, **Shalonda lies.**\n\n### Step 3: Analyze Tamika's statement\n- Tamika says: \"Shalonda lies.\"  \n  From Step 2, Shalonda does lie.  \n  So Tamika's statement is true.  \n  Therefore, **Tamika tells the truth.**\n\n### Step 4: Analyze Sal's statement\n- Sal says: \"Tamika lies.\"  \n  Tamika tells the truth (Step 3).  \n  So Sal's statement is false.  \n  Therefore, **Sal lies.**\n\n### Step 5: Analyze Helene's statement\n- Helene says: \"Sal lies.\"  \n  Sal lies (Step 4).  \n  So Helene's statement is true.  \n  Therefore, **Helene tells the truth.**\n\n---\n\n### Conclusion:\nHelene tells the truth.\n\n---\n\nFINAL ANSWER: Yes",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "Question: Delbert lies. Shalonda says Delbert tells the truth. Tamika says Shalonda lies. Sal says Tamika lies. Helene says Sal lies. Does Helene tell the truth?",
+  "source": "BBH/web_of_lies"
+}

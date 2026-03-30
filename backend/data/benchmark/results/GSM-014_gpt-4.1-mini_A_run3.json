@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-014",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:37:04.118553Z",
+  "latency_seconds": 2.26,
+  "input_tokens": 96,
+  "output_tokens": 117,
+  "cost_usd": 0.000226,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "April is donating plant pots to a local school for their new garden. They ask for 30 plant pots for the daisies, and twice as many for the roses. April had already bought 100 plant pots from the garden center before she knew how many she needed. How many plant pots does April have left over?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "First, find out how many plant pots April needs in total.\n\n- The school asks for 30 plant pots for daisies.\n- They ask for twice as many for roses, so:\n  \\( 2 \\times 30 = 60 \\) plant pots for roses.\n\nTotal needed = pots for daisies + pots for roses = \\(30 + 60 = 90\\).\n\nApril bought 100 plant pots.\n\nSubtract the number of pots needed from what she has:\n\n\\(100 - 90 = 10\\) plant pots left over.\n\nFINAL ANSWER: 10",
+  "extracted_answer": "10",
+  "is_correct": true,
+  "correct_answer": "10",
+  "answer_type": "numeric_exact",
+  "question": "April is donating plant pots to a local school for their new garden. They ask for 30 plant pots for the daisies, and twice as many for the roses. April had already bought 100 plant pots from the garden center before she knew how many she needed. How many plant pots does April have left over?",
+  "source": "GSM8K"
+}

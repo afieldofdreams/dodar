@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-004",
+  "condition": "D",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:06:01.586865Z",
+  "latency_seconds": 4.15,
+  "input_tokens": 247,
+  "output_tokens": 267,
+  "cost_usd": 0.000526,
+  "system_prompt_sent": "When answering this question, use the Thought-Action-Observation reasoning pattern. Alternate between reasoning about the problem and taking concrete analytical actions.\n\nFor each step:\n\nThought: Reason about what you currently know, what you need to figure out, and what approach to try next.\n\nAction: Perform a specific analytical action (e.g., identify key information, apply a formula, evaluate an option, check a constraint, test a hypothesis).\n\nObservation: State what you learned from that action and whether it changes your understanding.\n\nRepeat this Thought-Action-Observation cycle until you have enough information to answer confidently. Then provide your final answer.\n\nYou may use as many cycles as needed. Each cycle should build on what you learned in the previous one.",
+  "user_prompt_sent": "Use the Thought-Action-Observation pattern.\n\nHow would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Thought: The question is about causation—whether Alex dating Jamie caused Alex to be fired. To understand how a typical person would answer, I need to consider how people generally interpret cause and effect in workplace situations, particularly involving policy violations.\n\nAction: Identify key information:\n- Company policy prohibits employees dating direct reports.\n- Alex is a manager.\n- Jamie is Alex’s direct report.\n- Alex begins dating Jamie.\n- Alex is fired.\n\nPeople typically see a direct policy violation as a reason for disciplinary action, including firing.\n\nObservation: Given these facts, a typical person would likely conclude that Alex dating Jamie led to Alex being fired, as it violated the policy and caused the company to take action.\n\nThought: Next, consider if someone might say it did not cause the firing—perhaps Alex was fired for other reasons? But the question implies the firing was related to the policy. Most would attribute causation to the policy violation.\n\nAction: Evaluate possible alternative views. Could someone claim correlation but not causation? Possibly, but the policy and the consecutive events indicate causation stronger than just correlation.\n\nObservation: The typical interpretation aligns with causation because the policy exists to discourage such behavior, and breaking it results in firing.\n\nFINAL ANSWER: Yes, Alex dating Jamie caused Alex to be fired because it violated the company’s HR policy.",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?",
+  "source": "BBH/causal_judgement"
+}

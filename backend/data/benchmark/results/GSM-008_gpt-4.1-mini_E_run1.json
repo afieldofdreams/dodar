@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-008",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T12:00:05.949347Z",
+  "latency_seconds": 6.23,
+  "input_tokens": 292,
+  "output_tokens": 357,
+  "cost_usd": 0.000688,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nGarrett is popping popcorn for a snack. As the pan of kernels heats up, the kernels start popping faster. Twenty pop in the first 30 seconds of cooking, then three times that amount in the next 30 seconds. The kernels increase to four times the initial popping rate in the next thirty seconds, but in the final 30 seconds, the popping slows down to half the rate as the past 30 seconds. After Garrett takes the pan off the heat, a quarter of the number of kernels that popped in the final 30 seconds of cooking also pop from the residual heat. How many pieces of popcorn does Garrett have to eat?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nTo solve this problem, we need to understand the concept of rates over time and how quantities change according to those rates. Here, the problem describes the number of popcorn kernels popping over successive equal time intervals (each 30 seconds), with the popping rate changing in each interval. The key steps are to:\n\n1. Identify the initial popping rate (or quantity in the first interval).\n2. Determine the quantities popped in each time interval based on the multiples of the initial rate.\n3. Account for changes in the popping rate in each subsequent interval.\n4. Finally, after the heating stops, calculate the extra popcorn popped due to residual heat, which is a fraction of the last interval's popped kernels.\n\nThis boils down to simple multiplication and addition of popcorn kernels popped in each time segment.\n\n---\n\nStep 2 - REASON:  \n- First 30 seconds: 20 kernels pop. This is our initial amount.  \n- Next 30 seconds: three times the first 30 seconds' amount: 3 × 20 = 60 kernels pop.  \n- Third 30 seconds: four times the initial rate: 4 × 20 = 80 kernels pop.  \n- Fourth 30 seconds: half the rate of the previous 30 seconds. The previous was 80 kernels, so half of this is 80 / 2 = 40 kernels pop.  \n- After cooking finishes: A quarter of the number popped in the last 30 seconds pop due to residual heat. A quarter of 40 is 40 / 4 = 10 kernels pop.\n\nNow add all the popped kernels:  \n20 + 60 + 80 + 40 + 10 = 210 kernels.\n\n---\n\nFINAL ANSWER: 210",
+  "extracted_answer": "210",
+  "is_correct": true,
+  "correct_answer": "210",
+  "answer_type": "numeric_exact",
+  "question": "Garrett is popping popcorn for a snack. As the pan of kernels heats up, the kernels start popping faster. Twenty pop in the first 30 seconds of cooking, then three times that amount in the next 30 seconds. The kernels increase to four times the initial popping rate in the next thirty seconds, but in the final 30 seconds, the popping slows down to half the rate as the past 30 seconds. After Garrett takes the pan off the heat, a quarter of the number of kernels that popped in the final 30 seconds of cooking also pop from the residual heat. How many pieces of popcorn does Garrett have to eat?",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-004",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:48:07.083313Z",
+  "latency_seconds": 3.24,
+  "input_tokens": 107,
+  "output_tokens": 252,
+  "cost_usd": 0.000446,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A student observes the time it takes a marble to roll down a ramp four times. Which of these displays will best communicate the student's observations?\n\n  A: a pie chart with four different sections\n  B: a line graph with continuous data points\n  C: a bar graph with a bar for each trial\n  D: a table with four rows and four columns\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option in the context of the student's observations.\n\n- The student observed the time it takes a marble to roll down a ramp for four trials. This means there are four individual measurements of time.\n\nOption A: a pie chart with four different sections  \n- Pie charts show proportions or percentages of a whole. Time measurements for individual trials don’t represent parts of a whole, so this is not appropriate.\n\nOption B: a line graph with continuous data points  \n- Line graphs are good for showing trends over continuous data or changes over time. Although it could be used if the trials are sequential, the data points themselves are discrete, so this is less appropriate than a bar graph here.\n\nOption C: a bar graph with a bar for each trial  \n- Bar graphs are good for showing discrete data and making comparisons among trials straightforward. A bar for each trial showing the time would clearly communicate the student's observations.\n\nOption D: a table with four rows and four columns  \n- A table can display raw data but is not a graphical display. The question asks for a display to best communicate observations, so a graphical representation is preferable.\n\nTherefore, the best display to communicate the student's observations is a bar graph with a bar for each trial.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "A student observes the time it takes a marble to roll down a ramp four times. Which of these displays will best communicate the student's observations?",
+  "source": "ARC-Challenge"
+}

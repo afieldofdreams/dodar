@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-002",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:05:14.676896Z",
+  "latency_seconds": 3.52,
+  "input_tokens": 99,
+  "output_tokens": 170,
+  "cost_usd": 0.000312,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "How would a typical person answer each of the following questions about causation?\nSuzy and Billy both throw rocks at a bottle at the same time. Suzy's rock arrives first and shatters the bottle. Billy's rock arrives a moment later, but the bottle is already shattered. Did Billy cause the bottle to shatter?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's break down the situation:\n\n- Both Suzy and Billy throw rocks at the bottle simultaneously.\n- Suzy's rock arrives first and shatters the bottle.\n- Billy's rock arrives shortly after, but the bottle is already shattered by then.\n\nA typical person usually thinks about causation in terms of what directly led to the effect. Since the bottle was whole until Suzy's rock arrived and shattered it, the shattering was directly caused by Suzy's rock, not Billy's.\n\nEven though Billy also threw a rock, his rock didn't contribute to the shattering because the bottle was already broken by the time it hit.\n\nTherefore, most people would say Billy did not cause the bottle to shatter since his action did not produce a noticeable change or outcome.\n\nFINAL ANSWER: No, Billy did not cause the bottle to shatter.",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nSuzy and Billy both throw rocks at a bottle at the same time. Suzy's rock arrives first and shatters the bottle. Billy's rock arrives a moment later, but the bottle is already shattered. Did Billy cause the bottle to shatter?",
+  "source": "BBH/causal_judgement"
+}

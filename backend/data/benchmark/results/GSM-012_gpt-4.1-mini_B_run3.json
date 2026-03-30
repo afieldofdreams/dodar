@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-012",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:33:41.467367Z",
+  "latency_seconds": 4.66,
+  "input_tokens": 355,
+  "output_tokens": 417,
+  "cost_usd": 0.000809,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nSasha notices that prices for lumber have gone up 50% in the last few months after she bought some lumber. Since she has leftovers, she decides to sell them. She has leftover ten 2 x 4 x 10 boards that cost her $10 each. She also has five 4 x 4 x 10 boards she bought for $16 each. If she sells them all, how much profit does she make?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Identify the given information.\n- Sasha has 10 boards of 2 x 4 x 10, which she bought at $10 each.\n- Sasha has 5 boards of 4 x 4 x 10, which she bought at $16 each.\n- Prices for lumber have gone up 50% since she bought them.\n- She wants to sell all leftover boards at the new price.\n\nStep 2: Calculate the new selling price for each type of board.\nFor the 2 x 4 x 10 boards:\n- Original price = $10\n- Price increase = 50% of $10 = 0.50 × $10 = $5\n- New price per 2 x 4 x 10 board = $10 + $5 = $15\n\nFor the 4 x 4 x 10 boards:\n- Original price = $16\n- Price increase = 50% of $16 = 0.50 × $16 = $8\n- New price per 4 x 4 x 10 board = $16 + $8 = $24\n\nStep 3: Calculate total cost price of all leftover boards.\n- Cost of 10 boards (2 x 4 x 10) = 10 × $10 = $100\n- Cost of 5 boards (4 x 4 x 10) = 5 × $16 = $80\n- Total cost = $100 + $80 = $180\n\nStep 4: Calculate total selling price of all leftover boards.\n- Selling price of 10 boards (2 x 4 x 10) = 10 × $15 = $150\n- Selling price of 5 boards (4 x 4 x 10) = 5 × $24 = $120\n- Total selling price = $150 + $120 = $270\n\nStep 5: Calculate profit.\nProfit = Total selling price - Total cost price\nProfit = $270 - $180 = $90\n\nFINAL ANSWER: 90",
+  "extracted_answer": "90",
+  "is_correct": true,
+  "correct_answer": "90",
+  "answer_type": "numeric_exact",
+  "question": "Sasha notices that prices for lumber have gone up 50% in the last few months after she bought some lumber. Since she has leftovers, she decides to sell them. She has leftover ten 2 x 4 x 10 boards that cost her $10 each. She also has five 4 x 4 x 10 boards she bought for $16 each. If she sells them all, how much profit does she make?",
+  "source": "GSM8K"
+}

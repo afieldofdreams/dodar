@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-S-004",
+  "condition": "C",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:29:11.202930Z",
+  "latency_seconds": 5.07,
+  "input_tokens": 319,
+  "output_tokens": 427,
+  "cost_usd": 0.000811,
+  "system_prompt_sent": "Work through these five phases in order. Each phase must add new reasoning, not restate previous phases.\n\n1. DIAGNOSE: What exactly is being asked? Identify the constraints that will determine the answer. State the one thing most likely to cause an error on this type of problem.\n\n2. OPTIONS: Identify the most plausible answer and the strongest competing alternative. For each, state the specific evidence for and against. Do not simply list all choices.\n\n3. DECIDE: Commit to one answer. State the single strongest reason it is correct and the single strongest reason it might be wrong.\n\n4. ACTION: Verify your chosen answer by working through the problem with that answer in mind. If the problem involves calculation, show each step. If it involves reasoning, trace the logical chain.\n\n5. REVIEW: Look for the specific error you identified in DIAGNOSE. Check whether the concern you raised in DECIDE actually applies. If you find a genuine error, change your answer. If not, confirm it.\n\nState your final answer only after completing all five phases. Do not use the phrase \"final answer\" anywhere except the final line.",
+  "user_prompt_sent": "Follow the five phases (Diagnose, Options, Decide, Action, Review).\n\nWhich statement is sarcastic?\n(A) Nothing like a surprise audit to really brighten up a Monday morning.\n(B) Nothing like a team breakfast to really brighten up a Monday morning.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "1. DIAGNOSE:\nThe question asks which of the two statements is sarcastic. Sarcasm often involves saying something that means the opposite of the literal words, usually to express annoyance or displeasure. Key constraints: recognizing tone from the content, understanding what typically would not \"brighten up\" a Monday morning. The biggest error is mistaking genuine positive statements for sarcasm or vice versa.\n\n2. OPTIONS:\n(A) \"Nothing like a surprise audit to really brighten up a Monday morning.\"\n- Evidence for sarcasm: Surprise audits are typically unpleasant, stressful events, making the statement ironic.\n- Evidence against sarcasm: None really, as audits are generally unwelcome.\n\n(B) \"Nothing like a team breakfast to really brighten up a Monday morning.\"\n- Evidence for sarcasm: Possibly if team breakfasts are disliked.\n- Evidence against sarcasm: Team breakfasts are generally considered positive, so the statement likely is sincere.\n\nStrongest plausible answer: (A) because surprise audits are commonly disliked, making the statement ironically positive.\n\nStrongest competing alternative: (B), if one assumes team breakfasts are dreary.\n\n3. DECIDE:\nI choose (A) as the sarcastic statement.\n\nStrongest reason correct: The idea that a surprise audit would \"brighten up\" a Monday morning is clearly incongruous and typically not true, so it is almost certainly sarcastic.\n\nStrongest reason it could be wrong: If the speaker genuinely enjoys surprise audits (very uncommon), then it wouldn't be sarcastic, but this is unlikely.\n\n4. ACTION:\nCheck the meaning of each phrase:\n\n(A) Surprise audit = generally negative event.\n\nSaying it \"brightens up\" a Monday morning is the opposite of reality — classic sarcasm.\n\n(B) Team breakfast = generally positive event.\n\nSaying it \"brightens up\" a Monday morning is consistent with expectation — sincere, not sarcastic.\n\n5. REVIEW:\nError risk: misreading sarcasm due to lack of tone information. But context clues (surprise audit) strongly suggest sarcasm in (A).\n\nNo detected error in reasoning.\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "(A)",
+  "answer_type": "multiple_choice",
+  "question": "Which statement is sarcastic?\n(A) Nothing like a surprise audit to really brighten up a Monday morning.\n(B) Nothing like a team breakfast to really brighten up a Monday morning.",
+  "source": "BBH/snarks"
+}

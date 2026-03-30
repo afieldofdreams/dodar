@@ -1,0 +1,21 @@
+{
+  "task_id": "MED-014",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:26:00.348597Z",
+  "latency_seconds": 2.08,
+  "input_tokens": 412,
+  "output_tokens": 177,
+  "cost_usd": 0.000448,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A bakery makes 120 cupcakes every morning. They sell 60% by lunchtime and 25% of the remaining in the afternoon. At the end of the day, they donate unsold cupcakes. If they operate 6 days a week, how many cupcakes do they donate each week?\n\nEXAMPLE ANSWER: Let me work through this step by step.\n\nStarting cupcakes per day: 120\nSold by lunchtime: 60% of 120 = 72 cupcakes\nRemaining after lunch: 120 - 72 = 48 cupcakes\nSold in afternoon: 25% of 48 = 12 cupcakes\nRemaining after afternoon: 48 - 12 = 36 cupcakes\n\nSo 36 cupcakes donated each day.\nPer week (6 days): 36 x 6 = 216 cupcakes\n\nVerify: 120 - 72 = 48. 48 x 0.25 = 12. 48 - 12 = 36. 36 x 6 = 216. Checks out.\n\nFINAL ANSWER: 216\n\nNow solve the following problem using the same careful reasoning approach.\n\nPublic health researchers are reviewing data from an outbreak of hepatitis A that was traced to contaminated produce from a popular restaurant. A case series investigation with prospective and retrospective follow-up found that 500 individuals dined at the restaurant during the week of study. The incidence of hepatitis A infection was found to be 25%, and the total number of deaths recorded among the incident cases was 5 individuals. What was the case-fatality rate for the hepatitis A outbreak?\n\n  A: 4%\n  B: 10%\n  C: 20%\n  D: 25%\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's solve this step by step.\n\n1. Total individuals who dined at the restaurant: 500\n2. Incidence of hepatitis A infection: 25% of 500\n   - Calculate number of incident cases: 0.25 × 500 = 125 cases\n3. Total deaths among incident cases: 5 individuals\n4. Case-fatality rate (CFR) is calculated as:\n   \\[\n   \\text{CFR} = \\frac{\\text{Number of deaths}}{\\text{Number of incident cases}} \\times 100\\%\n   \\]\n5. Substituting values:\n   \\[\n   \\text{CFR} = \\frac{5}{125} \\times 100\\% = 4\\%\n   \\]\n\nTherefore, the case-fatality rate is 4%.\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "Public health researchers are reviewing data from an outbreak of hepatitis A that was traced to contaminated produce from a popular restaurant. A case series investigation with prospective and retrospective follow-up found that 500 individuals dined at the restaurant during the week of study. The incidence of hepatitis A infection was found to be 25%, and the total number of deaths recorded among the incident cases was 5 individuals. What was the case-fatality rate for the hepatitis A outbreak?",
+  "source": "MedQA-USMLE"
+}

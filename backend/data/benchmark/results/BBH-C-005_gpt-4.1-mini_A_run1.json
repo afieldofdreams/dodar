@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-005",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T19:46:30.738695Z",
+  "latency_seconds": 4.56,
+  "input_tokens": 101,
+  "output_tokens": 318,
+  "cost_usd": 0.000549,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "How would a typical person answer each of the following questions about causation?\nA doctor prescribes a patient medication A. The patient takes medication A and also takes herbal supplement B, which the doctor did not know about. The patient has an adverse reaction that only occurs when A and B are taken together. Did the doctor cause the adverse reaction?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the scenario step-by-step:\n\n1. **The doctor prescribed medication A**: This is a clear action taken by the doctor.\n\n2. **The patient took medication A and herbal supplement B**: The patient chose to take the herbal supplement independently, without informing the doctor.\n\n3. **The adverse reaction only occurs when A and B are taken together**: Neither A alone nor B alone causes the reaction, but their combination does.\n\n4. **Did the doctor cause the adverse reaction?**  \n   To determine causation, people often consider whether the doctor's action directly led to the harm. In this case:\n   - The doctor prescribed medication A based on available information.\n   - The doctor did not know about supplement B.\n   - The reaction only happens due to the combination, which the doctor did not anticipate.\n   - The patient voluntarily took supplement B.\n\n5. **Common reasoning about causation in this context**:  \n   - Some might say the doctor partially caused the reaction by prescribing medication A that interacts harmfully with supplement B.\n   - Others might argue the doctor did not cause it because the doctor was unaware of B, so could not foresee or prevent the interaction.\n   - A typical person's view usually gives weight to foreseeability and knowledge. Since the doctor did not know about B, a typical person might conclude the doctor did not cause the adverse event.\n\n**FINAL ANSWER: No, the doctor did not cause the adverse reaction because the reaction only occurred due to the combination of medication A with supplement B, which the doctor did not know about.**",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nA doctor prescribes a patient medication A. The patient takes medication A and also takes herbal supplement B, which the doctor did not know about. The patient has an adverse reaction that only occurs when A and B are taken together. Did the doctor cause the adverse reaction?",
+  "source": "BBH/causal_judgement"
+}

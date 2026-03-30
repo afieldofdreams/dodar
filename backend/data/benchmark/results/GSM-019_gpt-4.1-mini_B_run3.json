@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-019",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:40:46.012357Z",
+  "latency_seconds": 2.82,
+  "input_tokens": 356,
+  "output_tokens": 228,
+  "cost_usd": 0.000507,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nCandice put 80 post-it notes in her purse before she headed out to her job at the coffee shop.  On her way, she stopped off at the store and purchased a package of Post-it notes;  At work, she placed a single Post-it note on each of 220 different cups of coffee.  If she had 23 post-it notes remaining overall, how many Post-it notes were in the package that she purchased?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Identify the total number of Post-it notes Candice started with.\n\nShe initially put 80 Post-it notes in her purse.\n\nStep 2: Let the number of Post-it notes in the package she bought be \\( x \\).\n\nStep 3: Calculate the total number of Post-it notes Candice had after purchasing the package:\n\n\\[ 80 + x \\]\n\nStep 4: Candice used one Post-it note for each of 220 cups, so she used 220 Post-it notes.\n\nStep 5: The number of Post-it notes remaining after placing notes on the cups is given as 23.\n\nStep 6: Set up the equation:\n\n\\[ \\text{Total after purchase} - \\text{Used} = \\text{Remaining} \\]\n\n\\[ (80 + x) - 220 = 23 \\]\n\nStep 7: Solve the equation for \\( x \\):\n\n\\[\n80 + x - 220 = 23 \\\\\nx - 140 = 23 \\\\\nx = 23 + 140 \\\\\nx = 163\n\\]\n\nFINAL ANSWER: 163",
+  "extracted_answer": "163",
+  "is_correct": true,
+  "correct_answer": "163",
+  "answer_type": "numeric_exact",
+  "question": "Candice put 80 post-it notes in her purse before she headed out to her job at the coffee shop.  On her way, she stopped off at the store and purchased a package of Post-it notes;  At work, she placed a single Post-it note on each of 220 different cups of coffee.  If she had 23 post-it notes remaining overall, how many Post-it notes were in the package that she purchased?",
+  "source": "GSM8K"
+}

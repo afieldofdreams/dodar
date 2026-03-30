@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-014",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:24:24.180314Z",
+  "latency_seconds": 2.66,
+  "input_tokens": 330,
+  "output_tokens": 196,
+  "cost_usd": 0.000446,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nWhich of the following is a reason loggerhead turtles bury their eggs in holes that they dig on the beach?\n\n  A: to keep the eggs covered with water\n  B: to provide the eggs with nutrients\n  C: to hide the eggs from predators\n  D: to protect the eggs from sand\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option step by step:\n\nA: \"to keep the eggs covered with water\"  \nLoggerhead turtles lay their eggs on sandy beaches above the high tide line, not underwater, because turtle eggs need oxygen from air to develop. Keeping eggs covered with water would be harmful. So this is unlikely.\n\nB: \"to provide the eggs with nutrients\"  \nEggs generally contain their own nutrients for development. Burying eggs in sand doesn't supply additional nutrients. So this is unlikely.\n\nC: \"to hide the eggs from predators\"  \nBurying eggs in the sand helps hide them from predators such as birds, crabs, and mammals. This is a plausible and commonly known reason.\n\nD: \"to protect the eggs from sand\"  \nEggs are laid in the sand itself; so protecting eggs from sand is illogical.\n\nTherefore, the reason loggerhead turtles bury their eggs in holes is primarily to hide the eggs from predators.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following is a reason loggerhead turtles bury their eggs in holes that they dig on the beach?",
+  "source": "ARC-Challenge"
+}

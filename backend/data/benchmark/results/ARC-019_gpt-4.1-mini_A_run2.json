@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-019",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:44:46.661551Z",
+  "latency_seconds": 2.99,
+  "input_tokens": 79,
+  "output_tokens": 207,
+  "cost_usd": 0.000363,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "How is a skin cell from a mouse similar to an amoeba?\n\n  A: Both need energy.\n  B: Both have cell walls.\n  C: Both move with pseudopodia.\n  D: Both consume carbon dioxide.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option:\n\nA: Both need energy.  \n- A mouse skin cell requires energy to function.  \n- An amoeba also needs energy to carry out life processes.  \nThis is true for almost all living cells.\n\nB: Both have cell walls.  \n- Mouse skin cells are animal cells and do not have cell walls.  \n- Amoebas also do not have a cell wall; they have a flexible cell membrane.  \nSo this is false.\n\nC: Both move with pseudopodia.  \n- Amoebas move using pseudopodia (false feet).  \n- Mouse skin cells typically do not move using pseudopodia.  \nSo this is false.\n\nD: Both consume carbon dioxide.  \n- Most cells do not consume carbon dioxide; they produce it as a waste product during cellular respiration.  \n- Neither mouse cells nor amoebas consume CO2; rather, they use oxygen and release CO2.  \nSo this is false.\n\nTherefore, the best answer is A.\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "How is a skin cell from a mouse similar to an amoeba?",
+  "source": "ARC-Challenge"
+}

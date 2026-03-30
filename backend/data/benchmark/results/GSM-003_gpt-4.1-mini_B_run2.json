@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-003",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:38:00.139721Z",
+  "latency_seconds": 2.41,
+  "input_tokens": 317,
+  "output_tokens": 184,
+  "cost_usd": 0.000421,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nIn a neighborhood, the number of rabbits pets is twelve less than the combined number of pet dogs and cats. If there are two cats for every dog, and the number of dogs is 60, how many pets in total are in the neighborhood?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Identify given information:\n- Number of dogs = 60\n- Number of cats = 2 cats for every dog\n- Number of rabbits = (number of dogs + number of cats) - 12\n\nStep 2: Calculate the number of cats:\nSince there are 2 cats for every dog and the number of dogs is 60,\nNumber of cats = 2 × 60 = 120\n\nStep 3: Calculate the combined number of dogs and cats:\nDogs + Cats = 60 + 120 = 180\n\nStep 4: Calculate the number of rabbits:\nRabbits = (Dogs + Cats) - 12 = 180 - 12 = 168\n\nStep 5: Calculate the total number of pets:\nTotal pets = Dogs + Cats + Rabbits = 60 + 120 + 168 = 348\n\nFINAL ANSWER: 348",
+  "extracted_answer": "348",
+  "is_correct": true,
+  "correct_answer": "348",
+  "answer_type": "numeric_exact",
+  "question": "In a neighborhood, the number of rabbits pets is twelve less than the combined number of pet dogs and cats. If there are two cats for every dog, and the number of dogs is 60, how many pets in total are in the neighborhood?",
+  "source": "GSM8K"
+}

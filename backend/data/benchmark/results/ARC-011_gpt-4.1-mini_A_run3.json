@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-011",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:27:39.652187Z",
+  "latency_seconds": 2.35,
+  "input_tokens": 85,
+  "output_tokens": 210,
+  "cost_usd": 0.00037,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Naomi has a pet dog. Which of the following characteristics did the dog most likely inherit from its parents?\n\n  A: its weight\n  B: its favorite food\n  C: the color of its fur\n  D: the place where it lives\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option to determine which characteristics the dog most likely inherited from its parents:\n\nA: **its weight**  \nWeight can be influenced by genetics, meaning genes inherited from parents contribute to an animal’s potential size. However, weight is also heavily influenced by environmental factors like diet and activity level. So, weight is somewhat inherited but not strictly determined by genetics alone.\n\nB: **its favorite food**  \nFavorite food is usually influenced by experience, learning, and environment rather than genetics. Animals can develop food preferences based on what they have been exposed to, not necessarily inherited traits.\n\nC: **the color of its fur**  \nFur color is a genetic trait that is directly inherited from a dog’s parents. Genes determine pigments and patterns in fur, making this a highly heritable characteristic.\n\nD: **the place where it lives**  \nWhere a dog lives depends entirely on its environment and human owners, not genetics.\n\nConsidering this, the characteristic most likely inherited genetically from the parents is the color of its fur.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Naomi has a pet dog. Which of the following characteristics did the dog most likely inherit from its parents?",
+  "source": "ARC-Challenge"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-001",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:44:51.271193Z",
+  "latency_seconds": 3.62,
+  "input_tokens": 339,
+  "output_tokens": 267,
+  "cost_usd": 0.000563,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nWhich of the following best explains the importance of having a standardized taxonomic classification system when determining the relatedness of organisms?\n\n  A: to help scientists in conservation efforts\n  B: to determine the geographical habitats of all organisms\n  C: to have a consistent definition for all scientists\n  D: to understand the role of organisms in a food web\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1: Understanding the question  \nThe question asks for the best explanation of the importance of having a standardized taxonomic classification system when determining the relatedness of organisms.\n\nStep 2: Consider what taxonomic classification is  \nTaxonomic classification groups organisms based on shared characteristics and evolutionary relationships. A standardized system means scientists all use the same criteria and nomenclature, ensuring consistency.\n\nStep 3: Evaluate each choice\n\n- A: \"to help scientists in conservation efforts\"  \nAlthough classification can aid conservation by identifying species, it is not the primary purpose of having a standardized system to determine relatedness.\n\n- B: \"to determine the geographical habitats of all organisms\"  \nTaxonomy does not focus on geographical habitats but rather on classification based on characteristics and evolutionary relationships.\n\n- C: \"to have a consistent definition for all scientists\"  \nThis directly addresses the purpose of standardization in taxonomy—ensuring all scientists classify organisms in a consistent, universally accepted way, which is crucial when comparing relatedness.\n\n- D: \"to understand the role of organisms in a food web\"  \nKnowing the role of organisms in food webs depends more on ecology rather than taxonomic classification.\n\nStep 4: Conclusion  \nThe best explanation that aligns with the importance of a standardized taxonomic classification system for determining relatedness is C.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following best explains the importance of having a standardized taxonomic classification system when determining the relatedness of organisms?",
+  "source": "ARC-Challenge"
+}

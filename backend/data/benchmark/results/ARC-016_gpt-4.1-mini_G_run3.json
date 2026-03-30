@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-016",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:33:53.139261Z",
+  "latency_seconds": 2.61,
+  "input_tokens": 542,
+  "output_tokens": 221,
+  "cost_usd": 0.00057,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A 65-year-old man presents with sudden onset of slurred speech and right-sided weakness that started 2 hours ago. He has a history of atrial fibrillation and takes warfarin. His INR today is 1.4. CT head shows no haemorrhage. What is the most appropriate immediate management?\nA: Administer IV alteplase (thrombolysis)\nB: Increase warfarin dose\nC: Start aspirin 300mg\nD: Arrange urgent MRI brain\n\nEXAMPLE ANSWER: Let me work through this carefully.\n\nThe presentation is acute onset neurological deficit (slurred speech, right-sided weakness) within a 2-hour window. This is a clinical stroke presentation.\n\nKey factors to consider:\n- 2-hour onset puts him within the thrombolysis window (typically 4.5 hours)\n- CT shows no haemorrhage, so this is likely ischaemic\n- He has AF, which is a major risk factor for cardioembolic stroke\n- His INR is 1.4, which is subtherapeutic (target typically 2-3 for AF)\n- The subtherapeutic INR may explain why he had a stroke despite being on warfarin\n\nNow evaluating each option:\n- A (IV alteplase): Thrombolysis. Within time window, CT excludes haemorrhage. Guidelines generally consider thrombolysis if INR < 1.7.\n- B (Increase warfarin): Addresses long-term problem but nothing for acute stroke.\n- C (Aspirin 300mg): Standard if thrombolysis contraindicated, but thrombolysis is an option here.\n- D (Urgent MRI): Would delay treatment. CT already excluded haemorrhage.\n\nSince he is within the thrombolysis window, CT excludes haemorrhage, and INR 1.4 is below the 1.7 threshold, IV alteplase is most appropriate.\n\nFINAL ANSWER: A\n\nNow solve the following problem using the same careful reasoning approach.\n\nA small laundry room has several shelves above the washing machine. These shelves are an example of\n\n  A: making the wall stronger.\n  B: using storage space efficiently.\n  C: using a machine for more than one purpose.\n  D: solving the need for shelter in a creative way.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the problem step by step.\n\nThe scenario is about a small laundry room that has several shelves above the washing machine.\n\nWe need to determine what this represents as an example of.\n\nConsider each option:\n\nA: making the wall stronger.\n- Shelves above a washing machine are usually fixed on the wall but they don't typically strengthen the wall. Their purpose isn't structural reinforcement.\n\nB: using storage space efficiently.\n- Shelves above the washing machine make use of vertical space that might otherwise be wasted. This helps in maximizing storage in a small laundry room, which is usually limited in space.\n\nC: using a machine for more than one purpose.\n- The washing machine is used for washing clothes and does not take on other purposes because of the shelves. The shelves being above the machine do not change this.\n\nD: solving the need for shelter in a creative way.\n- The laundry room already provides shelter, but shelves above the washing machine don’t address shelter needs.\n\nGiven this, the shelves primarily represent efficient use of available space, particularly vertical space in a small or limited area.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "A small laundry room has several shelves above the washing machine. These shelves are an example of",
+  "source": "ARC-Challenge"
+}

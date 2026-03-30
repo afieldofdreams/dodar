@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-006",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:43:23.702681Z",
+  "latency_seconds": 2.75,
+  "input_tokens": 96,
+  "output_tokens": 210,
+  "cost_usd": 0.000374,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Winds blowing inland from oceans tend to have greater moisture than winds blowing over land. How does the high moisture content affect the coastal area climate?\n\n  A: There is less condensation.\n  B: There are fewer hurricanes.\n  C: There is greater precipitation.\n  D: There are more smog-filled areas.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Winds blowing inland from oceans carry a lot of moisture because the ocean is a large source of water that evaporates into the air. When these moist winds reach coastal areas, the moisture tends to cool and condense, forming clouds and precipitation. Therefore, coastal areas typically experience higher precipitation due to the high moisture content in ocean-blown winds.\n\nLet's analyze each option:\n\nA: There is less condensation.  \n- This is incorrect because moist air coming from the ocean is more likely to condense into clouds when it cools over land, leading to more condensation, not less.\n\nB: There are fewer hurricanes.  \n- This is incorrect as hurricanes form over warm ocean waters and are not directly reduced by moisture content in winds blowing inland.\n\nC: There is greater precipitation.  \n- This is correct because the high moisture content leads to more condensation and precipitation in coastal areas.\n\nD: There are more smog-filled areas.  \n- Smog is related to pollution and is not directly influenced by moisture content from ocean winds.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Winds blowing inland from oceans tend to have greater moisture than winds blowing over land. How does the high moisture content affect the coastal area climate?",
+  "source": "ARC-Challenge"
+}

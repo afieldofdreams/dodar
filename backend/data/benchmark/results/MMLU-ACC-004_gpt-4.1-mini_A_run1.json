@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-004",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:35:27.000424Z",
+  "latency_seconds": 8.0,
+  "input_tokens": 180,
+  "output_tokens": 623,
+  "cost_usd": 0.001069,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Swift Co. has identified three operating segments that may require separate disclosure in Swift's general purpose financial statements for the year ended December 31 year 2. Information for year 2 follows: Segment (in thousands) A B C Total Reported revenue $ 42 $ 121 $ 14 $ 177 Reported profit(loss) $ 12 $ 65 $ (3) $ 74 Assets $ 470 $ 800 $ 80 $ 1350 Which of Swift's segments are required to be separately disclosed in its December 31 year 2 financial statements?\n\n  A: A and B only.\n  B: A and C only.\n  C: B and C only.\n  D: A B and C.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "To determine which segments are required to be separately disclosed, we follow the criteria specified by accounting standards (generally IFRS 8 or ASC 280 for US GAAP), which typically require segment reporting if certain quantitative thresholds are met. The usual tests are:\n\n1. **Revenue Test:** A segment's reported revenue (including both sales to external customers and intersegment sales or transfers) is 10% or more of the combined revenue of all operating segments.\n2. **Profit or Loss Test:** The absolute amount of the segment's reported profit or loss is 10% or more of the greater of (i) the combined reported profit of all operating segments that did not report a loss and (ii) the combined reported loss of all operating segments that did report a loss.\n3. **Asset Test:** A segment's assets are 10% or more of the combined assets of all operating segments.\n\nIf a segment meets any one of the above criteria, it must be separately disclosed.\n\n---\n\n### Step 1: Calculate 10% thresholds\n\n- Total reported revenue = 177  \n- 10% of total revenue = 177 × 10% = 17.7\n\n- Total profit/loss = 74 (sum of 12 + 65 - 3 = 74)  \n  - Segments with profit: A (12), B (65) → total profit = 77  \n  - Segments with loss: C (-3) → total loss = 3  \n- Greater of total profit or total loss = 77 (profit)  \n- 10% of greater aggregate profit or loss = 77 × 10% = 7.7\n\n- Total assets = 1350  \n- 10% of total assets = 1350 × 10% = 135\n\n---\n\n### Step 2: Test for each segment\n\n| Segment | Revenue (in thousands) | Profit (in thousands) | Assets (in thousands) | Meets revenue 10%? | Meets profit 10%? | Meets asset 10%? |\n|---------|-----------------------|----------------------|----------------------|-------------------|------------------|------------------|\n| A       | 42                    | 12                   | 470                  | 42 ≥ 17.7 ✓       | 12 ≥ 7.7 ✓       | 470 ≥ 135 ✓      |\n| B       | 121                   | 65                   | 800                  | 121 ≥ 17.7 ✓      | 65 ≥ 7.7 ✓       | 800 ≥ 135 ✓      |\n| C       | 14                    | (3)                  | 80                   | 14 < 17.7 ✗       | 3 (absolute) < 7.7 ✗| 80 < 135 ✗     |\n\n---\n\nSegment A meets all three criteria.  \nSegment B meets all three criteria.  \nSegment C meets none of the criteria.\n\n---\n\n**Conclusion:** Only segments A and B require separate disclosure.\n\n---\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "Swift Co. has identified three operating segments that may require separate disclosure in Swift's general purpose financial statements for the year ended December 31 year 2. Information for year 2 follows: Segment (in thousands) A B C Total Reported revenue $ 42 $ 121 $ 14 $ 177 Reported profit(loss) $ 12 $ 65 $ (3) $ 74 Assets $ 470 $ 800 $ 80 $ 1350 Which of Swift's segments are required to be separately disclosed in its December 31 year 2 financial statements?",
+  "source": "MMLU/professional_accounting"
+}

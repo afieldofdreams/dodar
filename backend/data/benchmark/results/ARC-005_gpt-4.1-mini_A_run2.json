@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-005",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:34:26.792559Z",
+  "latency_seconds": 2.11,
+  "input_tokens": 105,
+  "output_tokens": 111,
+  "cost_usd": 0.00022,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Household appliances convert electricity into one or more different forms of energy. An electric fan can best be described as converting electricity into\n\n  A: heat energy only\n  B: heat energy and sound energy only\n  C: heat energy, sound energy, and mechanical energy only\n  D: heat energy, sound energy, mechanical energy, and chemical energy\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "An electric fan converts electrical energy to different forms:\n\n- Mechanical energy: The electric motor in the fan converts electrical energy into mechanical energy to rotate the blades.\n- Sound energy: The moving blades and motor produce some sound.\n- Heat energy: Electrical resistance in the motor and wiring produces some heat as a byproduct.\n- Chemical energy: There is no chemical energy conversion here because no chemical reactions are involved in the operation of an electric fan.\n\nThus, the fan converts electricity into heat energy, sound energy, and mechanical energy only.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Household appliances convert electricity into one or more different forms of energy. An electric fan can best be described as converting electricity into",
+  "source": "ARC-Challenge"
+}

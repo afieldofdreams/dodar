@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-010",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:48:21.847986Z",
+  "latency_seconds": 1.85,
+  "input_tokens": 430,
+  "output_tokens": 156,
+  "cost_usd": 0.000422,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nPoppy is solving a 1000-piece jigsaw puzzle. She places a quarter of the pieces on the board, then her mom places a third of the remaining pieces. How many jigsaw pieces are left to be placed?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me reason through this step-by-step.\n\n1. Total pieces: 1000.\n\n2. Poppy places a quarter of the pieces on the board first.\n\n- A quarter of 1000 is (1/4) × 1000 = 250 pieces.\n\n- So after Poppy places pieces, pieces remaining = 1000 - 250 = 750.\n\n3. Then her mom places a third of the remaining pieces.\n\n- Remaining before mom places: 750.\n\n- A third of 750 is (1/3) × 750 = 250 pieces.\n\n- So after mom places pieces, pieces remaining = 750 - 250 = 500.\n\nSo after both placements, 500 pieces are left unplaced.\n\nFINAL ANSWER: 500",
+  "extracted_answer": "500",
+  "is_correct": true,
+  "correct_answer": "500",
+  "answer_type": "numeric_exact",
+  "question": "Poppy is solving a 1000-piece jigsaw puzzle. She places a quarter of the pieces on the board, then her mom places a third of the remaining pieces. How many jigsaw pieces are left to be placed?",
+  "source": "GSM8K"
+}

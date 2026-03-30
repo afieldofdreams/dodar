@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-011",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:28:11.612048Z",
+  "latency_seconds": 1.96,
+  "input_tokens": 429,
+  "output_tokens": 153,
+  "cost_usd": 0.000416,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nIf two trains depart from a station in opposite directions, and one train is traveling 60 miles an hour while the other is traveling half that distance per hour, how far apart are they from each other after 3 hours?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me analyze the problem carefully step by step.\n\nTwo trains start from the same station and travel in opposite directions.\n\n- Train 1 speed = 60 miles per hour\n- Train 2 speed = half that distance per hour = 60 / 2 = 30 miles per hour\n\nThey travel for 3 hours.\n\nDistance each train travels = speed × time\n\n- Train 1 distance = 60 mph × 3 hours = 180 miles\n- Train 2 distance = 30 mph × 3 hours = 90 miles\n\nSince the trains travel in opposite directions, their distances add up to find how far apart they are.\n\nTotal distance apart = 180 miles + 90 miles = 270 miles\n\nFINAL ANSWER: 270",
+  "extracted_answer": "270",
+  "is_correct": true,
+  "correct_answer": "270",
+  "answer_type": "numeric_exact",
+  "question": "If two trains depart from a station in opposite directions, and one train is traveling 60 miles an hour while the other is traveling half that distance per hour, how far apart are they from each other after 3 hours?",
+  "source": "GSM8K"
+}

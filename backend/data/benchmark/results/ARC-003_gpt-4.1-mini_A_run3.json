@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-003",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:49:28.482223Z",
+  "latency_seconds": 3.64,
+  "input_tokens": 108,
+  "output_tokens": 285,
+  "cost_usd": 0.000499,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Students are studying how the positions of Earth and the Sun effect changes on Earth. After four seasons have passed on Earth, which has happened?\n\n  A: Earth has completed one rotation around the Moon.\n  B: Earth has completed one revolution around the Sun.\n  C: The Sun has completed one revolution around Earth.\n  D: The Moon has completed one revolution around Earth.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the question carefully.\n\nThe question states: \"After four seasons have passed on Earth, which has happened?\"\n\nWe know the following facts:\n\n- Earth experiences four seasons (spring, summer, autumn, winter) in one year.\n- One year is the time it takes Earth to complete one revolution around the Sun.\n- The Moon completes one revolution around Earth approximately every 27.3 days.\n- Earth rotates on its axis once every 24 hours (this is not a revolution or orbit).\n- The Sun does not revolve around Earth; Earth revolves around the Sun.\n\nNow let's analyze the answer choices:\n\nA: Earth has completed one rotation around the Moon.  \n- Earth does not revolve around the Moon; the Moon revolves around the Earth. This choice is incorrect.\n\nB: Earth has completed one revolution around the Sun.  \n- One year (one full Earth revolution around the Sun) corresponds to four seasons. This choice is correct.\n\nC: The Sun has completed one revolution around Earth.  \n- This is incorrect because the Sun does not revolve around the Earth.\n\nD: The Moon has completed one revolution around Earth.  \n- The Moon completes roughly 13 revolutions around Earth in one year, so after four seasons (one year), the Moon has completed more than one revolution. This choice is therefore inaccurate in the context of \"one revolution.\"\n\nTherefore, the correct answer is B.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Students are studying how the positions of Earth and the Sun effect changes on Earth. After four seasons have passed on Earth, which has happened?",
+  "source": "ARC-Challenge"
+}

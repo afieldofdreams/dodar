@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-005",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:27:36.937791Z",
+  "latency_seconds": 2.95,
+  "input_tokens": 105,
+  "output_tokens": 242,
+  "cost_usd": 0.000429,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Household appliances convert electricity into one or more different forms of energy. An electric fan can best be described as converting electricity into\n\n  A: heat energy only\n  B: heat energy and sound energy only\n  C: heat energy, sound energy, and mechanical energy only\n  D: heat energy, sound energy, mechanical energy, and chemical energy\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "An electric fan uses electrical energy primarily to turn its blades, which means it converts electricity into mechanical energy to circulate air. However, not all electrical energy is perfectly transformed into mechanical energy. Some electrical energy dissipates as heat energy due to resistance in the fan's motor and components. Additionally, the fan produces some sound energy because the moving blades and motor generate noise during operation.\n\nNow, let's analyze each option:\n\n- A: heat energy only  \n  This is incorrect because a fan's main purpose is to convert electrical energy into mechanical energy to rotate the blades, not just heat.\n\n- B: heat energy and sound energy only  \n  This excludes mechanical energy, which is the main form of energy produced by the fan.\n\n- C: heat energy, sound energy, and mechanical energy only  \n  This includes all the relevant forms of energy produced by the fan: mechanical energy (blade rotation), heat energy (from motor resistance), and sound energy (from motor and blades).\n\n- D: heat energy, sound energy, mechanical energy, and chemical energy  \n  Chemical energy is not produced during normal operation of an electric fan unless there are chemical reactions involved, which is not the case here.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Household appliances convert electricity into one or more different forms of energy. An electric fan can best be described as converting electricity into",
+  "source": "ARC-Challenge"
+}

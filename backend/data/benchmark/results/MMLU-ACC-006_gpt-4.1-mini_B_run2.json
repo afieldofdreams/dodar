@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-006",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:37:29.718790Z",
+  "latency_seconds": 3.84,
+  "input_tokens": 362,
+  "output_tokens": 284,
+  "cost_usd": 0.000599,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nThe city of Cobb has two trust funds for the benefit of the city's library trust fund A and trust fund B. Only the earnings from trust fund A can be expended and both the principal and interest from trust fund B can be expended. How should the city of Cobb report each trust fund? Trust fund A Trust fund B\n\n  A: Permanent Permanent\n  B: Permanent Special revenue\n  C: Special revenue Permanent\n  D: Special revenue Special revenue\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1: Understand the key characteristics of the funds.\n\n- Trust fund A: Only the earnings (interest) from this fund can be expended, the principal remains intact.\n- Trust fund B: Both the principal and the interest can be expended.\n\nStep 2: Know the general accounting terminology for fund reporting:\n\n- Permanent Fund: Used to report resources that are legally restricted to the extent that only earnings (usually interest and dividends) may be used for purposes that support the government’s programs — typically, the principal must remain intact.\n- Special Revenue Fund: Used to report the proceeds of specific revenue sources that are restricted or committed to expenditure for specified purposes other than debt service or capital projects.\n\nStep 3: Apply these definitions to Trust fund A:\n\n- Since only the earnings from Trust fund A can be expended, and the principal must be preserved, this is a classic example of a Permanent Fund.\n\nStep 4: Apply the definitions to Trust fund B:\n\n- Since both principal and interest can be expended, it is not a Permanent Fund.\n- Because the fund is restricted or committed to a specific purpose (library), and expenditures occur from this fund, it should be reported as a Special Revenue Fund.\n\nStep 5: Match the choices:\n\nTrust fund A: Permanent Fund\n\nTrust fund B: Special Revenue Fund\n\nFrom the options: B: Permanent Special revenue\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "The city of Cobb has two trust funds for the benefit of the city's library trust fund A and trust fund B. Only the earnings from trust fund A can be expended and both the principal and interest from trust fund B can be expended. How should the city of Cobb report each trust fund? Trust fund A Trust fund B",
+  "source": "MMLU/professional_accounting"
+}

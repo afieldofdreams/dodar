@@ -34,22 +34,43 @@ def _results_dir() -> Path:
 
 def load_benchmark_tasks(
     task_file: str | Path | None = None,
+    *,
+    version: str | None = None,
 ) -> list[BenchmarkTask]:
-    """Load benchmark tasks from JSON file."""
+    """Load benchmark tasks from JSON file.
+
+    Args:
+        task_file: Explicit path to a task file.
+        version: "v1" or "v2". If None, prefers v2 if it exists, else v1.
+    """
     if task_file is None:
-        # Look in project root first, then backend/data
-        candidates = [
-            _BACKEND_DIR.parent / "benchmark-tasks-100.json",
-            _BACKEND_DIR / "data" / "benchmark-tasks-100.json",
-        ]
+        root = _BACKEND_DIR.parent
+        data_dir = _BACKEND_DIR / "data"
+
+        if version == "v1":
+            candidates = [root / "benchmark-tasks-100.json", data_dir / "benchmark-tasks-100.json"]
+        elif version == "v2":
+            candidates = [root / "benchmark-tasks-v2.json", data_dir / "benchmark-tasks-v2.json"]
+        elif version == "v3":
+            candidates = [root / "benchmark-tasks-v3.json", data_dir / "benchmark-tasks-v3.json"]
+        else:
+            # Default: prefer v3, then v2, then v1
+            candidates = [
+                root / "benchmark-tasks-v3.json",
+                data_dir / "benchmark-tasks-v3.json",
+                root / "benchmark-tasks-v2.json",
+                data_dir / "benchmark-tasks-v2.json",
+                root / "benchmark-tasks-100.json",
+                data_dir / "benchmark-tasks-100.json",
+            ]
+
         for c in candidates:
             if c.exists():
                 task_file = c
                 break
         if task_file is None:
             raise FileNotFoundError(
-                "benchmark-tasks-100.json not found. "
-                f"Searched: {[str(c) for c in candidates]}"
+                f"No benchmark task file found. Searched: {[str(c) for c in candidates]}"
             )
 
     path = Path(task_file)

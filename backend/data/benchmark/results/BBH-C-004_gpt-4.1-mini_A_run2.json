@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-004",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:05:15.333054Z",
+  "latency_seconds": 4.05,
+  "input_tokens": 88,
+  "output_tokens": 177,
+  "cost_usd": 0.000318,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "How would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the situation step-by-step:\n\n1. The company's HR policy explicitly states that employees must not date their direct reports.\n2. Alex is a manager who starts dating Jamie, who is Alex's direct report.\n3. As a result of this dating relationship, Alex is fired.\n4. The firing appears to be a direct consequence of violating the HR policy.\n\nFrom a typical person's perspective, causation usually means that one event leads to another event happening as a result. Since Alex broke a clear company rule by dating their direct report, and that rule presumably exists to prevent conflicts of interest or other workplace issues, it makes sense that the violation of this rule would be the reason behind Alex's firing.\n\nTherefore, the cause (Alex dating their direct report) led directly to the effect (Alex was fired).\n\nFINAL ANSWER: Yes, Alex dating Jamie caused Alex to be fired.",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?",
+  "source": "BBH/causal_judgement"
+}

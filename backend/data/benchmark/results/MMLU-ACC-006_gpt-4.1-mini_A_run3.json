@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-006",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:29:26.590865Z",
+  "latency_seconds": 3.07,
+  "input_tokens": 127,
+  "output_tokens": 224,
+  "cost_usd": 0.000409,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "The city of Cobb has two trust funds for the benefit of the city's library trust fund A and trust fund B. Only the earnings from trust fund A can be expended and both the principal and interest from trust fund B can be expended. How should the city of Cobb report each trust fund? Trust fund A Trust fund B\n\n  A: Permanent Permanent\n  B: Permanent Special revenue\n  C: Special revenue Permanent\n  D: Special revenue Special revenue\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the problem carefully:\n\nThe city of Cobb has two trust funds for the library:\n\n- **Trust fund A:** Only the earnings (interest) can be expended, while the principal must be preserved.\n\n- **Trust fund B:** Both the principal and interest can be expended.\n\nIn governmental accounting, trust funds are classified as:\n\n- **Permanent fund:** Used when the principal must remain intact, and only earnings can be expended. This matches Trust fund A.\n\n- **Special revenue fund:** Used for resources that are restricted or committed to specific purposes but don't have the permanent principle preservation requirement. This matches Trust fund B.\n\nHence:\n\n- Trust fund A should be reported as a **Permanent fund**.\n\n- Trust fund B should be reported as a **Special revenue fund**.\n\nChecking the choices for this combination:\n\n- A: Permanent Permanent (No, A is permanent but B is not)\n\n- B: Permanent Special revenue (Yes, matches)\n\n- C: Special revenue Permanent (No, reversed)\n\n- D: Special revenue Special revenue (No, both special revenue not correct)\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "The city of Cobb has two trust funds for the benefit of the city's library trust fund A and trust fund B. Only the earnings from trust fund A can be expended and both the principal and interest from trust fund B can be expended. How should the city of Cobb report each trust fund? Trust fund A Trust fund B",
+  "source": "MMLU/professional_accounting"
+}

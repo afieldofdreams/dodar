@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-004",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T19:46:36.996083Z",
+  "latency_seconds": 6.04,
+  "input_tokens": 219,
+  "output_tokens": 297,
+  "cost_usd": 0.000563,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nHow would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Step 1 - STEP BACK:  \nTo analyze causation in general, we start with the principle of cause and effect. A cause is something that brings about an effect or result. Establishing causation typically requires showing that the cause and effect are linked temporally (the cause happens before the effect), that there is a plausible mechanism connecting cause to effect, and often that the cause was necessary or at least a significant contributing factor to the effect.\n\nIn social and legal contexts (like workplace policies), causation means that the action in question directly led to the consequence. If an employee violated a policy that explicitly forbids certain behavior and was fired as a direct result of that violation, then the action (policy violation) is the cause of the firing.\n\nStep 2 - REASON:  \nHere, Alex’s HR policy explicitly states no dating of direct reports. Alex, a manager, starts dating Jamie, their direct report. After this, Alex is fired. Since the dating violates a stated company policy, and the firing follows that violation, it is reasonable to conclude that the cause of Alex’s firing is the dating. The cause-effect link is direct: the policy violation (dating a direct report) led to the consequence (being fired). The cause (dating Jamie) was both necessary (without it, no violation) and sufficient (policy states firing is consequence) to produce the effect (firing).\n\nFINAL ANSWER: Yes, Alex dating Jamie caused Alex to be fired.",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?",
+  "source": "BBH/causal_judgement"
+}

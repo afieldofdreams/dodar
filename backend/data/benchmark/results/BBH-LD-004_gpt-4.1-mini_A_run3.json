@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-LD-004",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:47:36.655236Z",
+  "latency_seconds": 7.01,
+  "input_tokens": 180,
+  "output_tokens": 488,
+  "cost_usd": 0.000853,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are five birds: a blue jay, a cardinal, a hawk, a hummingbird, and a quail. The quail is to the left of the blue jay. The cardinal is the third from the left. The quail is the second from the left. The blue jay is to the left of the hummingbird.\nOptions:\n(A) The blue jay is the rightmost\n(B) The cardinal is the rightmost\n(C) The hawk is the rightmost\n(D) The hummingbird is the rightmost\n(E) The quail is the rightmost\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "We have five birds on a branch arranged in order from left to right: blue jay, cardinal, hawk, hummingbird, quail.\n\nGiven statements:\n\n1. The quail is to the left of the blue jay.\n2. The cardinal is the third from the left.\n3. The quail is the second from the left.\n4. The blue jay is to the left of the hummingbird.\n\nLet's analyze these step-by-step:\n\n- Statement 3: \"The quail is the second from the left.\"  \n  So, position 2 on the branch is the quail.\n\n- Statement 2: \"The cardinal is the third from the left.\"  \n  So, position 3 is the cardinal.\n\nHence, we have so far:\n\n1: ?\n2: quail  \n3: cardinal  \n4: ?  \n5: ?\n\n- Statement 1: \"The quail is to the left of the blue jay.\"  \n  Quail is at position 2, so blue jay must be at a position to the right of 2 (i.e., positions 3, 4, or 5).\n\n- Statement 4: \"The blue jay is to the left of the hummingbird.\"  \n  Blue jay must be to the left of the hummingbird.\n\nSo, blue jay < hummingbird in positions.\n\nLet's check possible positions for blue jay and hummingbird:\n\n- Blue jay can be at position 4 or 5 (since position 3 is cardinal).\n- If blue jay at 4, hummingbird must be at 5.\n- If blue jay at 5, hummingbird would have to be at a position to the right of 5 (doesn't exist). So blue jay can't be at 5.\n\nTherefore:\n\nblue jay = 4  \nhummingbird = 5\n\nWe have:\n\n1: ?  \n2: quail  \n3: cardinal  \n4: blue jay  \n5: hummingbird\n\nThe only bird left to place is the hawk, which must be in position 1.\n\nFinal arrangement:\n\n1: hawk  \n2: quail  \n3: cardinal  \n4: blue jay  \n5: hummingbird\n\nFrom this arrangement, the rightmost bird (position 5) is the hummingbird.\n\nAnswer choice (D) The hummingbird is the rightmost.\n\nFINAL ANSWER: (D) The hummingbird is the rightmost",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "exact_match",
+  "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are five birds: a blue jay, a cardinal, a hawk, a hummingbird, and a quail. The quail is to the left of the blue jay. The cardinal is the third from the left. The quail is the second from the left. The blue jay is to the left of the hummingbird.\nOptions:\n(A) The blue jay is the rightmost\n(B) The cardinal is the rightmost\n(C) The hawk is the rightmost\n(D) The hummingbird is the rightmost\n(E) The quail is the rightmost",
+  "source": "BBH/logical_deduction"
+}

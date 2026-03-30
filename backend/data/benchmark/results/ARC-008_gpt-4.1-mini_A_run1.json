@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-008",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:20:46.406726Z",
+  "latency_seconds": 2.89,
+  "input_tokens": 113,
+  "output_tokens": 232,
+  "cost_usd": 0.000416,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A student wants to determine which hand soap kills more bacteria. Her teacher tells her to change only the type of hand soap. The type of bacterium tested must be the same. Only one variable is tested because it\n\n  A: speeds up the experiment.\n  B: improves the reliability of the results.\n  C: makes the graphs easier to read.\n  D: ensures the students learn something.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "When conducting a scientific experiment, it's important to test only one variable at a time so that any observed effect can be directly attributed to that variable. If multiple variables were changed simultaneously, it would be unclear which change caused the results. This approach improves the accuracy and reliability of the experiment by reducing confounding factors.\n\nLet's evaluate each option:\n\nA: \"speeds up the experiment.\"  \n- Changing only one variable does not necessarily speed up the experiment. It is more about clarity and control than speed.\n\nB: \"improves the reliability of the results.\"  \n- Yes. By testing only one variable (type of soap) and keeping others constant (bacterium type, etc.), the experiment's results are more reliable since the effect can be attributed directly to that variable.\n\nC: \"makes the graphs easier to read.\"  \n- While it might simplify the graphs somewhat, this is not the main reason for controlling variables.\n\nD: \"ensures the students learn something.\"  \n- Learning can occur regardless, but controlling variables is more about the validity of the experiment rather than guaranteeing learning.\n\nTherefore, the best answer is B.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "A student wants to determine which hand soap kills more bacteria. Her teacher tells her to change only the type of hand soap. The type of bacterium tested must be the same. Only one variable is tested because it",
+  "source": "ARC-Challenge"
+}

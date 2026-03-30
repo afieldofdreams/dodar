@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-002",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:22:56.009713Z",
+  "latency_seconds": 1.69,
+  "input_tokens": 90,
+  "output_tokens": 141,
+  "cost_usd": 0.000262,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A student uses a bar graph to display the amount of rainfall per week over a 3-month period. Which other method of presentation is appropriate for the data?\n\n  A: a table\n  B: a pie chart\n  C: a photograph\n  D: a written paragraph\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "The data involves amount of rainfall per week over a 3-month period, which is quantitative data measured over time.\n\n- A bar graph is already used, showing discrete values per week.\n- A table would also be appropriate because it can list the weeks and the corresponding rainfall amounts clearly and numerically.\n- A pie chart is not appropriate because pie charts are best for showing parts of a whole at one point in time, not data over time.\n- A photograph is not a method of data presentation in a statistical sense.\n- A written paragraph could describe trends but is not the best method for presenting numerical data clearly.\n\nTherefore, the most appropriate alternative method of presentation is a table.\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "A student uses a bar graph to display the amount of rainfall per week over a 3-month period. Which other method of presentation is appropriate for the data?",
+  "source": "ARC-Challenge"
+}

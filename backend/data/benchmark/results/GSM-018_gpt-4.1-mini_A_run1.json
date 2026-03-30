@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-018",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:25:11.591539Z",
+  "latency_seconds": 4.7,
+  "input_tokens": 111,
+  "output_tokens": 266,
+  "cost_usd": 0.00047,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Three friends: Mike, Jim, and Tony decided to play a game. After 3 rounds Mike has 21 points, Jim 3 points less than Mike, and Tony 2 times more than Mike. In the fourth round, every player gets an extra point if they have over 20 points. How many points do all three players have in total after the extra points had been distributed?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's analyze the problem step-by-step:\n\n1. After 3 rounds:\n   - Mike has 21 points.\n   - Jim has 3 points less than Mike: \\( 21 - 3 = 18 \\) points.\n   - Tony has \"2 times more than Mike.\" This phrase can be ambiguous, but typically \"2 times more than\" means \\( 2 \\times \\) the amount, so Tony has:\n     \\( 2 \\times 21 = 42 \\) points.\n\n2. Points before the 4th round:\n   - Mike: 21\n   - Jim: 18\n   - Tony: 42\n\n3. In the 4th round, every player who has over 20 points gets an extra point.\n\n   - Mike has 21 (>20), so Mike gets 1 extra point: \\( 21 + 1 = 22 \\)\n   - Jim has 18 (not over 20), no extra point: 18\n   - Tony has 42 (>20), so Tony gets 1 extra point: \\( 42 + 1 = 43 \\)\n\n4. Total points after the 4th round and extra points:\n   \\( 22 + 18 + 43 = 83 \\)\n\n---\n\nFINAL ANSWER: 83",
+  "extracted_answer": "83",
+  "is_correct": true,
+  "correct_answer": "83",
+  "answer_type": "numeric_exact",
+  "question": "Three friends: Mike, Jim, and Tony decided to play a game. After 3 rounds Mike has 21 points, Jim 3 points less than Mike, and Tony 2 times more than Mike. In the fourth round, every player gets an extra point if they have over 20 points. How many points do all three players have in total after the extra points had been distributed?",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-006",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:32:08.599024Z",
+  "latency_seconds": 1.41,
+  "input_tokens": 88,
+  "output_tokens": 91,
+  "cost_usd": 0.000181,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Jason has a phone plan of 1000 minutes per month. Every day he has a 15-minute call with his boss, and he's had 300 extra minutes of call this month to other people. How many minutes does Jason have left if this month has 30 days?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "First, calculate the total minutes spent on calls with his boss in the month:  \n15 minutes/day × 30 days = 450 minutes\n\nNext, add the extra minutes spent talking to other people:  \n450 minutes (boss) + 300 minutes (others) = 750 minutes total used\n\nHe has 1000 minutes per month, so minutes left:  \n1000 - 750 = 250 minutes\n\nFINAL ANSWER: 250",
+  "extracted_answer": "250",
+  "is_correct": true,
+  "correct_answer": "250",
+  "answer_type": "numeric_exact",
+  "question": "Jason has a phone plan of 1000 minutes per month. Every day he has a 15-minute call with his boss, and he's had 300 extra minutes of call this month to other people. How many minutes does Jason have left if this month has 30 days?",
+  "source": "GSM8K"
+}

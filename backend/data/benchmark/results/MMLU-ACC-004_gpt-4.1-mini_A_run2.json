@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-004",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:20:10.431237Z",
+  "latency_seconds": 8.9,
+  "input_tokens": 180,
+  "output_tokens": 537,
+  "cost_usd": 0.000931,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Swift Co. has identified three operating segments that may require separate disclosure in Swift's general purpose financial statements for the year ended December 31 year 2. Information for year 2 follows: Segment (in thousands) A B C Total Reported revenue $ 42 $ 121 $ 14 $ 177 Reported profit(loss) $ 12 $ 65 $ (3) $ 74 Assets $ 470 $ 800 $ 80 $ 1350 Which of Swift's segments are required to be separately disclosed in its December 31 year 2 financial statements?\n\n  A: A and B only.\n  B: A and C only.\n  C: B and C only.\n  D: A B and C.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "To determine which operating segments must be separately disclosed, we need to apply the segment reporting quantitative thresholds under the relevant accounting standards (IFRS 8 or ASC 280). These generally require separate disclosure if a segment meets any one of these criteria:\n\n1. **Revenue test:** Segment revenue (including both sales to external customers and intersegment sales) is 10% or more of the combined revenue of all operating segments.\n\n2. **Profit or loss test:** The absolute amount of the segment’s reported profit or loss is 10% or more of the greater, in absolute amount, of:\n   - The combined reported profit of all operating segments that did not report a loss, or\n   - The combined reported loss of all operating segments that did report a loss.\n\n3. **Asset test:** Segment assets are 10% or more of the combined assets of all operating segments.\n\n---\n\n### Step 1: Revenue test (10% of total revenue)\n\n- Total revenue = 177\n- 10% of 177 = 17.7\n\nCheck each segment:\n- A: 42 ≥ 17.7 → passes revenue test\n- B: 121 ≥ 17.7 → passes revenue test\n- C: 14 < 17.7 → fails revenue test\n\n---\n\n### Step 2: Profit or loss test (10% of the greater of total profit or total loss)\n\n- Profit segments: A ($12), B ($65)\n- Loss segment: C (-$3)\n\nSum of profit segments = $12 + $65 = $77  \nSum of loss segments = $3 (absolute value)\n\nGreater of $77 and $3 is $77  \n10% of $77 = $7.7\n\nCheck each segment by absolute profit/loss:\n- A: |12| = 12 ≥ 7.7 → passes\n- B: |65| = 65 ≥ 7.7 → passes\n- C: |−3| = 3 < 7.7 → fails\n\n---\n\n### Step 3: Asset test (10% of total assets)\n\n- Total assets = 1,350\n- 10% of 1,350 = 135\n\nCheck each segment:\n- A: 470 ≥ 135 → passes asset test\n- B: 800 ≥ 135 → passes asset test\n- C: 80 < 135 → fails asset test\n\n---\n\n### Conclusion:\n\nSegments A and B meet one or more of the criteria. Segment C does not meet any.\n\nTherefore, segments **A and B** are required to be separately disclosed.\n\n---\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "Swift Co. has identified three operating segments that may require separate disclosure in Swift's general purpose financial statements for the year ended December 31 year 2. Information for year 2 follows: Segment (in thousands) A B C Total Reported revenue $ 42 $ 121 $ 14 $ 177 Reported profit(loss) $ 12 $ 65 $ (3) $ 74 Assets $ 470 $ 800 $ 80 $ 1350 Which of Swift's segments are required to be separately disclosed in its December 31 year 2 financial statements?",
+  "source": "MMLU/professional_accounting"
+}

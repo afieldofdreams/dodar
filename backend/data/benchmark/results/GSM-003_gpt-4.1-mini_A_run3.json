@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-003",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:16:37.955012Z",
+  "latency_seconds": 2.77,
+  "input_tokens": 82,
+  "output_tokens": 223,
+  "cost_usd": 0.00039,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "In a neighborhood, the number of rabbits pets is twelve less than the combined number of pet dogs and cats. If there are two cats for every dog, and the number of dogs is 60, how many pets in total are in the neighborhood?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's define the variables:\n- Let \\(D\\) = number of dogs\n- Let \\(C\\) = number of cats\n- Let \\(R\\) = number of rabbits\n\nGiven:\n- \\(D = 60\\)\n- There are two cats for every dog: \\(C = 2D\\)\n- The number of rabbits is 12 less than the combined number of dogs and cats: \\(R = (D + C) - 12\\)\n\nStep 1: Find the number of cats.\n\\[\nC = 2 \\times 60 = 120\n\\]\n\nStep 2: Find the total number of dogs and cats combined.\n\\[\nD + C = 60 + 120 = 180\n\\]\n\nStep 3: Find the number of rabbits.\n\\[\nR = 180 - 12 = 168\n\\]\n\nStep 4: Find the total number of pets.\n\\[\n\\text{Total} = D + C + R = 60 + 120 + 168 = 348\n\\]\n\nFINAL ANSWER: 348",
+  "extracted_answer": "348",
+  "is_correct": true,
+  "correct_answer": "348",
+  "answer_type": "numeric_exact",
+  "question": "In a neighborhood, the number of rabbits pets is twelve less than the combined number of pet dogs and cats. If there are two cats for every dog, and the number of dogs is 60, how many pets in total are in the neighborhood?",
+  "source": "GSM8K"
+}

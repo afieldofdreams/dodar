@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-004",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T11:59:00.510133Z",
+  "latency_seconds": 3.84,
+  "input_tokens": 238,
+  "output_tokens": 266,
+  "cost_usd": 0.000521,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nA student observes the time it takes a marble to roll down a ramp four times. Which of these displays will best communicate the student's observations?\n\n  A: a pie chart with four different sections\n  B: a line graph with continuous data points\n  C: a bar graph with a bar for each trial\n  D: a table with four rows and four columns\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK:\nWhen deciding how to best display data, it is important to consider what type of data is being collected and what you want to communicate. Time taken for each trial is quantitative data that is discrete and categorical by trial number (Trial 1, Trial 2, etc.). Visual displays such as bar graphs are good for comparing discrete data points, line graphs are often used for continuous data or trends over time, pie charts are best for showing proportions or percentages of a whole, and tables are good for presenting raw data but less effective for visual comparison.\n\nStep 2 - REASON:\n- A pie chart (A) shows parts of a whole and is not suitable here because the times are individual measurements, not parts of a total.\n- A line graph (B) is useful for continuous data or trends across intervals, but the marble rolling times are separate trials, so continuity is less relevant.\n- A bar graph (C) gives a clear comparison of discrete values, i.e., time for each roll, making it easy to see differences in trials.\n- A table (D) can show the data, but does not provide a visual summary that quickly communicates differences or patterns.\n\nTherefore, the bar graph (C) is the best option to communicate the student's observations effectively.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "A student observes the time it takes a marble to roll down a ramp four times. Which of these displays will best communicate the student's observations?",
+  "source": "ARC-Challenge"
+}

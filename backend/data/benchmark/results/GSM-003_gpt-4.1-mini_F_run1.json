@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-003",
+  "condition": "F",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-27T14:42:24.580253Z",
+  "latency_seconds": 7.96,
+  "input_tokens": 326,
+  "output_tokens": 436,
+  "cost_usd": 0.000828,
+  "system_prompt_sent": "Work through these five phases in order. Each phase must add new reasoning, not restate previous phases.\n\n1. REVIEW: Before answering, identify what type of error is most common on this kind of problem. What specific mistake should you watch for? Be precise about the failure mode.\n\n2. ACTION: Begin working through the problem. Show your reasoning or calculations step by step. Flag any step where you are uncertain. Identify which parts of your reasoning are solid and which are tentative.\n\n3. OPTIONS: Based on your work so far, identify the most plausible answer and the strongest competing alternative. State the specific evidence for and against each. Do not simply list all choices.\n\n4. DIAGNOSE: Now re-examine the problem constraints. Have you addressed all of them? Is there information you overlooked or an assumption you made that might be wrong?\n\n5. DECIDE: Commit to your final answer. State the single strongest reason for your choice and the single strongest reason against it.\n\nState your final answer only after completing all five phases. Do not use the phrase \"final answer\" anywhere except the final line.",
+  "user_prompt_sent": "Follow the five phases (Review, Action, Options, Diagnose, Decide).\n\nIn a neighborhood, the number of rabbits pets is twelve less than the combined number of pet dogs and cats. If there are two cats for every dog, and the number of dogs is 60, how many pets in total are in the neighborhood?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "1. REVIEW:  \nThe common errors in this type of problem usually involve misinterpreting relationships between quantities (e.g., \"two cats for every dog\" means ratio of cats to dogs is 2:1, not adding 2 cats for each dog directly) or forgetting to include all pet types when calculating the total. Watch carefully for proper application of the ratio and correct summation at the end.\n\n2. ACTION:  \n- Number of dogs = 60 (given)  \n- Cats to dogs ratio is 2:1, so number of cats = 2 × number of dogs = 2 × 60 = 120  \n- Combined number of dogs and cats = 60 + 120 = 180  \n- Number of rabbits is 12 less than combined dogs and cats = 180 − 12 = 168  \n- Total pets = dogs + cats + rabbits = 60 + 120 + 168 = 348  \n\nAll steps are straightforward and based directly on the problem's statements. No uncertain steps.\n\n3. OPTIONS:  \n- Most plausible: Total of 348 pets (dogs + cats + rabbits as calculated)  \n- Strongest competing alternative would be if the ratio or subtraction was misinterpreted; for example, if \"two cats for every dog\" was taken as an additive instead of a ratio, leading to different numbers. But this conflicts with the wording and ratio logic.  \n\n4. DIAGNOSE:  \nRe-examining constraints:  \n- Dogs = 60 (fixed)  \n- Cats = 2 per dog → 120 cats (correct)  \n- Rabbits = 12 fewer than combined dogs and cats → rabbits = 180 − 12 = 168 (correct)  \n- All pets included in final sum → yes, dogs + cats + rabbits = 348  \n\nNo constraint overlooked or misapplied.\n\n5. DECIDE:  \nStrongest reason for the choice: direct application of given ratios and values aligns perfectly with problem statements.  \nStrongest reason against: minimal chance of misunderstanding \"two cats for every dog,\" but the statement is clear.  \n\nFINAL ANSWER: 348",
+  "extracted_answer": "348",
+  "is_correct": true,
+  "correct_answer": "348",
+  "answer_type": "numeric_exact",
+  "question": "In a neighborhood, the number of rabbits pets is twelve less than the combined number of pet dogs and cats. If there are two cats for every dog, and the number of dogs is 60, how many pets in total are in the neighborhood?",
+  "source": "GSM8K"
+}

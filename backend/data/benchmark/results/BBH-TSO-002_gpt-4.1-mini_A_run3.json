@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-TSO-002",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:21:17.005855Z",
+  "latency_seconds": 5.28,
+  "input_tokens": 193,
+  "output_tokens": 299,
+  "cost_usd": 0.000556,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Alice, Bob, Claire, Dave, and Eve are holding a white elephant gift exchange. At the start of the event, they are each holding a present of a different color: Alice has a green present, Bob has a brown present, Claire has a purple present, Dave has a white present, and Eve has a blue present.\nAs the event progresses, pairs of people swap gifts. First, Alice and Bob swap their gifts. Then, Bob and Eve swap their gifts. Then, Dave and Eve swap their gifts. Then, Alice and Claire swap their gifts. Finally, Bob and Eve swap their gifts. At the end of the event, Dave has the\nOptions:\n(A) green present\n(B) brown present\n(C) purple present\n(D) white present\n(E) blue present\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's track which present each person has after each swap.\n\n**Initial state:**\n- Alice: green\n- Bob: brown\n- Claire: purple\n- Dave: white\n- Eve: blue\n\n**Swaps:**\n\n1. Alice and Bob swap:\n- Alice gets brown (from Bob)\n- Bob gets green (from Alice)\n- Claire: purple\n- Dave: white\n- Eve: blue\n\n2. Bob and Eve swap:\n- Bob and Eve swap their gifts:\n- Bob had green, Eve had blue\n- Bob gets blue\n- Eve gets green\n- Alice: brown\n- Claire: purple\n- Dave: white\n\n3. Dave and Eve swap:\n- Dave and Eve swap their gifts:\n- Dave had white, Eve had green\n- Dave gets green\n- Eve gets white\n- Alice: brown\n- Bob: blue\n- Claire: purple\n\n4. Alice and Claire swap:\n- Alice and Claire swap their gifts:\n- Alice had brown, Claire had purple\n- Alice gets purple\n- Claire gets brown\n- Bob: blue\n- Dave: green\n- Eve: white\n\n5. Bob and Eve swap:\n- Bob and Eve swap their gifts:\n- Bob had blue, Eve had white\n- Bob gets white\n- Eve gets blue\n- Alice: purple\n- Claire: brown\n- Dave: green\n\n**At the end:**\n- Dave has the green present.\n\nFINAL ANSWER: green present",
+  "extracted_answer": "green present",
+  "is_correct": false,
+  "correct_answer": "A",
+  "answer_type": "exact_match",
+  "question": "Alice, Bob, Claire, Dave, and Eve are holding a white elephant gift exchange. At the start of the event, they are each holding a present of a different color: Alice has a green present, Bob has a brown present, Claire has a purple present, Dave has a white present, and Eve has a blue present.\nAs the event progresses, pairs of people swap gifts. First, Alice and Bob swap their gifts. Then, Bob and Eve swap their gifts. Then, Dave and Eve swap their gifts. Then, Alice and Claire swap their gifts. Finally, Bob and Eve swap their gifts. At the end of the event, Dave has the\nOptions:\n(A) green present\n(B) brown present\n(C) purple present\n(D) white present\n(E) blue present",
+  "source": "BBH/tracking_shuffled_objects"
+}

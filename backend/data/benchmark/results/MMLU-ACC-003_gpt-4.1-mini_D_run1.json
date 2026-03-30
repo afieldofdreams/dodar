@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-003",
+  "condition": "D",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T11:56:18.553940Z",
+  "latency_seconds": 7.73,
+  "input_tokens": 265,
+  "output_tokens": 324,
+  "cost_usd": 0.000624,
+  "system_prompt_sent": "When answering this question, use the Thought-Action-Observation reasoning pattern. Alternate between reasoning about the problem and taking concrete analytical actions.\n\nFor each step:\n\nThought: Reason about what you currently know, what you need to figure out, and what approach to try next.\n\nAction: Perform a specific analytical action (e.g., identify key information, apply a formula, evaluate an option, check a constraint, test a hypothesis).\n\nObservation: State what you learned from that action and whether it changes your understanding.\n\nRepeat this Thought-Action-Observation cycle until you have enough information to answer confidently. Then provide your final answer.\n\nYou may use as many cycles as needed. Each cycle should build on what you learned in the previous one.",
+  "user_prompt_sent": "Use the Thought-Action-Observation pattern.\n\nParent gave securities with an adjusted basis of $10000 and fair market value of $9000 to a child. Later the child sold the securities for $7000. What is the child's basis for the securities sold?\n\n  A: $10,000\n  B: $9,000\n  C: $7,000\n  D: 0\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Thought: When property is gifted, the recipient's basis depends on whether the fair market value (FMV) at the time of the gift is lower or higher than the donor's adjusted basis. Here, the adjusted basis of the securities in the hands of the parent is $10,000, and the FMV at the time of the gift is $9,000, which is lower than the donor's basis. The child later sells the securities for $7,000. \n\nAction: Recall the IRS rules on basis for gifted property when FMV < donor's basis. Generally:\n- If the property is sold for a price between the FMV and donor's basis, basis for calculating gain is donor's basis, and basis for calculating loss is FMV. \n- If the property is sold below FMV, the basis for loss (the adjusted basis) is FMV.\nHere, sale price = $7,000 < FMV = $9,000 < donor's adjusted basis = $10,000.\n\nObservation: Since the sale price ($7,000) is less than the FMV at time of gift ($9,000), for loss calculation, the child's basis is the FMV at the date of gift, which is $9,000. If the sale price had been between $9,000 and $10,000, the basis for gain would have been the donor's adjusted basis. But here, less than FMV sale price means basis is FMV for loss calculation.\n\nThus, the child's basis for the securities sold is $9,000.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Parent gave securities with an adjusted basis of $10000 and fair market value of $9000 to a child. Later the child sold the securities for $7000. What is the child's basis for the securities sold?",
+  "source": "MMLU/professional_accounting"
+}

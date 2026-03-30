@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-006",
+  "condition": "C",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:40:54.212214Z",
+  "latency_seconds": 5.13,
+  "input_tokens": 332,
+  "output_tokens": 451,
+  "cost_usd": 0.000854,
+  "system_prompt_sent": "Work through these five phases in order. Each phase must add new reasoning, not restate previous phases.\n\n1. DIAGNOSE: What exactly is being asked? Identify the constraints that will determine the answer. State the one thing most likely to cause an error on this type of problem.\n\n2. OPTIONS: Identify the two strongest candidate answers. For each, state the specific evidence for and against. Do not rank them. Treat both as live possibilities.\n\n3. DECIDE: Plan how to test both candidates. What calculation or reasoning step would distinguish between them? Do not select an answer yet.\n\n4. ACTION: Execute the test from DECIDE on both candidates with equal rigour. Show the full working for each. Record where evidence favours one over the other.\n\n5. REVIEW: Based only on the evidence produced in ACTION, select the answer that better survived testing. State which specific result decided it. If the evidence is balanced, state why one edge case tips it.\n\nState your final answer only after completing all five phases. Do not use the phrase \"final answer\" anywhere except the final line.",
+  "user_prompt_sent": "Follow the five phases (Diagnose, Options, Decide, Action, Review).\n\nJason has a phone plan of 1000 minutes per month. Every day he has a 15-minute call with his boss, and he's had 300 extra minutes of call this month to other people. How many minutes does Jason have left if this month has 30 days?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "1. DIAGNOSE:\nThe problem asks to find how many minutes Jason has left from his 1000-minute monthly phone plan after accounting for his calls. The constraints are the total minutes allowed (1000), daily calls to his boss (15 minutes per day), extra minutes spent on calls to other people (300 minutes), and the total number of days in the month (30). The most likely cause of error would be incorrectly calculating the total minutes used in boss calls or misunderstanding the period of the calls (e.g., whether daily calls have been made every day of the month).\n\n2. OPTIONS:\nOption A: Jason has 550 minutes left.\n- Evidence For: Calculate total boss call minutes as 15 minutes/day × 30 days = 450 minutes. Add extra 300 minutes, total 750 minutes used. From 1000 minutes, remaining is 1000 - 750 = 250 minutes. This contradicts option A.\n- Evidence Against: The calculation does not support 550 minutes leftover.\nOption B: Jason has 250 minutes left.\n- Evidence For: Same calculation above supports 250 minutes remaining.\n- Evidence Against: There might be clarity needed about whether the extra 300 minutes are within or beyond his 1000-min plan.\n\n3. DECIDE:\nTo test both options, explicitly calculate the total minutes used by Jason during the month:\n- Calculate total minutes used for boss calls.\n- Add 300 extra minutes.\n- Subtract from 1000.\nCompare this calculation with both candidate answers.\n\n4. ACTION:\nCalculate total boss call minutes:\n15 minutes/day × 30 days = 450 minutes\nAdd extra minutes:\n450 + 300 = 750 minutes\nSubtract from total minutes allowed:\n1000 - 750 = 250 minutes\n\nChecking Option A: 550 minutes leftover\nCalculation does not support this. There is no way 550 minutes is leftover if 750 minutes are already used.\n\nChecking Option B: 250 minutes leftover\nCalculation matches perfectly.\n\n5. REVIEW:\nThe calculation clearly leads to 250 minutes leftover, which supports Option B. Option A is inconsistent with the total minutes used. Therefore, Option B better survives the test.\n\nFINAL ANSWER: 250",
+  "extracted_answer": "250",
+  "is_correct": true,
+  "correct_answer": "250",
+  "answer_type": "numeric_exact",
+  "question": "Jason has a phone plan of 1000 minutes per month. Every day he has a 15-minute call with his boss, and he's had 300 extra minutes of call this month to other people. How many minutes does Jason have left if this month has 30 days?",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-003",
+  "condition": "C",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:34:15.814818Z",
+  "latency_seconds": 5.49,
+  "input_tokens": 326,
+  "output_tokens": 530,
+  "cost_usd": 0.000978,
+  "system_prompt_sent": "Work through these five phases in order. Each phase must add new reasoning, not restate previous phases.\n\n1. DIAGNOSE: What exactly is being asked? Identify the constraints that will determine the answer. State the one thing most likely to cause an error on this type of problem.\n\n2. OPTIONS: Identify the two strongest candidate answers. For each, state the specific evidence for and against. Do not rank them. Treat both as live possibilities.\n\n3. DECIDE: Plan how to test both candidates. What calculation or reasoning step would distinguish between them? Do not select an answer yet.\n\n4. ACTION: Execute the test from DECIDE on both candidates with equal rigour. Show the full working for each. Record where evidence favours one over the other.\n\n5. REVIEW: Based only on the evidence produced in ACTION, select the answer that better survived testing. State which specific result decided it. If the evidence is balanced, state why one edge case tips it.\n\nState your final answer only after completing all five phases. Do not use the phrase \"final answer\" anywhere except the final line.",
+  "user_prompt_sent": "Follow the five phases (Diagnose, Options, Decide, Action, Review).\n\nIn a neighborhood, the number of rabbits pets is twelve less than the combined number of pet dogs and cats. If there are two cats for every dog, and the number of dogs is 60, how many pets in total are in the neighborhood?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "1. DIAGNOSE:  \nWe are asked to find the total number of pets in the neighborhood, where pets include dogs, cats, and rabbits. The constraints are:  \n- Number of dogs is 60.  \n- Number of cats is twice the number of dogs.  \n- Number of rabbits is twelve less than the combined number of dogs and cats.  \nThe likely error is misinterpreting the relationship between the number of rabbits and the combined number of dogs and cats, or miscounting cats or dogs.\n\n2. OPTIONS:  \nOption 1: Calculate cats as twice the dogs, then calculate rabbits (combined dogs and cats minus 12), and sum all pets. This direct method aligns with the problem statement.  \nFor: Clear application of given ratios and differences.  \nAgainst: Risk of arithmetic error.\n\nOption 2: Assume a different interpretation, perhaps rabbits are twelve less than just dogs, or only cats, or a different ratio between cats and dogs.  \nFor: Allows for possible misreading or ambiguity.  \nAgainst: No explicit statement supports this; less likely per problem statement.\n\n3. DECIDE:  \nTest both interpretations by calculating the total pets:  \n- Under option 1, find cats = 2 × dogs, then rabbits = (dogs + cats) − 12. Calculate total.  \n- Under option 2, re-interpret rabbits as twelve less than either dogs or cats alone and calculate total.  \nCompare totals for logical consistency.\n\n4. ACTION:  \nOption 1:  \n- Dogs = 60  \n- Cats = 2 × 60 = 120  \n- Combined dogs and cats = 60 + 120 = 180  \n- Rabbits = 180 − 12 = 168  \n- Total pets = 60 + 120 + 168 = 348  \n\nOption 2 (testing rabbits as 12 less than only dogs):  \n- Rabbits = 60 − 12 = 48  \n- Cats = 120 (unchanged)  \n- Total pets = 60 + 120 + 48 = 228  \n\nOption 2 (testing rabbits as 12 less than cats only):  \n- Rabbits = 120 − 12 = 108  \n- Total pets = 60 + 120 + 108 = 288  \n\n5. REVIEW:  \nThe problem explicitly states rabbits are twelve less than the combined number of dogs and cats, which matches Option 1. The other interpretations reduce the total number of rabbits but do not match the problem statement. Thus, Option 1 is better supported.\n\nFINAL ANSWER: 348",
+  "extracted_answer": "348",
+  "is_correct": true,
+  "correct_answer": "348",
+  "answer_type": "numeric_exact",
+  "question": "In a neighborhood, the number of rabbits pets is twelve less than the combined number of pet dogs and cats. If there are two cats for every dog, and the number of dogs is 60, how many pets in total are in the neighborhood?",
+  "source": "GSM8K"
+}

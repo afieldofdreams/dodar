@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-018",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:32:36.149420Z",
+  "latency_seconds": 3.87,
+  "input_tokens": 111,
+  "output_tokens": 241,
+  "cost_usd": 0.00043,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Three friends: Mike, Jim, and Tony decided to play a game. After 3 rounds Mike has 21 points, Jim 3 points less than Mike, and Tony 2 times more than Mike. In the fourth round, every player gets an extra point if they have over 20 points. How many points do all three players have in total after the extra points had been distributed?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's analyze the problem step by step.\n\n1. **Points after 3 rounds:**\n   - Mike has 21 points.\n   - Jim has 3 points less than Mike: \\(21 - 3 = 18\\) points.\n   - Tony has 2 times more than Mike. \"2 times more\" can be confusing, but it commonly means \"2 times as much.\" So Tony has \\(21 \\times 2 = 42\\) points.\n\n2. **In the fourth round, every player gets an extra point if they have over 20 points**:\n   - Mike: 21 points → over 20 → gets extra 1 point → new total: \\(21 + 1 = 22\\).\n   - Jim: 18 points → not over 20 → no extra point → still 18.\n   - Tony: 42 points → over 20 → gets extra 1 point → new total: \\(42 + 1 = 43\\).\n\n3. **Calculate total points after the extra points distributed:**\n   \\[\n   22 + 18 + 43 = 83\n   \\]\n\n**FINAL ANSWER: 83**",
+  "extracted_answer": "83",
+  "is_correct": true,
+  "correct_answer": "83",
+  "answer_type": "numeric_exact",
+  "question": "Three friends: Mike, Jim, and Tony decided to play a game. After 3 rounds Mike has 21 points, Jim 3 points less than Mike, and Tony 2 times more than Mike. In the fourth round, every player gets an extra point if they have over 20 points. How many points do all three players have in total after the extra points had been distributed?",
+  "source": "GSM8K"
+}

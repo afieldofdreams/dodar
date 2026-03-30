@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-003",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:18:23.005406Z",
+  "latency_seconds": 3.67,
+  "input_tokens": 108,
+  "output_tokens": 243,
+  "cost_usd": 0.000432,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Students are studying how the positions of Earth and the Sun effect changes on Earth. After four seasons have passed on Earth, which has happened?\n\n  A: Earth has completed one rotation around the Moon.\n  B: Earth has completed one revolution around the Sun.\n  C: The Sun has completed one revolution around Earth.\n  D: The Moon has completed one revolution around Earth.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option carefully based on the Earth's movement and the passing of the four seasons.\n\nThe question is about the relationship between Earth's and Sun's positions that affect the changes on Earth, specifically after four seasons have passed.\n\n- **A: Earth has completed one rotation around the Moon.**  \n  This is incorrect because Earth does not revolve around the Moon. Instead, the Moon revolves around Earth.\n\n- **B: Earth has completed one revolution around the Sun.**  \n  This makes sense because the changing seasons on Earth are caused by Earth's tilt and its orbit around the Sun. After four seasons (spring, summer, fall, winter), Earth would have completed one full orbit (revolution) around the Sun.\n\n- **C: The Sun has completed one revolution around Earth.**  \n  This is incorrect because the Sun does not revolve around Earth; rather, Earth revolves around the Sun.\n\n- **D: The Moon has completed one revolution around Earth.**  \n  While the Moon does revolve around Earth approximately every 27.3 days, this is unrelated to the passing of four seasons, which are caused by Earth's orbit around the Sun.\n\nTherefore, the correct answer is:\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Students are studying how the positions of Earth and the Sun effect changes on Earth. After four seasons have passed on Earth, which has happened?",
+  "source": "ARC-Challenge"
+}

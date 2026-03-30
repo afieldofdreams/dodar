@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
-import { fetchBenchmarkRuns, fetchAccuracySummary } from "../api/benchmark";
+import { fetchBenchmarkRuns, fetchAccuracySummary, fetchAnalysis } from "../api/benchmark";
 
 const CONDITION_NAMES: Record<string, string> = {
   A: "Baseline", B: "Zero-Shot CoT", C: "PGR", D: "ReAct",
@@ -94,6 +94,9 @@ export default function BenchmarkResultsPage() {
         </div>
       )}
 
+      {/* Protocol Analysis */}
+      {accuracy && accuracy.total > 0 && <AnalysisSection />}
+
       {/* Run history */}
       <h3 className="text-sm font-semibold text-zinc-400 mb-2">Run History</h3>
       {runs.length === 0 ? (
@@ -148,6 +151,138 @@ export default function BenchmarkResultsPage() {
               ))}
             </tbody>
           </table>
+        </div>
+      )}
+    </div>
+  );
+}
+
+
+function AnalysisSection() {
+  const { data: analysis } = useQuery({
+    queryKey: ["benchmark-analysis"],
+    queryFn: () => fetchAnalysis(),
+  });
+
+  if (!analysis || analysis.error) return null;
+
+  const mcnemar = analysis.mcnemar_paired_tests || {};
+  const efficiency = analysis.token_efficiency || {};
+  const taskAnalysis = analysis.task_level_analysis || {};
+  const errorDist = analysis.error_distribution_test;
+
+  return (
+    <div className="mb-8 space-y-6">
+      {/* McNemar's tests */}
+      {Object.keys(mcnemar).length > 0 && (
+        <div>
+          <h3 className="text-sm font-semibold text-zinc-400 mb-2">Part I: McNemar's Paired Tests</h3>
+          <div className="bg-surface-2 rounded-lg border border-border overflow-hidden">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-left text-xs text-zinc-500 border-b border-border">
+                  <th className="px-4 py-2">Hypothesis</th>
+                  <th className="px-4 py-2">Paired</th>
+                  <th className="px-4 py-2">Discordant</th>
+                  <th className="px-4 py-2">A only</th>
+                  <th className="px-4 py-2">B only</th>
+                  <th className="px-4 py-2">p-value</th>
+                  <th className="px-4 py-2">Sig.</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.entries(mcnemar).map(([key, test]: [string, any]) => (
+                  <tr key={key} className="border-t border-border/30">
+                    <td className="px-4 py-2 text-zinc-300 text-xs">{test.hypothesis}</td>
+                    <td className="px-4 py-2 text-zinc-400">{test.n_tasks_paired}</td>
+                    <td className="px-4 py-2 text-zinc-400">{test.n_discordant}</td>
+                    <td className="px-4 py-2 text-zinc-400">{test.a_only_correct}</td>
+                    <td className="px-4 py-2 text-zinc-400">{test.b_only_correct}</td>
+                    <td className="px-4 py-2 font-mono text-xs text-zinc-300">
+                      {typeof test.p_value === "number" ? test.p_value.toFixed(4) : test.p_value ?? "—"}
+                    </td>
+                    <td className="px-4 py-2">
+                      {test.significant_at_05 === true && <span className="text-green font-semibold">***</span>}
+                      {test.significant_at_05 === false && <span className="text-zinc-500">n.s.</span>}
+                      {test.significant_at_05 === null && <span className="text-zinc-600">—</span>}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {/* Token efficiency */}
+      {Object.keys(efficiency).length > 0 && (
+        <div>
+          <h3 className="text-sm font-semibold text-zinc-400 mb-2">Token Efficiency</h3>
+          <div className="bg-surface-2 rounded-lg border border-border overflow-hidden">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-left text-xs text-zinc-500 border-b border-border">
+                  <th className="px-4 py-2">Condition</th>
+                  <th className="px-4 py-2">Accuracy</th>
+                  <th className="px-4 py-2">$/Correct</th>
+                  <th className="px-4 py-2">$/Query</th>
+                  <th className="px-4 py-2">Avg Tokens</th>
+                  <th className="px-4 py-2">Avg Latency</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.entries(efficiency).sort().map(([cond, eff]: [string, any]) => (
+                  <tr key={cond} className="border-t border-border/30">
+                    <td className={`px-4 py-2 font-semibold ${COND_COLOR[cond] || "text-zinc-300"}`}>
+                      {cond} — {eff.condition_name}
+                    </td>
+                    <td className="px-4 py-2 text-zinc-300">{eff.accuracy_pct}%</td>
+                    <td className="px-4 py-2 font-mono text-xs text-zinc-300">${eff.cost_per_correct.toFixed(4)}</td>
+                    <td className="px-4 py-2 font-mono text-xs text-zinc-400">${eff.cost_per_query.toFixed(4)}</td>
+                    <td className="px-4 py-2 text-zinc-400">{eff.avg_output_tokens}</td>
+                    <td className="px-4 py-2 text-zinc-400">{eff.avg_latency_s}s</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      {/* Task contestability */}
+      {taskAnalysis.contestability && (
+        <div>
+          <h3 className="text-sm font-semibold text-zinc-400 mb-2">Task Contestability</h3>
+          <div className="flex gap-3">
+            {Object.entries(taskAnalysis.contestability as Record<string, number>)
+              .filter(([k]) => k !== "total")
+              .map(([cat, count]) => (
+                <div key={cat} className="bg-surface-2 border border-border rounded-lg px-4 py-3 text-center min-w-[100px]">
+                  <div className="text-lg font-bold">{count}</div>
+                  <div className="text-xs text-zinc-500">{cat}</div>
+                </div>
+              ))}
+          </div>
+          <p className="text-xs text-zinc-600 mt-1">
+            Only contestable tasks differentiate between frameworks. Trivial = all conditions correct. Impossible = all wrong.
+          </p>
+        </div>
+      )}
+
+      {/* Chi-squared error distribution */}
+      {errorDist && !errorDist.error && (
+        <div>
+          <h3 className="text-sm font-semibold text-zinc-400 mb-2">Part II: Error Distribution Test (H3/H5)</h3>
+          <div className={`text-sm px-4 py-3 rounded-lg ${
+            errorDist.significant_at_05
+              ? "bg-green/10 text-green"
+              : "bg-zinc-800 text-zinc-400"
+          }`}>
+            Chi-squared: {errorDist.chi2} | p = {errorDist.p_value} | df = {errorDist.degrees_of_freedom}
+            {errorDist.significant_at_05
+              ? " — Significant: error distributions differ across conditions"
+              : " — Not significant at p < 0.05"}
+          </div>
         </div>
       )}
     </div>

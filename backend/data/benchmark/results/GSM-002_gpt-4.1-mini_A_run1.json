@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-002",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:38:57.885283Z",
+  "latency_seconds": 2.58,
+  "input_tokens": 88,
+  "output_tokens": 110,
+  "cost_usd": 0.000211,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "On a certain day, the total cost of filling up 20 helium balloons was $900. Two days later, the cost of filling each balloon was increased by $20. How much did Bentley pay to fill 170 balloons if he went to fill them after the price increase?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Determine the cost per balloon on the first day.\n\nTotal cost for 20 balloons = $900  \nCost per balloon = 900 ÷ 20 = $45\n\nStep 2: Determine the new cost per balloon after the increase.\n\nIncrease = $20  \nNew cost per balloon = 45 + 20 = $65\n\nStep 3: Calculate the total cost for filling 170 balloons at the new rate.\n\nTotal cost = 170 × 65 = $11,050\n\nFINAL ANSWER: 11050",
+  "extracted_answer": "11050",
+  "is_correct": true,
+  "correct_answer": "11050",
+  "answer_type": "numeric_exact",
+  "question": "On a certain day, the total cost of filling up 20 helium balloons was $900. Two days later, the cost of filling each balloon was increased by $20. How much did Bentley pay to fill 170 balloons if he went to fill them after the price increase?",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-019",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:48:29.879790Z",
+  "latency_seconds": 5.38,
+  "input_tokens": 529,
+  "output_tokens": 355,
+  "cost_usd": 0.00078,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A 65-year-old man presents with sudden onset of slurred speech and right-sided weakness that started 2 hours ago. He has a history of atrial fibrillation and takes warfarin. His INR today is 1.4. CT head shows no haemorrhage. What is the most appropriate immediate management?\nA: Administer IV alteplase (thrombolysis)\nB: Increase warfarin dose\nC: Start aspirin 300mg\nD: Arrange urgent MRI brain\n\nEXAMPLE ANSWER: Let me work through this carefully.\n\nThe presentation is acute onset neurological deficit (slurred speech, right-sided weakness) within a 2-hour window. This is a clinical stroke presentation.\n\nKey factors to consider:\n- 2-hour onset puts him within the thrombolysis window (typically 4.5 hours)\n- CT shows no haemorrhage, so this is likely ischaemic\n- He has AF, which is a major risk factor for cardioembolic stroke\n- His INR is 1.4, which is subtherapeutic (target typically 2-3 for AF)\n- The subtherapeutic INR may explain why he had a stroke despite being on warfarin\n\nNow evaluating each option:\n- A (IV alteplase): Thrombolysis. Within time window, CT excludes haemorrhage. Guidelines generally consider thrombolysis if INR < 1.7.\n- B (Increase warfarin): Addresses long-term problem but nothing for acute stroke.\n- C (Aspirin 300mg): Standard if thrombolysis contraindicated, but thrombolysis is an option here.\n- D (Urgent MRI): Would delay treatment. CT already excluded haemorrhage.\n\nSince he is within the thrombolysis window, CT excludes haemorrhage, and INR 1.4 is below the 1.7 threshold, IV alteplase is most appropriate.\n\nFINAL ANSWER: A\n\nNow solve the following problem using the same careful reasoning approach.\n\nHow is a skin cell from a mouse similar to an amoeba?\n\n  A: Both need energy.\n  B: Both have cell walls.\n  C: Both move with pseudopodia.\n  D: Both consume carbon dioxide.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the question: How is a skin cell from a mouse similar to an amoeba?\n\nWe are given four options, so let's examine each:\n\nA: Both need energy.\n- All living cells, including mouse skin cells and amoebae, require energy to perform cellular functions.\n- Mouse skin cells are eukaryotic animal cells that use energy to maintain homeostasis, grow, and function.\n- Amoebae are single-celled eukaryotes that also require energy for movement, feeding, and metabolism.\n- So, it is true that both need energy.\n\nB: Both have cell walls.\n- Animal cells, including mouse skin cells, do not have cell walls. Instead, they have only a plasma membrane.\n- Amoebae also lack cell walls; as protists, they have a flexible plasma membrane.\n- Therefore, this statement is false.\n\nC: Both move with pseudopodia.\n- Amoebae move using pseudopodia (temporary projections of cytoplasm).\n- Mouse skin cells are part of a multicellular organism and are generally stationary; they do not move by pseudopodia.\n- Therefore, this statement is false.\n\nD: Both consume carbon dioxide.\n- Most cells (including mouse skin cells) consume oxygen and produce carbon dioxide as a waste product.\n- Amoebae consume oxygen and release carbon dioxide as waste as well, but they do not \"consume\" carbon dioxide.\n- Therefore, this statement is inaccurate.\n\nSummarizing the analysis:\n\n- A is correct because both require energy.\n- B is incorrect because neither has cell walls.\n- C is incorrect because only amoebae use pseudopodia for movement.\n- D is incorrect because both consume oxygen, but do not consume carbon dioxide.\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "How is a skin cell from a mouse similar to an amoeba?",
+  "source": "ARC-Challenge"
+}

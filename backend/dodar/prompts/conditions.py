@@ -37,41 +37,72 @@ CONDITION_B = Condition(
         "Consider all of the relevant information provided. Work through your reasoning "
         "thoroughly and methodically. Examine the problem from multiple angles before "
         "settling on your approach. Take your time to ensure your analysis is complete "
-        "and that you have not overlooked any important details. Be thorough in your "
-        "consideration of the information. Consider whether your initial impression "
-        "might be incomplete or whether there are aspects of the problem that deserve "
-        "closer attention. Reflect on whether the information provided contains any "
-        "nuances that could affect your answer. Make sure you have accounted for all "
-        "the relevant factors before arriving at your conclusion. Verify that each part "
-        "of your reasoning supports the next, and that you have not made any assumptions "
-        "that are not warranted by the information given. Take care to ensure that your "
-        "analysis addresses the full scope of the question. Double-check that your "
-        "reasoning is consistent throughout and that your final answer follows logically "
-        "from your analysis. Then provide your final answer clearly."
+        "and that you have not overlooked any important details. Consider whether your "
+        "initial impression might be incomplete or whether there are aspects of the "
+        "problem that deserve closer attention. Reflect on whether the information "
+        "provided contains any nuances that could affect your answer. Make sure you "
+        "have accounted for all the relevant factors before arriving at your conclusion. "
+        "Verify that each part of your reasoning supports the next, and that you have "
+        "not made any assumptions that are not warranted by the information given. Take "
+        "care to ensure that your analysis addresses the full scope of the question. "
+        "Check whether your reasoning accounts for all the constraints and conditions "
+        "present in the problem. Ensure that each step of your reasoning follows "
+        "logically from the previous step and that your analysis does not skip over any "
+        "intermediate considerations. Double-check that your reasoning is consistent "
+        "throughout and that your final answer follows logically from your analysis. "
+        "Then provide your final answer clearly."
     ),
     condition_instruction="Think step by step.",
 )
 
 CONDITION_C = Condition(
     code="C",
-    name="Phase-Gated Reasoning (PGR)",
+    name="Phase-Gated Reasoning (PGR) v3 — Late Commitment",
     system_prompt=(
-        "When answering this question, follow these five phases in order:\n\n"
-        "1. DIAGNOSE: Before doing anything else, identify the core problem being asked. "
-        "What are the key constraints? What information is given and what is missing? "
-        "What assumptions should you question? List at least three competing interpretations "
-        "or hypotheses if the problem is ambiguous.\n\n"
-        "2. OPTIONS: Generate at least three possible approaches or answers. Do not commit "
-        "to any single approach yet. For each option, identify the key trade-off or risk.\n\n"
-        "3. DECIDE: Select one approach. State explicitly why you are choosing it and why "
-        "you are rejecting each alternative. State your confidence level (high, medium, low) "
-        "and what evidence would change your mind.\n\n"
-        "4. ACTION: Execute your chosen approach fully. Show your work. Identify which steps "
-        "are reversible and which are not.\n\n"
-        "5. REVIEW: Check your output against the original problem. Have you addressed all "
-        "constraints? Are there errors in your reasoning? Does your answer actually answer "
-        "what was asked? Identify at least one way your answer could be wrong. If you find "
-        "an error, correct it before giving your final answer."
+        "Work through these five phases in order. Each phase must add new reasoning, "
+        "not restate previous phases.\n\n"
+        "1. DIAGNOSE: What exactly is being asked? Identify the constraints that will "
+        "determine the answer. State the one thing most likely to cause an error on "
+        "this type of problem.\n\n"
+        "2. OPTIONS: Identify the two strongest candidate answers. For each, state the "
+        "specific evidence for and against. Do not rank them. Treat both as live "
+        "possibilities.\n\n"
+        "3. DECIDE: Plan how to test both candidates. What calculation or reasoning step "
+        "would distinguish between them? Do not select an answer yet.\n\n"
+        "4. ACTION: Execute the test from DECIDE on both candidates with equal rigour. "
+        "Show the full working for each. Record where evidence favours one over the "
+        "other.\n\n"
+        "5. REVIEW: Based only on the evidence produced in ACTION, select the answer "
+        "that better survived testing. State which specific result decided it. If the "
+        "evidence is balanced, state why one edge case tips it.\n\n"
+        'State your final answer only after completing all five phases. Do not use the '
+        'phrase "final answer" anywhere except the final line.'
+    ),
+    condition_instruction="Follow the five phases (Diagnose, Options, Decide, Action, Review).",
+)
+
+CONDITION_C_PREVIOUS = Condition(
+    code="C_previous",
+    name="PGR v2 — Early Commitment (deprecated)",
+    system_prompt=(
+        "Work through these five phases in order. Each phase must add new reasoning, "
+        "not restate previous phases.\n\n"
+        "1. DIAGNOSE: What exactly is being asked? Identify the constraints that will "
+        "determine the answer. State the one thing most likely to cause an error on this "
+        "type of problem.\n\n"
+        "2. OPTIONS: Identify the most plausible answer and the strongest competing "
+        "alternative. For each, state the specific evidence for and against. Do not "
+        "simply list all choices.\n\n"
+        "3. DECIDE: Commit to one answer. State the single strongest reason it is correct "
+        "and the single strongest reason it might be wrong.\n\n"
+        "4. ACTION: Verify your chosen answer by working through the problem with that "
+        "answer in mind. If the problem involves calculation, show each step. If it "
+        "involves reasoning, trace the logical chain.\n\n"
+        "5. REVIEW: Look for the specific error you identified in DIAGNOSE. Check whether "
+        "the concern you raised in DECIDE actually applies. If you find a genuine error, "
+        "change your answer. If not, confirm it.\n\n"
+        'State your final answer only after completing all five phases. Do not use the '
+        'phrase "final answer" anywhere except the final line.'
     ),
     condition_instruction="Follow the five phases (Diagnose, Options, Decide, Action, Review).",
 )
@@ -116,22 +147,26 @@ CONDITION_E = Condition(
 
 CONDITION_F = Condition(
     code="F",
-    name="Shuffled-Phase PGR",
+    name="Shuffled-Phase PGR v2",
     system_prompt=(
-        "When answering this question, work through these five phases:\n\n"
-        "1. REVIEW: Check your understanding of the problem. What is actually being asked? "
-        "Are there errors in your initial reading? Identify at least one way you might "
-        "misinterpret this question.\n\n"
-        "2. ACTION: Begin working through the problem. Show your reasoning and calculations. "
-        "Identify which parts of your work are certain and which are tentative.\n\n"
-        "3. OPTIONS: Step back and generate at least three possible approaches or answers. "
-        "For each option, identify the key trade-off or risk. Do not commit yet.\n\n"
-        "4. DIAGNOSE: Now identify the core problem more precisely. What are the key "
-        "constraints? What information is given and what is missing? What assumptions should "
-        "you question?\n\n"
-        "5. DECIDE: Select your final approach. State explicitly why you are choosing it and "
-        "why you are rejecting each alternative. State your confidence level and what evidence "
-        "would change your mind."
+        "Work through these five phases in order. Each phase must add new reasoning, "
+        "not restate previous phases.\n\n"
+        "1. REVIEW: Before answering, identify what type of error is most common on this "
+        "kind of problem. What specific mistake should you watch for? Be precise about "
+        "the failure mode.\n\n"
+        "2. ACTION: Begin working through the problem. Show your reasoning or calculations "
+        "step by step. Flag any step where you are uncertain. Identify which parts of your "
+        "reasoning are solid and which are tentative.\n\n"
+        "3. OPTIONS: Based on your work so far, identify the most plausible answer and the "
+        "strongest competing alternative. State the specific evidence for and against each. "
+        "Do not simply list all choices.\n\n"
+        "4. DIAGNOSE: Now re-examine the problem constraints. Have you addressed all of "
+        "them? Is there information you overlooked or an assumption you made that might "
+        "be wrong?\n\n"
+        "5. DECIDE: Commit to your final answer. State the single strongest reason for "
+        "your choice and the single strongest reason against it.\n\n"
+        'State your final answer only after completing all five phases. Do not use the '
+        'phrase "final answer" anywhere except the final line.'
     ),
     condition_instruction="Follow the five phases (Review, Action, Options, Diagnose, Decide).",
 )
@@ -144,30 +179,77 @@ CONDITION_G = Condition(
     few_shot=True,
 )
 
+CONDITION_H = Condition(
+    code="H",
+    name="Anti-Anchoring PGR",
+    system_prompt=(
+        "Work through these five phases in order. Each phase must add new reasoning, "
+        "not restate previous phases.\n\n"
+        "1. DIAGNOSE: What type of problem is this and what are the constraints? What "
+        "mistake is most common on this type of problem? Do not consider possible answers "
+        "yet.\n\n"
+        "2. OPTIONS: Identify the two strongest candidate answers. For each, state the "
+        "specific evidence for and against. Treat both as equally plausible until all "
+        "evidence is weighed.\n\n"
+        "3. DECIDE: State your best answer. Rate your confidence 1-10. Name the one "
+        "piece of evidence that would make you switch.\n\n"
+        "4. ACTION: Test whether your chosen answer survives scrutiny. If calculation, "
+        "show each step. If reasoning, trace the logical chain. Flag any point where "
+        "evidence cuts against your choice.\n\n"
+        "5. REVIEW: Argue the strongest case that your answer is WRONG. Present the full "
+        "case for the alternative as if you were opposing counsel. After making this "
+        "argument, decide: switch or stand.\n\n"
+        'State your final answer only after completing all five phases. Do not use the '
+        'phrase "final answer" anywhere except the final line.'
+    ),
+    condition_instruction="Follow the five phases (Diagnose, Options, Decide, Action, Review).",
+)
+
 # Registry
 CONDITIONS: dict[str, Condition] = {
     "A": CONDITION_A,
     "B": CONDITION_B,
     "C": CONDITION_C,
+    "C_previous": CONDITION_C_PREVIOUS,
     "D": CONDITION_D,
     "E": CONDITION_E,
     "F": CONDITION_F,
     "G": CONDITION_G,
+    "H": CONDITION_H,
 }
 
-BENCHMARK_CONDITION_CODES = ["A", "B", "C", "D", "E", "F", "G"]
+# Default conditions for new runs (C_previous available but not default)
+BENCHMARK_CONDITION_CODES = ["A", "B", "C", "D", "E", "F", "G", "H"]
+
+# All conditions including deprecated
+ALL_CONDITION_CODES = ["A", "B", "C", "C_previous", "D", "E", "F", "G", "H"]
 
 
 # --- Few-shot worked examples for Condition G ---
 
-# Rotation map: test domain -> example domain
+# Rotation map: test source -> example domain
+# Supports both v1 sources ("MedQA-USMLE") and v2 sub-sources ("BBH/causal_judgement")
 EXAMPLE_ROTATION: dict[str, str] = {
+    # v1 exact sources
     "MedQA-USMLE": "mathematical_reasoning",
     "MMLU": "science_reasoning",
     "GSM8K": "diverse_reasoning",
     "BBH": "professional_reasoning",
     "ARC-Challenge": "clinical_reasoning",
-    # Also map by category for flexibility
+    # v2 sub-sources (BBH/*)
+    "BBH/causal_judgement": "professional_reasoning",
+    "BBH/logical_deduction_five_objects": "professional_reasoning",
+    "BBH/web_of_lies": "professional_reasoning",
+    "BBH/snarks": "mathematical_reasoning",
+    "BBH/disambiguation_qa": "clinical_reasoning",
+    "BBH/navigate": "mathematical_reasoning",
+    # v2 sub-sources (MMLU/*)
+    "MMLU/professional_law": "science_reasoning",
+    "MMLU/professional_accounting": "science_reasoning",
+    "MMLU/formal_logic": "clinical_reasoning",
+    "MMLU/conceptual_physics": "diverse_reasoning",
+    "MMLU/professional_medicine": "science_reasoning",
+    # Category-based fallbacks
     "clinical_reasoning": "mathematical_reasoning",
     "professional_reasoning": "science_reasoning",
     "mathematical_reasoning": "diverse_reasoning",
@@ -284,11 +366,19 @@ def get_worked_example(source: str, category: str) -> str:
     """Get the worked example for a task, based on its source or category.
 
     Uses the rotation map: a MedQA task gets a math example, etc.
+    Handles v2 sub-sources like "BBH/causal_judgement" by trying the full
+    source first, then the prefix before "/".
     """
-    # Try source first, then category
-    example_key = EXAMPLE_ROTATION.get(source) or EXAMPLE_ROTATION.get(category)
+    # Try exact source match first
+    example_key = EXAMPLE_ROTATION.get(source)
+    # Try prefix (e.g. "BBH/snarks" -> "BBH")
+    if not example_key and "/" in source:
+        example_key = EXAMPLE_ROTATION.get(source.split("/")[0])
+    # Try category
+    if not example_key and category:
+        example_key = EXAMPLE_ROTATION.get(category)
+    # Fallback: mathematical reasoning (most neutral)
     if not example_key:
-        # Fallback: use mathematical reasoning (most neutral)
         example_key = "mathematical_reasoning"
     return WORKED_EXAMPLES[example_key]
 

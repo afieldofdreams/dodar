@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-015",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:25:06.742222Z",
+  "latency_seconds": 4.75,
+  "input_tokens": 458,
+  "output_tokens": 319,
+  "cost_usd": 0.000694,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nThomas withdraws $1000 in 20 dollar bills from the bank account.  He loses 10 bills while getting home.  After that, he uses half of the remaining bills to pay for a bill.  Thomas then triples his money.  He then converts all his bills to 5 dollar bills.  How many 5 dollar bills does he have?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me reason through this step-by-step.\n\n1. Thomas withdraws $1000 in 20 dollar bills.  \n   Number of $20 bills initially = 1000 ÷ 20 = 50 bills.\n\n2. He loses 10 bills while getting home.  \n   Bills left after losing 10 = 50 - 10 = 40 bills.  \n   Amount of money left = 40 × $20 = $800.\n\n3. He uses half of the remaining bills to pay a bill.  \n   Half of 40 = 20 bills used for payment.  \n   Money paid = 20 × $20 = $400.  \n   Bills left after payment = 40 - 20 = 20 bills.  \n   Money left = 20 × $20 = $400.\n\n4. Thomas then triples his money.  \n   Money after tripling = $400 × 3 = $1200.  \n   Number of $20 bills now: since initially the money was in $20 bills, tripling money would mean the equivalent amount, but the problem probably means the amount triples, not the number of bills tripling (since bills are discrete). So now he has $1200 in $20 bills:  \n   New number of $20 bills = $1200 ÷ 20 = 60 bills.\n\n5. He then converts all his bills to $5 bills.  \n   Total amount = $1200.  \n   Number of $5 bills = 1200 ÷ 5 = 240 bills.\n\nFINAL ANSWER: 240",
+  "extracted_answer": "240",
+  "is_correct": true,
+  "correct_answer": "240",
+  "answer_type": "numeric_exact",
+  "question": "Thomas withdraws $1000 in 20 dollar bills from the bank account.  He loses 10 bills while getting home.  After that, he uses half of the remaining bills to pay for a bill.  Thomas then triples his money.  He then converts all his bills to 5 dollar bills.  How many 5 dollar bills does he have?",
+  "source": "GSM8K"
+}

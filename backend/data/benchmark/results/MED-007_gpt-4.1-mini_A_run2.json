@@ -1,0 +1,21 @@
+{
+  "task_id": "MED-007",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:19:46.674689Z",
+  "latency_seconds": 6.09,
+  "input_tokens": 180,
+  "output_tokens": 338,
+  "cost_usd": 0.000613,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A 29-year-old man diagnosed with schizophrenia 4 years ago presents for follow-up to discuss his medication. The patient was diagnosed with schizophrenia 4 years ago and has since tried several antipsychotic medications, none of which have been able to treat his negative symptoms. He has changed to clozapine 2 weeks ago and says that he does feel better. His physical exam is unremarkable, and he is responding appropriately to questioning. If this patient’s current medication is to be continued, which of the following laboratory tests should be ordered at this time?\n\n  A: Slit-lamp examination\n  B: Electrocardiogram\n  C: Prolactin level\n  D: Complete blood count\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "The patient was diagnosed with schizophrenia and has been switched to clozapine 2 weeks ago. Clozapine is typically reserved for treatment-resistant schizophrenia. While the patient reports feeling better, clozapine is known to have several important potential adverse effects, including a very serious risk of agranulocytosis (a dangerous drop in white blood cells).\n\nBecause of this, patients on clozapine require regular monitoring of their **complete blood count (CBC)** to watch for neutropenia or agranulocytosis. Blood counts must be obtained weekly for the first 6 months, every 2 weeks for the next 6 months, and then monthly thereafter. This monitoring is crucial for patient safety.\n\nLet's analyze the options:\n\n- A: Slit-lamp examination – This is indicated with certain drugs such as quetiapine or corticosteroids for eye side effects or substances causing pigment deposits, not for clozapine.\n- B: Electrocardiogram – While clozapine can cause myocarditis, routine ECG is not typically required unless symptoms occur. ECGs are more relevant for drugs like ziprasidone or drugs that cause QT prolongation.\n- C: Prolactin level – Many antipsychotics increase prolactin, causing side effects, but clozapine actually tends to decrease prolactin levels or leave them normal.\n- D: Complete blood count – This is the most important test to monitor clozapine adverse effects.\n\n**Therefore, the most important lab test needed at this time for a patient started on clozapine 2 weeks ago is a complete blood count.**\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "A 29-year-old man diagnosed with schizophrenia 4 years ago presents for follow-up to discuss his medication. The patient was diagnosed with schizophrenia 4 years ago and has since tried several antipsychotic medications, none of which have been able to treat his negative symptoms. He has changed to clozapine 2 weeks ago and says that he does feel better. His physical exam is unremarkable, and he is responding appropriately to questioning. If this patient’s current medication is to be continued, which of the following laboratory tests should be ordered at this time?",
+  "source": "MedQA-USMLE"
+}

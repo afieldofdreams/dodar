@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-011",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:30:31.512458Z",
+  "latency_seconds": 2.43,
+  "input_tokens": 535,
+  "output_tokens": 230,
+  "cost_usd": 0.000582,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A 65-year-old man presents with sudden onset of slurred speech and right-sided weakness that started 2 hours ago. He has a history of atrial fibrillation and takes warfarin. His INR today is 1.4. CT head shows no haemorrhage. What is the most appropriate immediate management?\nA: Administer IV alteplase (thrombolysis)\nB: Increase warfarin dose\nC: Start aspirin 300mg\nD: Arrange urgent MRI brain\n\nEXAMPLE ANSWER: Let me work through this carefully.\n\nThe presentation is acute onset neurological deficit (slurred speech, right-sided weakness) within a 2-hour window. This is a clinical stroke presentation.\n\nKey factors to consider:\n- 2-hour onset puts him within the thrombolysis window (typically 4.5 hours)\n- CT shows no haemorrhage, so this is likely ischaemic\n- He has AF, which is a major risk factor for cardioembolic stroke\n- His INR is 1.4, which is subtherapeutic (target typically 2-3 for AF)\n- The subtherapeutic INR may explain why he had a stroke despite being on warfarin\n\nNow evaluating each option:\n- A (IV alteplase): Thrombolysis. Within time window, CT excludes haemorrhage. Guidelines generally consider thrombolysis if INR < 1.7.\n- B (Increase warfarin): Addresses long-term problem but nothing for acute stroke.\n- C (Aspirin 300mg): Standard if thrombolysis contraindicated, but thrombolysis is an option here.\n- D (Urgent MRI): Would delay treatment. CT already excluded haemorrhage.\n\nSince he is within the thrombolysis window, CT excludes haemorrhage, and INR 1.4 is below the 1.7 threshold, IV alteplase is most appropriate.\n\nFINAL ANSWER: A\n\nNow solve the following problem using the same careful reasoning approach.\n\nNaomi has a pet dog. Which of the following characteristics did the dog most likely inherit from its parents?\n\n  A: its weight\n  B: its favorite food\n  C: the color of its fur\n  D: the place where it lives\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let me carefully analyze the question.\n\nNaomi has a pet dog. The question asks which characteristic the dog most likely inherited from its parents.\n\nWe need to consider which traits in a dog are genetically inherited versus which are influenced by environment or preference.\n\nOption A: Its weight  \n- Weight is influenced by both genetics and environment (diet, exercise). While genetics do play a role in potential size/weight, environmental factors heavily influence actual weight. Still, genetics set a baseline.\n\nOption B: Its favorite food  \n- Taste preference or food preference is largely influenced by experience and individual taste, not inherited genetically. Dogs may have preferences shaped by training or habit.\n\nOption C: The color of its fur  \n- Fur color is a typical genetic trait determined by dog’s genes inherited from the parents. This is a classic example of an inherited trait.\n\nOption D: The place where it lives  \n- This is an environmental factor, clearly not inherited.\n\nComparing all options, the most straightforward inherited characteristic is the color of the fur.\n\nAlthough weight has genetic components, it can vary significantly due to environment. Fur color is purely genetic.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Naomi has a pet dog. Which of the following characteristics did the dog most likely inherit from its parents?",
+  "source": "ARC-Challenge"
+}

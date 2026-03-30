@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-014",
+  "condition": "C_previous",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:38:31.527612Z",
+  "latency_seconds": 5.27,
+  "input_tokens": 347,
+  "output_tokens": 451,
+  "cost_usd": 0.00086,
+  "system_prompt_sent": "Work through these five phases in order. Each phase must add new reasoning, not restate previous phases.\n\n1. DIAGNOSE: What exactly is being asked? Identify the constraints that will determine the answer. State the one thing most likely to cause an error on this type of problem.\n\n2. OPTIONS: Identify the most plausible answer and the strongest competing alternative. For each, state the specific evidence for and against. Do not simply list all choices.\n\n3. DECIDE: Commit to one answer. State the single strongest reason it is correct and the single strongest reason it might be wrong.\n\n4. ACTION: Verify your chosen answer by working through the problem with that answer in mind. If the problem involves calculation, show each step. If it involves reasoning, trace the logical chain.\n\n5. REVIEW: Look for the specific error you identified in DIAGNOSE. Check whether the concern you raised in DECIDE actually applies. If you find a genuine error, change your answer. If not, confirm it.\n\nState your final answer only after completing all five phases. Do not use the phrase \"final answer\" anywhere except the final line.",
+  "user_prompt_sent": "Follow the five phases (Diagnose, Options, Decide, Action, Review).\n\nApril is donating plant pots to a local school for their new garden. They ask for 30 plant pots for the daisies, and twice as many for the roses. April had already bought 100 plant pots from the garden center before she knew how many she needed. How many plant pots does April have left over?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "1. DIAGNOSE:  \nThe question asks for the number of plant pots April has leftover after donating a specified amount. Constraints include:  \n- Daisies need 30 pots.  \n- Roses need twice as many pots as daisies, so roses need 2 × 30 = 60 pots.  \n- April has initially bought 100 pots.  \nThe key calculation is subtracting the total pots donated from the initial 100 pots. The most common error is miscalculating the number of pots needed for roses or subtracting incorrectly.\n\n2. OPTIONS:  \n- Option 1: Leftover pots = 100 - (30 for daisies + 60 for roses) = 10 pots.  \n  Evidence for: Correctly calculating 60 as twice the daisies' pots, then summing 30 + 60 = 90 total pots needed. Subtracting from 100 leaves 10.  \n  Evidence against: None apparent if the problem is interpreted literally as described.\n\n- Option 2: Another contender might be misunderstanding \"twice as many\" as total rather than just for roses, or mixing up numbers, leading to a different leftover number (e.g., 40).  \n  Evidence against: Misreading \"twice as many\" would ignore problem statement accuracy.\n\n3. DECIDE:  \nI choose Option 1: leftover pots = 10.  \nStrongest reason for correctness: Directly follows the problem's conditions and arithmetic.  \nStrongest reason it might be wrong: Misinterpretation of \"twice as many for the roses\" or forgetting to add daisies and roses before subtracting.\n\n4. ACTION:  \nCalculate total pots needed:  \n- Daisies: 30 pots  \n- Roses: 2 × 30 = 60 pots  \nTotal pots needed = 30 + 60 = 90 pots  \nPots leftover = 100 - 90 = 10 pots\n\n5. REVIEW:  \nCheck the concern about misreading \"twice as many.\" The problem explicitly says twice as many for the roses compared to daisies, so 60 is correct. Summation and subtraction are straightforward. No errors found.  \n\nFINAL ANSWER: 10",
+  "extracted_answer": "10",
+  "is_correct": true,
+  "correct_answer": "10",
+  "answer_type": "numeric_exact",
+  "question": "April is donating plant pots to a local school for their new garden. They ask for 30 plant pots for the daisies, and twice as many for the roses. April had already bought 100 plant pots from the garden center before she knew how many she needed. How many plant pots does April have left over?",
+  "source": "GSM8K"
+}

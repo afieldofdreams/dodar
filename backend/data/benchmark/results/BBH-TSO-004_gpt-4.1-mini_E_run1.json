@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-TSO-004",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T11:57:07.297673Z",
+  "latency_seconds": 10.34,
+  "input_tokens": 310,
+  "output_tokens": 367,
+  "cost_usd": 0.000711,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nAlice, Bob, Claire, Dave, and Eve are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Izzi, Bob is dancing with Lola, Claire is dancing with Sam, Dave is dancing with Patrick, and Eve is dancing with Jamie.\nThroughout the song, the dancers often trade partners. First, Claire and Eve switch partners. Then, Dave and Alice switch partners. Then, Claire and Dave switch partners. Then, Claire and Alice switch partners. Finally, Bob and Eve switch partners. At the end of the dance, Alice is dancing with\nOptions:\n(A) Izzi\n(B) Lola\n(C) Sam\n(D) Patrick\n(E) Jamie\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Step 1 - STEP BACK:  \nThis problem involves tracking the changes in partnerships through a series of switches. Each person starts with an initial partner, and then pairs trade partners in sequence. The key principle here is to carefully track the partner of each primary dancer after every trade, and update these partnerships systematically. The partner swaps only affect the two involved dancers—they exchange partners without introducing any other changes.\n\nStep 2 - REASON:  \nInitial partnerships:  \n- Alice ↔ Izzi  \n- Bob ↔ Lola  \n- Claire ↔ Sam  \n- Dave ↔ Patrick  \n- Eve ↔ Jamie  \n\nThe trades happen in order:\n\n1. Claire and Eve switch partners:  \nClaire's partner: Sam → Eve's partner: Jamie  \nAfter swap:  \n- Claire's partner becomes Jamie  \n- Eve's partner becomes Sam  \nUpdated:  \n- Claire ↔ Jamie  \n- Eve ↔ Sam  \n\n2. Dave and Alice switch partners:  \nDave's partner: Patrick  \nAlice's partner: Izzi  \nAfter swap:  \n- Dave ↔ Izzi  \n- Alice ↔ Patrick  \n\n3. Claire and Dave switch partners:  \nClaire's partner: Jamie  \nDave's partner: Izzi  \nAfter swap:  \n- Claire ↔ Izzi  \n- Dave ↔ Jamie  \n\n4. Claire and Alice switch partners:  \nClaire's partner: Izzi  \nAlice's partner: Patrick  \nAfter swap:  \n- Claire ↔ Patrick  \n- Alice ↔ Izzi  \n\n5. Bob and Eve switch partners:  \nBob's partner: Lola  \nEve's partner: Sam  \nAfter swap:  \n- Bob ↔ Sam  \n- Eve ↔ Lola  \n\nWe want to know Alice's partner at the end: After the last swap, Alice is dancing with Izzi.\n\nFINAL ANSWER: Izzi",
+  "extracted_answer": "Izzi",
+  "is_correct": false,
+  "correct_answer": "A",
+  "answer_type": "exact_match",
+  "question": "Alice, Bob, Claire, Dave, and Eve are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Izzi, Bob is dancing with Lola, Claire is dancing with Sam, Dave is dancing with Patrick, and Eve is dancing with Jamie.\nThroughout the song, the dancers often trade partners. First, Claire and Eve switch partners. Then, Dave and Alice switch partners. Then, Claire and Dave switch partners. Then, Claire and Alice switch partners. Finally, Bob and Eve switch partners. At the end of the dance, Alice is dancing with\nOptions:\n(A) Izzi\n(B) Lola\n(C) Sam\n(D) Patrick\n(E) Jamie",
+  "source": "BBH/tracking_shuffled_objects"
+}

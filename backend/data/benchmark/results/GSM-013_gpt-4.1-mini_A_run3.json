@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-013",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:20:14.951285Z",
+  "latency_seconds": 4.96,
+  "input_tokens": 113,
+  "output_tokens": 135,
+  "cost_usd": 0.000261,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Alice likes to count the puffs of clouds in the sky while she eats her lunch outside at school. On Monday she counts just 3 puffs of clouds. Each day after that through Friday, though, she sees double the number of clouds in the sky as the day before. At the end of the week, how many clouds will she have counted in the sky at lunch across all five days?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "On Monday, Alice counts 3 puffs of clouds.\n\nEach day after that, she counts double the number from the previous day. Let's find the number of puffs each day:\n\n- Monday: 3\n- Tuesday: 3 × 2 = 6\n- Wednesday: 6 × 2 = 12\n- Thursday: 12 × 2 = 24\n- Friday: 24 × 2 = 48\n\nNow, add all the counts together to find the total number of puffs counted across the five days:\n\n3 + 6 + 12 + 24 + 48 = 93\n\nFINAL ANSWER: 93",
+  "extracted_answer": "93",
+  "is_correct": true,
+  "correct_answer": "93",
+  "answer_type": "numeric_exact",
+  "question": "Alice likes to count the puffs of clouds in the sky while she eats her lunch outside at school. On Monday she counts just 3 puffs of clouds. Each day after that through Friday, though, she sees double the number of clouds in the sky as the day before. At the end of the week, how many clouds will she have counted in the sky at lunch across all five days?",
+  "source": "GSM8K"
+}

@@ -18,7 +18,7 @@ const BENCHMARK_MODELS = [
   "llama3.1:8b",
 ] as const;
 
-const SOURCES = ["MedQA-USMLE", "MMLU", "GSM8K", "BBH", "ARC-Challenge"] as const;
+// Sources are derived from loaded tasks — no hardcoded list needed
 
 const CONDITION_COLORS: Record<string, string> = {
   A: "text-zinc-400", B: "text-blue-400", C: "text-orange-400", D: "text-violet-400",
@@ -27,27 +27,27 @@ const CONDITION_COLORS: Record<string, string> = {
 
 export default function NewBenchmarkRunPage() {
   const navigate = useNavigate();
+  const [taskVersion, setTaskVersion] = useState<string>("v3");
   const [selectedSource, setSelectedSource] = useState("");
   const [selectedTaskIds, setSelectedTaskIds] = useState<string[]>([]);
   const [selectedModels, setSelectedModels] = useState<string[]>(["gpt-4.1-mini"]);
   const [selectedConditions, setSelectedConditions] = useState<string[]>(["A", "B", "C"]);
   const [runsPerTask, setRunsPerTask] = useState(1);
   const [skipCompleted, setSkipCompleted] = useState(true);
-  const [estimate, setEstimate] = useState<{
-    total_calls: number;
-    total_estimated_cost_usd: number;
-    models: Array<{ model: string; calls: number; estimated_cost_usd: number }>;
-  } | null>(null);
+  const [estimate, setEstimate] = useState<import("../api/benchmark").BenchmarkEstimate | null>(null);
 
   const { data: tasks = [] } = useQuery({
-    queryKey: ["benchmark-tasks"],
-    queryFn: fetchBenchmarkTasks,
+    queryKey: ["benchmark-tasks", taskVersion],
+    queryFn: () => fetchBenchmarkTasks(taskVersion),
   });
 
   const { data: conditions = [] } = useQuery({
     queryKey: ["benchmark-conditions"],
-    queryFn: fetchBenchmarkConditions,
+    queryFn: () => fetchBenchmarkConditions(true),
   });
+
+  // Derive unique sources from loaded tasks
+  const sources = [...new Set(tasks.map((t) => t.source))].sort();
 
   const filteredTasks = selectedSource
     ? tasks.filter((t) => t.source === selectedSource)
@@ -73,6 +73,7 @@ export default function NewBenchmarkRunPage() {
         runs_per_task: runsPerTask,
         skip_completed: skipCompleted,
         stage: runsPerTask === 1 ? "triage" : "validate",
+        task_version: taskVersion,
       }),
     onSuccess: (data) => navigate(`/benchmark/runs/${data.run_id}`),
   });
@@ -91,6 +92,36 @@ export default function NewBenchmarkRunPage() {
         100 tasks from MedQA, MMLU, GSM8K, BBH, ARC-Challenge. Seven experimental conditions.
       </p>
 
+      {/* Task Bank */}
+      <Section title="Task Bank">
+        <div className="flex gap-3 mb-3 flex-wrap">
+          {([
+            ["v3", "v3 — Dataset-sourced (100 tasks)"],
+            ["v2", "v2 — Hand-curated (100 tasks)"],
+            ["v1", "v1 — Original (100 tasks)"],
+          ] as const).map(([ver, label]) => (
+            <button
+              key={ver}
+              onClick={() => { setTaskVersion(ver); setSelectedSource(""); setSelectedTaskIds([]); }}
+              className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer ${
+                taskVersion === ver
+                  ? "bg-accent text-white"
+                  : "bg-surface-2 text-zinc-400 border border-border hover:text-zinc-200"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        <p className="text-xs text-zinc-500 mb-3">
+          {taskVersion === "v3"
+            ? "Generated from HuggingFace datasets with full provenance. MedQA, MMLU Professional, GSM8K, BBH, ARC-Challenge."
+            : taskVersion === "v2"
+            ? "Hand-curated for framework differentiation. More BBH, harder MedQA, new snarks/disambiguation/navigate/logic/physics."
+            : "Original benchmark from protocol v5. MedQA, MMLU, GSM8K, BBH, ARC-Challenge."}
+        </p>
+      </Section>
+
       {/* Tasks */}
       <Section title="Tasks">
         <div className="flex gap-2 mb-2">
@@ -100,7 +131,7 @@ export default function NewBenchmarkRunPage() {
             className="bg-surface-2 border border-border rounded-md px-3 py-1.5 text-sm text-zinc-300 focus:outline-none focus:border-accent"
           >
             <option value="">All Sources ({tasks.length})</option>
-            {SOURCES.map((s) => (
+            {sources.map((s) => (
               <option key={s} value={s}>{s} ({tasks.filter((t) => t.source === s).length})</option>
             ))}
           </select>
@@ -166,7 +197,7 @@ export default function NewBenchmarkRunPage() {
       {/* Conditions */}
       <Section title="Conditions">
         <div className="grid grid-cols-2 gap-1">
-          {conditions.map((c) => (
+          {conditions.filter((c) => !c.deprecated).map((c) => (
             <label key={c.code} className="flex items-center gap-2 py-1 text-sm cursor-pointer hover:text-white text-zinc-300">
               <input
                 type="checkbox"
@@ -179,6 +210,25 @@ export default function NewBenchmarkRunPage() {
             </label>
           ))}
         </div>
+        {conditions.some((c) => c.deprecated) && (
+          <div className="mt-3 pt-3 border-t border-border/50">
+            <div className="text-xs text-zinc-600 mb-1">Deprecated (for comparison)</div>
+            <div className="grid grid-cols-2 gap-1">
+              {conditions.filter((c) => c.deprecated).map((c) => (
+                <label key={c.code} className="flex items-center gap-2 py-1 text-sm cursor-pointer hover:text-zinc-300 text-zinc-500">
+                  <input
+                    type="checkbox"
+                    checked={selectedConditions.includes(c.code)}
+                    onChange={() => toggleItem(selectedConditions, c.code, setSelectedConditions)}
+                    className="accent-zinc-500"
+                  />
+                  <span className="font-bold text-zinc-500">{c.code}</span>
+                  <span>{c.name}</span>
+                </label>
+              ))}
+            </div>
+          </div>
+        )}
       </Section>
 
       {/* Options */}
@@ -239,22 +289,46 @@ export default function NewBenchmarkRunPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="text-left text-xs text-zinc-500">
-                <th className="px-4 py-2">Model</th>
+                <th className="px-4 py-2">Component</th>
                 <th className="px-4 py-2">Calls</th>
                 <th className="px-4 py-2">Est. Cost</th>
               </tr>
             </thead>
             <tbody>
+              {/* Benchmark runs */}
               {estimate.models.map((e, i) => (
                 <tr key={i} className="border-t border-border/50">
-                  <td className="px-4 py-2 text-zinc-300">{e.model}</td>
+                  <td className="px-4 py-2 text-zinc-300">Benchmark — {e.model}</td>
                   <td className="px-4 py-2 text-zinc-400">{e.calls}</td>
                   <td className="px-4 py-2 text-zinc-300">${e.estimated_cost_usd.toFixed(4)}</td>
                 </tr>
               ))}
+              {/* Subtotal benchmark */}
+              <tr className="border-t border-border/50 text-zinc-400">
+                <td className="px-4 py-1.5 text-xs">Benchmark subtotal</td>
+                <td className="px-4 py-1.5 text-xs">{estimate.total_calls}</td>
+                <td className="px-4 py-1.5 text-xs">${estimate.benchmark_cost_usd.toFixed(4)}</td>
+              </tr>
+              {/* Error classification */}
+              <tr className="border-t border-border/50">
+                <td className="px-4 py-2 text-zinc-300">
+                  Error classification
+                  <span className="text-xs text-zinc-500 ml-1">
+                    (~{estimate.error_classification.estimated_incorrect} errors × {estimate.error_classification.scorers.length} scorers)
+                  </span>
+                </td>
+                <td className="px-4 py-2 text-zinc-400">{estimate.error_classification.classification_calls}</td>
+                <td className="px-4 py-2 text-zinc-300">${estimate.error_classification.estimated_cost_usd.toFixed(4)}</td>
+              </tr>
+              <tr className="border-t border-border/50 text-xs text-zinc-500">
+                <td className="px-4 py-1 pl-8" colSpan={3}>
+                  Scorers: {estimate.error_classification.scorers.join(" + ")}
+                </td>
+              </tr>
+              {/* Total */}
               <tr className="border-t border-border font-semibold text-white">
-                <td className="px-4 py-2">Total</td>
-                <td className="px-4 py-2">{estimate.total_calls}</td>
+                <td className="px-4 py-2">Total (benchmark + scoring)</td>
+                <td className="px-4 py-2">{estimate.total_calls + estimate.error_classification.classification_calls}</td>
                 <td className="px-4 py-2">${estimate.total_estimated_cost_usd.toFixed(4)}</td>
               </tr>
             </tbody>

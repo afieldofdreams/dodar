@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-002",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:07:00.498812Z",
+  "latency_seconds": 3.27,
+  "input_tokens": 99,
+  "output_tokens": 225,
+  "cost_usd": 0.0004,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "How would a typical person answer each of the following questions about causation?\nSuzy and Billy both throw rocks at a bottle at the same time. Suzy's rock arrives first and shatters the bottle. Billy's rock arrives a moment later, but the bottle is already shattered. Did Billy cause the bottle to shatter?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "To analyze whether Billy caused the bottle to shatter, let's consider typical human intuitions about causation in such scenarios:\n\n1. **Timing and sequence**: Suzy's rock arrives first and breaks the bottle. Billy's rock arrives afterward when the bottle is already broken.\n\n2. **Effect actualization**: The bottle shatters at the moment Suzy's rock hits it, not when Billy's rock arrives.\n\n3. **Causation vs. contribution**: Causation typically involves being a necessary factor for the effect to occur. Since the bottle was intact until Suzy’s rock arrived, and shattered right then, Suzy's action was sufficient to cause the shattering.\n\n4. **Billy's rock impact**: Even though Billy did throw a rock, and it hit the location just after the bottle was already broken, his action did not bring about the shattering — the effect had already happened.\n\nBased on typical reasoning, most people would say that only Suzy caused the bottle to shatter, not Billy.\n\nFINAL ANSWER: No, Billy did not cause the bottle to shatter.",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nSuzy and Billy both throw rocks at a bottle at the same time. Suzy's rock arrives first and shatters the bottle. Billy's rock arrives a moment later, but the bottle is already shattered. Did Billy cause the bottle to shatter?",
+  "source": "BBH/causal_judgement"
+}

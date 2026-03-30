@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-002",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T11:59:48.612752Z",
+  "latency_seconds": 5.1,
+  "input_tokens": 219,
+  "output_tokens": 264,
+  "cost_usd": 0.00051,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nOn a certain day, the total cost of filling up 20 helium balloons was $900. Two days later, the cost of filling each balloon was increased by $20. How much did Bentley pay to fill 170 balloons if he went to fill them after the price increase?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nTo solve this problem, we use the basic principles of unit cost and total cost calculation:\n\n- Total cost = (number of items) × (cost per item)  \n- If cost per item changes, the new total cost is calculated using the updated unit price.  \n- The problem gives an initial total cost for a known quantity, from which we can find the original unit cost.  \n- After a price increase, the new unit cost is the original unit cost plus the increase.  \n- Using the new unit cost, we can find the total cost for any given quantity.\n\nStep 2 - REASON:  \nGiven:  \n- Total cost for 20 balloons initially = $900  \n- After two days, cost per balloon increases by $20  \n- Bentley fills 170 balloons after the increase\n\nFirst, find the original cost per balloon:  \nOriginal cost per balloon = Total cost / Number of balloons = 900 / 20 = $45\n\nNext, find the new cost per balloon after the $20 increase:  \nNew cost per balloon = 45 + 20 = $65\n\nFinally, calculate Bentley's total cost for 170 balloons:  \nTotal cost = 170 × 65 = $11,050\n\nFINAL ANSWER: 11050",
+  "extracted_answer": "11050",
+  "is_correct": true,
+  "correct_answer": "11050",
+  "answer_type": "numeric_exact",
+  "question": "On a certain day, the total cost of filling up 20 helium balloons was $900. Two days later, the cost of filling each balloon was increased by $20. How much did Bentley pay to fill 170 balloons if he went to fill them after the price increase?",
+  "source": "GSM8K"
+}

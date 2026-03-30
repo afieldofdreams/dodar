@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-006",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T11:56:14.419668Z",
+  "latency_seconds": 4.15,
+  "input_tokens": 258,
+  "output_tokens": 290,
+  "cost_usd": 0.000567,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nThe city of Cobb has two trust funds for the benefit of the city's library trust fund A and trust fund B. Only the earnings from trust fund A can be expended and both the principal and interest from trust fund B can be expended. How should the city of Cobb report each trust fund? Trust fund A Trust fund B\n\n  A: Permanent Permanent\n  B: Permanent Special revenue\n  C: Special revenue Permanent\n  D: Special revenue Special revenue\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK:  \nWhen accounting for trust funds in governmental accounting, reporting differs based on the restrictions on the trust fund’s resources and the nature of their use. Key concepts include:\n\n- **Permanent Funds:** These are trust funds where the principal is not expendable, and only earnings (often interest or investment income) can be used to support government programs. Since the principal must remain intact in perpetuity, only the earnings are expendable.\n\n- **Special Revenue Funds:** These funds are used to account for resources that are restricted or committed for specific purposes other than debt service or capital projects. They involve expendable resources, meaning both principal and earnings can be spent according to the restrictions.\n\nThe classification depends on whether the principal is expendable or not, and the purpose of the fund.\n\nStep 2 - REASON:  \n- Trust Fund A allows **only the earnings to be expended**, and the principal must remain intact. This is exactly the definition of a **Permanent Fund**.\n\n- Trust Fund B allows **both principal and earnings to be expended**. Because the principal is also expendable, it does not meet the criteria for a permanent fund. Instead, since it benefits a specific purpose (the city's library), it would be reported as a **Special Revenue Fund**.\n\nMatching this to the answer choices:  \n- Trust Fund A = Permanent  \n- Trust Fund B = Special revenue\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": false,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "The city of Cobb has two trust funds for the benefit of the city's library trust fund A and trust fund B. Only the earnings from trust fund A can be expended and both the principal and interest from trust fund B can be expended. How should the city of Cobb report each trust fund? Trust fund A Trust fund B",
+  "source": "MMLU/professional_accounting"
+}

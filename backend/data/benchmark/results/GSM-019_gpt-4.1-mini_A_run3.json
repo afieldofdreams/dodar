@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-019",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:22:40.750721Z",
+  "latency_seconds": 2.48,
+  "input_tokens": 121,
+  "output_tokens": 189,
+  "cost_usd": 0.000351,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Candice put 80 post-it notes in her purse before she headed out to her job at the coffee shop.  On her way, she stopped off at the store and purchased a package of Post-it notes;  At work, she placed a single Post-it note on each of 220 different cups of coffee.  If she had 23 post-it notes remaining overall, how many Post-it notes were in the package that she purchased?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's define variables and analyze the problem step-by-step:\n\n- Candice initially had 80 post-it notes.\n- She bought a package of post-it notes at the store (unknown quantity, let's call it \\( x \\)).\n- She used one post-it note on each of 220 cups of coffee, so she used 220 post-it notes in total.\n- She ended up with 23 post-it notes remaining.\n\nWe can write the equation to express the total number of post-it notes before using them:\n\\[\n80 + x - 220 = 23\n\\]\n\nNow solve for \\( x \\):\n\\[\n80 + x - 220 = 23\n\\]\n\\[\nx - 140 = 23\n\\]\n\\[\nx = 23 + 140\n\\]\n\\[\nx = 163\n\\]\n\nSo, the package she purchased contained 163 post-it notes.\n\nFINAL ANSWER: 163",
+  "extracted_answer": "163",
+  "is_correct": true,
+  "correct_answer": "163",
+  "answer_type": "numeric_exact",
+  "question": "Candice put 80 post-it notes in her purse before she headed out to her job at the coffee shop.  On her way, she stopped off at the store and purchased a package of Post-it notes;  At work, she placed a single Post-it note on each of 220 different cups of coffee.  If she had 23 post-it notes remaining overall, how many Post-it notes were in the package that she purchased?",
+  "source": "GSM8K"
+}

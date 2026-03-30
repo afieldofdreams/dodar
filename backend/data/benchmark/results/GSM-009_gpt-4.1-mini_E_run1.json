@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-009",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T11:56:39.581619Z",
+  "latency_seconds": 3.97,
+  "input_tokens": 226,
+  "output_tokens": 245,
+  "cost_usd": 0.000482,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nAli has four $10 bills and six $20 bills that he saved after working for Mr. James on his farm. Ali gives her sister half of the total money he has and uses 3/5 of the remaining amount of money to buy dinner. Calculate the amount of money he has after buying the dinner.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:\n\nThe relevant principle here involves basic arithmetic operations with money: addition, multiplication, division, and subtraction. To solve problems about sharing and spending money, the steps usually involve:\n\n- Calculating the total amount of money.\n- Finding halves or fractions of the money to represent shared or spent amounts.\n- Subtracting spent or given amounts from the total to find what's remaining.\n\nStep 2 - REASON:\n\n1. Calculate total money Ali has:\n\n- He has four $10 bills: 4 × $10 = $40\n- He has six $20 bills: 6 × $20 = $120\n\nTotal money = $40 + $120 = $160\n\n2. Ali gives his sister half of the total money:\n\nHalf of $160 = $160 ÷ 2 = $80\n\nRemaining money = $160 - $80 = $80\n\n3. Ali uses 3/5 of the remaining money to buy dinner:\n\n3/5 of $80 = (3/5) × $80 = $48\n\n4. Calculate money left after buying dinner:\n\nRemaining money after dinner = $80 - $48 = $32\n\nFINAL ANSWER: 32",
+  "extracted_answer": "32",
+  "is_correct": true,
+  "correct_answer": "32",
+  "answer_type": "numeric_exact",
+  "question": "Ali has four $10 bills and six $20 bills that he saved after working for Mr. James on his farm. Ali gives her sister half of the total money he has and uses 3/5 of the remaining amount of money to buy dinner. Calculate the amount of money he has after buying the dinner.",
+  "source": "GSM8K"
+}

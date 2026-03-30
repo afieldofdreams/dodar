@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-002",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:16:55.999557Z",
+  "latency_seconds": 3.56,
+  "input_tokens": 117,
+  "output_tokens": 273,
+  "cost_usd": 0.000484,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Kanji Company had sales last year of $265 million, including cash sales of $25 million. If its average collection period was 36 days, its ending accounts receivable balance is closest to . (Assume a 365-day year.)\n\n  A: $26.1 million\n  B: $23.7 million\n  C: $7.4 million\n  D: $18.7 million\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the problem step-by-step.\n\n---\n\n**Given:**\n\n- Total sales = $265 million\n- Cash sales = $25 million\n- Average collection period = 36 days\n- Year length = 365 days\n\n---\n\n### Step 1: Calculate credit sales\n\nSince cash sales are $25 million, credit sales (accounts receivable sales) = Total sales - Cash sales\n\n\\[\n\\text{Credit sales} = 265 - 25 = 240 \\text{ million}\n\\]\n\n---\n\n### Step 2: Calculate daily credit sales\n\n\\[\n\\text{Daily credit sales} = \\frac{240}{365} \\approx 0.6575 \\text{ million per day}\n\\]\n\n---\n\n### Step 3: Use the average collection period to calculate ending accounts receivable\n\nAverage collection period means, on average, the number of days it takes to collect accounts receivables.\n\n\\[\n\\text{Accounts receivable} = \\text{Daily credit sales} \\times \\text{Average collection period}\n\\]\n\n\\[\n= 0.6575 \\times 36 = 23.67 \\text{ million}\n\\]\n\n---\n\n### Step 4: Round to the closest option\n\n23.67 million ≈ 23.7 million, which matches option B.\n\n---\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Kanji Company had sales last year of $265 million, including cash sales of $25 million. If its average collection period was 36 days, its ending accounts receivable balance is closest to . (Assume a 365-day year.)",
+  "source": "MMLU/professional_accounting"
+}

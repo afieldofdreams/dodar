@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-017",
+  "condition": "H",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T11:28:53.633637Z",
+  "latency_seconds": 4.67,
+  "input_tokens": 337,
+  "output_tokens": 424,
+  "cost_usd": 0.000813,
+  "system_prompt_sent": "Work through these five phases in order. Each phase must add new reasoning, not restate previous phases.\n\n1. DIAGNOSE: What type of problem is this and what are the constraints? What mistake is most common on this type of problem? Do not consider possible answers yet.\n\n2. OPTIONS: Identify the two strongest candidate answers. For each, state the specific evidence for and against. Treat both as equally plausible until all evidence is weighed.\n\n3. DECIDE: State your best answer. Rate your confidence 1-10. Name the one piece of evidence that would make you switch.\n\n4. ACTION: Test whether your chosen answer survives scrutiny. If calculation, show each step. If reasoning, trace the logical chain. Flag any point where evidence cuts against your choice.\n\n5. REVIEW: Argue the strongest case that your answer is WRONG. Present the full case for the alternative as if you were opposing counsel. After making this argument, decide: switch or stand.\n\nState your final answer only after completing all five phases. Do not use the phrase \"final answer\" anywhere except the final line.",
+  "user_prompt_sent": "Follow the five phases (Diagnose, Options, Decide, Action, Review).\n\nThick fur on a mammal will trap heat close to the animal's body. A mammal with thick fur would be best fit for which type of environment?\n\n  A: a salt marsh\n  B: a frozen plain\n  C: a sandy beach\n  D: a humid rainforest\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "1. DIAGNOSE:  \nThis is a biology/ecology problem about animal adaptations to environments. The key constraint is the function of thick fur: it traps heat close to the body, helping the animal maintain warmth. The problem asks which environment would make thick fur most advantageous. A common mistake is matching the fur characteristic to the wrong environment, such as assuming fur is useful in all environments or confusing hot vs cold climates.\n\n2. OPTIONS:  \nTwo strongest candidates are:  \n- B: a frozen plain  \n  Evidence for: Frozen plains are cold; thick fur helps retain body heat to survive cold temperatures.  \n  Evidence against: None strong, as thick fur is well-known for cold climates.  \n\n- D: a humid rainforest  \n  Evidence for: Rainforests are humid and may be cooler in canopy shade, but generally warm and moist. Thick fur could trap moisture and heat here, but that might be a disadvantage.  \n  Evidence against: Thick fur would probably cause overheating in warm humid environments; animals in rainforests tend to have less fur for heat dissipation.\n\n3. DECIDE:  \nBest answer is B, a frozen plain. Confidence: 9/10.  \nMost critical evidence to switch: If thick fur were disadvantageous in cold environments and instead more suited to warm ones (which is opposite of general knowledge).  \n\n4. ACTION:  \nReasoning chain: Thick fur traps heat → Retaining heat is advantageous in cold environments → Frozen plains are cold → Therefore, a mammal with thick fur would be best adapted here.  \nNo contradictions found in this logical chain.\n\n5. REVIEW:  \nArguing that D (humid rainforest) might be correct:  \n- Thick fur could protect against moisture and insects.  \n- Some rainforest mammals have dense fur for camouflage or other purposes.  \nHowever, thick fur trapping heat would cause overheating in a warm, humid environment, so it is unlikely an adaptation primarily for heat retention.  \n\nGiven that the question emphasizes thick fur trapping heat, the colder environment (frozen plain) is the best fit.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Thick fur on a mammal will trap heat close to the animal's body. A mammal with thick fur would be best fit for which type of environment?",
+  "source": "ARC-Challenge"
+}

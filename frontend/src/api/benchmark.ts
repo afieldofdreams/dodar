@@ -12,6 +12,7 @@ export interface BenchmarkTaskSummary {
 export interface BenchmarkCondition {
   code: string;
   name: string;
+  deprecated?: boolean;
 }
 
 export interface BenchmarkRunSummary {
@@ -66,12 +67,13 @@ export interface AccuracySummary {
   by_model: Record<string, { correct: number; total: number; accuracy: number }>;
 }
 
-export function fetchBenchmarkTasks(): Promise<BenchmarkTaskSummary[]> {
-  return get<BenchmarkTaskSummary[]>("/benchmark/tasks");
+export function fetchBenchmarkTasks(taskVersion?: string): Promise<BenchmarkTaskSummary[]> {
+  const qs = taskVersion ? `?task_version=${taskVersion}` : "";
+  return get<BenchmarkTaskSummary[]>(`/benchmark/tasks${qs}`);
 }
 
-export function fetchBenchmarkConditions(): Promise<BenchmarkCondition[]> {
-  return get<BenchmarkCondition[]>("/benchmark/conditions");
+export function fetchBenchmarkConditions(includeDeprecated: boolean = true): Promise<BenchmarkCondition[]> {
+  return get<BenchmarkCondition[]>(`/benchmark/conditions?include_deprecated=${includeDeprecated}`);
 }
 
 export function fetchBenchmarkRuns(): Promise<BenchmarkRunSummary[]> {
@@ -93,6 +95,7 @@ export function startBenchmarkRun(config: {
   runs_per_task?: number;
   skip_completed?: boolean;
   stage?: string;
+  task_version?: string;
 }): Promise<{ run_id: string; total_items: number; models: string[]; conditions: string[]; stage: string }> {
   return post("/benchmark/runs", config);
 }
@@ -109,11 +112,77 @@ export function fetchAccuracySummary(params?: { model_id?: string; prompt_versio
   return get<AccuracySummary>(`/benchmark/accuracy${suffix}`);
 }
 
+export interface BenchmarkEstimate {
+  total_calls: number;
+  models: Array<{ model: string; calls: number; estimated_cost_usd: number }>;
+  benchmark_cost_usd: number;
+  error_classification: {
+    estimated_incorrect: number;
+    classification_calls: number;
+    scorers: string[];
+    estimated_cost_usd: number;
+  };
+  total_estimated_cost_usd: number;
+}
+
+export interface ErrorClassificationResult {
+  total_results: number;
+  incorrect: number;
+  classifications: number;
+  file: string;
+  agreement: {
+    kappa: number | null;
+    exact_agreement: number;
+    n_pairs: number;
+    exact_matches: number;
+    raters: string[];
+  };
+  by_rater: Record<string, Record<string, number>>;
+  by_condition: Record<string, Record<string, number>>;
+}
+
+export function classifyErrors(config: {
+  run_id?: string;
+  scorer_a?: string;
+  scorer_b?: string;
+}): Promise<ErrorClassificationResult> {
+  return post("/benchmark/classify-errors", config);
+}
+
+export function fetchErrorClassifications(): Promise<Array<{ file: string; count: number; timestamp: string }>> {
+  return get("/benchmark/error-classifications");
+}
+
+export function fetchErrorClassificationDetail(filename: string): Promise<{
+  classifications: Array<{
+    task_id: string;
+    condition: string;
+    model_id: string;
+    classification: string;
+    reasoning: string;
+    root_cause_quote: string | null;
+    confidence: string;
+    rater: string;
+  }>;
+  agreement: { kappa: number | null; exact_agreement: number; n_pairs: number; raters: string[] };
+  by_condition: Record<string, Record<string, number>>;
+  total: number;
+}> {
+  return get(`/benchmark/error-classifications/${filename}`);
+}
+
+export function fetchAnalysis(params?: { run_id?: string }): Promise<Record<string, any>> {
+  const qs = new URLSearchParams();
+  if (params?.run_id) qs.set("run_id", params.run_id);
+  const suffix = qs.toString() ? `?${qs}` : "";
+  return get(`/benchmark/analysis${suffix}`);
+}
+
 export function estimateBenchmarkCost(config: {
   task_ids?: string[] | null;
   models: string[];
   conditions: string[];
   runs_per_task?: number;
-}): Promise<{ total_calls: number; models: Array<{ model: string; calls: number; estimated_cost_usd: number }>; total_estimated_cost_usd: number }> {
+}): Promise<BenchmarkEstimate> {
   return post("/benchmark/estimate", config);
 }

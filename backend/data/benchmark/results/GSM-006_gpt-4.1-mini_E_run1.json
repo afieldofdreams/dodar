@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-006",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T12:06:15.359369Z",
+  "latency_seconds": 4.61,
+  "input_tokens": 219,
+  "output_tokens": 173,
+  "cost_usd": 0.000364,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nJason has a phone plan of 1000 minutes per month. Every day he has a 15-minute call with his boss, and he's had 300 extra minutes of call this month to other people. How many minutes does Jason have left if this month has 30 days?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:\n\nThe problem involves managing a monthly phone plan with a fixed amount of minutes. The main principle here is to calculate total usage and subtract it from the total allowance to find the remaining amount. Specifically, if a user has a monthly quota and uses certain minutes daily plus some extra time, we need to sum all used minutes and subtract from the total quota.\n\nStep 2 - REASON:\n\nJason's monthly allowance = 1000 minutes\n\nJason's daily call with boss = 15 minutes/day  \nNumber of days in month = 30  \nTotal minutes spent on daily calls = 15 × 30 = 450 minutes\n\nExtra calls = 300 minutes\n\nTotal minutes used = 450 + 300 = 750 minutes\n\nMinutes left = 1000 - 750 = 250 minutes\n\nFINAL ANSWER: 250",
+  "extracted_answer": "250",
+  "is_correct": true,
+  "correct_answer": "250",
+  "answer_type": "numeric_exact",
+  "question": "Jason has a phone plan of 1000 minutes per month. Every day he has a 15-minute call with his boss, and he's had 300 extra minutes of call this month to other people. How many minutes does Jason have left if this month has 30 days?",
+  "source": "GSM8K"
+}

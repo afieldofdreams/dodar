@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-LD-005",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:20:44.952194Z",
+  "latency_seconds": 3.52,
+  "input_tokens": 184,
+  "output_tokens": 296,
+  "cost_usd": 0.000547,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells five fruits: mangoes, pears, cantaloupes, watermelons, and loquats. The mangoes are more expensive than the loquats. The cantaloupes are more expensive than the mangoes. The watermelons are more expensive than the cantaloupes. The pears are the cheapest.\nOptions:\n(A) The mangoes are the second-cheapest\n(B) The pears are the second-cheapest\n(C) The cantaloupes are the second-cheapest\n(D) The watermelons are the second-cheapest\n(E) The loquats are the second-cheapest\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the information step-by-step.\n\nFruits:  \n- mangoes  \n- pears  \n- cantaloupes  \n- watermelons  \n- loquats\n\nGiven statements:  \n1. Mangoes are more expensive than loquats.  \n   → mangoes > loquats  \n2. Cantaloupes are more expensive than mangoes.  \n   → cantaloupes > mangoes  \n3. Watermelons are more expensive than cantaloupes.  \n   → watermelons > cantaloupes  \n4. Pears are the cheapest.  \n   → pears are the least expensive fruit.\n\nLet's arrange the fruits by price, from cheapest to most expensive:\n\n- Pears are cheapest → pears = 1st  \n- Loquats are less expensive than mangoes → loquats < mangoes  \n- Mangoes < cantaloupes (mangoes cheaper than cantaloupes)  \n- Cantaloupes < watermelons (cantaloupes cheaper than watermelons)\n\nWe have pears as the cheapest, then loquats, then mangoes, then cantaloupes, then watermelons.\n\nSo, the order from cheapest to most expensive is:\n\n1. Pears  \n2. Loquats  \n3. Mangoes  \n4. Cantaloupes  \n5. Watermelons\n\nTherefore, the second-cheapest fruit is loquats.\n\nFINAL ANSWER: (E) The loquats are the second-cheapest",
+  "extracted_answer": "E",
+  "is_correct": true,
+  "correct_answer": "E",
+  "answer_type": "exact_match",
+  "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells five fruits: mangoes, pears, cantaloupes, watermelons, and loquats. The mangoes are more expensive than the loquats. The cantaloupes are more expensive than the mangoes. The watermelons are more expensive than the cantaloupes. The pears are the cheapest.\nOptions:\n(A) The mangoes are the second-cheapest\n(B) The pears are the second-cheapest\n(C) The cantaloupes are the second-cheapest\n(D) The watermelons are the second-cheapest\n(E) The loquats are the second-cheapest",
+  "source": "BBH/logical_deduction"
+}

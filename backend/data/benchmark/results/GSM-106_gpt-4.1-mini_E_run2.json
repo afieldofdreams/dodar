@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-106",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:29:46.301062Z",
+  "latency_seconds": 2.8,
+  "input_tokens": 191,
+  "output_tokens": 142,
+  "cost_usd": 0.000304,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nA pizza is cut into 8 slices. If 3 people eat a total of 6 slices, what percentage of the pizza remains?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nWhen dealing with portions of a whole arranged in slices, the general principle is to find the fraction of the whole consumed or remaining by dividing the number of slices eaten or left by the total number of slices. To find the percentage remaining, the fraction of slices left is multiplied by 100%.\n\nStep 2 - REASON:  \n- Total slices of pizza = 8  \n- Slices eaten = 6  \n- Slices remaining = 8 - 6 = 2  \n- Fraction remaining = 2/8 = 1/4  \n- Percentage remaining = (1/4) * 100% = 25%\n\nFINAL ANSWER: 25",
+  "extracted_answer": "25",
+  "is_correct": true,
+  "correct_answer": "25",
+  "answer_type": "numeric_exact",
+  "question": "A pizza is cut into 8 slices. If 3 people eat a total of 6 slices, what percentage of the pizza remains?",
+  "source": "GSM8K"
+}

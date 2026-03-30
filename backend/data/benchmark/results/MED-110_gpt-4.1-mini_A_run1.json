@@ -1,0 +1,21 @@
+{
+  "task_id": "MED-110",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:28:49.240242Z",
+  "latency_seconds": 8.04,
+  "input_tokens": 115,
+  "output_tokens": 498,
+  "cost_usd": 0.000843,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A 38-year-old woman presents with persistent dry cough for 2 months and a nodular opacity on chest X-ray. ACE level is elevated. Chest CT shows hilar lymphadenopathy bilaterally. Calcium is 10.8 mg/dL (normal). Which diagnosis is most likely?\nA: Histoplasmosis\nB: Pulmonary tuberculosis\nC: Sarcoidosis\nD: Silicosis\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the clinical presentation and diagnostic clues:\n\n- **Patient**: 38-year-old woman\n- **Symptoms**: Persistent dry cough for 2 months\n- **Chest X-ray**: Nodular opacity\n- **Chest CT**: Bilateral hilar lymphadenopathy\n- **Labs**: Elevated ACE level, Calcium is normal (10.8 mg/dL)\n\nNow, let's consider each diagnosis:\n\n**A: Histoplasmosis**  \n- Caused by fungal infection, typically seen in endemic areas (Ohio/Mississippi river valleys).  \n- Usually presents with fever, cough, and systemic symptoms; may cause granulomatous inflammation.  \n- ACE levels are not typically elevated.  \n- Hilar lymphadenopathy can be seen, but ACE is not a classic marker for histoplasmosis.\n\n**B: Pulmonary tuberculosis**  \n- Causes nodular opacities and lymphadenopathy; however, typical symptoms are chronic cough with sputum, sometimes hemoptysis, night sweats, weight loss.  \n- ACE levels are not elevated.  \n- Lymphadenopathy may be unilateral or asymmetrical; the presentation with elevated ACE is unusual.\n\n**C: Sarcoidosis**  \n- Chronic systemic granulomatous disease; often affects young adults (20-40 years).  \n- Classic chest findings include bilateral hilar lymphadenopathy.  \n- Elevated serum ACE level is a hallmark and correlates with granuloma burden.  \n- Hypercalcemia or elevated calcium seen due to increased vitamin D activation by macrophages, though calcium can be normal as well.  \n- Presents with dry cough, fatigue, and sometimes nodular opacities in lungs.\n\n**D: Silicosis**  \n- Occupational exposure to silica dust, causes nodular opacities primarily in upper lobes.  \n- Can cause lymphadenopathy with calcification; however, ACE levels are not elevated.  \n- Typically seen in people with significant exposure, and symptoms include chronic cough and dyspnea.\n\n---\n\n**Reasoning**:\n\nThe key features are:  \n- Bilateral hilar lymphadenopathy (classic for sarcoidosis)  \n- Elevated ACE levels (a classic lab finding in sarcoidosis)  \n- Nodular opacity with dry cough and no systemic infection signs  \n- Calcium is normal, but hypercalcemia is not required for sarcoidosis diagnosis.  \n\nOther options are less likely due to ACE levels and typical clinical picture.\n\n---\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "A 38-year-old woman presents with persistent dry cough for 2 months and a nodular opacity on chest X-ray. ACE level is elevated. Chest CT shows hilar lymphadenopathy bilaterally. Calcium is 10.8 mg/dL (normal). Which diagnosis is most likely?\nA: Histoplasmosis\nB: Pulmonary tuberculosis\nC: Sarcoidosis\nD: Silicosis",
+  "source": "MedQA-USMLE"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-011",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:23:55.910367Z",
+  "latency_seconds": 1.97,
+  "input_tokens": 312,
+  "output_tokens": 155,
+  "cost_usd": 0.000373,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nIf two trains depart from a station in opposite directions, and one train is traveling 60 miles an hour while the other is traveling half that distance per hour, how far apart are they from each other after 3 hours?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Identify the speeds of both trains.\n- Train 1 speed = 60 miles/hour\n- Train 2 speed = half of 60 miles/hour = 60 / 2 = 30 miles/hour\n\nStep 2: Determine how far each train travels in 3 hours.\n- Distance traveled by Train 1 = speed × time = 60 × 3 = 180 miles\n- Distance traveled by Train 2 = speed × time = 30 × 3 = 90 miles\n\nStep 3: Since the trains are moving in opposite directions, the total distance between them is the sum of the distances traveled by both trains.\n- Total distance apart = 180 + 90 = 270 miles\n\nFINAL ANSWER: 270",
+  "extracted_answer": "270",
+  "is_correct": true,
+  "correct_answer": "270",
+  "answer_type": "numeric_exact",
+  "question": "If two trains depart from a station in opposite directions, and one train is traveling 60 miles an hour while the other is traveling half that distance per hour, how far apart are they from each other after 3 hours?",
+  "source": "GSM8K"
+}

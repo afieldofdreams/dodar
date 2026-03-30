@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-015",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:38:11.864986Z",
+  "latency_seconds": 3.29,
+  "input_tokens": 106,
+  "output_tokens": 180,
+  "cost_usd": 0.00033,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Thomas withdraws $1000 in 20 dollar bills from the bank account.  He loses 10 bills while getting home.  After that, he uses half of the remaining bills to pay for a bill.  Thomas then triples his money.  He then converts all his bills to 5 dollar bills.  How many 5 dollar bills does he have?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Thomas withdraws $1000 in $20 bills.  \nNumber of $20 bills initially = 1000 ÷ 20 = 50 bills.\n\nStep 2: He loses 10 bills.  \nRemaining bills = 50 - 10 = 40 bills.\n\nStep 3: He uses half of the remaining bills to pay a bill.  \nHalf of 40 = 20 bills used to pay, so remaining bills = 40 - 20 = 20 bills.\n\nStep 4: He triples his money.  \nHe has 20 bills × $20 = $400 remaining.  \nTripling this money: $400 × 3 = $1200.\n\nStep 5: He converts all the money to $5 bills.  \nNumber of $5 bills = 1200 ÷ 5 = 240 bills.\n\nFINAL ANSWER: 240",
+  "extracted_answer": "240",
+  "is_correct": true,
+  "correct_answer": "240",
+  "answer_type": "numeric_exact",
+  "question": "Thomas withdraws $1000 in 20 dollar bills from the bank account.  He loses 10 bills while getting home.  After that, he uses half of the remaining bills to pay for a bill.  Thomas then triples his money.  He then converts all his bills to 5 dollar bills.  How many 5 dollar bills does he have?",
+  "source": "GSM8K"
+}

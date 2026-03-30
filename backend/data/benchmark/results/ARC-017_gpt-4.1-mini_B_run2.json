@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-017",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:30:26.809873Z",
+  "latency_seconds": 1.96,
+  "input_tokens": 328,
+  "output_tokens": 140,
+  "cost_usd": 0.000355,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nThick fur on a mammal will trap heat close to the animal's body. A mammal with thick fur would be best fit for which type of environment?\n\n  A: a salt marsh\n  B: a frozen plain\n  C: a sandy beach\n  D: a humid rainforest\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1: Understand the trait - Thick fur traps heat close to the body, helping the animal retain warmth.\n\nStep 2: Consider the environments:\n- A salt marsh: Typically warm and wet, not extremely cold.\n- A frozen plain: Very cold environment where retaining body heat would be critical for survival.\n- A sandy beach: Generally warm, with temperature fluctuations but not typically very cold.\n- A humid rainforest: Warm and humid environment, where thick fur would cause overheating.\n\nStep 3: Determine which environment would require thick fur for heat retention. That would be a cold environment.\n\nStep 4: The frozen plain is the cold environment among the options given.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Thick fur on a mammal will trap heat close to the animal's body. A mammal with thick fur would be best fit for which type of environment?",
+  "source": "ARC-Challenge"
+}

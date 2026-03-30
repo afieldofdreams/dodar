@@ -46,9 +46,12 @@ def build_benchmark_prompt(task: BenchmarkTask, condition_code: str) -> PromptPa
     if condition.condition_instruction:
         parts.append(condition.condition_instruction)
 
+    # Resolve answer type (v2 uses "numeric" as alias for "numeric_exact")
+    answer_type = task.effective_answer_type
+
     # Few-shot example (Condition G only)
     if condition.few_shot:
-        example = get_worked_example(task.source, task.category)
+        example = get_worked_example(task.source, task.category or "")
         parts.append(
             f"Here is an example of careful step-by-step reasoning on a different problem:\n\n"
             f"{example}\n\n"
@@ -58,13 +61,13 @@ def build_benchmark_prompt(task: BenchmarkTask, condition_code: str) -> PromptPa
     # Question text
     parts.append(task.question)
 
-    # Formatted options (for multiple choice)
-    if task.options:
-        options_text = "\n".join(f"  {k}: {v}" for k, v in task.options.items())
-        parts.append(options_text)
+    # Formatted options (v1 dict, v3 list, v2 inline — handled by model)
+    formatted = task.formatted_options
+    if formatted:
+        parts.append(formatted)
 
     # Universal suffix (FINAL ANSWER format)
-    parts.append(get_universal_suffix(task.answer_type))
+    parts.append(get_universal_suffix(answer_type))
 
     user_message = "\n\n".join(parts)
 

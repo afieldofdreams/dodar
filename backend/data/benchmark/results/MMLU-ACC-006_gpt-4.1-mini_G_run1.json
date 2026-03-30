@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-006",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:16:10.506096Z",
+  "latency_seconds": 5.08,
+  "input_tokens": 388,
+  "output_tokens": 283,
+  "cost_usd": 0.000608,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A student places a metal spoon in a cup of hot water. After one minute, the handle feels warm. Which best explains this?\nA: Heat energy was created in the spoon by the water\nB: Cold energy moved from the spoon into the water\nC: Heat energy was transferred through the metal by conduction\nD: The spoon absorbed light energy from the water\n\nEXAMPLE ANSWER: The observation is that a metal spoon's handle gets warm when the bowl end is in hot water. I need to identify the mechanism.\n\nKey physics: metal is a good thermal conductor. Heat transfers through solid materials by conduction.\n\nEvaluating each option:\n- A: Heat is not created. It is transferred. Violates conservation of energy. Incorrect.\n- B: No such thing as 'cold energy.' Heat moves from hot to cold. Incorrect.\n- C: Heat transfers from hot water to spoon, then through metal by conduction. Correct.\n- D: Light energy not involved. The transfer is thermal. Incorrect.\n\nFINAL ANSWER: C\n\nNow solve the following problem using the same careful reasoning approach.\n\nThe city of Cobb has two trust funds for the benefit of the city's library trust fund A and trust fund B. Only the earnings from trust fund A can be expended and both the principal and interest from trust fund B can be expended. How should the city of Cobb report each trust fund? Trust fund A Trust fund B\n\n  A: Permanent Permanent\n  B: Permanent Special revenue\n  C: Special revenue Permanent\n  D: Special revenue Special revenue\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the problem carefully:\n\nWe have two trust funds for the city library:\n\n- Trust fund A: only the earnings (interest) can be expended; principal must remain intact.\n- Trust fund B: both principal and interest can be expended.\n\nThe question is: How should each trust fund be reported?\n\nFirst, some key concepts:\n\n1. **Permanent Fund**: This fund is used when the principal is maintained intact and only earnings (interest) are spent for a specific purpose. This matches the description of trust fund A.\n\n2. **Special Revenue Fund**: This fund is used to account for specific revenue sources that are restricted or committed to expenditures other than debt service or capital projects. If both principal and earnings can be spent, it typically implies the money is available for immediate expenditure, so it could be accounted for as a special revenue fund.\n\nApplying this:\n\n- Trust fund A: principal must remain intact, only earnings used → **Permanent Fund**.\n\n- Trust fund B: principal and interest can both be expended → since funds can be spent freely, more like a **Special Revenue Fund**.\n\nNow check the answers:\n\nA: Permanent / Permanent – incorrect for Trust fund B.\n\nB: Permanent / Special revenue – matches our reasoning.\n\nC: Special revenue / Permanent – reversed, incorrect.\n\nD: Special revenue / Special revenue – incorrect for Trust fund A.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "The city of Cobb has two trust funds for the benefit of the city's library trust fund A and trust fund B. Only the earnings from trust fund A can be expended and both the principal and interest from trust fund B can be expended. How should the city of Cobb report each trust fund? Trust fund A Trust fund B",
+  "source": "MMLU/professional_accounting"
+}

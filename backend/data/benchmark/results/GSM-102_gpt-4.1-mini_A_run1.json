@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-102",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:28:26.547612Z",
+  "latency_seconds": 6.29,
+  "input_tokens": 72,
+  "output_tokens": 101,
+  "cost_usd": 0.00019,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A recipe calls for 2 cups of flour, 3 eggs, and 1 cup of milk. James wants to make 2.5 times the recipe. How many eggs does he need?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "The original recipe calls for 3 eggs.\n\nJames wants to make 2.5 times the recipe.\n\nSo, the number of eggs needed = 3 eggs × 2.5 = 7.5 eggs.\n\nSince you usually can't use half an egg in a recipe, he might round up to 8 eggs or decide how to handle the half egg based on the recipe's flexibility. But mathematically, the exact amount is 7.5 eggs.\n\nFINAL ANSWER: 7.5",
+  "extracted_answer": "7.5",
+  "is_correct": true,
+  "correct_answer": "7.5",
+  "answer_type": "numeric_exact",
+  "question": "A recipe calls for 2 cups of flour, 3 eggs, and 1 cup of milk. James wants to make 2.5 times the recipe. How many eggs does he need?",
+  "source": "GSM8K"
+}

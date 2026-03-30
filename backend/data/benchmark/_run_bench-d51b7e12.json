@@ -1,0 +1,42 @@
+{
+  "run_id": "bench-d51b7e12",
+  "config": {
+    "task_ids": null,
+    "models": [
+      "gpt-4.1-mini"
+    ],
+    "conditions": [
+      "A",
+      "B",
+      "C",
+      "G",
+      "H",
+      "D",
+      "E"
+    ],
+    "runs_per_task": 1,
+    "skip_completed": true,
+    "prompt_version": "v3.1",
+    "execution_seed": 42,
+    "stage": "triage",
+    "task_version": "v3"
+  },
+  "status": "completed",
+  "created_at": "2026-03-27T11:53:10.833777Z",
+  "completed_at": "2026-03-27T12:07:59.607807Z",
+  "total_items": 511,
+  "completed_items": 511,
+  "correct_items": 431,
+  "total_cost_usd": 0.4415,
+  "total_tokens": 412199,
+  "accuracy_by_condition": {
+    "G": 88.9,
+    "B": 82.9,
+    "H": 84.1,
+    "A": 82.6,
+    "D": 85.9,
+    "E": 81.7,
+    "C": 84.3
+  },
+  "dropouts": []
+}

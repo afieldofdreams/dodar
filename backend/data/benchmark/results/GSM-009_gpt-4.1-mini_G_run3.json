@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-009",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:27:07.612514Z",
+  "latency_seconds": 3.22,
+  "input_tokens": 447,
+  "output_tokens": 223,
+  "cost_usd": 0.000536,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nAli has four $10 bills and six $20 bills that he saved after working for Mr. James on his farm. Ali gives her sister half of the total money he has and uses 3/5 of the remaining amount of money to buy dinner. Calculate the amount of money he has after buying the dinner.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me reason through this step-by-step.\n\n1. First, calculate the total amount of money Ali has before giving any to his sister.\n\n- Ali has four $10 bills: \\(4 \\times 10 = 40\\) dollars.\n- Ali has six $20 bills: \\(6 \\times 20 = 120\\) dollars.\n- Total amount: \\(40 + 120 = 160\\) dollars.\n\n2. Ali gives half of the total money to his sister.\n\n- Half of 160 is \\(160 \\div 2 = 80\\) dollars.\n- Money remaining with Ali: \\(160 - 80 = 80\\) dollars.\n\n3. Ali uses 3/5 of the remaining money to buy dinner.\n\n- \\(3/5 \\times 80 = (3 \\times 80) \\div 5 = 240 \\div 5 = 48\\) dollars used for dinner.\n\n4. Calculate the money Ali has after buying dinner.\n\n- Remaining money: \\(80 - 48 = 32\\) dollars.\n\nFINAL ANSWER: 32",
+  "extracted_answer": "32",
+  "is_correct": true,
+  "correct_answer": "32",
+  "answer_type": "numeric_exact",
+  "question": "Ali has four $10 bills and six $20 bills that he saved after working for Mr. James on his farm. Ali gives her sister half of the total money he has and uses 3/5 of the remaining amount of money to buy dinner. Calculate the amount of money he has after buying the dinner.",
+  "source": "GSM8K"
+}

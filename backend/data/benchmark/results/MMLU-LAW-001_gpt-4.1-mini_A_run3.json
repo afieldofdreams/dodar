@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-LAW-001",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:49:24.685682Z",
+  "latency_seconds": 4.71,
+  "input_tokens": 193,
+  "output_tokens": 368,
+  "cost_usd": 0.000666,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A plaintiff files suit in federal district court against a lawnmower manufacturer, alleging strict liability, negligent manufacture, and breach of warranty. The suit is to recover damages for injuries. suffered by the plaintiff when his gasoline-powered lawnmower exploded, while the plaintiff was mowing his front lawn. At trial, the plaintiff calls a man who witnessed the explosion to testify as an eyewitness. The witness suffers from a mental illness that affects his perception of reality. Which of the following is true regarding the witness's mental condition?\n\n  A: It disqualifies him from testifying\n  B: It maybe proved to impeach him as a witness\n  C: It has no bearing on either his competence or his credibility.\n  D: It must not be referred to because it is unfairly prejudicial.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the options in light of the Federal Rules of Evidence and general principles of witness competency and credibility:\n\n- **Witness competency**: Generally, every person is competent to be a witness unless the court finds they are incapable of perceiving, remembering, or communicating the event, or understanding their duty to tell the truth.\n\n- A mental illness, even one that affects perception of reality, does **not automatically disqualify** a person from being a witness. The court must determine if the witness can perceive and accurately relay what they saw (Rule 601).\n\n- Even if the witness is competent, the mental illness **may be used to impeach** the witness's credibility by showing that their perception or memory might be unreliable or distorted.\n\n- The mental illness is relevant to **credibility**, but it must be balanced against Rule 403 — if reference to the illness is unfairly prejudicial, it might be limited or excluded.\n\nNow let's evaluate each choice:\n\n- **A: It disqualifies him from testifying.**  \n  Incorrect. Mental illness alone does not disqualify a witness from testifying.\n\n- **B: It maybe (sic) proved to impeach him as a witness.**  \n  Correct. The mental illness can be introduced to challenge the accuracy and reliability of the witness’s testimony.\n\n- **C: It has no bearing on either his competence or his credibility.**  \n  Incorrect. It has no bearing on competence automatically, but it definitely affects credibility.\n\n- **D: It must not be referred to because it is unfairly prejudicial.**  \n  Incorrect. It can be referred to if relevant; the court may limit it if the prejudice outweighs probative value, but it is not outright prohibited.\n\nTherefore, the best answer is **B**.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "A plaintiff files suit in federal district court against a lawnmower manufacturer, alleging strict liability, negligent manufacture, and breach of warranty. The suit is to recover damages for injuries. suffered by the plaintiff when his gasoline-powered lawnmower exploded, while the plaintiff was mowing his front lawn. At trial, the plaintiff calls a man who witnessed the explosion to testify as an eyewitness. The witness suffers from a mental illness that affects his perception of reality. Which of the following is true regarding the witness's mental condition?",
+  "source": "MMLU/professional_law"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-019",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T12:02:42.094714Z",
+  "latency_seconds": 3.79,
+  "input_tokens": 252,
+  "output_tokens": 239,
+  "cost_usd": 0.000483,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nCandice put 80 post-it notes in her purse before she headed out to her job at the coffee shop.  On her way, she stopped off at the store and purchased a package of Post-it notes;  At work, she placed a single Post-it note on each of 220 different cups of coffee.  If she had 23 post-it notes remaining overall, how many Post-it notes were in the package that she purchased?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nThis is a problem involving simple arithmetic and the concept of total quantity, consumption, and remaining quantity. The general principle is that:\n\nInitial quantity + Additional quantity purchased = Total quantity available  \nTotal quantity available - Quantity used = Remaining quantity\n\nWe can use these relationships to set up an equation and solve for the unknown quantity, which in this case is the number of post-it notes in the package she purchased.\n\nStep 2 - REASON:  \nCandice started with 80 post-it notes. She then purchased some additional post-it notes (let's call this number x). So the total number of post-it notes she had was: 80 + x.\n\nShe used one post-it note on each of 220 cups of coffee, so she used 220 post-it notes.\n\nAfter using 220, she has 23 left.\n\nSo, total available - used = remaining  \n(80 + x) - 220 = 23\n\nNow solve for x:  \n80 + x - 220 = 23  \nx - 140 = 23  \nx = 23 + 140  \nx = 163\n\nFINAL ANSWER: 163",
+  "extracted_answer": "163",
+  "is_correct": true,
+  "correct_answer": "163",
+  "answer_type": "numeric_exact",
+  "question": "Candice put 80 post-it notes in her purse before she headed out to her job at the coffee shop.  On her way, she stopped off at the store and purchased a package of Post-it notes;  At work, she placed a single Post-it note on each of 220 different cups of coffee.  If she had 23 post-it notes remaining overall, how many Post-it notes were in the package that she purchased?",
+  "source": "GSM8K"
+}

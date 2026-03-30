@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-017",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:37:14.883939Z",
+  "latency_seconds": 3.64,
+  "input_tokens": 543,
+  "output_tokens": 243,
+  "cost_usd": 0.000606,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A 65-year-old man presents with sudden onset of slurred speech and right-sided weakness that started 2 hours ago. He has a history of atrial fibrillation and takes warfarin. His INR today is 1.4. CT head shows no haemorrhage. What is the most appropriate immediate management?\nA: Administer IV alteplase (thrombolysis)\nB: Increase warfarin dose\nC: Start aspirin 300mg\nD: Arrange urgent MRI brain\n\nEXAMPLE ANSWER: Let me work through this carefully.\n\nThe presentation is acute onset neurological deficit (slurred speech, right-sided weakness) within a 2-hour window. This is a clinical stroke presentation.\n\nKey factors to consider:\n- 2-hour onset puts him within the thrombolysis window (typically 4.5 hours)\n- CT shows no haemorrhage, so this is likely ischaemic\n- He has AF, which is a major risk factor for cardioembolic stroke\n- His INR is 1.4, which is subtherapeutic (target typically 2-3 for AF)\n- The subtherapeutic INR may explain why he had a stroke despite being on warfarin\n\nNow evaluating each option:\n- A (IV alteplase): Thrombolysis. Within time window, CT excludes haemorrhage. Guidelines generally consider thrombolysis if INR < 1.7.\n- B (Increase warfarin): Addresses long-term problem but nothing for acute stroke.\n- C (Aspirin 300mg): Standard if thrombolysis contraindicated, but thrombolysis is an option here.\n- D (Urgent MRI): Would delay treatment. CT already excluded haemorrhage.\n\nSince he is within the thrombolysis window, CT excludes haemorrhage, and INR 1.4 is below the 1.7 threshold, IV alteplase is most appropriate.\n\nFINAL ANSWER: A\n\nNow solve the following problem using the same careful reasoning approach.\n\nThick fur on a mammal will trap heat close to the animal's body. A mammal with thick fur would be best fit for which type of environment?\n\n  A: a salt marsh\n  B: a frozen plain\n  C: a sandy beach\n  D: a humid rainforest\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the problem step by step:\n\nThe question involves understanding how thick fur functions in mammals and what type of environment it is best suited for.\n\n- Thick fur traps heat close to the animal's body, providing insulation.\n- This is beneficial in cold environments, as it helps retain body heat and prevents hypothermia.\n- Conversely, in hot environments, thick fur would trap heat and could cause overheating and heat stress.\n\nNow let's consider each environment option:\n\nA: A salt marsh  \n- Generally, salt marshes can have variable temperatures but are often warmer and humid. Thick fur would likely cause overheating here.\n\nB: A frozen plain  \n- This is a very cold environment. Thick fur would be beneficial by trapping heat and keeping the animal warm.\n\nC: A sandy beach  \n- Sandy beaches are typically warm or hot during the day. Thick fur would trap heat and likely be a disadvantage.\n\nD: A humid rainforest  \n- Rainforests are hot and humid environments where trapping heat would be problematic.\n\nGiven that thick fur traps heat, the environment best suited for mammals with thick fur is a cold environment where retaining heat is crucial. The only cold environment given here is the frozen plain.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Thick fur on a mammal will trap heat close to the animal's body. A mammal with thick fur would be best fit for which type of environment?",
+  "source": "ARC-Challenge"
+}

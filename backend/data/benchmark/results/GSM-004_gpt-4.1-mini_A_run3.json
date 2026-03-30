@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-004",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:42:25.790626Z",
+  "latency_seconds": 3.36,
+  "input_tokens": 142,
+  "output_tokens": 222,
+  "cost_usd": 0.000412,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Conor lives near a beach and loves going there every day to have fun. On a particular week, he found 50 people at the beach on the first day. The next day, 20 more people were present at the beach than on the first day, and on the third day, the total number of people increased to twice the number that were there on the second day. If Conor saw an average of 60 people each day the rest of the week, calculate the total number of people Conor saw at the beach that week.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's analyze the problem step-by-step:\n\n1. On the first day, there were 50 people.\n2. On the second day, there were 20 more people than the first day:\n   \\[\n   50 + 20 = 70 \\text{ people}\n   \\]\n3. On the third day, the number of people was twice the number on the second day:\n   \\[\n   2 \\times 70 = 140 \\text{ people}\n   \\]\n4. There are 7 days in a week. The first three days' numbers are known:\n   \\[\n   50, 70, 140\n   \\]\n5. The remaining 4 days have an average of 60 people each day, so the total for those 4 days is:\n   \\[\n   4 \\times 60 = 240\n   \\]\n6. Now, sum all the people over the 7 days:\n   \\[\n   50 + 70 + 140 + 240 = 500\n   \\]\n\nFINAL ANSWER: 500",
+  "extracted_answer": "500",
+  "is_correct": true,
+  "correct_answer": "500",
+  "answer_type": "numeric_exact",
+  "question": "Conor lives near a beach and loves going there every day to have fun. On a particular week, he found 50 people at the beach on the first day. The next day, 20 more people were present at the beach than on the first day, and on the third day, the total number of people increased to twice the number that were there on the second day. If Conor saw an average of 60 people each day the rest of the week, calculate the total number of people Conor saw at the beach that week.",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-020",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:27:21.554469Z",
+  "latency_seconds": 4.36,
+  "input_tokens": 149,
+  "output_tokens": 277,
+  "cost_usd": 0.000503,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Rose is out picking flowers for a vase she wants to fill.  She starts off by picking 3 flowers with 5 petals each.  She then picks 4 flowers with 6 petals each.  She then adds another 5 flowers with 4 petals each.  Lastly she picks 6 flowers with 7 petals each.  As she's carrying these flowers over to fill the vase, she drops 1 of each and the wind blows them away.  She puts the remaining flowers in the vase.  How many petals in total are on the flowers in the vase?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's break the problem down step-by-step.\n\n1. Rose picks 3 flowers with 5 petals each.\n   - Total petals here = 3 flowers * 5 petals = 15 petals\n\n2. She picks 4 flowers with 6 petals each.\n   - Total petals here = 4 * 6 = 24 petals\n\n3. She adds 5 flowers with 4 petals each.\n   - Total petals here = 5 * 4 = 20 petals\n\n4. Lastly, she picks 6 flowers with 7 petals each.\n   - Total petals here = 6 * 7 = 42 petals\n\nBefore dropping any, the total petals are:\n15 + 24 + 20 + 42 = 101 petals\n\n---\n\nThen, she drops 1 flower of each type and they blow away.\n\n- She drops 1 flower with 5 petals → lose 5 petals\n- She drops 1 flower with 6 petals → lose 6 petals\n- She drops 1 flower with 4 petals → lose 4 petals\n- She drops 1 flower with 7 petals → lose 7 petals\n\nTotal petals lost = 5 + 6 + 4 + 7 = 22 petals\n\n---\n\nPetals remaining in the vase:\n\n101 - 22 = 79 petals\n\n---\n\nFINAL ANSWER: 79",
+  "extracted_answer": "79",
+  "is_correct": true,
+  "correct_answer": "79",
+  "answer_type": "numeric_exact",
+  "question": "Rose is out picking flowers for a vase she wants to fill.  She starts off by picking 3 flowers with 5 petals each.  She then picks 4 flowers with 6 petals each.  She then adds another 5 flowers with 4 petals each.  Lastly she picks 6 flowers with 7 petals each.  As she's carrying these flowers over to fill the vase, she drops 1 of each and the wind blows them away.  She puts the remaining flowers in the vase.  How many petals in total are on the flowers in the vase?",
+  "source": "GSM8K"
+}

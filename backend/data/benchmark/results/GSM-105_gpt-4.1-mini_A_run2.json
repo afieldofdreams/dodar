@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-105",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:29:11.361722Z",
+  "latency_seconds": 3.93,
+  "input_tokens": 74,
+  "output_tokens": 177,
+  "cost_usd": 0.000313,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Three workers are paid $15/hour, $20/hour, and $25/hour respectively. They each work 8 hours a day. If they work together for 5 days, what is their combined earnings?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Identify each worker's hourly wage:\n- Worker 1: $15/hour\n- Worker 2: $20/hour\n- Worker 3: $25/hour\n\nStep 2: Calculate each worker's daily earnings:\n- Worker 1: 15 * 8 = $120\n- Worker 2: 20 * 8 = $160\n- Worker 3: 25 * 8 = $200\n\nStep 3: Calculate each worker's earnings for 5 days:\n- Worker 1: 120 * 5 = $600\n- Worker 2: 160 * 5 = $800\n- Worker 3: 200 * 5 = $1000\n\nStep 4: Calculate the combined earnings:\n600 + 800 + 1000 = $2400\n\nFINAL ANSWER: 2400",
+  "extracted_answer": "2400",
+  "is_correct": false,
+  "correct_answer": "6000",
+  "answer_type": "numeric_exact",
+  "question": "Three workers are paid $15/hour, $20/hour, and $25/hour respectively. They each work 8 hours a day. If they work together for 5 days, what is their combined earnings?",
+  "source": "GSM8K"
+}

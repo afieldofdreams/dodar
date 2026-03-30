@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-003",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:35:46.354330Z",
+  "latency_seconds": 7.55,
+  "input_tokens": 367,
+  "output_tokens": 491,
+  "cost_usd": 0.000932,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A student places a metal spoon in a cup of hot water. After one minute, the handle feels warm. Which best explains this?\nA: Heat energy was created in the spoon by the water\nB: Cold energy moved from the spoon into the water\nC: Heat energy was transferred through the metal by conduction\nD: The spoon absorbed light energy from the water\n\nEXAMPLE ANSWER: The observation is that a metal spoon's handle gets warm when the bowl end is in hot water. I need to identify the mechanism.\n\nKey physics: metal is a good thermal conductor. Heat transfers through solid materials by conduction.\n\nEvaluating each option:\n- A: Heat is not created. It is transferred. Violates conservation of energy. Incorrect.\n- B: No such thing as 'cold energy.' Heat moves from hot to cold. Incorrect.\n- C: Heat transfers from hot water to spoon, then through metal by conduction. Correct.\n- D: Light energy not involved. The transfer is thermal. Incorrect.\n\nFINAL ANSWER: C\n\nNow solve the following problem using the same careful reasoning approach.\n\nParent gave securities with an adjusted basis of $10000 and fair market value of $9000 to a child. Later the child sold the securities for $7000. What is the child's basis for the securities sold?\n\n  A: $10,000\n  B: $9,000\n  C: $7,000\n  D: 0\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the problem carefully step-by-step.\n\n**Given:**\n- Parent gave securities to child.\n- Adjusted basis to parent = $10,000\n- Fair Market Value (FMV) at gift = $9,000\n- Child later sold securities for $7,000.\n\n**Question:** What is the child's basis in the securities for calculating gain or loss when sold?\n\n---\n\n**Key tax principles involved:**\n\n1. **Basis for gifted property** depends on whether the property is later sold for a gain or loss.\n2. The **carryover basis rule** states:\n   - When the sale price is greater than the parent's adjusted basis (i.e., a gain situation), the child uses the parent's adjusted basis.\n   - When the sale price is less than the FMV at the time of the gift, the child uses the FMV at the time of the gift.\n3. If the sale price is between the FMV and the donor's adjusted basis, there is special treatment and possibly no gain or loss.\n4. This rule prevents the child from claiming a loss higher than the economic loss at the time of gift.\n\n---\n\n**Application:**\n\n- Parent's adjusted basis = $10,000\n- FMV at gift = $9,000\n- Sale price to third party = $7,000\n\nWe have:\n\nSale price $7,000 < FMV $9,000 < basis $10,000\n\nSince sale price is lower than FMV:\n\n- The loss basis is the FMV at gift = $9,000.\n- If the child sells for less than FMV, basis for loss is FMV.\n- Thus, for loss purposes, child's basis = $9,000.\n- For gain purposes, if sale price > parent's basis, basis is parent's basis.\n\nHere, since there is a loss (sold for $7,000 < FMV $9,000), child uses FMV $9,000 basis.\n\n---\n\n**Evaluating the options:**\n\nA: $10,000 – this is the parent's basis, used for gains but not for loss here. Incorrect.\n\nB: $9,000 – FMV at gift, used as basis for loss calculations here. Correct.\n\nC: $7,000 – sale price, not used as basis. Incorrect.\n\nD: 0 – no basis of zero. Incorrect.\n\n---\n\n**FINAL ANSWER: B**",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Parent gave securities with an adjusted basis of $10000 and fair market value of $9000 to a child. Later the child sold the securities for $7000. What is the child's basis for the securities sold?",
+  "source": "MMLU/professional_accounting"
+}

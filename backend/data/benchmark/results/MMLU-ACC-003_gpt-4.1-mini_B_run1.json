@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-003",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:43:22.594778Z",
+  "latency_seconds": 5.84,
+  "input_tokens": 341,
+  "output_tokens": 425,
+  "cost_usd": 0.000816,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nParent gave securities with an adjusted basis of $10000 and fair market value of $9000 to a child. Later the child sold the securities for $7000. What is the child's basis for the securities sold?\n\n  A: $10,000\n  B: $9,000\n  C: $7,000\n  D: 0\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the problem step-by-step:\n\n1. A parent gave securities to a child.\n2. The securities have an adjusted basis to the parent of $10,000.\n3. The fair market value (FMV) of the securities at the time of the gift is $9,000.\n4. Later, the child sold the securities for $7,000.\n\nNow, the key consideration is how to determine the child's basis in the securities for purposes of calculating gain or loss upon the sale.\n\n**IRS rules for gifts:**\n\n- If the FMV of the gift at the time of the gift is **less** than the donor's adjusted basis, then two different bases apply, depending on whether the child sells the property at a gain or loss.\n\n- The **gain basis** is the donor's adjusted basis ($10,000 here).\n\n- The **loss basis** is the fair market value at the time of the gift ($9,000 here).\n\nWhen the child sells:\n\n- If the child sells at a price **higher** than the donor's basis ($10,000), then the gain is based on the donor's basis.\n\n- If the child sells at a price **lower** than the FMV at the gift date ($9,000), then loss is based on the FMV.\n\n- If the selling price is **between** the FMV and the donor's basis (i.e., between $9,000 and $10,000), then no gain or loss is recognized.\n\nHere, the selling price is $7,000, which is less than both the FMV and the donor's adjusted basis.\n\nTherefore, the child's basis for calculating gain or loss is the FMV at the time of the gift, which is $9,000 for calculating loss.\n\nSince the child sold for $7,000, which is less than $9,000, the child incurs a loss, and the basis used to compute loss is $9,000.\n\nTherefore, the child’s basis for the securities sold is $9,000.\n\nFinal answer is B.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Parent gave securities with an adjusted basis of $10000 and fair market value of $9000 to a child. Later the child sold the securities for $7000. What is the child's basis for the securities sold?",
+  "source": "MMLU/professional_accounting"
+}

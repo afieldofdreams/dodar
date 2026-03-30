@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-CJ-003",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:26:22.043523Z",
+  "latency_seconds": 3.02,
+  "input_tokens": 181,
+  "output_tokens": 249,
+  "cost_usd": 0.000471,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "How would a typical person answer each of the following questions about causation?\nNed has a new motorboat. When Ned turns the key, the motorboat starts if either the gear is in neutral or the motor is in the lock position. Today, the gear is in neutral, and the motor is not in the lock position. Ned checks the motor to see if it is in the lock position. He changes its position, and he puts it in the lock position. Because the motorboat would start if either the gear is in neutral or the motor is in the lock position, the motorboat starts when Ned turns the key. Did the motorboat start because Ned changed the position of the motor?\nOptions:\n- Yes\n- No\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the situation step-by-step:\n\n1. Initially, the gear is in neutral, and the motor is **not** in the lock position.\n2. The motorboat starts if **either** the gear is in neutral **or** the motor is in the lock position.\n3. Since the gear is in neutral initially, the motorboat would start even without changing the motor’s position.\n4. Ned checks the motor and then changes its position to the lock position.\n5. After Ned changes the motor to the lock position, the motorboat still starts when Ned turns the key.\n6. The question is: Did the motorboat start **because** Ned changed the position of the motor?\n\nFrom a typical person's perspective on causation, we consider whether the action made a difference to the outcome. Here, the motorboat would have started regardless of Ned's action, because the gear being in neutral was already sufficient to start the boat.\n\nTherefore, the causal factor for the boat starting, in this context, is primarily that the gear was in neutral, not the motor position being changed. Ned's action was not necessary for the boat to start at that time, so it is not typically seen as the cause.\n\nFINAL ANSWER: No",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nNed has a new motorboat. When Ned turns the key, the motorboat starts if either the gear is in neutral or the motor is in the lock position. Today, the gear is in neutral, and the motor is not in the lock position. Ned checks the motor to see if it is in the lock position. He changes its position, and he puts it in the lock position. Because the motorboat would start if either the gear is in neutral or the motor is in the lock position, the motorboat starts when Ned turns the key. Did the motorboat start because Ned changed the position of the motor?\nOptions:\n- Yes\n- No",
+  "source": "BBH/causal_judgement"
+}

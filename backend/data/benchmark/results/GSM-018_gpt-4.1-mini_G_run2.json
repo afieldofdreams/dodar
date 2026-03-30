@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-018",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:36:54.175271Z",
+  "latency_seconds": 5.4,
+  "input_tokens": 463,
+  "output_tokens": 465,
+  "cost_usd": 0.000929,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nThree friends: Mike, Jim, and Tony decided to play a game. After 3 rounds Mike has 21 points, Jim 3 points less than Mike, and Tony 2 times more than Mike. In the fourth round, every player gets an extra point if they have over 20 points. How many points do all three players have in total after the extra points had been distributed?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me reason through this step-by-step.\n\n1. After 3 rounds:\n- Mike has 21 points.\n- Jim has 3 points less than Mike: Jim = 21 - 3 = 18 points.\n- Tony has 2 times more than Mike. This can be ambiguous, but usually “2 times more than Mike” means Tony = Mike + 2 × Mike = 21 + 42 = 63 points. However, sometimes it's interpreted as \"2 times Mike\", which would be 42 points. Let me clarify both interpretations to be sure.\n\nInterpretation A: \"2 times more\" = Mike + 2 × Mike = 3 × Mike = 63 points.\n\nInterpretation B: \"2 times more\" = 2 × Mike = 42 points.\n\n2. Next, the fourth round:\n- Every player who has over 20 points gets an extra point.\n\nCheck points before extra point for both interpretations.\n\nInterpretation A:\nMike = 21 (over 20 → +1)\nJim = 18 (not over 20 → no extra point)\nTony = 63 (over 20 → +1)\n\nInterpretation B:\nMike = 21 (over 20 → +1)\nJim = 18 (not over 20 → no extra point)\nTony = 42 (over 20 → +1)\n\n3. Now add the extra points.\n\nInterpretation A:\nMike: 21 + 1 = 22\nJim: 18 + 0 = 18\nTony: 63 + 1 = 64\nTotal points = 22 + 18 + 64 = 104\n\nInterpretation B:\nMike: 21 + 1 = 22\nJim: 18 + 0 = 18\nTony: 42 + 1 = 43\nTotal points = 22 + 18 + 43 = 83\n\n4. The phrase \"2 times more\" is often used imprecisely. Most likely it means Tony has twice the points of Mike, i.e., 2 × 21 = 42 points (interpretation B).\n\nTherefore, the total points after the extra points have been distributed is 22 + 18 + 43 = 83.\n\nFINAL ANSWER: 83",
+  "extracted_answer": "83",
+  "is_correct": true,
+  "correct_answer": "83",
+  "answer_type": "numeric_exact",
+  "question": "Three friends: Mike, Jim, and Tony decided to play a game. After 3 rounds Mike has 21 points, Jim 3 points less than Mike, and Tony 2 times more than Mike. In the fourth round, every player gets an extra point if they have over 20 points. How many points do all three players have in total after the extra points had been distributed?",
+  "source": "GSM8K"
+}

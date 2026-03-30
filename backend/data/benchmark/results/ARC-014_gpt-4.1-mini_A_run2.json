@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-014",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:30:00.584662Z",
+  "latency_seconds": 2.59,
+  "input_tokens": 95,
+  "output_tokens": 191,
+  "cost_usd": 0.000344,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Which of the following is a reason loggerhead turtles bury their eggs in holes that they dig on the beach?\n\n  A: to keep the eggs covered with water\n  B: to provide the eggs with nutrients\n  C: to hide the eggs from predators\n  D: to protect the eggs from sand\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Loggerhead turtles dig holes on the beach to bury their eggs primarily for protection. \n\n- Option A: To keep the eggs covered with water — This is unlikely because the eggs are laid on the beach, not underwater. Eggs need air, not water, so this is not a valid reason.\n- Option B: To provide the eggs with nutrients — The eggs develop based on the yolk inside them; the sand does not provide nutrients to the eggs.\n- Option C: To hide the eggs from predators — Burying eggs helps to conceal them from predators who might eat the eggs if they were exposed.\n- Option D: To protect the eggs from sand — Since the eggs are already in the sand, this option is contradictory; sand is not harmful to eggs and is their natural incubating environment.\n\nTherefore, the main reason loggerhead turtles bury their eggs in holes on the beach is to hide and protect them from predators.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following is a reason loggerhead turtles bury their eggs in holes that they dig on the beach?",
+  "source": "ARC-Challenge"
+}

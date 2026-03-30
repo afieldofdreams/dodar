@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-019",
+  "condition": "D",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T12:05:45.507727Z",
+  "latency_seconds": 2.91,
+  "input_tokens": 280,
+  "output_tokens": 163,
+  "cost_usd": 0.000373,
+  "system_prompt_sent": "When answering this question, use the Thought-Action-Observation reasoning pattern. Alternate between reasoning about the problem and taking concrete analytical actions.\n\nFor each step:\n\nThought: Reason about what you currently know, what you need to figure out, and what approach to try next.\n\nAction: Perform a specific analytical action (e.g., identify key information, apply a formula, evaluate an option, check a constraint, test a hypothesis).\n\nObservation: State what you learned from that action and whether it changes your understanding.\n\nRepeat this Thought-Action-Observation cycle until you have enough information to answer confidently. Then provide your final answer.\n\nYou may use as many cycles as needed. Each cycle should build on what you learned in the previous one.",
+  "user_prompt_sent": "Use the Thought-Action-Observation pattern.\n\nCandice put 80 post-it notes in her purse before she headed out to her job at the coffee shop.  On her way, she stopped off at the store and purchased a package of Post-it notes;  At work, she placed a single Post-it note on each of 220 different cups of coffee.  If she had 23 post-it notes remaining overall, how many Post-it notes were in the package that she purchased?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Thought: Candice initially had 80 post-it notes. She then bought a package of post-it notes, adding an unknown number \\( x \\) to her total. She used 220 post-it notes, and was left with 23 post-it notes. The relationship can be expressed with an equation to find \\( x \\).\n\nAction: Set up the equation based on the problem:\n\n\\[\n80 + x - 220 = 23\n\\]\n\nSolve for \\( x \\):\n\n\\[\n80 + x - 220 = 23 \\implies x - 140 = 23 \\implies x = 23 + 140 = 163\n\\]\n\nObservation: Candice bought a package of 163 post-it notes. This satisfies the conditions given in the problem.\n\nFINAL ANSWER: 163",
+  "extracted_answer": "163",
+  "is_correct": true,
+  "correct_answer": "163",
+  "answer_type": "numeric_exact",
+  "question": "Candice put 80 post-it notes in her purse before she headed out to her job at the coffee shop.  On her way, she stopped off at the store and purchased a package of Post-it notes;  At work, she placed a single Post-it note on each of 220 different cups of coffee.  If she had 23 post-it notes remaining overall, how many Post-it notes were in the package that she purchased?",
+  "source": "GSM8K"
+}

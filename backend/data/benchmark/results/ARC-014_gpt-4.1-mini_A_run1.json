@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-014",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:23:58.395509Z",
+  "latency_seconds": 2.33,
+  "input_tokens": 95,
+  "output_tokens": 221,
+  "cost_usd": 0.000392,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Which of the following is a reason loggerhead turtles bury their eggs in holes that they dig on the beach?\n\n  A: to keep the eggs covered with water\n  B: to provide the eggs with nutrients\n  C: to hide the eggs from predators\n  D: to protect the eggs from sand\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option in relation to why loggerhead turtles bury their eggs:\n\nA: to keep the eggs covered with water  \n- Loggerhead turtles nest on beaches, and their eggs need to be kept moist but not submerged in water. Burying eggs in holes does not keep them covered with water; in fact, too much water can harm the eggs. So this is unlikely.\n\nB: to provide the eggs with nutrients  \n- The eggs themselves contain nutrients needed for the developing embryo. The sand doesn't provide nutrients; it mainly serves as a protective medium. So this is unlikely.\n\nC: to hide the eggs from predators  \n- Burying eggs in sand can conceal them from predators, reducing the chances of eggs being found and eaten. This is a common protective strategy among many species that lay eggs in the ground.\n\nD: to protect the eggs from sand  \n- Since the eggs are buried in sand, it's not to protect them from sand but rather to protect them by being inside the sand.\n\nThus, the main reason is to conceal or hide the eggs from predators.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following is a reason loggerhead turtles bury their eggs in holes that they dig on the beach?",
+  "source": "ARC-Challenge"
+}

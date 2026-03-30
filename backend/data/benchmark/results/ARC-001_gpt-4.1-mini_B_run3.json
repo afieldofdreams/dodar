@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-001",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:44:47.850093Z",
+  "latency_seconds": 2.88,
+  "input_tokens": 339,
+  "output_tokens": 234,
+  "cost_usd": 0.00051,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nWhich of the following best explains the importance of having a standardized taxonomic classification system when determining the relatedness of organisms?\n\n  A: to help scientists in conservation efforts\n  B: to determine the geographical habitats of all organisms\n  C: to have a consistent definition for all scientists\n  D: to understand the role of organisms in a food web\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1: Understand what a taxonomic classification system is — it is a system used to organize and categorize organisms based on their characteristics and evolutionary relationships.\n\nStep 2: Determine the importance of having a standardized system — a standardized system allows scientists worldwide to classify and name organisms consistently. This avoids confusion from different naming conventions and helps communicate about organisms clearly.\n\nStep 3: Consider each option:\n\n- A: \"to help scientists in conservation efforts\" — conservation can benefit from classification, but the main purpose of the taxonomy system is not directly about conservation; it's about classification and naming.\n- B: \"to determine the geographical habitats of all organisms\" — taxonomy classifies organisms based on characteristics, not necessarily where they live.\n- C: \"to have a consistent definition for all scientists\" — having a standardized system provides a consistent framework and definitions so scientists can communicate effectively about relationships between organisms.\n- D: \"to understand the role of organisms in a food web\" — food webs deal with ecological relationships, which is a different focus than taxonomy.\n\nStep 4: The option that best explains the importance of standardization in taxonomy is C.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following best explains the importance of having a standardized taxonomic classification system when determining the relatedness of organisms?",
+  "source": "ARC-Challenge"
+}

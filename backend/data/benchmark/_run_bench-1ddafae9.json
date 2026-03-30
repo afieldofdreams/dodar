@@ -1,0 +1,32 @@
+{
+  "run_id": "bench-1ddafae9",
+  "config": {
+    "task_ids": [
+      "MED-001"
+    ],
+    "models": [
+      "gpt-4.1-mini"
+    ],
+    "conditions": [
+      "A",
+      "B",
+      "C"
+    ],
+    "runs_per_task": 1,
+    "skip_completed": true,
+    "prompt_version": "v3.2",
+    "execution_seed": 42,
+    "stage": "triage",
+    "task_version": "v3"
+  },
+  "status": "completed",
+  "created_at": "2026-03-27T14:43:36.394183Z",
+  "completed_at": "2026-03-27T14:43:36.395040Z",
+  "total_items": 0,
+  "completed_items": 0,
+  "correct_items": 0,
+  "total_cost_usd": 0.0,
+  "total_tokens": 0,
+  "accuracy_by_condition": {},
+  "dropouts": []
+}

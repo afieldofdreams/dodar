@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-001",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:36:49.878764Z",
+  "latency_seconds": 2.8,
+  "input_tokens": 104,
+  "output_tokens": 212,
+  "cost_usd": 0.000381,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Which of the following best explains the importance of having a standardized taxonomic classification system when determining the relatedness of organisms?\n\n  A: to help scientists in conservation efforts\n  B: to determine the geographical habitats of all organisms\n  C: to have a consistent definition for all scientists\n  D: to understand the role of organisms in a food web\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option in the context of the importance of having a standardized taxonomic classification system for determining the relatedness of organisms:\n\nA: **To help scientists in conservation efforts**  \nWhile taxonomy can aid conservation by identifying and classifying species, the primary purpose of a standardized classification system is not solely for conservation efforts.\n\nB: **To determine the geographical habitats of all organisms**  \nTaxonomy classifies organisms based on characteristics and relatedness, not their geographic location. Habitat determination involves ecological studies, not taxonomy.\n\nC: **To have a consistent definition for all scientists**  \nHaving a standardized taxonomic classification system ensures that all scientists use the same names and hierarchical relationships for organisms, enabling clear communication and accurate assessment of relatedness.\n\nD: **To understand the role of organisms in a food web**  \nUnderstanding ecological roles relates more to ecology than taxonomy. Taxonomy helps identify and classify organisms, but food web roles come from ecological interactions.\n\nTherefore, the option that best explains the importance of standardized taxonomy for determining relatedness is:\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following best explains the importance of having a standardized taxonomic classification system when determining the relatedness of organisms?",
+  "source": "ARC-Challenge"
+}

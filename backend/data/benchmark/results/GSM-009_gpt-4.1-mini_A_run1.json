@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-009",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:20:42.891900Z",
+  "latency_seconds": 2.44,
+  "input_tokens": 95,
+  "output_tokens": 220,
+  "cost_usd": 0.00039,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Ali has four $10 bills and six $20 bills that he saved after working for Mr. James on his farm. Ali gives her sister half of the total money he has and uses 3/5 of the remaining amount of money to buy dinner. Calculate the amount of money he has after buying the dinner.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Calculate the total amount of money Ali has.\n\n- Number of $10 bills: 4  \n  Total from $10 bills = 4 × $10 = $40\n\n- Number of $20 bills: 6  \n  Total from $20 bills = 6 × $20 = $120\n\nTotal money = $40 + $120 = $160\n\n---\n\nStep 2: Ali gives half of the total money to his sister.\n\nHalf of $160 is:  \n$\\frac{1}{2} \\times 160 = 80$ dollars\n\nMoney left after giving half to his sister:  \n$160 - 80 = 80$ dollars\n\n---\n\nStep 3: Ali uses $\\frac{3}{5}$ of the remaining money to buy dinner.\n\nAmount spent on dinner:  \n$\\frac{3}{5} \\times 80 = 48$ dollars\n\n---\n\nStep 4: Calculate the remaining money after buying dinner.\n\nMoney left after dinner:  \n$80 - 48 = 32$ dollars\n\n---\n\nFINAL ANSWER: 32",
+  "extracted_answer": "32",
+  "is_correct": true,
+  "correct_answer": "32",
+  "answer_type": "numeric_exact",
+  "question": "Ali has four $10 bills and six $20 bills that he saved after working for Mr. James on his farm. Ali gives her sister half of the total money he has and uses 3/5 of the remaining amount of money to buy dinner. Calculate the amount of money he has after buying the dinner.",
+  "source": "GSM8K"
+}

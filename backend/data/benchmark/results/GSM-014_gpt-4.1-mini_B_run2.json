@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-014",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:43:20.163987Z",
+  "latency_seconds": 2.33,
+  "input_tokens": 331,
+  "output_tokens": 166,
+  "cost_usd": 0.000398,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nApril is donating plant pots to a local school for their new garden. They ask for 30 plant pots for the daisies, and twice as many for the roses. April had already bought 100 plant pots from the garden center before she knew how many she needed. How many plant pots does April have left over?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Determine how many plant pots the school needs for daisies.\nThey need 30 plant pots for the daisies.\n\nStep 2: Determine how many plant pots the school needs for the roses.\nThey need twice as many plant pots for roses as for daisies.\nSo, roses need 2 × 30 = 60 plant pots.\n\nStep 3: Calculate the total number of plant pots needed for the garden.\nTotal = daisies + roses = 30 + 60 = 90 plant pots.\n\nStep 4: Compare how many pots April already has to how many are needed.\nApril has 100 pots but only needs 90.\n\nStep 5: Determine how many pots will be left over.\nLeftover = 100 - 90 = 10 pots.\n\nFINAL ANSWER: 10",
+  "extracted_answer": "10",
+  "is_correct": true,
+  "correct_answer": "10",
+  "answer_type": "numeric_exact",
+  "question": "April is donating plant pots to a local school for their new garden. They ask for 30 plant pots for the daisies, and twice as many for the roses. April had already bought 100 plant pots from the garden center before she knew how many she needed. How many plant pots does April have left over?",
+  "source": "GSM8K"
+}

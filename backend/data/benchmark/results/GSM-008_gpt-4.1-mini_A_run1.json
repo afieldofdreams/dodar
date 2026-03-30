@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-008",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:16:37.966307Z",
+  "latency_seconds": 7.99,
+  "input_tokens": 161,
+  "output_tokens": 275,
+  "cost_usd": 0.000504,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Garrett is popping popcorn for a snack. As the pan of kernels heats up, the kernels start popping faster. Twenty pop in the first 30 seconds of cooking, then three times that amount in the next 30 seconds. The kernels increase to four times the initial popping rate in the next thirty seconds, but in the final 30 seconds, the popping slows down to half the rate as the past 30 seconds. After Garrett takes the pan off the heat, a quarter of the number of kernels that popped in the final 30 seconds of cooking also pop from the residual heat. How many pieces of popcorn does Garrett have to eat?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's break down the popping intervals step-by-step:\n\n1. **First 30 seconds:**\n   - Kernels popped: 20\n\n2. **Second 30 seconds:**\n   - Three times the amount of the first 30 seconds.\n   - Kernels popped: 3 × 20 = 60\n\n3. **Third 30 seconds:**\n   - Four times the initial popping rate (initial popping rate is 20 kernels).\n   - Kernels popped: 4 × 20 = 80\n\n4. **Fourth 30 seconds:**\n   - Half the rate of the past 30 seconds (past 30 seconds: 80 kernels).\n   - Kernels popped: ½ × 80 = 40\n\n5. **After pan off the heat:**\n   - A quarter of the number of kernels that popped in the final 30 seconds also pop from residual heat.\n   - Number popped: ¼ × 40 = 10\n\nNow, let's sum all popped kernels:\n\n20 (first 30s) + 60 (second 30s) + 80 (third 30s) + 40 (fourth 30s) + 10 (residual)  \n= 20 + 60 + 80 + 40 + 10  \n= 210\n\nFINAL ANSWER: 210",
+  "extracted_answer": "210",
+  "is_correct": true,
+  "correct_answer": "210",
+  "answer_type": "numeric_exact",
+  "question": "Garrett is popping popcorn for a snack. As the pan of kernels heats up, the kernels start popping faster. Twenty pop in the first 30 seconds of cooking, then three times that amount in the next 30 seconds. The kernels increase to four times the initial popping rate in the next thirty seconds, but in the final 30 seconds, the popping slows down to half the rate as the past 30 seconds. After Garrett takes the pan off the heat, a quarter of the number of kernels that popped in the final 30 seconds of cooking also pop from the residual heat. How many pieces of popcorn does Garrett have to eat?",
+  "source": "GSM8K"
+}

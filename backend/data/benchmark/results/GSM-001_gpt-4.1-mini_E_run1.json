@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-001",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T11:54:07.585523Z",
+  "latency_seconds": 4.33,
+  "input_tokens": 216,
+  "output_tokens": 199,
+  "cost_usd": 0.000405,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nCynthia eats one serving of ice cream every night.  She buys cartons of ice cream with 15 servings of ice cream per carton at a cost of $4.00 per carton.  After 60 days, how much will she spend on ice cream?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nThe problem involves understanding a unit rate (cost per serving) and multiplication to find total cost over time. The key concepts here are:  \n- Each carton contains a fixed number of servings.  \n- Each carton has a fixed cost.  \n- Cynthia eats one serving per day, so total servings equals total days.  \n- To find the total cost over many days, first determine how many cartons she needs, then multiply by the cost per carton.\n\nStep 2 - REASON:  \n- Cynthia eats 1 serving per day. Over 60 days, she will eat 60 servings.  \n- Each carton contains 15 servings. To cover 60 servings, divide 60 by 15 servings/carton: 60 ÷ 15 = 4 cartons.  \n- Each carton costs $4.00, so cost for 4 cartons is 4 × $4.00 = $16.00.\n\nFINAL ANSWER: 16",
+  "extracted_answer": "16",
+  "is_correct": true,
+  "correct_answer": "16",
+  "answer_type": "numeric_exact",
+  "question": "Cynthia eats one serving of ice cream every night.  She buys cartons of ice cream with 15 servings of ice cream per carton at a cost of $4.00 per carton.  After 60 days, how much will she spend on ice cream?",
+  "source": "GSM8K"
+}

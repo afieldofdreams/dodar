@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-006",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:40:05.117774Z",
+  "latency_seconds": 3.23,
+  "input_tokens": 323,
+  "output_tokens": 165,
+  "cost_usd": 0.000393,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nJason has a phone plan of 1000 minutes per month. Every day he has a 15-minute call with his boss, and he's had 300 extra minutes of call this month to other people. How many minutes does Jason have left if this month has 30 days?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Determine the total minutes Jason uses for his daily calls to his boss.\n- Jason calls his boss for 15 minutes each day.\n- There are 30 days in the month.\n- Total boss call minutes = 15 minutes/day * 30 days = 450 minutes.\n\nStep 2: Add the extra 300 minutes Jason has spent on calls to other people.\n- Extra minutes = 300 minutes.\n\nStep 3: Calculate the total minutes used this month.\n- Total usage = boss calls + extra calls = 450 + 300 = 750 minutes.\n\nStep 4: Subtract total minutes used from the phone plan's total minutes.\n- Phone plan = 1000 minutes.\n- Minutes left = 1000 - 750 = 250 minutes.\n\nFINAL ANSWER: 250",
+  "extracted_answer": "250",
+  "is_correct": true,
+  "correct_answer": "250",
+  "answer_type": "numeric_exact",
+  "question": "Jason has a phone plan of 1000 minutes per month. Every day he has a 15-minute call with his boss, and he's had 300 extra minutes of call this month to other people. How many minutes does Jason have left if this month has 30 days?",
+  "source": "GSM8K"
+}

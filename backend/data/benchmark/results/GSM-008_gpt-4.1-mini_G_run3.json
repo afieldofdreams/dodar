@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-008",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:39:36.184625Z",
+  "latency_seconds": 4.33,
+  "input_tokens": 513,
+  "output_tokens": 336,
+  "cost_usd": 0.000743,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nGarrett is popping popcorn for a snack. As the pan of kernels heats up, the kernels start popping faster. Twenty pop in the first 30 seconds of cooking, then three times that amount in the next 30 seconds. The kernels increase to four times the initial popping rate in the next thirty seconds, but in the final 30 seconds, the popping slows down to half the rate as the past 30 seconds. After Garrett takes the pan off the heat, a quarter of the number of kernels that popped in the final 30 seconds of cooking also pop from the residual heat. How many pieces of popcorn does Garrett have to eat?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's carefully analyze the problem step by step.\n\n1. **First 30 seconds:**  \n   20 kernels pop.\n\n2. **Next 30 seconds (30-60s):**  \n   Three times as many as the first 30 seconds pop.  \n   \\( 3 \\times 20 = 60 \\) kernels pop.\n\n3. **Next 30 seconds (60-90s):**  \n   Four times the initial popping rate pop.  \n   The initial popping rate was 20 kernels per 30 seconds, so:  \n   \\( 4 \\times 20 = 80 \\) kernels pop.\n\n4. **Final 30 seconds (90-120s):**  \n   Popping slows to half the rate of the past 30 seconds (the previous 30 seconds was 80 kernels), so:  \n   \\( \\frac{1}{2} \\times 80 = 40 \\) kernels pop.\n\n5. **Residual popping after pan is taken off heat:**  \n   A quarter of the kernels that popped in the final 30 seconds pop again from residual heat.  \n   \\( \\frac{1}{4} \\times 40 = 10 \\) kernels pop.\n\n6. **Add up all the kernels popped:**  \n   - First 30 seconds: 20  \n   - Next 30 seconds: 60  \n   - Third 30 seconds: 80  \n   - Fourth 30 seconds: 40  \n   - Residual: 10\n\n   Total popped = \\(20 + 60 + 80 + 40 + 10 = 210\\)\n\n**FINAL ANSWER: 210**",
+  "extracted_answer": "210",
+  "is_correct": true,
+  "correct_answer": "210",
+  "answer_type": "numeric_exact",
+  "question": "Garrett is popping popcorn for a snack. As the pan of kernels heats up, the kernels start popping faster. Twenty pop in the first 30 seconds of cooking, then three times that amount in the next 30 seconds. The kernels increase to four times the initial popping rate in the next thirty seconds, but in the final 30 seconds, the popping slows down to half the rate as the past 30 seconds. After Garrett takes the pan off the heat, a quarter of the number of kernels that popped in the final 30 seconds of cooking also pop from the residual heat. How many pieces of popcorn does Garrett have to eat?",
+  "source": "GSM8K"
+}

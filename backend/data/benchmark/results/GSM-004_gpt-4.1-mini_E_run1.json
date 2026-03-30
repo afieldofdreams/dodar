@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-004",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T12:05:12.882251Z",
+  "latency_seconds": 5.93,
+  "input_tokens": 273,
+  "output_tokens": 324,
+  "cost_usd": 0.000628,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nConor lives near a beach and loves going there every day to have fun. On a particular week, he found 50 people at the beach on the first day. The next day, 20 more people were present at the beach than on the first day, and on the third day, the total number of people increased to twice the number that were there on the second day. If Conor saw an average of 60 people each day the rest of the week, calculate the total number of people Conor saw at the beach that week.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nWhen dealing with problems involving averages and totals over a period, the key principles include:\n- Understanding average as the total sum divided by the number of items (or days, in this case).\n- Calculating total sums by adding quantities from each relevant day.\n- Working with incremental changes day-to-day and forming expressions to represent those changes.\n- Using the given average to set up equations for unknown quantities.\n\nStep 2 - REASON:  \nGiven:  \n- Day 1: 50 people  \n- Day 2: 20 more than day 1 → 50 + 20 = 70 people  \n- Day 3: twice the number on day 2 → 2 × 70 = 140 people  \n- For the rest of the week (assuming a 7-day week), the average daily number of people is 60.\n\nWe want the total number of people Conor saw at the beach during the week.\n\nFirst, find how many days remain after the third day:\n- Total days in week = 7\n- Days accounted for = 3\n- Remaining days = 7 - 3 = 4\n\nThe average for these remaining 4 days is 60 people each day, so total for these days:\n4 × 60 = 240 people\n\nSum totals for the whole week:\nDay 1 + Day 2 + Day 3 + Days 4-7  \n= 50 + 70 + 140 + 240  \n= 300 + 240  \n= 540 people\n\nFINAL ANSWER: 540",
+  "extracted_answer": "540",
+  "is_correct": false,
+  "correct_answer": "500",
+  "answer_type": "numeric_exact",
+  "question": "Conor lives near a beach and loves going there every day to have fun. On a particular week, he found 50 people at the beach on the first day. The next day, 20 more people were present at the beach than on the first day, and on the third day, the total number of people increased to twice the number that were there on the second day. If Conor saw an average of 60 people each day the rest of the week, calculate the total number of people Conor saw at the beach that week.",
+  "source": "GSM8K"
+}

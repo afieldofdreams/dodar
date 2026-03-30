@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-006",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:28:31.306866Z",
+  "latency_seconds": 4.05,
+  "input_tokens": 127,
+  "output_tokens": 268,
+  "cost_usd": 0.00048,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "The city of Cobb has two trust funds for the benefit of the city's library trust fund A and trust fund B. Only the earnings from trust fund A can be expended and both the principal and interest from trust fund B can be expended. How should the city of Cobb report each trust fund? Trust fund A Trust fund B\n\n  A: Permanent Permanent\n  B: Permanent Special revenue\n  C: Special revenue Permanent\n  D: Special revenue Special revenue\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each trust fund based on the type of funds described:\n\n**Trust Fund A:**\n- Only the **earnings** (interest/income) from Trust Fund A can be used/spent.\n- The **principal** (the original amount) must remain intact.\n- This characteristic matches a **permanent fund** because permanent funds require that the principal be maintained and only earnings (income) can be spent.\n  \nTherefore, Trust Fund A should be reported as a **Permanent fund**.\n\n---\n\n**Trust Fund B:**\n- Both the **principal and interest (earnings)** from Trust Fund B can be expended.\n- This means the fund is not permanent because the principal can be spent.\n- Since it's a trust for the library, and the full amount can be spent, this fits the description of a **special revenue fund** (used for specific purposes with resources that are legally restricted).\n\nTherefore, Trust Fund B should be reported as a **Special revenue fund**.\n\n---\n\n**Summary:**\n\n- Trust Fund A = Permanent fund  \n- Trust Fund B = Special revenue fund\n\nLooking at the options:\n\nA: Permanent / Permanent  \nB: Permanent / Special revenue  \nC: Special revenue / Permanent  \nD: Special revenue / Special revenue\n\nThe correct match is option **B**.\n\n---\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "The city of Cobb has two trust funds for the benefit of the city's library trust fund A and trust fund B. Only the earnings from trust fund A can be expended and both the principal and interest from trust fund B can be expended. How should the city of Cobb report each trust fund? Trust fund A Trust fund B",
+  "source": "MMLU/professional_accounting"
+}

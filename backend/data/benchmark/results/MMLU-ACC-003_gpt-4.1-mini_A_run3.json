@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-003",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:47:26.821768Z",
+  "latency_seconds": 4.39,
+  "input_tokens": 106,
+  "output_tokens": 367,
+  "cost_usd": 0.00063,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Parent gave securities with an adjusted basis of $10000 and fair market value of $9000 to a child. Later the child sold the securities for $7000. What is the child's basis for the securities sold?\n\n  A: $10,000\n  B: $9,000\n  C: $7,000\n  D: 0\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the situation step-by-step:\n\n1. **Adjusted basis of securities in the hands of the parent:** $10,000  \n2. **Fair Market Value (FMV) of securities at the time of the gift:** $9,000  \n3. **Sale price by the child:** $7,000  \n\n### Relevant IRS rules for gift basis when the FMV at the time of the gift is less than the adjusted basis:\n- If the FMV at the time of the gift is **less** than the donor's adjusted basis, then the **donee's basis for purposes of gain** is the donor's adjusted basis.  \n- The **donee's basis for purposes of loss** is the FMV at the time of the gift.  \n- If the donee sells for a price between the FMV and the donor's basis, no gain or loss is recognized.\n\n### Applying these rules:\n\n- Donor's basis = $10,000  \n- FMV at gift date = $9,000  \n- Child's sale price = $7,000\n\nSince the child sold the securities for $7,000, which is **less than both the FMV ($9,000) and the donor's basis ($10,000)**, the loss is recognized using the FMV at the time of the gift as the basis for loss calculations.\n\nTherefore, the child's basis for calculating **loss** would be $9,000.\n\n### Summary:\n- For gain: basis = $10,000  \n- For loss: basis = $9,000  \n- Since the sale price $7,000 is less than FMV $9,000, the loss basis applies.\n\nSo, the basis for the child is **$9,000** (loss basis).\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Parent gave securities with an adjusted basis of $10000 and fair market value of $9000 to a child. Later the child sold the securities for $7000. What is the child's basis for the securities sold?",
+  "source": "MMLU/professional_accounting"
+}

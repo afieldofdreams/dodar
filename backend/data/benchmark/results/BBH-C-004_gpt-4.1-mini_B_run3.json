@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-004",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:06:20.002199Z",
+  "latency_seconds": 4.02,
+  "input_tokens": 332,
+  "output_tokens": 199,
+  "cost_usd": 0.000451,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nHow would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Step-by-step reasoning:\n\n1. The HR policy explicitly states that employees must not date their direct reports.\n\n2. Alex, who is a manager, starts dating Jamie, who is Alex's direct report. This action breaks the stated HR policy.\n\n3. As a result of breaking the HR policy, Alex is fired.\n\n4. To evaluate causation, we consider whether Alex dating Jamie was a factor that led to the firing. Since Alex violated a clear policy by dating Jamie, this violation is the direct reason for termination.\n\n5. Therefore, the act of dating the direct report is not just correlated with but is the proximate cause of the firing. If Alex had not dated Jamie, Alex presumably would not have been fired based on the HR policy.\n\n6. Thus, in typical causal reasoning, Alex's dating Jamie caused Alex to be fired because that action directly triggered the consequence of termination as per the policy.\n\nFINAL ANSWER: Yes, Alex's dating Jamie caused Alex to be fired.",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?",
+  "source": "BBH/causal_judgement"
+}

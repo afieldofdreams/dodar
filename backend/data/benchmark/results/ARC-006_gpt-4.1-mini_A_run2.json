@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-006",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:21:23.135579Z",
+  "latency_seconds": 2.43,
+  "input_tokens": 96,
+  "output_tokens": 182,
+  "cost_usd": 0.00033,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Winds blowing inland from oceans tend to have greater moisture than winds blowing over land. How does the high moisture content affect the coastal area climate?\n\n  A: There is less condensation.\n  B: There are fewer hurricanes.\n  C: There is greater precipitation.\n  D: There are more smog-filled areas.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "When winds blow inland from the ocean, they carry moisture because of evaporation over the ocean surface. This high moisture content in the air increases the likelihood of condensation when the air rises and cools, leading to cloud formation and precipitation. Therefore, coastal areas tend to have greater precipitation due to the moist ocean air.\n\nLet's analyze the options:\n\nA: There is less condensation.\n- Incorrect. More moisture leads to more condensation as the air cools.\n\nB: There are fewer hurricanes.\n- Incorrect. While hurricanes depend on ocean temperature and atmospheric conditions, this option is unrelated to moisture content directly causing fewer hurricanes.\n\nC: There is greater precipitation.\n- Correct. High moisture leads to more condensation and thus more precipitation in coastal areas.\n\nD: There are more smog-filled areas.\n- Incorrect. Smog is related to pollution and atmospheric conditions, not directly to moisture content from ocean winds.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Winds blowing inland from oceans tend to have greater moisture than winds blowing over land. How does the high moisture content affect the coastal area climate?",
+  "source": "ARC-Challenge"
+}

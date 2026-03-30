@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-MED-007",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:24:46.531509Z",
+  "latency_seconds": 5.4,
+  "input_tokens": 138,
+  "output_tokens": 532,
+  "cost_usd": 0.000906,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A 55-year-old man who is a business executive is admitted to the hospital for evaluation of abdominal pain. He is polite to the physician but berates the nurses and other staff. The patient's wife and two of his three adult children arrive for a visit. The patient says with disgust that the missing child is and always has been worthless. Which of the following is the most likely explanation for this patient's behavior?\n\n  A: Projection\n  B: Projective identification\n  C: Reaction formation\n  D: Splitting\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze the case step-by-step:\n\n**Patient description:**\n- 55-year-old man, business executive\n- Admitted for abdominal pain\n- Polite to physician\n- Berates nurses and other staff\n- Disparages his missing child, calling them worthless\n\n**Behavior to explain:**\n- Politeness to someone of higher perceived status (physician)\n- Hostility to nurses and staff (possibly lower status, more accessible targets)\n- Disgust and devaluation of a family member\n\n**Options:**\n\n**A: Projection**\n- Definition: Attributing one’s own unacceptable feelings or impulses to someone else.\n- Example: A person who feels angry accuses others of hostility.\n- Does this fit? The patient is blaming others for something possibly originating in himself. This could fit if he is projecting his self-hatred or dissatisfaction onto the child or nurses.\n\n**B: Projective identification**\n- Definition: More complex than projection; the person projects unwanted feelings into another person and then interacts with the person as if they embody those feelings.\n- Usually involves inducing or controlling the other person’s behavior.\n- More commonly seen in borderline personality disorder.\n- The case does not describe any interaction where the patient is trying to elicit feelings in others or control their behavior in this way. Likely not the correct answer.\n\n**C: Reaction formation**\n- Definition: Replacing an unacceptable impulse with its opposite.\n- Example: A person who feels hostility acts extremely friendly.\n- Here, the patient is openly hostile to nurses and the missing child, so no reversal of feelings is apparent.\n\n**D: Splitting**\n- Definition: Viewing people or situations as all good or all bad, with no middle ground.\n- Frequently seen in borderline personality disorder.\n- In splitting, a person idolizes some people and devalues others, switching between extremes.\n- The patient treats the physician politely (all good), nurses and staff with hostility (all bad), and disparages one child as worthless.\n- This suggests black-and-white thinking about people.\n\n**Comparison and conclusion:**\n\n- The patient's behaviorthat is polite to the physician and hostile to nurses and others, plus the devaluation of the missing child, indicates viewing people in extremes.\n- This is characteristic of **splitting**.\n- Projection involves attributing one's feelings to others, but here the behavior is more about categorizing people as completely good or bad.\n- Reaction formation doesn't fit because the hostile feelings are expressed, not reversed.\n- Projective identification is more complex and doesn't fit the scenario.\n\nTherefore, **the most likely explanation is splitting**.\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "A 55-year-old man who is a business executive is admitted to the hospital for evaluation of abdominal pain. He is polite to the physician but berates the nurses and other staff. The patient's wife and two of his three adult children arrive for a visit. The patient says with disgust that the missing child is and always has been worthless. Which of the following is the most likely explanation for this patient's behavior?",
+  "source": "MMLU/professional_medicine"
+}

@@ -1,0 +1,49 @@
+{
+  "run_id": "bench-b66ca1fd",
+  "config": {
+    "task_ids": [
+      "BBH-C-001",
+      "BBH-C-002",
+      "BBH-C-003",
+      "BBH-C-004",
+      "BBH-C-005",
+      "BBH-C-006"
+    ],
+    "models": [
+      "gpt-4.1-mini"
+    ],
+    "conditions": [
+      "A",
+      "B",
+      "C",
+      "E",
+      "G",
+      "D",
+      "F"
+    ],
+    "runs_per_task": 1,
+    "skip_completed": true,
+    "prompt_version": "v3.1",
+    "execution_seed": 42,
+    "stage": "triage",
+    "task_version": "v2"
+  },
+  "status": "completed",
+  "created_at": "2026-03-26T19:46:06.553952Z",
+  "completed_at": "2026-03-26T19:46:43.850757Z",
+  "total_items": 21,
+  "completed_items": 21,
+  "correct_items": 12,
+  "total_cost_usd": 0.0165,
+  "total_tokens": 14957,
+  "accuracy_by_condition": {
+    "D": 33.3,
+    "A": 66.7,
+    "G": 33.3,
+    "C": 66.7,
+    "B": 66.7,
+    "F": 66.7,
+    "E": 66.7
+  },
+  "dropouts": []
+}

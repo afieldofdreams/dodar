@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-WL-001",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:43:41.302623Z",
+  "latency_seconds": 2.46,
+  "input_tokens": 71,
+  "output_tokens": 206,
+  "cost_usd": 0.000358,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Question: Ka lies. Christie says Ka tells the truth. Jerry says Christie lies. Crista says Jerry lies. Yoland says Crista tells the truth. Does Yoland tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze each statement carefully and denote each person as telling the truth (T) or lying (L).\n\nGiven statements:\n\n1. Ka lies. (Given fact)\n2. Christie says Ka tells the truth.\n3. Jerry says Christie lies.\n4. Crista says Jerry lies.\n5. Yoland says Crista tells the truth.\n\nStep 1: Since Ka lies, Ka = L.\n\nStep 2: Christie says \"Ka tells the truth.\" Since Ka actually lies, Christie's statement is false. Therefore Christie = L.\n\nStep 3: Jerry says \"Christie lies.\" Christie is lying, so Jerry's statement is true. Jerry = T.\n\nStep 4: Crista says \"Jerry lies.\" Jerry is telling the truth, so Crista's statement is false. Crista = L.\n\nStep 5: Yoland says \"Crista tells the truth.\" Crista lies, so Yoland's statement is false. Yoland = L.\n\nHence, Yoland lies.\n\nFINAL ANSWER: No",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "Question: Ka lies. Christie says Ka tells the truth. Jerry says Christie lies. Crista says Jerry lies. Yoland says Crista tells the truth. Does Yoland tell the truth?",
+  "source": "BBH/web_of_lies"
+}

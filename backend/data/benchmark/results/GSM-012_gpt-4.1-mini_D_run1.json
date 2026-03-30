@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-012",
+  "condition": "D",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T12:03:44.080345Z",
+  "latency_seconds": 7.07,
+  "input_tokens": 279,
+  "output_tokens": 404,
+  "cost_usd": 0.000758,
+  "system_prompt_sent": "When answering this question, use the Thought-Action-Observation reasoning pattern. Alternate between reasoning about the problem and taking concrete analytical actions.\n\nFor each step:\n\nThought: Reason about what you currently know, what you need to figure out, and what approach to try next.\n\nAction: Perform a specific analytical action (e.g., identify key information, apply a formula, evaluate an option, check a constraint, test a hypothesis).\n\nObservation: State what you learned from that action and whether it changes your understanding.\n\nRepeat this Thought-Action-Observation cycle until you have enough information to answer confidently. Then provide your final answer.\n\nYou may use as many cycles as needed. Each cycle should build on what you learned in the previous one.",
+  "user_prompt_sent": "Use the Thought-Action-Observation pattern.\n\nSasha notices that prices for lumber have gone up 50% in the last few months after she bought some lumber. Since she has leftovers, she decides to sell them. She has leftover ten 2 x 4 x 10 boards that cost her $10 each. She also has five 4 x 4 x 10 boards she bought for $16 each. If she sells them all, how much profit does she make?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Thought: Sasha wants to sell her leftover lumber. She has two types of boards: ten 2x4x10 boards bought at $10 each, and five 4x4x10 boards bought at $16 each. Prices for lumber have increased by 50%, so the current selling price will be 150% of the original cost for each board. The profit she makes is the difference between the selling price (new price) and the cost price (original price) multiplied by the quantity of boards.\n\nAction: Calculate the new price for each type of board after the 50% increase.\n- For the 2x4x10 boards, original price = $10. New price = $10 + 50% of $10 = $10 + $5 = $15.\n- For the 4x4x10 boards, original price = $16. New price = $16 + 50% of $16 = $16 + $8 = $24.\n\nObservation: The new prices reflect the 50% increase for both board types.\n\nThought: Next, calculate the profit made per board which is the selling price minus the original price, then multiply by the number of boards to find total profit for each type.\n\nAction:\n- Profit per 2x4x10 board = $15 - $10 = $5. For 10 boards, total profit = 10 * $5 = $50.\n- Profit per 4x4x10 board = $24 - $16 = $8. For 5 boards, total profit = 5 * $8 = $40.\n\nObservation: The total profit from each type of board is $50 and $40 respectively.\n\nThought: Finally, sum the profits from both types of boards to get the total profit.\n\nAction: Total profit = $50 + $40 = $90.\n\nObservation: Sasha will make a total profit of $90 by selling all the leftover boards at the new price.\n\nFINAL ANSWER: 90",
+  "extracted_answer": "90",
+  "is_correct": true,
+  "correct_answer": "90",
+  "answer_type": "numeric_exact",
+  "question": "Sasha notices that prices for lumber have gone up 50% in the last few months after she bought some lumber. Since she has leftovers, she decides to sell them. She has leftover ten 2 x 4 x 10 boards that cost her $10 each. She also has five 4 x 4 x 10 boards she bought for $16 each. If she sells them all, how much profit does she make?",
+  "source": "GSM8K"
+}

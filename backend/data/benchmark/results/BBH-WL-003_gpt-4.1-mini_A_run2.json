@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-WL-003",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:19:03.653573Z",
+  "latency_seconds": 4.34,
+  "input_tokens": 75,
+  "output_tokens": 257,
+  "cost_usd": 0.000441,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Question: Delbert lies. Shalonda says Delbert tells the truth. Tamika says Shalonda lies. Sal says Tamika lies. Helene says Sal lies. Does Helene tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the statements one by one, defining the characters' truthfulness as variables:\n\n- D = Delbert tells truth (True or False)\n- S = Shalonda tells truth\n- T = Tamika tells truth\n- Sa = Sal tells truth\n- H = Helene tells truth\n\nGiven:\n- Delbert lies. So, D = False.\n\nStatements:\n\n1. Shalonda says Delbert tells the truth.\n   Shalonda says: \"D is True\".\n   Since D is false, Shalonda's statement is false.\n   Therefore, Shalonda lies.\n   So, S = False.\n\n2. Tamika says Shalonda lies.\n   Since S is false (Shalonda lies), Tamika's statement is true.\n   So, T = True.\n\n3. Sal says Tamika lies.\n   Since T is true (Tamika tells truth), Sal's statement (\"Tamika lies\") is false.\n   So, Sal lies. Sa = False.\n\n4. Helene says Sal lies.\n   Since Sa is false (Sal lies), Helene's statement (\"Sal lies\") is true.\n   Therefore, Helene tells truth.\n   H = True.\n\nThus, Helene tells the truth.\n\nFINAL ANSWER: Yes",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "Question: Delbert lies. Shalonda says Delbert tells the truth. Tamika says Shalonda lies. Sal says Tamika lies. Helene says Sal lies. Does Helene tell the truth?",
+  "source": "BBH/web_of_lies"
+}

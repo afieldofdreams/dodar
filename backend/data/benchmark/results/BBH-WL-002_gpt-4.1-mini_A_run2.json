@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-WL-002",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:17:24.987553Z",
+  "latency_seconds": 4.66,
+  "input_tokens": 77,
+  "output_tokens": 272,
+  "cost_usd": 0.000466,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Question: Elanor tells the truth. Crista says Elanor lies. Vernell says Crista lies. Shalonda says Vernell lies. Teressa says Shalonda lies. Does Teressa tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the statements step-by-step.\n\nGiven:\n\n- Elanor tells the truth.\n- Crista says Elanor lies.\n- Vernell says Crista lies.\n- Shalonda says Vernell lies.\n- Teressa says Shalonda lies.\n\nWe want to determine if Teressa tells the truth.\n\n---\n\nStep 1: Elanor tells the truth.\n\nSo Elanor's statement is true (although we don't know her exact statement, only that she tells the truth).\n\nStep 2: Crista says \"Elanor lies.\"\n\nSince Elanor tells the truth, Crista’s statement is false.\n\nTherefore:\n\nCrista lies.\n\nStep 3: Vernell says \"Crista lies.\"\n\nSince Crista lies, Vernell's statement is true.\n\nTherefore:\n\nVernell tells the truth.\n\nStep 4: Shalonda says \"Vernell lies.\"\n\nSince Vernell tells the truth, Shalonda’s statement is false.\n\nTherefore:\n\nShalonda lies.\n\nStep 5: Teressa says \"Shalonda lies.\"\n\nSince Shalonda lies, Teressa's statement is true.\n\nTherefore:\n\nTeressa tells the truth.\n\n---\n\nSummary:\n\n- Elanor tells the truth.\n- Crista lies.\n- Vernell tells the truth.\n- Shalonda lies.\n- Teressa tells the truth.\n\n---\n\nFINAL ANSWER: Yes",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "Question: Elanor tells the truth. Crista says Elanor lies. Vernell says Crista lies. Shalonda says Vernell lies. Teressa says Shalonda lies. Does Teressa tell the truth?",
+  "source": "BBH/web_of_lies"
+}

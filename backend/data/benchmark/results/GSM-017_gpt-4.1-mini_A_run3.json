@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-017",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:24:12.809972Z",
+  "latency_seconds": 3.84,
+  "input_tokens": 136,
+  "output_tokens": 386,
+  "cost_usd": 0.000672,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Amalia, Megan, and Dior divided the home chores so that each person had something to do while the others were working. Amalia's work was to mow the lawn, which took her 4 hours. Megan had to walk the dog and this took her 2 hours longer than Amalia to complete her chore. Dior's work was to do laundry and she took well over 4 hours longer than the time Amalia took to mow the lawn. Calculate the total time they all took to do their chores altogether.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's analyze the problem step-by-step:\n\n1. **Amalia's time:**  \n   Amalia mowed the lawn in **4 hours**.\n\n2. **Megan's time:**  \n   Megan walked the dog, which took **2 hours longer than Amalia**.  \n   So Megan's time = 4 hours + 2 hours = **6 hours**.\n\n3. **Dior's time:**  \n   Dior did the laundry and took **well over 4 hours longer than Amalia**.  \n   \"Well over 4 hours\" can be interpreted as **more than 4 hours**, so it could be any time greater than 4 hours added to Amalia's 4 hours.  \n   The problem doesn't specify an exact value or a minimum, but since it just says \"well over 4 hours longer,\" we can assume at least 5 hours longer to be safe.  \n   So Dior's time = 4 hours + (greater than 4 hours) = let's take **5 hours longer than 4 hours = 9 hours** as a minimal estimate for \"well over 4 hours.\"  \n   \n   Alternatively, if the problem means exactly 4 hours longer, it would be 8 hours total. But \"well over\" suggests significantly more than 4 hours, so we pick 5 hours longer (minimum \"well over\") for calculation.\n\n4. **Total time:**  \n   Amalia: 4 hours  \n   Megan: 6 hours  \n   Dior: 9 hours (assumed)  \n   \n   Sum total = 4 + 6 + 9 = **19 hours**.\n\n---\n\n**Note:** If the problem means exactly 4 hours longer, total time would be 4 + 6 + 8 = 18 hours. Since it says \"well over,\" 19 hours is a reasonable answer.\n\n---\n\nFINAL ANSWER: 19",
+  "extracted_answer": "19",
+  "is_correct": false,
+  "correct_answer": "18",
+  "answer_type": "numeric_exact",
+  "question": "Amalia, Megan, and Dior divided the home chores so that each person had something to do while the others were working. Amalia's work was to mow the lawn, which took her 4 hours. Megan had to walk the dog and this took her 2 hours longer than Amalia to complete her chore. Dior's work was to do laundry and she took well over 4 hours longer than the time Amalia took to mow the lawn. Calculate the total time they all took to do their chores altogether.",
+  "source": "GSM8K"
+}

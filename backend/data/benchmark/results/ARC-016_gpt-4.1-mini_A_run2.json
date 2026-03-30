@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-016",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:39:13.281709Z",
+  "latency_seconds": 1.7,
+  "input_tokens": 92,
+  "output_tokens": 140,
+  "cost_usd": 0.000261,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A small laundry room has several shelves above the washing machine. These shelves are an example of\n\n  A: making the wall stronger.\n  B: using storage space efficiently.\n  C: using a machine for more than one purpose.\n  D: solving the need for shelter in a creative way.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option:\n\nA: making the wall stronger.\n- Shelves above a washing machine don't typically strengthen the wall; they are mounted on the wall but don't contribute to its structural integrity.\n\nB: using storage space efficiently.\n- Shelves above a washing machine utilize vertical space that might otherwise be wasted, thus making efficient use of storage space in a small laundry room.\n\nC: using a machine for more than one purpose.\n- The washing machine is used for laundry. The shelves are separate storage space and not making the washing machine serve multiple functions.\n\nD: solving the need for shelter in a creative way.\n- Shelves in a laundry room don't address shelter needs.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "A small laundry room has several shelves above the washing machine. These shelves are an example of",
+  "source": "ARC-Challenge"
+}

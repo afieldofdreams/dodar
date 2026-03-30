@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-CJ-004",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:43:45.020524Z",
+  "latency_seconds": 1.48,
+  "input_tokens": 232,
+  "output_tokens": 98,
+  "cost_usd": 0.00025,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "How would a typical person answer each of the following questions about causation?\nGeorge and his sister Lena reunite at their parents' house for Thanksgiving. Whereas George just got into medical school, Lena is unhappy in her marriage and recently lost her job. Over the course of the day, George and Lena get into a number of heated arguments. Later in the afternoon they play a game of darts. They split the first two games, and the third game is close until the end. Who will win comes down to George's last shot. If he hits a high point region, he wins; if he hits a low point region, Lena wins. George doesn't care that Lena is having a difficult time; he really wants to beat her. He aims the dart at the high point region. He sets up his shot and the dart lands in the high point region. George triumphs in his victory while Lena is sad. Did George hit the high point region intentionally?\nOptions:\n- Yes\n- No\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let’s analyze the situation carefully:\n\n- George really wants to beat Lena, so he has a clear motivation to hit the high point region.\n- He aims the dart at the high point region.\n- The dart lands in the high point region.\n- Nothing indicates any accidental or unintended factors causing the dart to land there.\n- Thus, a typical person would conclude that George intended to hit the high point region because his action and outcome align with his goal and intention.\n\nFINAL ANSWER: Yes",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nGeorge and his sister Lena reunite at their parents' house for Thanksgiving. Whereas George just got into medical school, Lena is unhappy in her marriage and recently lost her job. Over the course of the day, George and Lena get into a number of heated arguments. Later in the afternoon they play a game of darts. They split the first two games, and the third game is close until the end. Who will win comes down to George's last shot. If he hits a high point region, he wins; if he hits a low point region, Lena wins. George doesn't care that Lena is having a difficult time; he really wants to beat her. He aims the dart at the high point region. He sets up his shot and the dart lands in the high point region. George triumphs in his victory while Lena is sad. Did George hit the high point region intentionally?\nOptions:\n- Yes\n- No",
+  "source": "BBH/causal_judgement"
+}

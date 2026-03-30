@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-WL-004",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:24:12.712723Z",
+  "latency_seconds": 9.89,
+  "input_tokens": 69,
+  "output_tokens": 330,
+  "cost_usd": 0.000556,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Question: Fidel lies. Fletcher says Fidel tells the truth. Yoland says Fletcher lies. Raymond says Yoland lies. Leda says Raymond lies. Does Leda tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the statement step-by-step.\n\n**Given:**\n\n- Fidel lies. (So, Fidel's statements are always false.)\n- Fletcher says: \"Fidel tells the truth.\"\n- Yoland says: \"Fletcher lies.\"\n- Raymond says: \"Yoland lies.\"\n- Leda says: \"Raymond lies.\"\n\nWe need to determine whether Leda tells the truth.\n\n---\n\n### Step 1: Analyzing Fletcher's statement.\n\n- Fletcher says: \"Fidel tells the truth.\"\n- Since Fidel lies (given), Fidel does NOT tell the truth.\n- Fletcher's statement \"Fidel tells the truth\" is false.\n- Therefore, Fletcher is lying.\n\n---\n\n### Step 2: Analyzing Yoland's statement.\n\n- Yoland says: \"Fletcher lies.\"\n- From Step 1, Fletcher lies (true).\n- Yoland's statement \"Fletcher lies\" is true.\n- So, Yoland tells the truth.\n\n---\n\n### Step 3: Analyzing Raymond's statement.\n\n- Raymond says: \"Yoland lies.\"\n- From Step 2, Yoland tells the truth.\n- Raymond's statement \"Yoland lies\" is false.\n- So, Raymond lies.\n\n---\n\n### Step 4: Analyzing Leda's statement.\n\n- Leda says: \"Raymond lies.\"\n- From Step 3, Raymond lies.\n- So, Leda's statement is true.\n- Therefore, Leda tells the truth.\n\n---\n\n**Summary:**\n\n- Fletcher lies\n- Yoland tells the truth\n- Raymond lies\n- Leda tells the truth\n\n---\n\nFINAL ANSWER: yes",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "Question: Fidel lies. Fletcher says Fidel tells the truth. Yoland says Fletcher lies. Raymond says Yoland lies. Leda says Raymond lies. Does Leda tell the truth?",
+  "source": "BBH/web_of_lies"
+}

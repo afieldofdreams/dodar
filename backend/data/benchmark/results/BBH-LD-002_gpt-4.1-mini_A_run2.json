@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-LD-002",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:21:17.866364Z",
+  "latency_seconds": 3.83,
+  "input_tokens": 191,
+  "output_tokens": 420,
+  "cost_usd": 0.000748,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are five books: a yellow book, a brown book, a gray book, a black book, and a purple book. The yellow book is to the right of the purple book. The black book is to the left of the purple book. The black book is the third from the left. The brown book is the leftmost.\nOptions:\n(A) The yellow book is the second from the left\n(B) The brown book is the second from the left\n(C) The gray book is the second from the left\n(D) The black book is the second from the left\n(E) The purple book is the second from the left\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the given information step-by-step:\n\nBooks available: yellow, brown, gray, black, purple.\n\nPositions: 1 (leftmost) to 5 (rightmost).\n\nGiven statements:\n\n1. The yellow book is to the right of the purple book.\n\n   This means: purple is somewhere left of yellow.\n\n2. The black book is to the left of the purple book.\n\n   This means: black is somewhere left of purple.\n\n3. The black book is the third from the left.\n\n   So: black book is in position 3.\n\n4. The brown book is the leftmost.\n\n   So: brown book is in position 1.\n\nUsing these:\n\nPositions so far:\n\n1: brown  \n2: ?  \n3: black  \n4: ?  \n5: ?\n\nNow, from statement (2), black is left of purple, so purple has to be at position 4 or 5.\n\nFrom statement (1), yellow is to the right of purple, so yellow is to the right of purple.\n\nHence, if purple is at position 4, yellow must be at position 5.\n\nIf purple is at position 5, yellow would have to be at position >5 which is impossible.\n\nTherefore:\n\nPurple: position 4  \nYellow: position 5\n\nNow the only remaining book is gray, which must be at position 2.\n\nThus:\n\n1: brown  \n2: gray  \n3: black  \n4: purple  \n5: yellow\n\nThe question is: which book is second from the left?\n\nPosition 2 is gray.\n\nLook back at the options:\n\n(A) Yellow is second from the left → false (yellow is at 5)  \n(B) Brown is second from the left → false (brown is 1)  \n(C) Gray is second from the left → true  \n(D) Black is second from the left → false (black is 3)  \n(E) Purple is second from the left → false (purple is 4)\n\nHence:\n\nFINAL ANSWER: (C) The gray book is the second from the left",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "exact_match",
+  "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are five books: a yellow book, a brown book, a gray book, a black book, and a purple book. The yellow book is to the right of the purple book. The black book is to the left of the purple book. The black book is the third from the left. The brown book is the leftmost.\nOptions:\n(A) The yellow book is the second from the left\n(B) The brown book is the second from the left\n(C) The gray book is the second from the left\n(D) The black book is the second from the left\n(E) The purple book is the second from the left",
+  "source": "BBH/logical_deduction"
+}

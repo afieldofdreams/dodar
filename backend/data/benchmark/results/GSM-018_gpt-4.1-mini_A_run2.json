@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-018",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:28:54.332572Z",
+  "latency_seconds": 2.64,
+  "input_tokens": 111,
+  "output_tokens": 267,
+  "cost_usd": 0.000472,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Three friends: Mike, Jim, and Tony decided to play a game. After 3 rounds Mike has 21 points, Jim 3 points less than Mike, and Tony 2 times more than Mike. In the fourth round, every player gets an extra point if they have over 20 points. How many points do all three players have in total after the extra points had been distributed?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's analyze the problem step by step:\n\n1. After 3 rounds:\n- Mike has 21 points.\n- Jim has 3 points less than Mike → Jim = 21 - 3 = 18 points.\n- Tony has 2 times more than Mike. This phrase can be ambiguous, but typically \"2 times more than Mike\" means Tony has Mike's points plus 2 times Mike's points:\n\n\"2 times more than Mike\" = Mike + 2 × Mike = 3 × Mike.\n\nSo Tony = 3 × 21 = 63 points.\n(If it just meant twice as many, it would be 2 × Mike = 42, but because the wording is \"2 times more\" I take it as triple.)\n\n2. In the fourth round, every player gets an extra point if they have over 20 points.\n\n- Mike has 21 (> 20), so Mike gets +1 → 22 points.\n- Jim has 18 (not over 20), so no points added → 18 points.\n- Tony has 63 (> 20), so Tony gets +1 → 64 points.\n\n3. Total points after the extra points:\n\n22 (Mike) + 18 (Jim) + 64 (Tony) = 104 points.\n\nFINAL ANSWER: 104",
+  "extracted_answer": "104",
+  "is_correct": false,
+  "correct_answer": "83",
+  "answer_type": "numeric_exact",
+  "question": "Three friends: Mike, Jim, and Tony decided to play a game. After 3 rounds Mike has 21 points, Jim 3 points less than Mike, and Tony 2 times more than Mike. In the fourth round, every player gets an extra point if they have over 20 points. How many points do all three players have in total after the extra points had been distributed?",
+  "source": "GSM8K"
+}

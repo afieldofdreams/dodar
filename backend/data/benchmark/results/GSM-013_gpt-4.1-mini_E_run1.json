@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-013",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T12:00:14.792010Z",
+  "latency_seconds": 8.69,
+  "input_tokens": 244,
+  "output_tokens": 371,
+  "cost_usd": 0.000691,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nAlice likes to count the puffs of clouds in the sky while she eats her lunch outside at school. On Monday she counts just 3 puffs of clouds. Each day after that through Friday, though, she sees double the number of clouds in the sky as the day before. At the end of the week, how many clouds will she have counted in the sky at lunch across all five days?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:\nThis problem involves a sequence where the number of clouds visible each day doubles compared to the previous day. This is a geometric progression (or geometric sequence) where each term after the first is found by multiplying the previous term by a constant ratio. \n\nThe key principles:\n- The first term (a₁) is the number of clouds on Monday.\n- Each subsequent term is double the previous term, so the common ratio (r) is 2.\n- We need to find the total number of clouds counted over 5 days, which means summing the five terms.\n- The sum of the first n terms of a geometric sequence is given by:\n  \n  Sₙ = a₁ * (rⁿ - 1) / (r - 1)\n\nStep 2 - REASON:\n- Given:\n  - a₁ = 3 (cloud puffs on Monday)\n  - r = 2 (clouds double each day)\n  - n = 5 (days Monday through Friday)\n\nCalculate each day's cloud count:\n- Monday (day 1): 3\n- Tuesday (day 2): 3 * 2 = 6\n- Wednesday (day 3): 6 * 2 = 12\n- Thursday (day 4): 12 * 2 = 24\n- Friday (day 5): 24 * 2 = 48\n\nCalculate the sum:\nS₅ = 3 * (2⁵ - 1) / (2 - 1)\n   = 3 * (32 - 1) / 1\n   = 3 * 31\n   = 93\n\nSo, the total number of cloud puffs counted over the five days is 93.\n\nFINAL ANSWER: 93",
+  "extracted_answer": "93",
+  "is_correct": true,
+  "correct_answer": "93",
+  "answer_type": "numeric_exact",
+  "question": "Alice likes to count the puffs of clouds in the sky while she eats her lunch outside at school. On Monday she counts just 3 puffs of clouds. Each day after that through Friday, though, she sees double the number of clouds in the sky as the day before. At the end of the week, how many clouds will she have counted in the sky at lunch across all five days?",
+  "source": "GSM8K"
+}

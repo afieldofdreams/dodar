@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-004",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:31:52.658597Z",
+  "latency_seconds": 2.85,
+  "input_tokens": 377,
+  "output_tokens": 231,
+  "cost_usd": 0.00052,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nConor lives near a beach and loves going there every day to have fun. On a particular week, he found 50 people at the beach on the first day. The next day, 20 more people were present at the beach than on the first day, and on the third day, the total number of people increased to twice the number that were there on the second day. If Conor saw an average of 60 people each day the rest of the week, calculate the total number of people Conor saw at the beach that week.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let's analyze the problem step by step:\n\n1. On the first day, Conor found 50 people at the beach.\n2. The next day (second day), there were 20 more people than on the first day.\n   - Number of people on second day = 50 + 20 = 70.\n3. On the third day, the total number of people increased to twice the number that were there on the second day.\n   - Number of people on third day = 2 × 70 = 140.\n4. The rest of the week means the remaining 4 days (since a week has 7 days).\n5. On each of these remaining days, Conor saw an average of 60 people.\n   - Total people for these 4 days = 60 × 4 = 240.\n6. Now, the total number of people Conor saw in the whole week:\n   - Sum of people on first day + second day + third day + remaining 4 days\n   - = 50 + 70 + 140 + 240\n   - = 500.\n\nFINAL ANSWER: 500",
+  "extracted_answer": "500",
+  "is_correct": true,
+  "correct_answer": "500",
+  "answer_type": "numeric_exact",
+  "question": "Conor lives near a beach and loves going there every day to have fun. On a particular week, he found 50 people at the beach on the first day. The next day, 20 more people were present at the beach than on the first day, and on the third day, the total number of people increased to twice the number that were there on the second day. If Conor saw an average of 60 people each day the rest of the week, calculate the total number of people Conor saw at the beach that week.",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-CJ-004",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:18:59.162783Z",
+  "latency_seconds": 4.71,
+  "input_tokens": 232,
+  "output_tokens": 216,
+  "cost_usd": 0.000438,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "How would a typical person answer each of the following questions about causation?\nGeorge and his sister Lena reunite at their parents' house for Thanksgiving. Whereas George just got into medical school, Lena is unhappy in her marriage and recently lost her job. Over the course of the day, George and Lena get into a number of heated arguments. Later in the afternoon they play a game of darts. They split the first two games, and the third game is close until the end. Who will win comes down to George's last shot. If he hits a high point region, he wins; if he hits a low point region, Lena wins. George doesn't care that Lena is having a difficult time; he really wants to beat her. He aims the dart at the high point region. He sets up his shot and the dart lands in the high point region. George triumphs in his victory while Lena is sad. Did George hit the high point region intentionally?\nOptions:\n- Yes\n- No\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "To determine whether George hit the high point region intentionally, a typical person would consider the following:\n\n1. **George’s desire to win**: It is stated that George \"really wants to beat her,\" which suggests motivation to aim for the high point region.\n\n2. **George’s aim**: The prompt says \"He aims the dart at the high point region,\" indicating a deliberate choice and intention behind his action.\n\n3. **Outcome of the shot**: The dart lands in the high point region where George aimed, reinforcing that he succeeded in carrying out his intended action.\n\n4. **George’s attitude towards Lena's troubles**: George \"doesn't care that Lena is having a difficult time,\" which implies that his motivation is focused solely on winning, not influenced by Lena’s feelings. This does not negate intention; if anything, it supports that his aim is deliberate for his own benefit.\n\nGiven these points, the typical person would conclude that George did hit the high point region intentionally, as the narrative explicitly states his aim and desire to win.\n\nFINAL ANSWER: Yes",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nGeorge and his sister Lena reunite at their parents' house for Thanksgiving. Whereas George just got into medical school, Lena is unhappy in her marriage and recently lost her job. Over the course of the day, George and Lena get into a number of heated arguments. Later in the afternoon they play a game of darts. They split the first two games, and the third game is close until the end. Who will win comes down to George's last shot. If he hits a high point region, he wins; if he hits a low point region, Lena wins. George doesn't care that Lena is having a difficult time; he really wants to beat her. He aims the dart at the high point region. He sets up his shot and the dart lands in the high point region. George triumphs in his victory while Lena is sad. Did George hit the high point region intentionally?\nOptions:\n- Yes\n- No",
+  "source": "BBH/causal_judgement"
+}

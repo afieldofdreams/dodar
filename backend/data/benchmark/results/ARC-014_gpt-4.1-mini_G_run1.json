@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-014",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:33:28.461934Z",
+  "latency_seconds": 3.94,
+  "input_tokens": 545,
+  "output_tokens": 263,
+  "cost_usd": 0.000639,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A 65-year-old man presents with sudden onset of slurred speech and right-sided weakness that started 2 hours ago. He has a history of atrial fibrillation and takes warfarin. His INR today is 1.4. CT head shows no haemorrhage. What is the most appropriate immediate management?\nA: Administer IV alteplase (thrombolysis)\nB: Increase warfarin dose\nC: Start aspirin 300mg\nD: Arrange urgent MRI brain\n\nEXAMPLE ANSWER: Let me work through this carefully.\n\nThe presentation is acute onset neurological deficit (slurred speech, right-sided weakness) within a 2-hour window. This is a clinical stroke presentation.\n\nKey factors to consider:\n- 2-hour onset puts him within the thrombolysis window (typically 4.5 hours)\n- CT shows no haemorrhage, so this is likely ischaemic\n- He has AF, which is a major risk factor for cardioembolic stroke\n- His INR is 1.4, which is subtherapeutic (target typically 2-3 for AF)\n- The subtherapeutic INR may explain why he had a stroke despite being on warfarin\n\nNow evaluating each option:\n- A (IV alteplase): Thrombolysis. Within time window, CT excludes haemorrhage. Guidelines generally consider thrombolysis if INR < 1.7.\n- B (Increase warfarin): Addresses long-term problem but nothing for acute stroke.\n- C (Aspirin 300mg): Standard if thrombolysis contraindicated, but thrombolysis is an option here.\n- D (Urgent MRI): Would delay treatment. CT already excluded haemorrhage.\n\nSince he is within the thrombolysis window, CT excludes haemorrhage, and INR 1.4 is below the 1.7 threshold, IV alteplase is most appropriate.\n\nFINAL ANSWER: A\n\nNow solve the following problem using the same careful reasoning approach.\n\nWhich of the following is a reason loggerhead turtles bury their eggs in holes that they dig on the beach?\n\n  A: to keep the eggs covered with water\n  B: to provide the eggs with nutrients\n  C: to hide the eggs from predators\n  D: to protect the eggs from sand\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let me carefully think through this question.\n\nThe question asks: Why do loggerhead turtles bury their eggs in holes they dig on the beach?\n\nLoggerhead turtles lay their eggs on sandy beaches. They dig nests (holes) in which to deposit their eggs.\n\nConsider each option:\n\nA: to keep the eggs covered with water  \n- Loggerhead turtle eggs are laid on land, not in water. They require a moist environment but are not submerged. Keeping the eggs underwater would likely drown them. So this option is unlikely.\n\nB: to provide the eggs with nutrients  \n- Turtle eggs derive nutrients from the yolk inside each egg, not from the soil or sand. The sand/nest does not provide nutrients to the eggs. So this is unlikely.\n\nC: to hide the eggs from predators  \n- Burying eggs in the sand helps conceal them from predators such as birds, crabs, and mammals that might eat the eggs. The eggs are vulnerable during incubation, so hiding them is an important protective strategy.\n\nD: to protect the eggs from sand  \n- The eggs are buried in sand, so this option is contradictory. They are not protecting eggs from sand by burying them in sand.\n\nThus, the main reason loggerhead turtles bury their eggs is to hide them from predators.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "Which of the following is a reason loggerhead turtles bury their eggs in holes that they dig on the beach?",
+  "source": "ARC-Challenge"
+}

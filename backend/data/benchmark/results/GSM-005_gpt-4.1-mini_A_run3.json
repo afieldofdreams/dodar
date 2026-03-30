@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-005",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:28:13.478964Z",
+  "latency_seconds": 1.07,
+  "input_tokens": 86,
+  "output_tokens": 77,
+  "cost_usd": 0.000158,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "John injured his back and needs to go to physical therapy.  He went to physical therapy for 6 weeks.  Each week he went twice for 2 hours at a time.  If the sessions cost $125 per hour how much did the physical therapy cost?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "First, find the total number of sessions:\n\n6 weeks × 2 sessions per week = 12 sessions\n\nEach session lasts 2 hours, so total hours:\n\n12 sessions × 2 hours per session = 24 hours\n\nCost per hour is $125, so total cost:\n\n24 hours × $125 per hour = $3,000\n\nFINAL ANSWER: 3000",
+  "extracted_answer": "3000",
+  "is_correct": true,
+  "correct_answer": "3000",
+  "answer_type": "numeric_exact",
+  "question": "John injured his back and needs to go to physical therapy.  He went to physical therapy for 6 weeks.  Each week he went twice for 2 hours at a time.  If the sessions cost $125 per hour how much did the physical therapy cost?",
+  "source": "GSM8K"
+}

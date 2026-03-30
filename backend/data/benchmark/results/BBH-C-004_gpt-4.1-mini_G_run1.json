@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-004",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T19:46:12.786396Z",
+  "latency_seconds": 5.95,
+  "input_tokens": 406,
+  "output_tokens": 217,
+  "cost_usd": 0.00051,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A company discovers that one of its senior managers has been approving contracts with a vendor owned by their spouse, without disclosing this relationship. The contracts were all at market rate. Which best describes the legal situation?\nA: No violation occurred because the contracts were at market rate\nB: A breach of fiduciary duty occurred regardless of pricing\nC: This constitutes fraud because of the concealment\nD: The company can only act if it suffered financial loss\n\nEXAMPLE ANSWER: Let me think through each element.\n\nThe key facts are: (1) undisclosed conflict of interest, (2) related-party transactions, (3) contracts at market rate, (4) the manager had approval authority.\n\nA fiduciary duty requires loyalty and disclosure. The core issue is not whether the company lost money, but whether the manager fulfilled their duty to disclose.\n\nEvaluating each option:\n- A: Market rate pricing is relevant to damages but does not eliminate the duty to disclose.\n- B: Fiduciary duty includes loyalty and full disclosure. The breach is the concealment, not the price.\n- C: Fraud requires intentional deception for personal gain. Higher bar than fiduciary breach.\n- D: Financial loss is relevant to damages, not to whether a breach occurred.\n\nThe strongest answer is B.\n\nFINAL ANSWER: B\n\nNow solve the following problem using the same careful reasoning approach.\n\nHow would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the scenario carefully.\n\nFacts:\n- The company has an HR policy prohibiting employees from dating their direct reports.\n- Alex, a manager, starts dating Jamie, who is Alex's direct report.\n- Alex is fired.\n\nQuestion:\nDid Alex's dating Jamie cause Alex to be fired?\n\nCausation in this context means that Alex's action (dating Jamie) led to the consequence (being fired). \n\nReasoning:\n- The company policy explicitly forbids relationships between managers and their direct reports.\n- Alex violated this policy by dating Jamie.\n- The company responded by firing Alex.\n- The firing followed the policy violation and was likely a direct consequence of that violation.\n\nConsidering common understanding of causation:\n- Typically, if a person violates a clear rule and is disciplined as a consequence, their action is seen as causing the discipline.\n- Even if other factors were present (e.g., prior performance), the immediate cause is the dating in violation of policy.\n\nTherefore, a typical person would say yes — Alex's dating Jamie caused Alex to be fired.\n\nFINAL ANSWER: Yes",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?",
+  "source": "BBH/causal_judgement"
+}

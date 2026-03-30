@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-002",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T18:17:07.700758Z",
+  "latency_seconds": 3.6,
+  "input_tokens": 417,
+  "output_tokens": 209,
+  "cost_usd": 0.000501,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A company discovers that one of its senior managers has been approving contracts with a vendor owned by their spouse, without disclosing this relationship. The contracts were all at market rate. Which best describes the legal situation?\nA: No violation occurred because the contracts were at market rate\nB: A breach of fiduciary duty occurred regardless of pricing\nC: This constitutes fraud because of the concealment\nD: The company can only act if it suffered financial loss\n\nEXAMPLE ANSWER: Let me think through each element.\n\nThe key facts are: (1) undisclosed conflict of interest, (2) related-party transactions, (3) contracts at market rate, (4) the manager had approval authority.\n\nA fiduciary duty requires loyalty and disclosure. The core issue is not whether the company lost money, but whether the manager fulfilled their duty to disclose.\n\nEvaluating each option:\n- A: Market rate pricing is relevant to damages but does not eliminate the duty to disclose.\n- B: Fiduciary duty includes loyalty and full disclosure. The breach is the concealment, not the price.\n- C: Fraud requires intentional deception for personal gain. Higher bar than fiduciary breach.\n- D: Financial loss is relevant to damages, not to whether a breach occurred.\n\nThe strongest answer is B.\n\nFINAL ANSWER: B\n\nNow solve the following problem using the same careful reasoning approach.\n\nHow would a typical person answer each of the following questions about causation?\nSuzy and Billy both throw rocks at a bottle at the same time. Suzy's rock arrives first and shatters the bottle. Billy's rock arrives a moment later, but the bottle is already shattered. Did Billy cause the bottle to shatter?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's think through the scenario carefully.\n\nFacts:\n- Both Suzy and Billy throw rocks at the bottle at the same time.\n- Suzy's rock arrives first and shatters the bottle.\n- Billy's rock arrives after the bottle is already shattered.\n\nThe question: Did Billy cause the bottle to shatter?\n\nTo determine causation, we usually ask if the actor's conduct was a necessary factor in bringing about the effect.\n\nStep 1: Suzy's rock arrived first, and that rock alone broke the bottle.\n\nStep 2: By the time Billy's rock arrived, the bottle was already broken.\n\nStep 3: Therefore, Billy's rock could not have contributed to the shattering—the bottle was already shattered, so Billy's action did not cause the effect.\n\nCommon sense (i.e., how a typical person would think) would likely conclude that only Suzy caused the shattering.\n\nTherefore, Billy did not cause the bottle to shatter.\n\nFINAL ANSWER: No, Billy did not cause the bottle to shatter.",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nSuzy and Billy both throw rocks at a bottle at the same time. Suzy's rock arrives first and shatters the bottle. Billy's rock arrives a moment later, but the bottle is already shattered. Did Billy cause the bottle to shatter?",
+  "source": "BBH/causal_judgement"
+}

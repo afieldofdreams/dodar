@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-002",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T18:17:13.172626Z",
+  "latency_seconds": 5.04,
+  "input_tokens": 343,
+  "output_tokens": 261,
+  "cost_usd": 0.000555,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Be thorough in your consideration of the information. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nHow would a typical person answer each of the following questions about causation?\nSuzy and Billy both throw rocks at a bottle at the same time. Suzy's rock arrives first and shatters the bottle. Billy's rock arrives a moment later, but the bottle is already shattered. Did Billy cause the bottle to shatter?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze this step by step:\n\n1. **What happened?**  \n   Suzy and Billy both threw rocks at a bottle at the same time. Suzy's rock arrived first and shattered the bottle. Billy's rock arrived slightly later, after the bottle was already broken.\n\n2. **Causation concept involved:**  \n   Typically, to say someone caused an event, their action must have made a difference—the event wouldn't have happened at that moment or in the same way without their action.\n\n3. **Did Suzy's action cause the shattering?**  \n   Yes, because her rock hit the bottle first and caused it to break.\n\n4. **Did Billy's action cause the shattering?**  \n   Since the bottle was already shattered when Billy's rock arrived, Billy’s rock did not contribute to the shattering of the bottle (it was already broken).\n\n5. **What would happen if Billy had not thrown his rock?**  \n   The bottle would still have shattered because Suzy's rock hit it first.\n\n6. **Common-sense causation:**  \n   A typical person, applying common-sense understanding, would say Suzy caused the shattering; Billy did not cause it.\n\nFINAL ANSWER: No, Billy did not cause the bottle to shatter.",
+  "extracted_answer": "No",
+  "is_correct": true,
+  "correct_answer": "No",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nSuzy and Billy both throw rocks at a bottle at the same time. Suzy's rock arrives first and shatters the bottle. Billy's rock arrives a moment later, but the bottle is already shattered. Did Billy cause the bottle to shatter?",
+  "source": "BBH/causal_judgement"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-002",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:38:05.458388Z",
+  "latency_seconds": 5.17,
+  "input_tokens": 117,
+  "output_tokens": 319,
+  "cost_usd": 0.000557,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Kanji Company had sales last year of $265 million, including cash sales of $25 million. If its average collection period was 36 days, its ending accounts receivable balance is closest to . (Assume a 365-day year.)\n\n  A: $26.1 million\n  B: $23.7 million\n  C: $7.4 million\n  D: $18.7 million\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "**Step 1: Understand the problem**\n\nKanji Company had total sales of $265 million last year, which includes cash sales of $25 million. This means the rest of the sales were credit sales.\n\nAverage collection period (ACP) = 36 days  \nWe want to find ending accounts receivable (AR), which can be approximated by:\n\n\\[\n\\text{Accounts Receivable} = \\text{Average Daily Credit Sales} \\times \\text{Average Collection Period}\n\\]\n\n---\n\n**Step 2: Calculate credit sales**\n\nSince total sales = $265 million and cash sales = $25 million:\n\n\\[\n\\text{Credit Sales} = 265 - 25 = 240 \\text{ million}\n\\]\n\n---\n\n**Step 3: Calculate average daily credit sales**\n\nAssuming 365 days in a year:\n\n\\[\n\\text{Average daily credit sales} = \\frac{240,000,000}{365} \\approx 657,534.25\n\\]\n\n---\n\n**Step 4: Calculate accounts receivable**\n\n\\[\n\\text{AR} = 657,534.25 \\times 36 \\approx 23,671,233\n\\]\n\nApproximately $23.7 million.\n\n---\n\n**Step 5: Find closest answer**\n\nLooking at the options:\n\n- A: $26.1 million\n- B: $23.7 million\n- C: $7.4 million\n- D: $18.7 million\n\nThe closest is **B: $23.7 million**\n\n---\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Kanji Company had sales last year of $265 million, including cash sales of $25 million. If its average collection period was 36 days, its ending accounts receivable balance is closest to . (Assume a 365-day year.)",
+  "source": "MMLU/professional_accounting"
+}

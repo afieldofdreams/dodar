@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-017",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:18:54.257382Z",
+  "latency_seconds": 1.87,
+  "input_tokens": 93,
+  "output_tokens": 138,
+  "cost_usd": 0.000258,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Thick fur on a mammal will trap heat close to the animal's body. A mammal with thick fur would be best fit for which type of environment?\n\n  A: a salt marsh\n  B: a frozen plain\n  C: a sandy beach\n  D: a humid rainforest\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Thick fur acts as insulation by trapping heat close to the body. This adaptation is beneficial in cold environments where retaining body heat is crucial for survival. \n\n- A salt marsh (A) can have varied temperatures but generally is not extremely cold.\n- A frozen plain (B) is a cold environment where retaining heat is necessary.\n- A sandy beach (C) is typically warm and does not usually require thick fur for heat retention.\n- A humid rainforest (D) is warm and humid, so thick fur would likely cause overheating rather than help.\n\nTherefore, a mammal with thick fur would be best fit for a frozen, cold environment like a frozen plain.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Thick fur on a mammal will trap heat close to the animal's body. A mammal with thick fur would be best fit for which type of environment?",
+  "source": "ARC-Challenge"
+}

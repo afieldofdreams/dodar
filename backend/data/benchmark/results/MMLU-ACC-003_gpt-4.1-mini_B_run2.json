@@ -1,0 +1,21 @@
+{
+  "task_id": "MMLU-ACC-003",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:18:57.727148Z",
+  "latency_seconds": 5.27,
+  "input_tokens": 341,
+  "output_tokens": 375,
+  "cost_usd": 0.000736,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nParent gave securities with an adjusted basis of $10000 and fair market value of $9000 to a child. Later the child sold the securities for $7000. What is the child's basis for the securities sold?\n\n  A: $10,000\n  B: $9,000\n  C: $7,000\n  D: 0\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1: Identify the type of gift and the basis rules involved.\n\nWhen a parent gives securities to a child (a gift), the child’s basis for selling those securities depends on the relationship between the fair market value (FMV) at the time of the gift and the donor's adjusted basis.\n\nStep 2: Understand the basis rules for gifts.\n\n- If the FMV at the time of the gift is higher than the donor's basis, the donee's basis for gain is the donor's adjusted basis.\n- If the FMV at the time of the gift is lower than the donor's basis, then two bases apply:\n  - For determining loss, the basis is the FMV at the time of the gift.\n  - For determining gain, the basis remains the donor's adjusted basis.\n\nStep 3: Apply the rules to the current scenario.\n\nGiven:\n- Donor's adjusted basis = $10,000\n- FMV at time of gift = $9,000 (less than donor's basis)\n- Sale price by child = $7,000\n\nStep 4: Determine if the sale results in gain or loss.\n\nSelling price ($7,000) < FMV at gift ($9,000)\n\nSince the sale price is less than the FMV, the child has incurred a loss.\n\nStep 5: Determine the child’s basis for the sale.\n\nBecause the child sold at a loss (sale < FMV), the basis for loss is the FMV at the time of the gift.\n\nTherefore, the basis is $9,000.\n\nStep 6: Summarize\n\n- Basis for gain = $10,000\n- Basis for loss = $9,000\n\nSince the sale price is below FMV and thus a loss, basis = FMV = $9,000.\n\nFINAL ANSWER: B",
+  "extracted_answer": "B",
+  "is_correct": true,
+  "correct_answer": "B",
+  "answer_type": "multiple_choice",
+  "question": "Parent gave securities with an adjusted basis of $10000 and fair market value of $9000 to a child. Later the child sold the securities for $7000. What is the child's basis for the securities sold?",
+  "source": "MMLU/professional_accounting"
+}

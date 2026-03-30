@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-S-002",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:29:43.981096Z",
+  "latency_seconds": 2.04,
+  "input_tokens": 87,
+  "output_tokens": 136,
+  "cost_usd": 0.000252,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Which statement is sarcastic?\n(A) Oh great, another meeting that could have been an email, said Sarah enthusiastically as she opened her calendar.\n(B) Oh great, we finally get to discuss the new project plan, said Sarah enthusiastically as she opened her calendar.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze both statements:\n\n(A) \"Oh great, another meeting that could have been an email, said Sarah enthusiastically as she opened her calendar.\"\n- This statement sounds sarcastic because Sarah is likely unhappy about having another meeting that she feels is unnecessary and could have been handled with an email. The enthusiasm mentioned is most likely not genuine but ironic.\n\n(B) \"Oh great, we finally get to discuss the new project plan, said Sarah enthusiastically as she opened her calendar.\"\n- This statement appears straightforward and genuinely positive. Sarah is happy to discuss the new project plan, and the enthusiasm seems sincere.\n\nTherefore, the sarcastic statement is (A).\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "(A)",
+  "answer_type": "multiple_choice",
+  "question": "Which statement is sarcastic?\n(A) Oh great, another meeting that could have been an email, said Sarah enthusiastically as she opened her calendar.\n(B) Oh great, we finally get to discuss the new project plan, said Sarah enthusiastically as she opened her calendar.",
+  "source": "BBH/snarks"
+}

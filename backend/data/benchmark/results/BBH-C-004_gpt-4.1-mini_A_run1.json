@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-004",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T19:46:33.199323Z",
+  "latency_seconds": 2.31,
+  "input_tokens": 88,
+  "output_tokens": 164,
+  "cost_usd": 0.000298,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "How would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "To determine whether a typical person would say that Alex’s dating Jamie caused Alex to be fired, let's consider how causation is generally understood in everyday reasoning:\n\n1. The policy clearly states employees must not date their direct reports.\n2. Alex, a manager, starts dating Jamie, who is Alex’s direct report.\n3. Alex is fired as a consequence.\n4. Typically, if Alex had not started dating Jamie, Alex would not have been fired.\n5. The firing is a direct result of violating the policy.\n\nMost people would see the relationship as a cause-effect scenario: violating the policy (dating the direct report) led to the firing.\n\nTherefore, a typical person would say Alex’s dating Jamie did cause Alex to be fired.\n\nFINAL ANSWER: Yes, Alex’s dating Jamie caused Alex to be fired.",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nA company's HR policy states that employees must not date their direct reports. Alex, a manager, starts dating their direct report Jamie. Alex is fired. Did Alex's dating Jamie cause Alex to be fired?",
+  "source": "BBH/causal_judgement"
+}

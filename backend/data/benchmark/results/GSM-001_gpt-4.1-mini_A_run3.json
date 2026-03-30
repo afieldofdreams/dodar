@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-001",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:17:35.089939Z",
+  "latency_seconds": 2.38,
+  "input_tokens": 85,
+  "output_tokens": 134,
+  "cost_usd": 0.000248,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Cynthia eats one serving of ice cream every night.  She buys cartons of ice cream with 15 servings of ice cream per carton at a cost of $4.00 per carton.  After 60 days, how much will she spend on ice cream?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "First, let's determine how many servings Cynthia needs for 60 days:\n\n- She eats 1 serving per day.\n- For 60 days, she needs 60 servings.\n\nNext, find out how many cartons she needs to buy, given that each carton has 15 servings:\n\n- Number of cartons = total servings needed ÷ servings per carton\n- Number of cartons = 60 ÷ 15 = 4 cartons\n\nNow, calculate the total cost:\n\n- Cost per carton = $4.00\n- Total cost = number of cartons × cost per carton = 4 × 4.00 = $16.00\n\nFINAL ANSWER: 16",
+  "extracted_answer": "16",
+  "is_correct": true,
+  "correct_answer": "16",
+  "answer_type": "numeric_exact",
+  "question": "Cynthia eats one serving of ice cream every night.  She buys cartons of ice cream with 15 servings of ice cream per carton at a cost of $4.00 per carton.  After 60 days, how much will she spend on ice cream?",
+  "source": "GSM8K"
+}

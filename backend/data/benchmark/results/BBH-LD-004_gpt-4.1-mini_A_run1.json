@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-LD-004",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:32:26.783170Z",
+  "latency_seconds": 5.51,
+  "input_tokens": 180,
+  "output_tokens": 454,
+  "cost_usd": 0.000798,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are five birds: a blue jay, a cardinal, a hawk, a hummingbird, and a quail. The quail is to the left of the blue jay. The cardinal is the third from the left. The quail is the second from the left. The blue jay is to the left of the hummingbird.\nOptions:\n(A) The blue jay is the rightmost\n(B) The cardinal is the rightmost\n(C) The hawk is the rightmost\n(D) The hummingbird is the rightmost\n(E) The quail is the rightmost\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the information step-by-step.\n\nWe have five birds in a fixed order from left to right:\n1. ?\n2. ?\n3. Cardinal (given: The cardinal is the third from the left)\n4. ?\n5. ?\n\nGiven:\n- The quail is second from the left. So position 2 = quail.\n- The cardinal is third from the left. So position 3 = cardinal.\n- The quail is to the left of the blue jay. Since quail is in position 2, blue jay must be somewhere right of 2.\n- The blue jay is to the left of the hummingbird. So the blue jay is to the left of the hummingbird.\n\nPositions so far:\n1. ?\n2. Quail\n3. Cardinal\n4. ?\n5. ?\n\nPossible birds remaining to place: blue jay, hawk, hummingbird\n\nLet's consider position 1:\n\n- The quail is second (2)\n- Cardinal is third (3)\n- Blue jay must be right of quail (2)\n- Blue jay left of hummingbird\n\nSo blue jay cannot be 1 (since quail is 2 and blue jay must be right of quail), so blue jay must be in position 4 or 5.\n\nAlso, blue jay is left of hummingbird: blue jay < hummingbird\n\nTry positions:\n\n- If blue jay is 4, then hummingbird must be 5.\n- Then the remaining slot 1 is hawk.\n\nLet's check this:\n\nPositions:  \n1. Hawk  \n2. Quail  \n3. Cardinal  \n4. Blue jay  \n5. Hummingbird  \n\nCheck conditions:\n\n- Quail is to left of blue jay: position 2 < position 4 ✔  \n- Cardinal is third: position 3 ✔  \n- Quail is second: position 2 ✔  \n- Blue jay left of hummingbird: 4 < 5 ✔\n\nAll conditions satisfied.\n\nFinal positions:\n\n1 - Hawk  \n2 - Quail  \n3 - Cardinal  \n4 - Blue jay  \n5 - Hummingbird\n\nThus, the rightmost (position 5) bird is the hummingbird.\n\nFINAL ANSWER: (D) The hummingbird is the rightmost",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "exact_match",
+  "question": "The following paragraphs each describe a set of five objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are five birds: a blue jay, a cardinal, a hawk, a hummingbird, and a quail. The quail is to the left of the blue jay. The cardinal is the third from the left. The quail is the second from the left. The blue jay is to the left of the hummingbird.\nOptions:\n(A) The blue jay is the rightmost\n(B) The cardinal is the rightmost\n(C) The hawk is the rightmost\n(D) The hummingbird is the rightmost\n(E) The quail is the rightmost",
+  "source": "BBH/logical_deduction"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-012",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T11:59:34.991379Z",
+  "latency_seconds": 7.7,
+  "input_tokens": 261,
+  "output_tokens": 335,
+  "cost_usd": 0.00064,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nA student is investigating how light behaves when it strikes different surfaces. She has a frosted window glass pane, a clear window glass pane, a mirror, and a piece of cardboard. Which of these objects will scatter the most light?\n\n  A: the mirror, because it is reflective\n  B: the piece of cardboard, because it is opaque\n  C: the clear window glass, because it is transparent\n  D: the frosted window glass, because it is translucent\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Step 1 - STEP BACK:  \nLight interacts with materials in different ways depending on the properties of the surface. Light may be transmitted (pass through), absorbed, reflected, or scattered. Scattering occurs when light hits a rough or uneven surface or a medium with inhomogeneities, causing the light to be dispersed in many directions.  \n- Transparent materials (like clear glass) allow light to pass through with minimal scattering.  \n- Translucent materials (like frosted glass) allow light to pass through but scatter it, so objects are not clearly seen through it.  \n- Opaque materials (like cardboard) do not transmit light; they absorb or reflect it, often causing some scattering on the surface.  \n- Mirrors have smooth, reflective surfaces that specularly reflect light with very little scattering because the surface is smooth at the microscopic level.\n\nStep 2 - REASON:  \nGiven the objects: frosted glass (translucent), clear glass (transparent), mirror, and cardboard (opaque), we analyze which scatters most light:  \n- Clear glass: minimal scattering, most light passes straight through.  \n- Mirror: mainly specular reflection, very little scattering.  \n- Cardboard: opaque and rough, reflects and absorbs light, scattering some light but mostly absorbs or reflects diffusely.  \n- Frosted glass: designed to scatter light strongly while still transmitting it, so the light passing through is scattered in many directions.\n\nBetween these, frosted glass is specifically made to scatter light strongly, much more than cardboard (which is mostly absorption and diffuse reflection) or a smooth mirror (which reflects light with minimal scattering).\n\nFINAL ANSWER: D",
+  "extracted_answer": "D",
+  "is_correct": true,
+  "correct_answer": "D",
+  "answer_type": "multiple_choice",
+  "question": "A student is investigating how light behaves when it strikes different surfaces. She has a frosted window glass pane, a clear window glass pane, a mirror, and a piece of cardboard. Which of these objects will scatter the most light?",
+  "source": "ARC-Challenge"
+}

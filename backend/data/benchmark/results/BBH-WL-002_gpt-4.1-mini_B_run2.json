@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-WL-002",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:34:11.799786Z",
+  "latency_seconds": 2.4,
+  "input_tokens": 312,
+  "output_tokens": 180,
+  "cost_usd": 0.000413,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nQuestion: Elanor tells the truth. Crista says Elanor lies. Vernell says Crista lies. Shalonda says Vernell lies. Teressa says Shalonda lies. Does Teressa tell the truth?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's analyze the statements step by step:\n\n1. Elanor tells the truth.\n   - So, Elanor is truthful.\n\n2. Crista says Elanor lies.\n   - Since Elanor tells the truth, Crista's statement (\"Elanor lies\") is false.\n   - Therefore, Crista lies.\n\n3. Vernell says Crista lies.\n   - Since Crista lies, Vernell's statement is true.\n   - Therefore, Vernell tells the truth.\n\n4. Shalonda says Vernell lies.\n   - Since Vernell tells the truth, Shalonda's statement (\"Vernell lies\") is false.\n   - Therefore, Shalonda lies.\n\n5. Teressa says Shalonda lies.\n   - Shalonda lies.\n   - So Teressa's statement is true.\n   - Therefore, Teressa tells the truth.\n\nFINAL ANSWER: Yes",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "Question: Elanor tells the truth. Crista says Elanor lies. Vernell says Crista lies. Shalonda says Vernell lies. Teressa says Shalonda lies. Does Teressa tell the truth?",
+  "source": "BBH/web_of_lies"
+}

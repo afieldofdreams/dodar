@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-TSO-004",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:22:49.664317Z",
+  "latency_seconds": 4.96,
+  "input_tokens": 179,
+  "output_tokens": 383,
+  "cost_usd": 0.000684,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "Alice, Bob, Claire, Dave, and Eve are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Izzi, Bob is dancing with Lola, Claire is dancing with Sam, Dave is dancing with Patrick, and Eve is dancing with Jamie.\nThroughout the song, the dancers often trade partners. First, Claire and Eve switch partners. Then, Dave and Alice switch partners. Then, Claire and Dave switch partners. Then, Claire and Alice switch partners. Finally, Bob and Eve switch partners. At the end of the dance, Alice is dancing with\nOptions:\n(A) Izzi\n(B) Lola\n(C) Sam\n(D) Patrick\n(E) Jamie\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let's track the partners step-by-step.\n\n**Initial pairs:**\n- Alice - Izzi\n- Bob - Lola\n- Claire - Sam\n- Dave - Patrick\n- Eve - Jamie\n\n---\n\n**Step 1: Claire and Eve switch partners**\n\n- Claire had Sam\n- Eve had Jamie\n\nAfter switching:\n\n- Claire → Jamie\n- Eve → Sam\n\nNow:\n\n- Alice - Izzi\n- Bob - Lola\n- Claire - Jamie\n- Dave - Patrick\n- Eve - Sam\n\n---\n\n**Step 2: Dave and Alice switch partners**\n\n- Dave had Patrick\n- Alice had Izzi\n\nSwitching partners:\n\n- Dave → Izzi\n- Alice → Patrick\n\nNow:\n\n- Alice - Patrick\n- Bob - Lola\n- Claire - Jamie\n- Dave - Izzi\n- Eve - Sam\n\n---\n\n**Step 3: Claire and Dave switch partners**\n\n- Claire had Jamie\n- Dave had Izzi\n\nSwitch partners:\n\n- Claire → Izzi\n- Dave → Jamie\n\nNow:\n\n- Alice - Patrick\n- Bob - Lola\n- Claire - Izzi\n- Dave - Jamie\n- Eve - Sam\n\n---\n\n**Step 4: Claire and Alice switch partners**\n\n- Claire had Izzi\n- Alice had Patrick\n\nSwitch partners:\n\n- Claire → Patrick\n- Alice → Izzi\n\nNow:\n\n- Alice - Izzi\n- Bob - Lola\n- Claire - Patrick\n- Dave - Jamie\n- Eve - Sam\n\n---\n\n**Step 5: Bob and Eve switch partners**\n\n- Bob had Lola\n- Eve had Sam\n\nSwitch partners:\n\n- Bob → Sam\n- Eve → Lola\n\nNow:\n\n- Alice - Izzi\n- Bob - Sam\n- Claire - Patrick\n- Dave - Jamie\n- Eve - Lola\n\n---\n\n**Final partners:**\n\n- Alice is dancing with **Izzi**\n\n---\n\nFINAL ANSWER: Izzi",
+  "extracted_answer": "Izzi",
+  "is_correct": false,
+  "correct_answer": "A",
+  "answer_type": "exact_match",
+  "question": "Alice, Bob, Claire, Dave, and Eve are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Izzi, Bob is dancing with Lola, Claire is dancing with Sam, Dave is dancing with Patrick, and Eve is dancing with Jamie.\nThroughout the song, the dancers often trade partners. First, Claire and Eve switch partners. Then, Dave and Alice switch partners. Then, Claire and Dave switch partners. Then, Claire and Alice switch partners. Finally, Bob and Eve switch partners. At the end of the dance, Alice is dancing with\nOptions:\n(A) Izzi\n(B) Lola\n(C) Sam\n(D) Patrick\n(E) Jamie",
+  "source": "BBH/tracking_shuffled_objects"
+}

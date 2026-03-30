@@ -1,0 +1,21 @@
+{
+  "task_id": "BBH-C-003",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:05:56.348019Z",
+  "latency_seconds": 3.87,
+  "input_tokens": 414,
+  "output_tokens": 269,
+  "cost_usd": 0.000596,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: A company discovers that one of its senior managers has been approving contracts with a vendor owned by their spouse, without disclosing this relationship. The contracts were all at market rate. Which best describes the legal situation?\nA: No violation occurred because the contracts were at market rate\nB: A breach of fiduciary duty occurred regardless of pricing\nC: This constitutes fraud because of the concealment\nD: The company can only act if it suffered financial loss\n\nEXAMPLE ANSWER: Let me think through each element.\n\nThe key facts are: (1) undisclosed conflict of interest, (2) related-party transactions, (3) contracts at market rate, (4) the manager had approval authority.\n\nA fiduciary duty requires loyalty and disclosure. The core issue is not whether the company lost money, but whether the manager fulfilled their duty to disclose.\n\nEvaluating each option:\n- A: Market rate pricing is relevant to damages but does not eliminate the duty to disclose.\n- B: Fiduciary duty includes loyalty and full disclosure. The breach is the concealment, not the price.\n- C: Fraud requires intentional deception for personal gain. Higher bar than fiduciary breach.\n- D: Financial loss is relevant to damages, not to whether a breach occurred.\n\nThe strongest answer is B.\n\nFINAL ANSWER: B\n\nNow solve the following problem using the same careful reasoning approach.\n\nHow would a typical person answer each of the following questions about causation?\nThe city council enacted an ordinance that all fire hydrants in the city must be painted red. A resident paints their fire hydrant red. The ordinance is then repealed. Did the resident paint the fire hydrant red because of the ordinance?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [answer]",
+  "raw_response": "Let me think through this carefully.\n\nThe question is about causation: Did the resident paint the fire hydrant red because of the ordinance?\n\nKey facts:\n1. The city council enacted an ordinance requiring all fire hydrants to be painted red.\n2. The resident painted their fire hydrant red.\n3. The ordinance was later repealed.\n\nThe causal question is whether the ordinance caused the resident's action.\n\nFirst, consider the timing: The resident painted the hydrant red while the ordinance was in effect.\n\nSecond, consider motivation: The ordinance required (or strongly encouraged) painting fire hydrants red to comply with the law.\n\nThird, the fact that the ordinance was later repealed is unlikely to impact whether the resident's initial motivation was caused by the ordinance. The repeal happened afterward, so it doesn't negate the fact that the ordinance might have been the cause.\n\nTypically, when assessing causation in everyday reasoning, a person would say the ordinance caused the resident to paint red if the resident painted in response to the ordinance (to comply).\n\nUnless there is evidence the resident painted red for reasons unrelated to the ordinance (e.g., purely personal preference), we would conclude that yes, the painting was because of the ordinance.\n\nHence, a typical person would likely answer \"yes\" — the painting was caused by the ordinance.\n\nFINAL ANSWER: Yes",
+  "extracted_answer": "Yes",
+  "is_correct": true,
+  "correct_answer": "Yes",
+  "answer_type": "exact_match",
+  "question": "How would a typical person answer each of the following questions about causation?\nThe city council enacted an ordinance that all fire hydrants in the city must be painted red. A resident paints their fire hydrant red. The ordinance is then repealed. Did the resident paint the fire hydrant red because of the ordinance?",
+  "source": "BBH/causal_judgement"
+}

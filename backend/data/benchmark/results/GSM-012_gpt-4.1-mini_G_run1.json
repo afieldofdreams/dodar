@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-012",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:48:01.172972Z",
+  "latency_seconds": 5.93,
+  "input_tokens": 472,
+  "output_tokens": 356,
+  "cost_usd": 0.000758,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nSasha notices that prices for lumber have gone up 50% in the last few months after she bought some lumber. Since she has leftovers, she decides to sell them. She has leftover ten 2 x 4 x 10 boards that cost her $10 each. She also has five 4 x 4 x 10 boards she bought for $16 each. If she sells them all, how much profit does she make?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me carefully analyze the problem step by step:\n\n1. Sasha originally bought:\n   - Ten 2 x 4 x 10 boards at $10 each.\n   - Five 4 x 4 x 10 boards at $16 each.\n\n2. She notices the price of lumber has gone up 50% after she bought the lumber.\n\n3. She has leftovers of these boards and decides to sell them all at the new price (i.e., current price after the 50% increase).\n\nStep 1: Calculate original total cost.\n- Cost of ten 2 x 4 x 10 boards: 10 x $10 = $100\n- Cost of five 4 x 4 x 10 boards: 5 x $16 = $80\n- Total cost = $100 + $80 = $180\n\nStep 2: Calculate new price per board type after 50% increase:\n- New price for 2 x 4 x 10 board = $10 + 50% of $10 = $10 + $5 = $15\n- New price for 4 x 4 x 10 board = $16 + 50% of $16 = $16 + $8 = $24\n\nStep 3: Calculate total selling price:\n- Selling price for ten 2 x 4 x 10 boards = 10 x $15 = $150\n- Selling price for five 4 x 4 x 10 boards = 5 x $24 = $120\n- Total selling price = $150 + $120 = $270\n\nStep 4: Calculate profit:\nProfit = Total selling price - Total original cost\nProfit = $270 - $180 = $90\n\nFINAL ANSWER: 90",
+  "extracted_answer": "90",
+  "is_correct": true,
+  "correct_answer": "90",
+  "answer_type": "numeric_exact",
+  "question": "Sasha notices that prices for lumber have gone up 50% in the last few months after she bought some lumber. Since she has leftovers, she decides to sell them. She has leftover ten 2 x 4 x 10 boards that cost her $10 each. She also has five 4 x 4 x 10 boards she bought for $16 each. If she sells them all, how much profit does she make?",
+  "source": "GSM8K"
+}

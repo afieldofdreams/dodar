@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-018",
+  "condition": "B",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 3,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:36:07.998004Z",
+  "latency_seconds": 3.3,
+  "input_tokens": 346,
+  "output_tokens": 232,
+  "cost_usd": 0.00051,
+  "system_prompt_sent": "Approach this problem step by step. Think carefully about what is being asked. Consider all of the relevant information provided. Work through your reasoning thoroughly and methodically. Examine the problem from multiple angles before settling on your approach. Take your time to ensure your analysis is complete and that you have not overlooked any important details. Consider whether your initial impression might be incomplete or whether there are aspects of the problem that deserve closer attention. Reflect on whether the information provided contains any nuances that could affect your answer. Make sure you have accounted for all the relevant factors before arriving at your conclusion. Verify that each part of your reasoning supports the next, and that you have not made any assumptions that are not warranted by the information given. Take care to ensure that your analysis addresses the full scope of the question. Check whether your reasoning accounts for all the constraints and conditions present in the problem. Ensure that each step of your reasoning follows logically from the previous step and that your analysis does not skip over any intermediate considerations. Double-check that your reasoning is consistent throughout and that your final answer follows logically from your analysis. Then provide your final answer clearly.",
+  "user_prompt_sent": "Think step by step.\n\nThree friends: Mike, Jim, and Tony decided to play a game. After 3 rounds Mike has 21 points, Jim 3 points less than Mike, and Tony 2 times more than Mike. In the fourth round, every player gets an extra point if they have over 20 points. How many points do all three players have in total after the extra points had been distributed?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1: Identify the points after 3 rounds:\n- Mike has 21 points.\n- Jim has 3 points less than Mike, so Jim has 21 - 3 = 18 points.\n- Tony has 2 times more than Mike. The phrase \"2 times more than Mike\" is a bit ambiguous, but usually \"2 times more\" means \"2 times as much,\" i.e., Tony has 2 × Mike's points = 2 × 21 = 42 points.\n\nStep 2: Apply the extra points in the fourth round:\n- Every player with over 20 points gets 1 extra point.\n- Mike: 21 points (over 20), so Mike gets +1 → 22 points.\n- Jim: 18 points (not over 20), so no extra points → 18 points.\n- Tony: 42 points (over 20), so Tony gets +1 → 43 points.\n\nStep 3: Calculate the total points after the extra points:\n22 (Mike) + 18 (Jim) + 43 (Tony) = 83 points.\n\nFINAL ANSWER: 83",
+  "extracted_answer": "83",
+  "is_correct": true,
+  "correct_answer": "83",
+  "answer_type": "numeric_exact",
+  "question": "Three friends: Mike, Jim, and Tony decided to play a game. After 3 rounds Mike has 21 points, Jim 3 points less than Mike, and Tony 2 times more than Mike. In the fourth round, every player gets an extra point if they have over 20 points. How many points do all three players have in total after the extra points had been distributed?",
+  "source": "GSM8K"
+}

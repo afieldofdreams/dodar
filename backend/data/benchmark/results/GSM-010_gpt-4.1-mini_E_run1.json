@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-010",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T11:59:50.318497Z",
+  "latency_seconds": 4.36,
+  "input_tokens": 209,
+  "output_tokens": 228,
+  "cost_usd": 0.000448,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nPoppy is solving a 1000-piece jigsaw puzzle. She places a quarter of the pieces on the board, then her mom places a third of the remaining pieces. How many jigsaw pieces are left to be placed?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nWhen dealing with fractions of a total quantity removed in multiple steps, a good approach is to work sequentially. First, determine the quantity removed in each step by multiplying the total or remaining amount by the given fraction. After each removal, update the remaining quantity. Finally, subtract the sum of all removed quantities from the original total to find out how many pieces are left.\n\nStep 2 - REASON:  \nTotal pieces = 1000\n\n- Poppy places a quarter of the pieces:  \n  Pieces placed by Poppy = \\( \\frac{1}{4} \\times 1000 = 250 \\)  \n  Remaining pieces after Poppy = \\( 1000 - 250 = 750 \\)\n\n- Then Mom places a third of the remaining pieces:  \n  Pieces placed by Mom = \\( \\frac{1}{3} \\times 750 = 250 \\)  \n  Remaining pieces after Mom = \\( 750 - 250 = 500 \\)\n\nSo, the number of jigsaw pieces left to be placed is 500.\n\nFINAL ANSWER: 500",
+  "extracted_answer": "500",
+  "is_correct": true,
+  "correct_answer": "500",
+  "answer_type": "numeric_exact",
+  "question": "Poppy is solving a 1000-piece jigsaw puzzle. She places a quarter of the pieces on the board, then her mom places a third of the remaining pieces. How many jigsaw pieces are left to be placed?",
+  "source": "GSM8K"
+}

@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-005",
+  "condition": "C",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:33:20.270981Z",
+  "latency_seconds": 4.24,
+  "input_tokens": 330,
+  "output_tokens": 415,
+  "cost_usd": 0.000796,
+  "system_prompt_sent": "Work through these five phases in order. Each phase must add new reasoning, not restate previous phases.\n\n1. DIAGNOSE: What exactly is being asked? Identify the constraints that will determine the answer. State the one thing most likely to cause an error on this type of problem.\n\n2. OPTIONS: Identify the two strongest candidate answers. For each, state the specific evidence for and against. Do not rank them. Treat both as live possibilities.\n\n3. DECIDE: Plan how to test both candidates. What calculation or reasoning step would distinguish between them? Do not select an answer yet.\n\n4. ACTION: Execute the test from DECIDE on both candidates with equal rigour. Show the full working for each. Record where evidence favours one over the other.\n\n5. REVIEW: Based only on the evidence produced in ACTION, select the answer that better survived testing. State which specific result decided it. If the evidence is balanced, state why one edge case tips it.\n\nState your final answer only after completing all five phases. Do not use the phrase \"final answer\" anywhere except the final line.",
+  "user_prompt_sent": "Follow the five phases (Diagnose, Options, Decide, Action, Review).\n\nJohn injured his back and needs to go to physical therapy.  He went to physical therapy for 6 weeks.  Each week he went twice for 2 hours at a time.  If the sessions cost $125 per hour how much did the physical therapy cost?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "1. DIAGNOSE:\nThe problem asks for the total cost of John's physical therapy sessions. We are given:\n- Duration: 6 weeks\n- Frequency: 2 sessions per week\n- Length of each session: 2 hours\n- Cost per hour: $125\n\nThe main constraint is the accurate multiplication of the number of sessions by the hours per session and cost per hour. The most likely error would be misunderstanding the total number of sessions or the total hours.\n\n2. OPTIONS:\nOption A: Calculate total hours as 6 weeks × 2 sessions/week × 2 hours/session, then multiply by $125/hour.\nEvidence For: Matches all given data exactly.\nEvidence Against: None apparent.\n\nOption B: Calculate total sessions differently, perhaps miscounting the sessions (e.g., 6 sessions total instead of 12) or assuming different hours per session.\nEvidence For: Might arise from misunderstanding “twice for 2 hours at a time.”\nEvidence Against: Contradicts the problem statement.\n\n3. DECIDE:\nTo decide between these options, we will calculate the total number of sessions and total hours explicitly, then multiply by hourly cost to find total cost. The critical test is verifying the total number of hours.\n\n4. ACTION:\nOption A calculation:\n- Sessions: 6 weeks × 2 sessions/week = 12 sessions\n- Hours: 12 sessions × 2 hours/session = 24 hours\n- Cost: 24 hours × $125/hour = $3000\n\nOption B calculation (assuming 6 sessions total):\n- Sessions: 6 sessions total\n- Hours: 6 sessions × 2 hours/session = 12 hours\n- Cost: 12 hours × $125/hour = $1500\n\nChecking against the problem, Option A matches the details precisely.\n\n5. REVIEW:\nThe calculation in Option A correctly accounts for all sessions over 6 weeks at 2 sessions per week. Option B undercounts the sessions. Thus, the evidence strongly supports Option A.\n\nFINAL ANSWER: 3000",
+  "extracted_answer": "3000",
+  "is_correct": true,
+  "correct_answer": "3000",
+  "answer_type": "numeric_exact",
+  "question": "John injured his back and needs to go to physical therapy.  He went to physical therapy for 6 weeks.  Each week he went twice for 2 hours at a time.  If the sessions cost $125 per hour how much did the physical therapy cost?",
+  "source": "GSM8K"
+}

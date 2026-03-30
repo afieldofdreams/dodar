@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-013",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:27:20.313149Z",
+  "latency_seconds": 3.99,
+  "input_tokens": 465,
+  "output_tokens": 228,
+  "cost_usd": 0.000551,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nAlice likes to count the puffs of clouds in the sky while she eats her lunch outside at school. On Monday she counts just 3 puffs of clouds. Each day after that through Friday, though, she sees double the number of clouds in the sky as the day before. At the end of the week, how many clouds will she have counted in the sky at lunch across all five days?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me reason through this carefully step-by-step.\n\n- On Monday, Alice counts 3 puffs of clouds.\n- Each next day, she sees double the number of clouds compared to the previous day.\n- This pattern continues through Friday, meaning 5 total days: Monday, Tuesday, Wednesday, Thursday, Friday.\n\nLet me find the number of clouds on each day:\n\n- Monday: 3 clouds\n- Tuesday: double Monday → 3 × 2 = 6 clouds\n- Wednesday: double Tuesday → 6 × 2 = 12 clouds\n- Thursday: double Wednesday → 12 × 2 = 24 clouds\n- Friday: double Thursday → 24 × 2 = 48 clouds\n\nNow, sum all these to find the total clouds counted over the 5 days:\n\n3 + 6 + 12 + 24 + 48 = \n\n3 + 6 = 9  \n9 + 12 = 21  \n21 + 24 = 45  \n45 + 48 = 93\n\nSo across all five days, she counts 93 clouds.\n\nFINAL ANSWER: 93",
+  "extracted_answer": "93",
+  "is_correct": true,
+  "correct_answer": "93",
+  "answer_type": "numeric_exact",
+  "question": "Alice likes to count the puffs of clouds in the sky while she eats her lunch outside at school. On Monday she counts just 3 puffs of clouds. Each day after that through Friday, though, she sees double the number of clouds in the sky as the day before. At the end of the week, how many clouds will she have counted in the sky at lunch across all five days?",
+  "source": "GSM8K"
+}

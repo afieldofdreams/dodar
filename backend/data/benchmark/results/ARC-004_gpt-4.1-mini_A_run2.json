@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-004",
+  "condition": "A",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:23:53.776898Z",
+  "latency_seconds": 3.36,
+  "input_tokens": 107,
+  "output_tokens": 234,
+  "cost_usd": 0.000417,
+  "system_prompt_sent": null,
+  "user_prompt_sent": "A student observes the time it takes a marble to roll down a ramp four times. Which of these displays will best communicate the student's observations?\n\n  A: a pie chart with four different sections\n  B: a line graph with continuous data points\n  C: a bar graph with a bar for each trial\n  D: a table with four rows and four columns\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "Let's analyze each option:\n\nA: A pie chart with four different sections  \n- Pie charts are usually used to show proportions or percentages of a whole, not individual measurements or repeated trials. Since time measurements are continuous data, a pie chart is not the best choice here.\n\nB: A line graph with continuous data points  \n- Line graphs are good for showing trends over time or continuous data. However, the trials are discrete events, not a continuous variable. Using a line graph might suggest a continuous relationship or trend that may not be relevant.\n\nC: A bar graph with a bar for each trial  \n- A bar graph can show separate measurements for each trial clearly. Each bar represents the time recorded in each trial, making it easy to compare individual results.\n\nD: A table with four rows and four columns  \n- A table can present the raw data values, but it doesn't visually communicate the differences or similarities in times as effectively as a graph would.\n\nGiven these considerations, the best display to communicate the student's observations (the times for four individual trials) is a bar graph showing a bar for each trial, making it clear and easy to compare.\n\nFINAL ANSWER: C",
+  "extracted_answer": "C",
+  "is_correct": true,
+  "correct_answer": "C",
+  "answer_type": "multiple_choice",
+  "question": "A student observes the time it takes a marble to roll down a ramp four times. Which of these displays will best communicate the student's observations?",
+  "source": "ARC-Challenge"
+}

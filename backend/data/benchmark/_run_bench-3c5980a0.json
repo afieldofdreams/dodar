@@ -1,0 +1,48 @@
+{
+  "run_id": "bench-3c5980a0",
+  "config": {
+    "task_ids": [
+      "ARC-001",
+      "ARC-002",
+      "ARC-003"
+    ],
+    "models": [
+      "gpt-4.1-mini"
+    ],
+    "conditions": [
+      "A",
+      "B",
+      "C",
+      "E",
+      "G",
+      "D",
+      "F",
+      "H"
+    ],
+    "runs_per_task": 1,
+    "skip_completed": true,
+    "prompt_version": "v3.1",
+    "execution_seed": 42,
+    "stage": "triage",
+    "task_version": "v2"
+  },
+  "status": "completed",
+  "created_at": "2026-03-26T20:30:23.806308Z",
+  "completed_at": "2026-03-26T20:30:55.745614Z",
+  "total_items": 24,
+  "completed_items": 24,
+  "correct_items": 24,
+  "total_cost_usd": 0.0186,
+  "total_tokens": 17777,
+  "accuracy_by_condition": {
+    "D": 100.0,
+    "H": 100.0,
+    "C": 100.0,
+    "B": 100.0,
+    "E": 100.0,
+    "A": 100.0,
+    "F": 100.0,
+    "G": 100.0
+  },
+  "dropouts": []
+}

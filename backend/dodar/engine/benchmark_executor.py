@@ -39,8 +39,8 @@ async def execute_benchmark_run(
     """Execute a full benchmark run across tasks × models × conditions × runs."""
     settings = get_settings()
 
-    # Load tasks
-    all_tasks = load_benchmark_tasks()
+    # Load tasks (v1 or v2 task bank)
+    all_tasks = load_benchmark_tasks(version=config.task_version)
     if config.task_ids:
         tasks_by_id = {t.id: t for t in all_tasks}
         tasks = [tasks_by_id[tid] for tid in config.task_ids if tid in tasks_by_id]
@@ -126,8 +126,9 @@ async def execute_benchmark_run(
             )
 
             # Extract answer and check correctness
-            extracted = extract_answer(response.text, task.answer_type)
-            is_correct = check_correctness(extracted, task.correct_answer, task.answer_type)
+            answer_type = task.effective_answer_type
+            extracted = extract_answer(response.text, answer_type)
+            is_correct = check_correctness(extracted, task.correct_answer, answer_type)
 
             result = BenchmarkResult(
                 task_id=task.id,
@@ -146,7 +147,7 @@ async def execute_benchmark_run(
                 extracted_answer=extracted,
                 is_correct=is_correct,
                 correct_answer=task.correct_answer,
-                answer_type=task.answer_type,
+                answer_type=answer_type,
                 question=task.question,
                 source=task.source,
             )

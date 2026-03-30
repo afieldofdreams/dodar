@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-101",
+  "condition": "G",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-26T20:29:46.245421Z",
+  "latency_seconds": 2.11,
+  "input_tokens": 444,
+  "output_tokens": 189,
+  "cost_usd": 0.00048,
+  "system_prompt_sent": "Think through this problem step by step. Reason carefully before committing to an answer.",
+  "user_prompt_sent": "Here is an example of careful step-by-step reasoning on a different problem:\n\nEXAMPLE QUESTION: Alice, Bob, and Carol each have a different favourite colour: red, blue, or green. Alice says: 'My favourite colour is not red.' Bob says: 'My favourite colour is not blue.' Carol says: 'My favourite colour is not red.' If exactly one is lying, who likes which colour?\n\nEXAMPLE ANSWER: Let me reason through this systematically.\n\nThere are three statements and exactly one is a lie. Let me test each possibility.\n\nCase 1: Alice is lying (her colour IS red). Then Alice=red. Bob's statement is true (not blue), so Bob=green. Carol's statement is true (not red), so Carol=blue. All different. Valid.\n\nCase 2: Bob is lying (his colour IS blue). Then Bob=blue. Alice's statement is true (not red), so Alice=green or blue. Since Bob=blue, Alice=green. Carol's statement is true (not red), so Carol=red. But Carol said 'not red' — that's two liars. Invalid.\n\nCase 3: Carol is lying (her colour IS red). Then Carol=red. Alice is true (not red), Bob is true (not blue), so Bob=green. Alice=blue. All different. Valid.\n\nTwo valid solutions. Case 1: Alice=red, Bob=green, Carol=blue.\n\nFINAL ANSWER: Alice likes red (she lied), Bob likes green, Carol likes blue\n\nNow solve the following problem using the same careful reasoning approach.\n\nA store has a promotion where every item is 25% off. Sarah buys a shirt originally priced at $40 and a pair of jeans originally priced at $60. She also receives an additional 10% discount on her total purchase as a loyalty reward. How much does Sarah pay in total?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Let me reason through this step-by-step.\n\n1. First, calculate the price of each item after the 25% off discount.\n\n- Shirt original price: $40  \n  25% off means paying 75% of the original price:  \n  40 × 0.75 = $30\n\n- Jeans original price: $60  \n  25% off means paying 75% of the original price:  \n  60 × 0.75 = $45\n\n2. Calculate the subtotal after the 25% discount on each item.\n\nSubtotal = 30 + 45 = $75\n\n3. Sarah also receives an additional 10% discount on the total purchase as a loyalty reward.\n\n10% off means paying 90% of the subtotal:  \n75 × 0.90 = $67.50\n\nTherefore, Sarah pays $67.50 in total.\n\nFINAL ANSWER: 67.50",
+  "extracted_answer": "67.50",
+  "is_correct": false,
+  "correct_answer": "81.9",
+  "answer_type": "numeric_exact",
+  "question": "A store has a promotion where every item is 25% off. Sarah buys a shirt originally priced at $40 and a pair of jeans originally priced at $60. She also receives an additional 10% discount on her total purchase as a loyalty reward. How much does Sarah pay in total?",
+  "source": "GSM8K"
+}

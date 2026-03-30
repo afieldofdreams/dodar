@@ -1,0 +1,21 @@
+{
+  "task_id": "GSM-003",
+  "condition": "E",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 1,
+  "prompt_version": "v3.1",
+  "timestamp": "2026-03-27T12:06:31.048680Z",
+  "latency_seconds": 4.65,
+  "input_tokens": 213,
+  "output_tokens": 225,
+  "cost_usd": 0.000445,
+  "system_prompt_sent": "When answering this question, use the following two-step approach:\n\nStep 1 - STEP BACK: Before attempting to answer, ask yourself a higher-level question about the general principles, concepts, or domain knowledge that are relevant to this problem. Answer that general question first to establish the foundational knowledge needed.\n\nStep 2 - REASON: Using the principles and knowledge you established in Step 1, now reason through the specific question. Apply the general principles to the particular details of the problem to arrive at your answer.\n\nAlways complete both steps before giving your final answer.",
+  "user_prompt_sent": "First step back to identify relevant principles, then reason through the specific problem.\n\nIn a neighborhood, the number of rabbits pets is twelve less than the combined number of pet dogs and cats. If there are two cats for every dog, and the number of dogs is 60, how many pets in total are in the neighborhood?\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [number]",
+  "raw_response": "Step 1 - STEP BACK:  \nThe problem involves relationships between quantities of different types of pets. The key principles here include understanding ratios and algebraic expressions to relate quantities. We also use substitution for variables based on given relationships and then find the total by summing all quantities.\n\nStep 2 - REASON:  \n- Let the number of dogs be \\(D\\), cats be \\(C\\), and rabbits be \\(R\\).  \n- It is given \\(D = 60\\).  \n- The ratio of cats to dogs is \\(2:1\\), so \\(C = 2 \\times D = 2 \\times 60 = 120\\).  \n- The number of rabbits is twelve less than the combined number of dogs and cats. The combined number is \\(D + C = 60 + 120 = 180\\).  \n- Therefore, \\(R = 180 - 12 = 168\\).  \n- Now the total number of pets is \\(D + C + R = 60 + 120 + 168 = 348\\).\n\nFINAL ANSWER: 348",
+  "extracted_answer": "348",
+  "is_correct": true,
+  "correct_answer": "348",
+  "answer_type": "numeric_exact",
+  "question": "In a neighborhood, the number of rabbits pets is twelve less than the combined number of pet dogs and cats. If there are two cats for every dog, and the number of dogs is 60, how many pets in total are in the neighborhood?",
+  "source": "GSM8K"
+}

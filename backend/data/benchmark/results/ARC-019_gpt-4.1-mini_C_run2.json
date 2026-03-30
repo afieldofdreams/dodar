@@ -1,0 +1,21 @@
+{
+  "task_id": "ARC-019",
+  "condition": "C",
+  "model_id": "gpt-4.1-mini",
+  "run_number": 2,
+  "prompt_version": "v3.2",
+  "timestamp": "2026-03-29T16:46:13.694566Z",
+  "latency_seconds": 5.62,
+  "input_tokens": 323,
+  "output_tokens": 513,
+  "cost_usd": 0.00095,
+  "system_prompt_sent": "Work through these five phases in order. Each phase must add new reasoning, not restate previous phases.\n\n1. DIAGNOSE: What exactly is being asked? Identify the constraints that will determine the answer. State the one thing most likely to cause an error on this type of problem.\n\n2. OPTIONS: Identify the two strongest candidate answers. For each, state the specific evidence for and against. Do not rank them. Treat both as live possibilities.\n\n3. DECIDE: Plan how to test both candidates. What calculation or reasoning step would distinguish between them? Do not select an answer yet.\n\n4. ACTION: Execute the test from DECIDE on both candidates with equal rigour. Show the full working for each. Record where evidence favours one over the other.\n\n5. REVIEW: Based only on the evidence produced in ACTION, select the answer that better survived testing. State which specific result decided it. If the evidence is balanced, state why one edge case tips it.\n\nState your final answer only after completing all five phases. Do not use the phrase \"final answer\" anywhere except the final line.",
+  "user_prompt_sent": "Follow the five phases (Diagnose, Options, Decide, Action, Review).\n\nHow is a skin cell from a mouse similar to an amoeba?\n\n  A: Both need energy.\n  B: Both have cell walls.\n  C: Both move with pseudopodia.\n  D: Both consume carbon dioxide.\n\n\n\nShow your reasoning, then state your final answer clearly on its own line in the format:\nFINAL ANSWER: [letter]",
+  "raw_response": "1. DIAGNOSE:\nThe question asks for a similarity between a skin cell from a mouse and an amoeba. The constraints are biological facts about these two cell types. The key point is identifying an attribute that both share. The most common error is confusing characteristics of cell types (e.g., animal cells vs. protists) or misattributing traits like cell walls or methods of movement.\n\n2. OPTIONS:\nA: Both need energy.\n- Evidence for: All living cells, including animal cells and amoebas, require energy to carry out functions.\n- Evidence against: None; this is a fundamental characteristic of all cells.\n\nB: Both have cell walls.\n- Evidence for: Some cells (like plant cells) have cell walls.\n- Evidence against: Animal cells (including mouse skin cells) do not have cell walls; amoebas also lack cell walls.\n\nC: Both move with pseudopodia.\n- Evidence for: Amoebas move with pseudopodia.\n- Evidence against: Mouse skin cells generally do not move using pseudopodia; they are relatively stationary.\n\nD: Both consume carbon dioxide.\n- Evidence for: Plants consume CO2 during photosynthesis.\n- Evidence against: Neither mouse skin cells nor amoebas consume CO2; they consume oxygen.\n\n3. DECIDE:\nTo distinguish between A and another potential answer, I need to verify if both cells require energy—which is generally true for all living cells—and check the factual validity of cell walls, presence of pseudopodia in mouse cells, and CO2 consumption.\n\n4. ACTION:\nA: Do skin cells and amoebas both need energy?\n- Cellular metabolism universally requires energy (ATP) for survival.\n- Mouse skin cells perform metabolism and thus need energy.\n- Amoebas also metabolize and require energy.\n\nB: Do both have cell walls?\n- Mouse skin cells are animal cells without cell walls.\n- Amoebas are protists without cell walls.\n- Therefore, both do not have cell walls.\n\nC: Do both move with pseudopodia?\n- Amoebas move with pseudopodia.\n- Mouse skin cells are generally non-motile and do not move with pseudopodia.\n\nD: Do both consume carbon dioxide?\n- Neither mouse cells nor amoebas consume CO2; both respire oxygen and release CO2 as a waste product.\n\n5. REVIEW:\nBased on the above, only option A is true for both cells. The other options are factually incorrect for at least one cell type.\n\nFINAL ANSWER: A",
+  "extracted_answer": "A",
+  "is_correct": true,
+  "correct_answer": "A",
+  "answer_type": "multiple_choice",
+  "question": "How is a skin cell from a mouse similar to an amoeba?",
+  "source": "ARC-Challenge"
+}
