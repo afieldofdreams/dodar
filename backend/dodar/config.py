@@ -16,11 +16,14 @@ class Settings(BaseSettings):
     openai_api_key: str = ""
     google_api_key: str = ""
 
-    # Data directories
+    # Data directories (override via DATA_DIR / RUNS_DIR / SCORES_DIR env vars)
     data_dir: Path = _DATA_DIR
     scenarios_dir: Path = _DATA_DIR / "scenarios"
     runs_dir: Path = _DATA_DIR / "runs"
     scores_dir: Path = _DATA_DIR / "scores"
+
+    # Ollama (override via OLLAMA_BASE_URL env var for non-local deployments)
+    ollama_base_url: str = "http://localhost:11434"
 
     # Execution
     default_concurrency: int = 5

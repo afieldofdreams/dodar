@@ -2,11 +2,17 @@ from __future__ import annotations
 
 from typing import Callable
 
+from dodar.config import get_settings
 from dodar.runners.anthropic import AnthropicRunner
 from dodar.runners.base import ModelRunner
 from dodar.runners.google import GoogleRunner
 from dodar.runners.ollama import OllamaRunner
 from dodar.runners.openai import OpenAIRunner
+
+
+def _ollama(model: str) -> OllamaRunner:
+    return OllamaRunner(model_override=model, base_url=get_settings().ollama_base_url)
+
 
 # Maps model ID -> factory function that creates the runner
 _REGISTRY: dict[str, Callable[[], ModelRunner]] = {
@@ -22,12 +28,12 @@ _REGISTRY: dict[str, Callable[[], ModelRunner]] = {
     "gpt-4.1-nano": lambda: OpenAIRunner(model_override="gpt-4.1-nano"),
     "o4-mini": lambda: OpenAIRunner(model_override="o4-mini"),
     "gemini-2.0-flash": lambda: GoogleRunner(),
-    # Local models (Ollama)
-    "qwen2.5:32b": lambda: OllamaRunner(model_override="qwen2.5:32b-instruct-q4_K_M"),
-    "qwen2.5:14b": lambda: OllamaRunner(model_override="qwen2.5:14b-instruct"),
-    "qwen2.5:7b": lambda: OllamaRunner(model_override="qwen2.5:7b-instruct"),
-    "llama3.1:8b": lambda: OllamaRunner(model_override="llama3.1:8b"),
-    "phi3:3.8b": lambda: OllamaRunner(model_override="phi3:3.8b"),
+    # Local models (Ollama) — base URL from OLLAMA_BASE_URL env var
+    "qwen2.5:32b": lambda: _ollama("qwen2.5:32b-instruct-q4_K_M"),
+    "qwen2.5:14b": lambda: _ollama("qwen2.5:14b-instruct"),
+    "qwen2.5:7b": lambda: _ollama("qwen2.5:7b-instruct"),
+    "llama3.1:8b": lambda: _ollama("llama3.1:8b"),
+    "phi3:3.8b": lambda: _ollama("phi3:3.8b"),
 }
 
 _instances: dict[str, ModelRunner] = {}
