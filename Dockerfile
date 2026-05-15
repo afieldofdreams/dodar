@@ -16,8 +16,8 @@ RUN pip install --no-cache-dir -e ./backend/
 # Copy built frontend into the location main.py expects
 COPY --from=frontend-build /app/frontend/dist ./frontend/dist
 
-# Persist run/score data across container restarts
-VOLUME ["/app/backend/data/runs", "/app/backend/data/scores"]
+# Persist new benchmark runs/results across container restarts
+VOLUME ["/app/backend/data/benchmark"]
 
 ENV PORT=8000
 
