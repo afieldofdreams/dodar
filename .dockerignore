@@ -1,0 +1,11 @@
+.git
+.venv
+__pycache__
+*.pyc
+*.pyo
+node_modules
+frontend/dist
+backend/data/runs
+backend/data/scores
+.env
+*.env
